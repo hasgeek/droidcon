@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Droidcon India</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {
+        font-family: 'Droid Sans', arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      header, footer {
+        text-align: center;
+      }
+      header {
+        background-color: #fff;
+        margin: 1em;
+      }
+      article {
+        margin: 0;
+        margin: 1em;
+      }
+      article p {
+        color: #4E7000;
+        text-align: center;
+      }
+      footer {
+        font-size: 80%;
+        color: #4E7000;
+      }
+      h1 {
+        font-size: 85px;
+        letter-spacing: -0.03em;
+        margin: 0;
+        color: #699108;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.5)), to(rgba(255,255,255,1)));
+      }
+      #h1-droid {
+        font-family: 'Droid Sans', arial, sans-serif;
+        font-weight: bold;
+      }
+      #h1-con {
+        font-family: 'Droid Serif', georgia, sans-serif;
+        font-weight: normal;
+      }
+      h2, h3 {
+        font-family: 'Droid Serif', georgia, sans-serif;
+        margin: 0;
+        color: #699108;
+      }
+      h3 {
+        font-size: 13px;
+      }
+      .datecaption {
+        font-size: 80%;
+        margin: 0.25em;
+        color: #4E7000;
+      }
+      .f {
+        font-style: italic;
+        font-family: 'Droid Serif', georgia, sans-serif;
+        }
+      .g {
+        font-family: 'Droid Sans', arial, sans-serif;
+      }
+      .s, .a {
+        font-family: 'Droid Serif', georgia, sans-serif;
+      }
+      #mc_embed_signup {
+        max-width: 25em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #mce-responses {
+        margin: 1em 0;
+        color: #4E7000;
+      }
+      div.mce_inline_error {
+        color: red;
+        background-color: yellow;
+      }
+      fieldset {
+        border: 2px solid #699108;
+        margin: 1em;
+        margin-top: 2em;
+      }
+      label, legend, strong {
+        color: #4E7000;
+        font-weight: normal;
+      }
+      label {
+        display: block;
+      }
+      a {
+        color: #4E7000;
+      }
+      a:hover {
+        color: #4E7000;
+      }
+      a img {
+        border: 0;
+      }
+      ul.tiles {
+        list-style: none;
+        margin: 1em 0 0;
+        padding: 0;
+      }
+      ul.tiles li {
+        display: inline-block;
+        padding: 0 0.5em;
+      }
+      ul.tiles li.highlighted,
+      ul.tiles li.highlighted h2,
+      ul.tiles li.highlighted h3 {
+        color: #83B31D;
+      }
+      .mc-field-group {
+        margin: 0.5em 0;
+      }
+      .input-group ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 0.5em;
+      }
+      .input-group ul label {
+        display: inline;
+      }
+      .input-group ul input {
+        vertical-align: bottom;
+      }
+      .input-group ul li {
+        display: inline;
+        padding-right: 0.5em;
+      }
+      input[type="text"], input[type="email"] {
+        width: 20em;
+        color: #4E7000;
+        /* background-color: #CAC4C7; */
+        border: 1px solid #a0ca23;
+        font-size: 110%;
+      }
+      input[type="submit"] {
+        background-color: #699108;
+        color: #eee;
+        padding: 0.5em;
+        border-radius: 2em;
+        border: 2px solid #4E7000;
+        font-weight: bold;
+        font-size: 80%;
+      }
+      input[type="submit"]:focus {
+        outline: none;
+        border: 2px solid #75B600;
+      }
+      input[type="submit"]:hover {
+        border: 2px solid #75B600;
+      }
+      input[type="submit"]:active {
+        background-color: #4E7000;
+      }
+      .button-caption {
+        padding: 0.5em;
+        color: #4E7000;
+        font-size: 80%;
+      }
+      /* Fixes for older IE versions */
+      ul.tiles li {
+        zoom: 1;
+        *display: inline;
+        _height: 100px;
+      }
+      @media all and (min-width: 480px) and (max-width: 640px) {
+        h1 {
+          font-size: 70px;
+        }
+      }
+      @media all and (min-width: 320px) and (max-width: 480px) {
+        h1 {
+          font-size: 50px;
+        }
+        input[type="text"] {
+          width: 15em;
+        }
+        #mc_embed_signup {
+          max-width: 20em;
+        }
+      }
+      @media all and (max-width: 320px) {
+        h1 {
+          font-size: 20px;
+        }
+        #mc_embed_signup {
+          max-width: 20em;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19123154-16']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>  </head>
+  <body>
+    <header>
+      <div class="droids"> 
+        <img width="86" height="100" src="img/android.png" alt="Android"/>
+      </div> 
+      <h1><span id="h1-droid">Droidcon</span> <span id="h1-con">India</span></h1> 
+      <ul class="tiles">
+        <li>
+          <h2>Bucharest</h2>
+          <h3>28 September 2011</h3>
+        </li>
+        <li>
+          <h2>London</h2>
+          <h3>6 &amp; 7 October 2011</h3>
+        </li>
+        <li class="highlighted">
+          <h2>Bangalore</h2>
+          <h3>18 &amp; 19 November 2011</h3>
+        </li>
+        <li>
+          <h2>Amsterdam</h2>
+          <h3>22 &amp; 23 November 2011</h3>
+        </li>
+        <li>
+          <h2>Berlin</h2>
+          <h3>13 &amp; 14 March 2012</h3>
+        </li>
+      </ul>
+    </header>
+    <article>
+      <!-- Begin MailChimp Signup Form -->
+      <script type="text/javascript">
+      // delete this script tag and use a "div.mce_inline_error{ XXX !important}" selector
+      // or fill this in and it will be inlined when errors are generated
+      var mc_custom_error_style = '';
+      </script>
+      <div id="mc_embed_signup">
+        <form action="http://hasgeek.us2.list-manage1.com/subscribe/post?u=c84c1486d2d6a025417c5d146&amp;id=5b57e22978" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      	  <fieldset>
+      	    <legend style="white-space:normal"><span>Sign up to be notified when we have updates</span></legend>
+            <div class="mc-field-group">
+              <label for="mce-FULLNAME">Your name </label>
+              <input type="text" value="" name="FULLNAME" class="" id="mce-FULLNAME">
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email address
+              </label>
+              <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group input-group">
+              <strong>You want to... </strong>
+              <ul>
+                <li><input type="checkbox" value="1" name="group[1793][1]" id="mce-group[1793]-1793-0"> <label for="mce-group[1793]-1793-0">Attend</label></li>
+                <li><input type="checkbox" value="2" name="group[1793][2]" id="mce-group[1793]-1793-1"> <label for="mce-group[1793]-1793-1">Speak</label></li>
+                <li><input type="checkbox" value="4" name="group[1793][4]" id="mce-group[1793]-1793-2"> <label for="mce-group[1793]-1793-2">Sponsor</label></li>
+                <li><input type="checkbox" value="8" name="group[1793][8]" id="mce-group[1793]-1793-3"> <label for="mce-group[1793]-1793-3">Volunteer</label></li>
+              </ul>
+            </div>
+      		  <div id="mce-responses">
+      			  <div class="response" id="mce-error-response" style="display:none"></div>
+      			  <div class="response" id="mce-success-response" style="display:none"></div>
+      		  </div>
+      		  <div>
+      		    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
+      		    <span class="button-caption">You can unsubscribe anytime.</span>
+      		  </div>
+      	  </fieldset>	
+        </form>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://downloads.mailchimp.com/js/jquery.form-n-validate.js"></script>
+
+        <script type="text/javascript">
+        var err_style = '';
+        try{
+            err_style = mc_custom_error_style;
+        } catch(e){
+            err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+        }
+        var head= document.getElementsByTagName('head')[0];
+        var style= document.createElement('style');
+        style.type= 'text/css';
+        if (style.styleSheet) {
+          style.styleSheet.cssText = err_style;
+        } else {
+          style.appendChild(document.createTextNode(err_style));
+        }
+        head.appendChild(style);
+        setTimeout('mce_preload_check();', 250);
+
+        var mce_preload_checks = 0;
+        function mce_preload_check(){
+            if (mce_preload_checks>40) return;
+            mce_preload_checks++;
+            try {
+                var jqueryLoaded=jQuery;
+            } catch(err) {
+                setTimeout('mce_preload_check();', 250);
+                return;
+            }
+            try {
+                var validatorLoaded=jQuery("#fake-form").validate({});
+            } catch(err) {
+                setTimeout('mce_preload_check();', 250);
+                return;
+            }
+            mce_init_form();
+        }
+        function mce_init_form(){
+            jQuery(document).ready( function($) {
+              var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+              var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+              $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+              options = { url: 'http://hasgeek.us2.list-manage.com/subscribe/post-json?u=c84c1486d2d6a025417c5d146&id=5b57e22978&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                            beforeSubmit: function(){
+                                $('#mce_tmp_error_msg').remove();
+                                $('.datefield','#mc_embed_signup').each(
+                                    function(){
+                                        var txt = 'filled';
+                                        var fields = new Array();
+                                        var i = 0;
+                                        $(':text', this).each(
+                                            function(){
+                                                fields[i] = this;
+                                                i++;
+                                            });
+                                        $(':hidden', this).each(
+                                            function(){
+                                                var bday = false;
+                                                if (fields.length == 2){
+                                                    bday = true;
+                                                    fields[2] = {'value':1970};//trick birthdays into having years
+                                                }
+                                            	if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                            		this.value = '';
+        									    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                            		this.value = '';
+        									    } else {
+        	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+        	                                    }
+                                            });
+                                    });
+                                return mce_validator.form();
+                            }, 
+                            success: mce_success_cb
+                        };
+              $('#mc-embedded-subscribe-form').ajaxForm(options);      
+
+            });
+        }
+        function mce_success_cb(resp){
+            $('#mce-success-response').hide();
+            $('#mce-error-response').hide();
+            if (resp.result=="success"){
+                $('#mce-'+resp.result+'-response').show();
+                $('#mce-'+resp.result+'-response').html(resp.msg);
+                $('#mc-embedded-subscribe-form').each(function(){
+                    this.reset();
+            	});
+            } else {
+                var index = -1;
+                var msg;
+                try {
+                    var parts = resp.msg.split(' - ',2);
+                    if (parts[1]==undefined){
+                        msg = resp.msg;
+                    } else {
+                        i = parseInt(parts[0]);
+                        if (i.toString() == parts[0]){
+                            index = parts[0];
+                            msg = parts[1];
+                        } else {
+                            index = -1;
+                            msg = resp.msg;
+                        }
+                    }
+                } catch(e){
+                    index = -1;
+                    msg = resp.msg;
+                }
+                try{
+                    if (index== -1){
+                        $('#mce-'+resp.result+'-response').show();
+                        $('#mce-'+resp.result+'-response').html(msg);            
+                    } else {
+                        err_id = 'mce_tmp_error_msg';
+                        html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+
+                        var input_id = '#mc_embed_signup';
+                        var f = $(input_id);
+                        if (ftypes[index]=='address'){
+                            input_id = '#mce-'+fnames[index]+'-addr1';
+                            f = $(input_id).parent().parent().get(0);
+                        } else if (ftypes[index]=='date'){
+                            input_id = '#mce-'+fnames[index]+'-month';
+                            f = $(input_id).parent().parent().get(0);
+                        } else {
+                            input_id = '#mce-'+fnames[index];
+                            f = $().parent(input_id).get(0);
+                        }
+                        if (f){
+                            $(f).append(html);
+                            $(input_id).focus();
+                        } else {
+                            $('#mce-'+resp.result+'-response').show();
+                            $('#mce-'+resp.result+'-response').html(msg);
+                        }
+                    }
+                } catch(e){
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        }
+      </script>
+      <!--End mc_embed_signup-->
+    </article>
+    <article>
+      <p>
+        Can&rsquo;t wait? Head over to <a href="http://funnel.hasgeek.com/droidcon/">the funnel</a>
+        to see submissions, or follow <a href="http://twitter.com/droidconIN">@droidconIN</a> on Twitter.
+      </p>
+    <footer>
+      <p>
+        Droidcon India is an event by the fine fellows at <a href="http://hasgeek.in/">HasGeek</a>,
+        in association with <a href="http://droidcon.com/">Droidcon Europe</a> and the
+        <a href="http://www.meetup.com/blrdroid/">Bangalore Android User Group</a>.
+      </p>
+    </footer>
+  </body>
+</html>
