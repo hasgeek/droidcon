@@ -1,0 +1,41 @@
+@media only screen and (min-width: 52.5em) {
+	/* Style adjustments for viewports 60em and over go here */
+	
+	.container {
+		max-width: 87em;
+		padding: 0 1.5em;
+		margin: 0 auto;
+	}
+	.bleed {
+		padding: 0;
+		max-width: 90em;
+	}
+	
+	
+	#header hgroup {
+		height: 35em;
+		background: url(../_img/illos-day.jpg) no-repeat bottom center;
+		background-size: 90em auto;
+	}
+	#header .titles {
+		margin: 18em 1.7em 0 auto;
+		width: 19.5em;
+	}
+	#header h1 { font-size: 96px; }
+	
+	nav ul { margin-top: -1px; }
+	#header nav .expanded { display: inline; }
+	.tickets { font-size: 14px; }
+	.tickets a dt { width: 70%; margin-bottom: 1.5em; }
+	.tickets a dd { width: 30%; margin-bottom: 1.5em; }
+	
+	#footer {
+		background: url(../_img/andy_separator.png) scroll repeat-x top center;
+		padding-top: 80px;
+	}
+	#footer .container {
+		max-width: 39em;
+		margin: auto;
+		padding-right: 18em;
+	}
+}

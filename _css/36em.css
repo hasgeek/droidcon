@@ -1,0 +1,75 @@
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 31.5em) {
+	/* Style adjustments for viewports 36em and over go here */
+	
+	.container {
+		max-width: 57em;
+		padding: 0 1.5em;
+		margin: 0 auto;
+	}
+	.bleed {
+		padding: 0;
+		max-width: 60em;
+	}
+
+
+
+	#header { margin: 0 auto; }
+	#header hgroup {
+		height: 24.14em;
+		background: url(../_img/illos-day.jpg) no-repeat bottom center;
+		background-size: 60em auto;
+	}
+	#header h3 {
+		font-size: 1em;
+		margin: 0 -1.5em;
+		padding: 1em 1.5em;
+	}
+	#header p { font-size: 1em; }
+	#header p .expanded { display: inline; }
+	#header .titles {
+		margin: 11em 5% 0 auto;
+		width: 16em;
+	}
+	#header h1 { font-size: 72px; }
+	
+	nav ul { margin-top: 0; border-top: none; font-size: 18px; }
+	.register { position: relative; }
+	.tickets {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 1.5em 1.5em 0;
+		background: url(../_img/stripes_dark_green.png);
+		font-size: 12px;
+		line-height: 16px;
+		text-align: left;
+		color: #EEE;
+	}
+	.tickets a { color: inherit; text-align: left; padding: 0; }
+	.tickets a dt { float: left;  width: 50%; clear: left; font-weight: bold; margin-bottom: 1em; }
+	.tickets a dd { float: right; width: 50%; font-family: Georgia, serif; margin: 0; text-align: right;  }
+	.tickets .inactive { color: #AAB885; color: rgba(255,255,255,0.5); }
+	
+	
+	#content {
+		max-width: 60em;
+		padding: 0;
+		margin: 0 auto;
+	}
+	#content .container,
+	#footer .container {
+		clear: both;
+		margin-right: 25%;
+		padding: 0 3em 0 3em;
+		margin-left: 0;
+	}
+	
+	.blogpost { margin: 3em 0 4em; }
+}

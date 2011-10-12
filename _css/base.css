@@ -1,0 +1,218 @@
+/* ============== */
+/* = Typography = */
+/* ============== */
+body { font: 14px/24px  'Droid Sans', Helvetica, Arial, sans-serif; }
+h1,h2,h4 { font-family: 'Droid Serif', Georgia, serif; }
+
+p { margin: 0 0 24px; }
+pre { word-wrap: normal; overflow: auto; }
+code { font: 0.857em/1  Menlo, Monaco, 'Bitstream Vera Sans Mono', 'Courier New', monospace; }
+pre code { font-family: Menlo, 'Bitstream Vera Sans Mono', Monaco, 'Courier New', monospace; }
+
+.amp {
+	font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
+	font-style: italic;
+	font-size: 1.2em;
+	line-height: 0.5em;
+}
+.quo { margin-left: -0.24em; }
+.dquo { margin-left: -0.44em; }
+.tquo { margin-left: -0.68em; }
+
+
+/*** ------------ ***/
+body {
+	color: #BBB;
+	background: #121212 url(../_img/black_denim.png) repeat scroll;
+}
+a { color: #759E0D; text-decoration: none; }
+a:hover { color: #8D2; }
+hr { margin: 1em 0; }
+
+#page {}
+
+.container {
+	max-width: 33em;
+	padding: 0 1.5em;
+	margin: 0 auto;
+}
+.bleed {
+	padding: 0;
+	max-width: 36em;
+}
+
+
+
+#header { margin: 0 auto; }
+#header .expanded { display: none; }
+#header hgroup {
+	position: relative;
+	padding: 0 1.5em;
+	height: 14.2em;
+	background: url(../_img/illos-day.jpg) no-repeat bottom center;
+	background-size: 36em auto;
+	margin: 0;
+}
+#header h3,
+#header p {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #444;
+}
+#header h3 { text-transform: lowercase; color: rgba(0,0,0,0.4); }
+#header p { position: absolute; right: 1.75em; top: 1em; }
+.has  { font-weight: bold; color: #DF5E0E; }
+.geek { font-weight: bold; color: #816894; }
+#header .titles {
+	margin: 5em 0 0 auto;
+	width: 11em;
+	color: white;
+}
+#header h1 {
+	font: 42px/1 'League Gothic', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', 'Droid Sans', Helvetica, sans-serif;
+	font-weight: normal;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	text-shadow: #555 0 0 1px;
+}
+#header h1 a { color: inherit; text-decoration: none; }
+#header h2 { font-size: 1em; font-family: inherit; font-weight: normal; line-height: 1; margin: 0; }
+
+#header hr { display: none; }
+
+nav ul {
+	margin: -1px 0 0;
+	font: 1em/3 'Droid Sans', Helvetica, sans-serif;
+	text-align: center;
+	background: url(../_img/stripes.png) repeat scroll;
+	border: 1px solid #111;
+	border-left: none;
+	border-right: none;
+}
+nav li { float: left; width: 25%; }
+nav li a { display: block; text-decoration: none; color: gray; text-align: center; }
+nav li > a:hover { color: white; background: rgba(255,255,255,0.1); }
+nav li.register > a { background: url(../_img/stripes_green.png); color: white; }
+.register { float: right; }
+.tickets { display: none; }
+
+
+.flexbox .flexlist {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: horizontal;
+	   -moz-box-orient: horizontal;
+			box-orient: horizontal;
+}
+.flexbox .flexlist > li {
+	float: none;
+	-webkit-box-flex: 1;
+	   -moz-box-flex: 1;
+			box-flex: 1;  
+}
+
+
+.slogan {
+	font-size: 36px;
+	line-height: 48px;
+}
+.button {
+	display: inline-block;
+	font-size: 16px;
+	padding: 0.5em 2em;
+	
+	color: white;
+	background: #98C749;
+-webkit-border-radius: 0.5em;
+   -moz-border-radius: 0.5em;
+	    border-radius: 0.5em;
+-webkit-box-shadow: 0px 3px 0px green;
+   -moz-box-shadow: 0px 3px 0px green;
+	    box-shadow: 0px 3px 0px green;
+	
+	text-decoration: none;
+	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+}
+
+#sponsors, #hasgeek { display: none; }
+
+#content h2 { font-size: 14px; }
+.strip { margin: 0 auto 2em; }
+
+#updates h2 { display: none; }
+#updates hr { display: none; }
+.blogpost a:hover { text-decoration: underline; }
+.summary h3 {
+	padding: 0;
+	margin: 1.5em 0 0.3em;
+	font-size: 21px;
+	font-weight: normal;
+}
+.summary h3 a { color: #DDD; }
+.summary a.timestamp {
+	font-size: 11px;
+	word-spacing: -1px;
+	color: gray;
+	margin-left: 0.5em;
+}
+.headline { display: none; }
+.headline h3 { font-size: 16px; font-weight: normal; }
+
+
+#sponsors { margin-bottom: 2em; }
+#sponsors ul { margin: 0; padding: 0; }
+#sponsors li {
+	list-style-type: none;
+	float: left;
+	width: 45%;
+	height: 5em;
+	margin: 1em 2.5% 1em 0;
+	padding: 0;
+	text-align: left;
+}
+#sponsors li:nth-child(odd)  { width: 45%; margin: 1em 10% 1em 0; }
+#sponsors li:nth-child(even) { width: 45%; margin: 1em 0; }
+#sponsors li img {
+	vertical-align: middle;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	max-height: 100%;
+}
+#sponsors hr { display: none; }
+
+
+#hasgeek h2 { font-size: 24px; }
+
+
+#footer { background: url(../_img/andy_separator_small.png) repeat-x scroll left top; padding-top: 50px; }
+#footer .nav { padding: 0; background: none; border: none; margin: 2em 0; }
+#footer .nav li { display: inline; }
+#footer .nav li + li { margin-left: 0.5em; }
+#footer .nav li + li:before { content: " · "; font-weight: bold; font-family: Georgia; font-size: 1.2em; margin-right: 0.25em; color: #444; }
+#footer .nav li a { text-decoration: none; }
+#footer .nav li a:hover { text-decoration: underline; }
+#footer h3 {
+	font-size: 12px;
+	margin-top: 2em;
+	color: gray;
+	color: rgba(255,255,255,0.3);
+}
+.partners { margin: 0 0 3em; padding: 0; overflow: auto; }
+.partners li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float: left;
+	width:  20%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	background: rgba(255,255,255,0.1);
+}
+.partners img { max-width: 80%; max-height: 80%; width: auto; height: auto; vertical-align: middle; }
+#footer p { font-size: 12px; color: gray; padding-top: 1.5em; }
+
