@@ -201,7 +201,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	color: gray;
 	color: rgba(255,255,255,0.3);
 }
-.partners { margin: 0 0 3em; padding: 0; overflow: auto; }
+.partners { margin: 0 0 3em; padding: 0; overflow: auto; outline: 1px solid rgba(200, 200, 200, 0.2); }
 .partners li {
 	margin: 0;
 	padding: 0;
