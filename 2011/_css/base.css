@@ -212,6 +212,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	line-height: 100px;
 	text-align: center;
 	background: rgba(255,255,255,0.1);
+	background: white;
 }
 .partners img { max-width: 80%; max-height: 80%; width: auto; height: auto; vertical-align: middle; }
 #footer p { font-size: 12px; color: gray; padding-top: 1.5em; }
