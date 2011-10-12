@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^$ /2011 [R,L]
+RewriteRule ^SponsorKit.pdf$ /2011/SponsorKit.pdf [R,L]
