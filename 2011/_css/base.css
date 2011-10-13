@@ -2,7 +2,6 @@
 /* = Typography = */
 /* ============== */
 body { font: 14px/24px  'Droid Sans', Helvetica, Arial, sans-serif; }
-/*h1,h2,h4 { font-family: 'Droid Serif', Georgia, serif; }*/
 
 p { margin: 0 0 24px; }
 pre { word-wrap: normal; overflow: auto; }

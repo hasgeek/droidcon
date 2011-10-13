@@ -13,7 +13,7 @@
 <meta name="description" content="Droidcon India. 18th - 19th November 2011, Bangalore.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:700,400,400italic,700italic|Droid+Sans:400,700">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
 <link rel="stylesheet" href="_css/style.combined.css">
 
 <script src="_js/libs/modernizr-2.0.6.min.js"></script>
