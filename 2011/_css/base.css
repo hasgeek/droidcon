@@ -107,7 +107,7 @@ nav ul {
 }
 nav li { float: left; width: 25%; }
 nav li a { display: block; text-decoration: none; color: gray; text-align: center; }
-nav .active a { color: white; border-bottom: 1px dotted #BBB; }
+nav .active a { color: white; border-bottom: 1px solid #666; }
 nav li > a:hover { color: white; background: rgba(255,255,255,0.1); }
 nav li.register > a { background: url(../_img/stripes_green.png); color: white; }
 .register { float: right; }
@@ -155,14 +155,23 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 
 #sponsors, #hasgeek { display: none; }
 
-#content h2 { font-size: 14px; }
 .strip { margin: 2em auto; }
 .strip h2 {
+	font-size: 21px;
+	line-height: 28px;
+	margin-bottom: 1.1em;
+}
+.strip h3 {
 	font-size: 12px;
 	margin-top: 2em;
 	color: gray;
 	color: rgba(255,255,255,0.3);
 }
+.strip p img { max-width: 100%; height: auto; margin-bottom: 0.4em; }
+.strip .images { text-align: center; margin-bottom: 2em; overflow: auto; }
+.strip .n3 { float: left; max-width: 32.5%; }
+.strip .n3 + .n3 { float: none;  }
+.strip .first + .n3 + .n3 { float: right; }
 
 #about-event {
 	margin: 0;

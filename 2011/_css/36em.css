@@ -63,7 +63,6 @@
 		padding: 0;
 		margin: 0 auto;
 	}
-	.strip { margin: 3em auto; }
 	#content .container,
 	#footer .container {
 		clear: both;
@@ -71,6 +70,13 @@
 		padding: 0 3em 0 3em;
 		margin-left: 0;
 	}
+	
+	.strip { margin: 3em auto; }
+	.strip h2 {
+		font-size: 24px;
+		line-height: 36px;
+	}
+	
 	
 	#about-event {
 		margin: 3em auto;

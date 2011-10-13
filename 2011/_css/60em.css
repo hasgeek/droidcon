@@ -64,6 +64,11 @@
 	.tickets a dd { width: 30%; margin-bottom: 1.5em; }
 	
 	.strip { margin: 4em auto; }
+	.strip h2 {
+		font-size: 36px;
+		line-height: 48px;
+	}
+	
 	#about-event .box { margin: 0 -2em; }
 	#about-event .lead { font-size: 24px; line-height: 36px; }
 	

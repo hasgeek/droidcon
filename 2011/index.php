@@ -14,7 +14,7 @@
 
 
 <div id="updates" class="strip container clearfix">
-<h2>Latest Updates</h2>
+<h3>Latest Updates</h3>
 
 <div class="blogpost summary">
 <h3><a href="#">Registrations Now Open</a></h3>

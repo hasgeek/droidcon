@@ -46,14 +46,14 @@ function page_header($active_tab = false) {
 <h2>18&#8211;19 Nov 2011, India</h2>
 </div><!-- .titles -->
 
-<p><a href="#"><span class="expanded">MLR Convention Centre, </span>Whitefield, Bangalore</a></p>
+<p><a title="Venue Information" href="venue"><span class="expanded">MLR Convention Centre, </span>Whitefield, Bangalore</a></p>
 </hgroup>
 
 <nav>
 <ul class="clearfix flexlist">
 <li<?php echo $active_tab == 1 ? ' class="active"':'' ?>><a href="#">News<span class="expanded"> &amp; Updates</span></a></li>
 <li<?php echo $active_tab == 2 ? ' class="active"':'' ?>><a href="#">Programme</a></li>
-<li<?php echo $active_tab == 3 ? ' class="active"':'' ?>><a href="#">Venue<span class="expanded"> Information</span></a></li>
+<li<?php echo $active_tab == 3 ? ' class="active"':'' ?>><a href="venue">Venue<span class="expanded"> Information</span></a></li>
 <li class="register">
 <a href="http://droidcon.doattend.com/">Register<span class="expanded"> Now</span></a>
 <div class="tickets">
@@ -96,7 +96,7 @@ function page_footer() {
 <li><a href="./">Home</a></li>
 <li><a href="#">News</a></li>
 <li><a href="#">Programme</a></li>
-<li><a href="#">Venue</a></li>
+<li><a href="venue">Venue</a></li>
 </ul>
 
 
