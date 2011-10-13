@@ -46,7 +46,7 @@ function page_header($active_tab = false) {
 <h2>18&#8211;19 Nov 2011, India</h2>
 </div><!-- .titles -->
 
-<p><span class="expanded">MLR Convention Centre, </span>Whitefield, Bangalore</p>
+<p><a href="#"><span class="expanded">MLR Convention Centre, </span>Whitefield, Bangalore</a></p>
 </hgroup>
 
 <nav>
