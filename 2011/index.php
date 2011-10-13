@@ -1,69 +1,6 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" id="" class="no-js oldie ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" id="" class="no-js oldie ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" id="" class="no-js ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html id="" class="no-js" lang="en"> <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<title>Droidcon India</title>
-<meta name="description" content="Droidcon India. 18th - 19th November 2011, Bangalore.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:700,400,400italic,700italic|Droid+Sans:400,700">
-<link rel="stylesheet" href="_css/style.combined.css">
-
-<script src="_js/libs/modernizr-2.0.6.min.js"></script>
-</head>
-<body>
-<div id="page">
-
-
-<div id="header" class="container bleed clearfix">
-<hgroup class="clearfix">
-<h3><span class="has">Has</span><span class="geek">Geek</span> Presents</h3>
-
-<ul id="parallax">
-<li id="parallax-layer-1" data-xrange="48"></li>
-<li id="parallax-layer-2" data-xrange="0"></li>
-<li id="parallax-layer-3" data-xrange="28"></li>
-<li id="parallax-layer-4" data-xrange="5"></li>
-<li id="parallax-layer-5" data-xrange="-25" data-yrange="-15"></li>
-
-</ul>
-
-<div class="titles">
-<h1><a href="./">Droidcon</a></h1>
-<h2>18&#8211;19 Nov 2011, India</h2>
-</div><!-- .titles -->
-
-<p><span class="expanded">MLR Convention Centre, </span>Whitefield, Bangalore</p>
-</hgroup>
-
-<nav>
-<ul class="clearfix flexlist">
-<li><a href="#">News<span class="expanded"> &amp; Updates</span></a></li>
-<li><a href="#">Programme</a></li>
-<li><a href="#">Venue<span class="expanded"> Information</span></a></li>
-<li class="register">
-<a href="http://droidcon.doattend.com/">Register<span class="expanded"> Now</span></a>
-<div class="tickets">
-<a href="http://droidcon.doattend.com/">	
-<dl class="clearfix">
-<dt>Early Geek</dt>
-<dd>Rs 1400</dd>
-<dt class="inactive">Super Early Geek</dt>
-<dd class="inactive">Sold Out</dd>
-</dl>
-</a>
-</div><!-- #tickets -->
-</li>
-</ul>
-</nav>
-
-<hr>
-</div><!-- #header -->
+<?php include "_template.php" ?>
+<?php html_header() ?>
+<?php page_header() ?>
 
 
 <div id="content">
@@ -154,52 +91,5 @@ and expertise and hanging out later over <code>$beverageOfChoice</code>.
 </div><!-- #content -->
 
 
-<div id="footer">
-<hr class="invisible">
-
-<div class="container clearfix">
-<h3>Brought to you by</h3>
-<ul class="partners flexlist">
-<li><a title="HasGeek" href="//hasgeek.com"><img src="_img/partners/hasgeek.png" alt="HasGeek"></a></li>
-<li><a title="Droidcon.com" href="//droidcon.com"><img src="_img/partners/droidcon_com.png" alt="Droidcon.com"></a></li>
-<li><a title="Bangalore Android User Group" href="#"><img src="_img/partners/baug.png" alt="Bangalore Android User Group"></a></li>
-<li><a title="Mobile Monday Bangalore" href="//www.momob.in"><img src="_img/partners/momo.png" alt="Mobile Monday Bangalore"></a></li>
-<li><a title="Medianama" href="//medianama.com"><img src="_img/partners/medianama.png" alt="Medianama"></a></li>
-</ul>
-
-<ul class="nav">
-<li><a href="./">Home</a></li>
-<li><a href="#">News</a></li>
-<li><a href="#">Programme</a></li>
-<li><a href="#">Venue</a></li>
-</ul>
-
-
-<!-- <p>Droidcon India is an event by the fine fellows at <a href="http://hasgeek.in/">HasGeek</a>, -->
-<!-- in association with <a href="http://droidcon.com/">Droidcon Europe</a> and the -->
-<!-- <a href="http://www.meetup.com/blrdroid/">Bangalore Android User Group</a>.</p> -->
-</div>
-</div><!-- #footer -->
-
-
-
-</div><!-- #page -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="_js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-<script src="_js/script.combined.js"></script>
-<!--[if lt IE 7 ]>
-<script src="../_js/libs/dd_belatedpng.js"></script>
-<script>DD_belatedPNG.fix("img, .png_bg");</script>
-<![endif]-->
-
-<script>
-// if (location.hostname == '') {
-// var _gaq=[['_setAccount','UA-22065789-1'],['_trackPageview']];
-// (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-// g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-// s.parentNode.insertBefore(g,s)}(document,'script'));
-// }
-</script>
-</body>
-</html>
+<?php page_footer() ?>
+<?php html_footer() ?>
