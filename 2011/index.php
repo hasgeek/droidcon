@@ -10,6 +10,8 @@
 
 	<p>Droidcon India follows HasGeek&#8217;s typical model of participant-driven selection of sessions. Session proposals are <a href="http://funnel.hasgeek.com/droidcon/">currently being accepted</a> and tickets are already <a href="http://droidcon.doattend.com">on sale</a>. Early Geek pricing expires this weekend, so hurry!</p>
 </div>
+
+<p class="images separator"><img alt="" src="_img/separators/andy-auto.png" width="552" height"222"></p>
 </div>
 
 
