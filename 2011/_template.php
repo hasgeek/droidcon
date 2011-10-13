@@ -1,4 +1,4 @@
-<?php function html_header() {
+<?php function html_header($title = '') {
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" id="droidcon-in" class="no-js oldie ie6"> <![endif]-->
@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>Droidcon India 2011</title>
+<title>Droidcon India 2011<?php if ($title) echo " - $title"; ?></title>
 <meta name="description" content="Droidcon India. 18th - 19th November 2011, Bangalore.">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 }
 
 
-function page_header() {
+function page_header($active_tab = false) {
 ?>
 <div id="page">
 
@@ -51,9 +51,9 @@ function page_header() {
 
 <nav>
 <ul class="clearfix flexlist">
-<li><a href="#">News<span class="expanded"> &amp; Updates</span></a></li>
-<li><a href="#">Programme</a></li>
-<li><a href="#">Venue<span class="expanded"> Information</span></a></li>
+<li<?php echo $active_tab == 1 ? ' class="active"':'' ?>><a href="#">News<span class="expanded"> &amp; Updates</span></a></li>
+<li<?php echo $active_tab == 2 ? ' class="active"':'' ?>><a href="#">Programme</a></li>
+<li<?php echo $active_tab == 3 ? ' class="active"':'' ?>><a href="#">Venue<span class="expanded"> Information</span></a></li>
 <li class="register">
 <a href="http://droidcon.doattend.com/">Register<span class="expanded"> Now</span></a>
 <div class="tickets">

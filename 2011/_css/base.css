@@ -101,6 +101,7 @@ nav ul {
 }
 nav li { float: left; width: 25%; }
 nav li a { display: block; text-decoration: none; color: gray; text-align: center; }
+nav .active a { color: white; border-bottom: 1px dotted #BBB; }
 nav li > a:hover { color: white; background: rgba(255,255,255,0.1); }
 nav li.register > a { background: url(../_img/stripes_green.png); color: white; }
 .register { float: right; }
