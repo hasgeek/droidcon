@@ -61,7 +61,16 @@ hr { margin: 1em 0; }
 	color: #444;
 }
 #header h3 { text-transform: lowercase; color: rgba(0,0,0,0.4); }
-#header p { position: absolute; right: 1.75em; top: 1em; }
+#header p {
+	position: absolute;
+	right: 1.75em; top: 1em;
+	padding: 0.5em; margin-top: -0.5em;
+	color: black;
+	background: rgba(0,0,0,0.1);
+	-webkit-border-radius: 0.25em;
+	   -moz-border-radius: 0.25em;
+			border-radius: 0.25em;
+}
 .has  { font-weight: bold; color: #DF5E0E; }
 .geek { font-weight: bold; color: #816894; }
 #header .titles {
