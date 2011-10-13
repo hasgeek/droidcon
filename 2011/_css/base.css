@@ -2,7 +2,7 @@
 /* = Typography = */
 /* ============== */
 body { font: 14px/24px  'Droid Sans', Helvetica, Arial, sans-serif; }
-h1,h2,h4 { font-family: 'Droid Serif', Georgia, serif; }
+/*h1,h2,h4 { font-family: 'Droid Serif', Georgia, serif; }*/
 
 p { margin: 0 0 24px; }
 pre { word-wrap: normal; overflow: auto; }
@@ -150,14 +150,37 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 #sponsors, #hasgeek { display: none; }
 
 #content h2 { font-size: 14px; }
-.strip { margin: 0 auto 2em; }
+.strip { margin: 2em auto; }
+.strip h2 {
+	font-size: 12px;
+	margin-top: 2em;
+	color: gray;
+	color: rgba(255,255,255,0.3);
+}
 
-#updates h2 { display: none; }
+#about-event {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 24px;
+}
+#about-event .box {
+	background: #333;
+	background: rgba(255,255,255,0.1);
+	padding: 3em 1.5em 1.5em;
+}
+#about-event .lead {
+	font-size: 21px;
+	line-height: 28px;
+	margin-right: 0.2em;
+}
+
 #updates hr { display: none; }
+.blogpost { margin-bottom: 2em; }
 .blogpost a:hover { text-decoration: underline; }
 .summary h3 {
 	padding: 0;
-	margin: 1.5em 0 0.3em;
+	margin: 0.5em 0 0.3em;
 	font-size: 21px;
 	font-weight: normal;
 }

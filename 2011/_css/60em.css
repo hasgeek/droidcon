@@ -63,6 +63,10 @@
 	.tickets a dt { width: 70%; margin-bottom: 1.5em; }
 	.tickets a dd { width: 30%; margin-bottom: 1.5em; }
 	
+	.strip { margin: 4em auto; }
+	#about-event .box { margin: 0 -2em; }
+	#about-event .lead { font-size: 24px; line-height: 36px; }
+	
 	#footer {
 		background: url(../_img/andy_separator.png) scroll repeat-x top center;
 		padding-top: 80px;
