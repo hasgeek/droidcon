@@ -47,7 +47,7 @@ function page_header($active_tab = false) {
 
 <div id="header" class="container bleed clearfix">
 <hgroup class="clearfix">
-<h3><span class="has">Has</span><span class="geek">Geek</span> Presents</h3>
+<h3><a href="//hasgeek.com"><span class="has">Has</span><span class="geek">Geek</span> Presents</a></h3>
 
 <ul id="parallax">
 <li id="parallax-layer-1" data-xrange="48"></li>

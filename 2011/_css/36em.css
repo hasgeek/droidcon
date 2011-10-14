@@ -27,8 +27,14 @@
 	}
 	#header h3 {
 		font-size: 1em;
-		margin: 0 -1.5em;
-		padding: 1em 1.5em;
+		width: 40px;
+		height: 33px;
+	}
+	#header h3 a {
+		display: block;
+		height: 100%;
+		text-indent: -999em; overflow: hidden;
+		background: url(../_img/hasgeek-presents_small.png) scroll no-repeat top left;
 	}
 	#header p { font-size: 1em; }
 	#header p .expanded { display: inline; }
