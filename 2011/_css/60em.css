@@ -52,14 +52,16 @@
 		left: 0;
 		height: 100%;
 		width: 100%;
-		
 		background-position: bottom center;
+		background-image: url(../_img/layers.png);
 	}
-	.no-touch.js #parallax-layer-1 { z-index: 10; background-image: url(../_img/layers/sky.png); background-position: top center; }
-	.no-touch.js #parallax-layer-2 { z-index: 20; top: 18px; background-image: url(../_img/layers/buildings.png) }
-	.no-touch.js #parallax-layer-3 { z-index: 30; top: 0; background-image: url(../_img/layers/land.png) }
-	.no-touch.js #parallax-layer-4 { z-index: 40; top: 14px; background-image: url(../_img/layers/trees.png) }
-	.no-touch.js #parallax-layer-5 { z-index: 50; top: 15px; background-image: url(../_img/layers/andy.png) }
+	.no-touch.js #parallax-layer-1 { z-index: 10; background-position: center -600px;height: 500px;top: 0px;}
+	.no-touch.js #parallax-layer-2 { z-index: 20; background-position: -30px -1215px;height: 220px;top: 100px; }
+	.no-touch.js #parallax-layer-3 { z-index: 30; background-position: 20px -1500px; height: 250px;top: 245px; }
+	.no-touch.js #parallax-layer-4 { z-index: 40; background-position: -35px -10px;  height: 180px;top: 170px;}
+	.no-touch.js #parallax-layer-5 { z-index: 50; background-position: 135px -200px; height: 390px;top: 110px;}
+/*
+*/
 	
 	nav ul { margin-top: -1px; }
 	#header nav .expanded { display: inline; }
