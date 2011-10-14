@@ -61,7 +61,7 @@
 		color: #EEE;
 	}
 	.tickets a { color: inherit; text-align: left; padding: 0; }
-	.tickets a dt { float: left;  width: 50%; clear: left; font-weight: bold; margin-bottom: 1em; }
+	.tickets a dt { float: left;  width: 50%; clear: both; font-weight: bold; margin-bottom: 1em; }
 	.tickets a dd { float: right; width: 50%; font-family: Georgia, serif; margin: 0; text-align: right;  }
 	.tickets .inactive { color: #AAB885; color: rgba(255,255,255,0.5); }
 	
@@ -70,6 +70,7 @@
 		max-width: 60em;
 		padding: 0;
 		margin: 0 auto;
+		position: relative;
 	}
 	#content .container,
 	#footer .container {
@@ -84,8 +85,25 @@
 		font-size: 24px;
 		line-height: 36px;
 	}
+	.strip .body {
+		font-size: 16px;
+		line-height: 26px;
+	}
 	.strip .separator { margin: 5em auto 0; }
 	
+	.sidebar {
+		position: absolute;
+		left: 75%;
+		right: 0;
+		top: 15em;
+		border-left: 1px solid #666;
+		border-left: 1px solid rgba(200,200,200,0.3);
+	}
+	.sidebar .widget { float: none; width: auto; }
+	.sidebar .widget + .widget { margin-top: 3em; }
+	.sidebar + .strip { margin-top: -3em; }
+	
+	.blog .blogpost + .blogpost { margin-top: 8em; }
 	
 	#about-event {
 		margin: 3em auto;
