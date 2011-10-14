@@ -103,4 +103,21 @@
 		line-height: 30px;
 	}
 	.blogpost { margin: 3em 0 4em; }
+	
+	#partners h3 {
+		position: absolute;
+		margin: 0 0 0 3em;
+		-webkit-transform-origin: left bottom;
+		   -moz-transform-origin: left bottom;
+			-ms-transform-origin: left bottom;
+			 -o-transform-origin: left bottom;
+				transform-origin: left bottom;
+		-webkit-transform: rotate(-90deg) translate(-80px, -10px);
+		   -moz-transform: rotate(-90deg) translate(-80px, -10px);
+			-ms-transform: rotate(-90deg) translate(-80px, -10px);
+			 -o-transform: rotate(-90deg) translate(-80px, -10px);
+				transform: rotate(-90deg) translate(-80px, -10px);
+	}
+	#partners ul { margin-top: 1em; margin-left: 1.5em; }
+	#partners li { width: 20%; }
 }

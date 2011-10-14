@@ -100,14 +100,6 @@ function page_footer() {
 <hr class="invisible">
 
 <div class="container clearfix">
-<h3>Brought to you by</h3>
-<ul class="partners flexlist">
-<li><a title="HasGeek" href="//hasgeek.com"><img src="_img/partners/hasgeek.png" alt="HasGeek"></a></li>
-<li><a title="Droidcon.com" href="//droidcon.com"><img src="_img/partners/droidcon_com.png" alt="Droidcon.com"></a></li>
-<li><a title="Bangalore Android User Group" href="#"><img src="_img/partners/baug.png" alt="Bangalore Android User Group"></a></li>
-<li><a title="Mobile Monday Bangalore" href="//www.momob.in"><img src="_img/partners/momo.png" alt="Mobile Monday Bangalore"></a></li>
-<li><a title="Medianama" href="//medianama.com"><img src="_img/partners/medianama.png" alt="Medianama"></a></li>
-</ul>
 
 <ul class="nav">
 <li><a href="./">Home</a></li>
@@ -123,7 +115,25 @@ function page_footer() {
 </div>
 </div><!-- #footer -->
 
-
+<div id="partners" class="clearfix">
+<div class="shadow">
+<h3>Our Partners</h3>
+<ul class="partners">
+<li><a title="Droidcon.com" href="//droidcon.com"><img src="_img/partners/droidcon_com.png" alt="Droidcon.com"></a></li>
+<li><a title="Bangalore Android User Group" href="#"><img src="_img/partners/baug.png" alt="Bangalore Android User Group"></a></li>
+<li><a title="Mobile Monday Bangalore" href="//www.momob.in"><img src="_img/partners/momo.png" alt="Mobile Monday Bangalore"></a></li>
+<li><a title="Medianama" href="//medianama.com"><img src="_img/partners/medianama.png" alt="Medianama"></a></li>
+<li><a title="Droidcon.com" href="//droidcon.com"><img src="_img/partners/droidcon_com.png" alt="Droidcon.com"></a></li>
+<li><a title="Bangalore Android User Group" href="#"><img src="_img/partners/baug.png" alt="Bangalore Android User Group"></a></li>
+<li><a title="Mobile Monday Bangalore" href="//www.momob.in"><img src="_img/partners/momo.png" alt="Mobile Monday Bangalore"></a></li>
+<li><a title="Medianama" href="//medianama.com"><img src="_img/partners/medianama.png" alt="Medianama"></a></li>
+<li><a title="Droidcon.com" href="//droidcon.com"><img src="_img/partners/droidcon_com.png" alt="Droidcon.com"></a></li>
+<li><a title="Bangalore Android User Group" href="#"><img src="_img/partners/baug.png" alt="Bangalore Android User Group"></a></li>
+<li><a title="Mobile Monday Bangalore" href="//www.momob.in"><img src="_img/partners/momo.png" alt="Mobile Monday Bangalore"></a></li>
+<li><a title="Medianama" href="//medianama.com"><img src="_img/partners/medianama.png" alt="Medianama"></a></li>
+</ul>
+</div>
+</div><!-- #partners -->
 
 </div><!-- #page -->
 
