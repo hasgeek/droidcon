@@ -1,7 +1,7 @@
 /* ============== */
 /* = Typography = */
 /* ============== */
-body { font: 14px/24px  'Droid Sans', Helvetica, Arial, sans-serif; }
+body { font: 14px/24px  'PT Sans', Helvetica, Arial, sans-serif; }
 
 p { margin: 0 0 24px; }
 pre { word-wrap: normal; overflow: auto; }
