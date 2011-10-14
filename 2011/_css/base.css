@@ -84,7 +84,7 @@ hr { margin: 1em 0; }
 	color: white;
 }
 #header h1 {
-	font: 42px/1 'League Gothic', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', 'Droid Sans', Helvetica, sans-serif;
+	font: 42px/1 'League Gothic', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', 'PT Sans', Helvetica, sans-serif;
 	font-weight: normal;
 	margin-bottom: 0;
 	text-transform: uppercase;
@@ -98,7 +98,8 @@ hr { margin: 1em 0; }
 
 nav ul {
 	margin: -1px 0 0;
-	font: 1em/3 'Droid Sans', Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 3em;
 	text-align: center;
 	background: url(../_img/stripes.png) repeat scroll;
 	border: 1px solid #111;
@@ -150,7 +151,6 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	    box-shadow: 0px 3px 0px green;
 	
 	text-decoration: none;
-	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
 }
 
 #sponsors, #hasgeek { display: none; }
