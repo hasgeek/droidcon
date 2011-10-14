@@ -68,14 +68,18 @@ function page_header($active_tab = false) {
 
 <nav>
 <ul class="clearfix flexlist">
-<li<?php echo $active_tab == 1 ? ' class="active"':'' ?>><a href="#">News<span class="expanded"> &amp; Updates</span></a></li>
-<li<?php echo $active_tab == 2 ? ' class="active"':'' ?>><a href="#">Programme</a></li>
+<li<?php echo $active_tab == 1 ? ' class="active"':'' ?>><a href="blog.php">News<span class="expanded"> &amp; Updates</span></a></li>
+<li<?php echo $active_tab == 2 ? ' class="active"':'' ?>><a href="http://funnel.hasgeek.com/droidcon/">Programme</a></li>
 <li<?php echo $active_tab == 3 ? ' class="active"':'' ?>><a href="venue">Venue<span class="expanded"> Information</span></a></li>
 <li class="register">
 <a href="http://droidcon.doattend.com/">Register<span class="expanded"> Now</span></a>
 <div class="tickets">
 <a href="http://droidcon.doattend.com/">	
 <dl class="clearfix">
+<!-- <dt class="inactive">At Venue</dt>
+<dd class="inactive">Rs 2200</dd>
+<dt class="inactive">Regular</dt>
+<dd class="inactive">Rs 1800</dd> -->
 <dt>Early Geek</dt>
 <dd>Rs 1400</dd>
 <dt class="inactive">Super Early Geek</dt>
@@ -103,7 +107,7 @@ function page_footer() {
 
 <ul class="nav">
 <li><a href="./">Home</a></li>
-<li><a href="#">News</a></li>
+<li><a href="blog.php">News</a></li>
 <li><a href="#">Programme</a></li>
 <li><a href="venue">Venue</a></li>
 </ul>
