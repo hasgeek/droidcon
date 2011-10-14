@@ -51,10 +51,10 @@ function page_header($active_tab = false) {
 
 <ul id="parallax">
 <li id="parallax-layer-1" data-xrange="48"></li>
-<li id="parallax-layer-2" data-xrange="0"></li>
-<li id="parallax-layer-3" data-xrange="28"></li>
+<li id="parallax-layer-2" data-xrange="28"></li>
+<li id="parallax-layer-3" data-xrange="0"></li>
 <li id="parallax-layer-4" data-xrange="5"></li>
-<li id="parallax-layer-5" data-xrange="-25" data-yrange="-15"></li>
+<li id="parallax-layer-5" data-xrange="-25" data-yrange="-13"></li>
 
 </ul>
 

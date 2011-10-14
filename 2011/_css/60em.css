@@ -54,8 +54,8 @@
 		background-position: bottom center;
 	}
 	.no-touch.js #parallax-layer-1 { z-index: 10; background-image: url(../_img/layers/sky.png); background-position: top center; }
-	.no-touch.js #parallax-layer-2 { z-index: 20; top: 0; background-image: url(../_img/layers/land.png) }
-	.no-touch.js #parallax-layer-3 { z-index: 30; top: 18px; background-image: url(../_img/layers/buildings.png) }
+	.no-touch.js #parallax-layer-2 { z-index: 20; top: 18px; background-image: url(../_img/layers/buildings.png) }
+	.no-touch.js #parallax-layer-3 { z-index: 30; top: 0; background-image: url(../_img/layers/land.png) }
 	.no-touch.js #parallax-layer-4 { z-index: 40; top: 14px; background-image: url(../_img/layers/trees.png) }
 	.no-touch.js #parallax-layer-5 { z-index: 50; top: 15px; background-image: url(../_img/layers/andy.png) }
 	
