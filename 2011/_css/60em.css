@@ -21,7 +21,9 @@
 		margin: 18em 1.7em 0 auto;
 		width: 19.5em;
 	}
-	#header h1 { font-size: 96px; }
+	#header h1 { font-size: 64px; }
+	.wf-leaguegothicregular-n4-active #header h1 { font-size: 100px; }
+	#header h2 { font-size: 27px; }
 	
 	.no-touch.js #header hgroup { background: none; overflow: hidden; }
 	.no-touch.js #header .titles { position: relative; z-index: 10; }

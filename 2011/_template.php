@@ -14,6 +14,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700">
+<script type="text/javascript">
+WebFontConfig = {
+	custom: {
+		families: ['LeagueGothicRegular'],
+	    urls: [ '_css/league_gothic.css' ]
+	},
+};
+(function() {
+	var wf = document.createElement('script');
+	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+})();
+</script>
 <link rel="stylesheet" href="_css/style.combined.css">
 
 <script src="_js/libs/modernizr-2.0.6.min.js"></script>

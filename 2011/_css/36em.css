@@ -36,7 +36,9 @@
 		margin: 11em 5% 0 auto;
 		width: 16em;
 	}
-	#header h1 { font-size: 72px; }
+	#header h1 { font-size: 53px; }
+	.wf-leaguegothicregular-n4-active #header h1 { font-size: 82px; }
+	#header h2 { font-size: 22px; }
 	
 	nav ul { margin-top: 0; border-top: none; font-size: 18px; }
 	.register { position: relative; }
