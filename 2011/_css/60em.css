@@ -23,10 +23,10 @@
 	}
 	#header h1 { font-size: 96px; }
 	
-	.js #header hgroup { background: none; overflow: hidden; }
-	.js #header .titles { position: relative; z-index: 10; }
-	.js #header h3 { position: relative; z-index: 5; }
-	.js	#parallax {
+	.no-touch.js #header hgroup { background: none; overflow: hidden; }
+	.no-touch.js #header .titles { position: relative; z-index: 10; }
+	.no-touch.js #header h3 { position: relative; z-index: 5; }
+	.no-touch.js #parallax {
 		display: block;
 		padding: 0; margin: 0;
 		z-index: 0;
@@ -51,11 +51,11 @@
 		
 		background-position: bottom center;
 	}
-	.js #parallax-layer-1 { z-index: 10; background-image: url(../_img/layers/sky.png); background-position: top center; }
-	.js #parallax-layer-2 { z-index: 20; top: 0; background-image: url(../_img/layers/land.png) }
-	.js #parallax-layer-3 { z-index: 30; top: 18px; background-image: url(../_img/layers/buildings.png) }
-	.js #parallax-layer-4 { z-index: 40; top: 14px; background-image: url(../_img/layers/trees.png) }
-	.js #parallax-layer-5 { z-index: 50; top: 15px; background-image: url(../_img/layers/andy.png) }
+	.no-touch.js #parallax-layer-1 { z-index: 10; background-image: url(../_img/layers/sky.png); background-position: top center; }
+	.no-touch.js #parallax-layer-2 { z-index: 20; top: 0; background-image: url(../_img/layers/land.png) }
+	.no-touch.js #parallax-layer-3 { z-index: 30; top: 18px; background-image: url(../_img/layers/buildings.png) }
+	.no-touch.js #parallax-layer-4 { z-index: 40; top: 14px; background-image: url(../_img/layers/trees.png) }
+	.no-touch.js #parallax-layer-5 { z-index: 50; top: 15px; background-image: url(../_img/layers/andy.png) }
 	
 	nav ul { margin-top: -1px; }
 	#header nav .expanded { display: inline; }
