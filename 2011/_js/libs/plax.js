@@ -225,11 +225,11 @@
       if (layer.invert != true) {
         layer.obj
           .css('left',layer.startX + (layer.xRange*hRatio))
-          .css('top', layer.startY + (layer.yRange*vRatio))
+          //.css('top', layer.startY + (layer.yRange*vRatio))
       } else {
         layer.obj
           .css('left',layer.startX - (layer.xRange*hRatio))
-          .css('top', layer.startY - (layer.yRange*vRatio))
+          //.css('top', layer.startY - (layer.yRange*vRatio))
       }
     }
   }
