@@ -15,6 +15,24 @@
 </div>
 
 
+<div id="sponsors" class="sidebar clearfix">
+<h2>Sponsors</h2>
+
+<ul class="clearfix">
+<li><a href="#" title="MobStac     "><img alt="MobStac     " src="_img/sponsors/mobstac.png"></a></li>
+<li><a href="#" title="HTCDev      "><img alt="HTCDev      " src="_img/sponsors/htcdev.png"></a></li>
+<li><a href="#" title="Cisco       "><img alt="Cisco       " src="_img/sponsors/cisco.png"></a></li>
+<li><a href="#" title="Micromax    "><img alt="Micromax    " src="_img/sponsors/micromax.jpg"></a></li>
+<li><a href="#" title="NovoJuris   "><img alt="NovoJuris   " src="_img/sponsors/novojuris.png"></a></li>
+<li><a href="#" title="FusionCharts"><img alt="FusionCharts" src="_img/sponsors/fusioncharts.jpg"></a></li>
+<li><a href="#" title="Talk.to     "><img alt="Talk.to     " src="_img/sponsors/talkto.png"></a></li>
+</ul>
+
+<hr>
+</div><!-- #sponsors -->
+
+
+
 <div id="updates" class="strip container clearfix">
 <h3>Latest Updates</h3>
 
@@ -49,22 +67,6 @@ the existing submissions and vote for the ones you want to see. <a class="timest
 <hr>
 </div><!-- #updates -->
 
-
-<div id="sponsors" class="container clearfix">
-<h2>Sponsors</h2>
-
-<ul class="clearfix">
-<li><a href="#" title="MobStac     "><img alt="MobStac     " src="_img/sponsors/mobstac.png"></a></li>
-<li><a href="#" title="HTCDev      "><img alt="HTCDev      " src="_img/sponsors/htcdev.png"></a></li>
-<li><a href="#" title="Cisco       "><img alt="Cisco       " src="_img/sponsors/cisco.png"></a></li>
-<li><a href="#" title="Micromax    "><img alt="Micromax    " src="_img/sponsors/micromax.jpg"></a></li>
-<li><a href="#" title="NovoJuris   "><img alt="NovoJuris   " src="_img/sponsors/novojuris.png"></a></li>
-<li><a href="#" title="FusionCharts"><img alt="FusionCharts" src="_img/sponsors/fusioncharts.jpg"></a></li>
-<li><a href="#" title="Talk.to     "><img alt="Talk.to     " src="_img/sponsors/talkto.png"></a></li>
-</ul>
-
-<hr>
-</div><!-- #sponsors -->
 
 
 <div id="hasgeek" class="strip container clearfix">

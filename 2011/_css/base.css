@@ -166,7 +166,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	text-decoration: none;
 }
 
-#sponsors, #hasgeek { display: none; }
+#hasgeek { display: none; }
 
 .strip { margin: 2em auto; }
 .strip h2 {
@@ -188,6 +188,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 .strip .separator { margin: 4em auto 0; }
 
 .sidebar {
+	margin-top: 3em;
 	margin-bottom: 3em;
 	padding: 1em 1.5em;
 	border: 1px solid #666;
@@ -261,21 +262,14 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 #sponsors li {
 	list-style-type: none;
 	float: left;
-	width: 45%;
-	height: 5em;
-	margin: 1em 2.5% 1em 0;
+	width: 50%;
+	height: 6em;
+	margin: 0;
 	padding: 0;
 	text-align: left;
 }
-#sponsors li:nth-child(odd)  { width: 45%; margin: 1em 10% 1em 0; }
-#sponsors li:nth-child(even) { width: 45%; margin: 1em 0; }
-#sponsors li img {
-	vertical-align: middle;
-	max-width: 100%;
-	width: auto;
-	height: auto;
-	max-height: 100%;
-}
+#sponsors li:nth-child(even) { text-align: right; }
+#sponsors li img { max-width: 90%; max-height: 90%; width: auto; height: auto; vertical-align: middle; }
 #sponsors hr { display: none; }
 
 

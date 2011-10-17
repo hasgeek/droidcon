@@ -27,29 +27,6 @@
 </div><!-- .container -->
 
 
-<div class="sidebar clearfix">
-<div class="widget">
-	<h3>Archives</h3>
-	<dl>
-	<dt><a href="#">2011</a></dt>
-	<dd><a href="#">November</a></dd>
-	<dd><a href="#">October</a></dd>
-	<dd><a href="#">September</a></dd>
-	</dl>
-</div><!-- .widget -->
-
-<!-- <hr> -->
-
-<div class="widget">
-	<h3>Categories</h3>
-	<ul>
-	<li><a href="#">News</a></li>
-	<li><a href="#">Droidcon 2011</a></li>
-	<li><a href="#">Sessions</a></li>
-	<li><a href="#">Sponsors</a></li>
-	</ul>
-</div><!-- .widget -->
-</div><!-- .blog-sidebar -->
 
 
 <div class="blog container strip clearfix">
