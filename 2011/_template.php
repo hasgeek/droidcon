@@ -105,12 +105,12 @@ function page_footer() {
 
 <div class="container clearfix">
 
-<ul class="nav">
+<!-- <ul class="nav">
 <li><a href="./">Home</a></li>
 <li><a href="blog.php">News</a></li>
 <li><a href="#">Programme</a></li>
 <li><a href="venue">Venue</a></li>
-</ul>
+</ul> -->
 
 
 <!-- <p>Droidcon India is an event by the fine fellows at <a href="http://hasgeek.in/">HasGeek</a>, -->
