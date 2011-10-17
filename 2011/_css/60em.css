@@ -27,7 +27,7 @@
 	#header h3 { width: 60px; height: 50px; }
 	#header h3 a { background-image: url(../_img/hasgeek-presents.png); }
 	
-	.no-touch.js #header hgroup { background: none; overflow: hidden; }
+/*	.no-touch.js #header hgroup { background: none; overflow: hidden; }
 	.no-touch.js #header .titles { position: relative; z-index: 10; }
 	.no-touch.js #header h3 { position: relative; z-index: 5; }
 	.no-touch.js #parallax {
@@ -60,7 +60,6 @@
 	.no-touch.js #parallax-layer-3 { z-index: 30; background-position: 20px -1500px; height: 250px;top: 245px; }
 	.no-touch.js #parallax-layer-4 { z-index: 40; background-position: -35px -10px;  height: 180px;top: 170px;}
 	.no-touch.js #parallax-layer-5 { z-index: 50; background-position: 135px -200px; height: 390px;top: 110px;}
-/*
 */
 	
 	nav ul { margin-top: -1px; }

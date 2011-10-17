@@ -141,9 +141,9 @@ function page_footer() {
 
 </div><!-- #page -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="_js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-<script src="_js/script.combined.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+<!-- <script>window.jQuery || document.write('<script src="_js/libs/jquery-1.6.2.min.js"><\/script>')</script> -->
+<!-- <script src="_js/script.combined.js"></script> -->
 <!--[if lt IE 7 ]>
 <script src="../_js/libs/dd_belatedpng.js"></script>
 <script>DD_belatedPNG.fix("img, .png_bg");</script>
