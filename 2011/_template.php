@@ -76,14 +76,14 @@ function page_header($active_tab = false) {
 <div class="tickets">
 <a href="http://droidcon.doattend.com/">	
 <dl class="clearfix">
-<!-- <dt class="inactive">At Venue</dt>
+<dt>Regular</dt>
+<dd>Rs 1800</dd>
+<dt class="inactive">At Venue</dt>
 <dd class="inactive">Rs 2200</dd>
-<dt class="inactive">Regular</dt>
-<dd class="inactive">Rs 1800</dd> -->
-<dt>Early Geek</dt>
+<!-- <dt>Early Geek</dt>
 <dd>Rs 1400</dd>
 <dt class="inactive">Super Early Geek</dt>
-<dd class="inactive">Sold Out</dd>
+<dd class="inactive">Sold Out</dd> -->
 </dl>
 </a>
 </div><!-- #tickets -->
