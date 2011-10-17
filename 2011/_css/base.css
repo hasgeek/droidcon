@@ -104,18 +104,20 @@ nav ul {
 	margin: -1px 0 0;
 	font-size: 1em;
 	line-height: 3em;
+	height: 3em;
 	text-align: center;
 	background: url(../_img/stripes.png) repeat scroll;
 	border: 1px solid #111;
 	border-left: none;
 	border-right: none;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-nav li { float: left; width: 20%; }
-nav li a { display: block; text-decoration: none; color: gray; text-align: center; }
+nav li { float: left; width: 18.75%; height: 100%; }
+nav li a { display: block; height: 100%; text-decoration: none; color: gray; text-align: center; }
 nav .active a { color: white; border-bottom: 1px solid #666; }
 nav li > a:hover { color: white; background: rgba(255,255,255,0.1); }
 nav li.register > a { background: url(../_img/stripes_green.png); color: white; }
-.register { float: right; }
+.register { float: right; width: 25%; }
 .tickets { display: none; }
 
 
@@ -127,13 +129,19 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	-webkit-box-orient: horizontal;
 	   -moz-box-orient: horizontal;
 			box-orient: horizontal;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .flexbox .flexlist > li {
 	float: none;
+	width: auto;
 	-webkit-box-flex: 1;
 	   -moz-box-flex: 1;
 			box-flex: 1;  
+}
+.flexbox .flexlist > li.register {
+	width: 25%;
+	-webkit-box-flex: 0;
+	   -moz-box-flex: 0;
+			box-flex: 0;
 }
 
 
@@ -198,18 +206,19 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 .sidebar li { display: list-item; list-style-type: circle; margin-left: 1.3em; }
 
 #about-event {
+	max-width: 100%;
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
-	line-height: 24px;
 }
 #about-event .box {
+	font-size: 16px;
+	line-height: 24px;
 	background: #333;
 	background: rgba(200,200,200,0.1);
 	padding: 3em 1.5em 1.5em;
 	border: 1px solid rgba(100, 100, 100, 0.2);
-  border-radius: 2px;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+	border-radius: 2px;
+	text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 #about-event .lead {
 	font-size: 21px;

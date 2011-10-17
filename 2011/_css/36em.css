@@ -109,12 +109,12 @@
 	
 	#about-event {
 		margin: 3em auto;
-		line-height: 26px;
 	}
 	#about-event .box {
 		background: #333;
 		background: rgba(255,255,255,0.1);
 		padding: 2em 2em 0.5em;
+		line-height: 26px;
 	}
 	#about-event .lead {
 		display: block;
