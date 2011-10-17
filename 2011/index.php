@@ -16,16 +16,26 @@
 
 
 <div id="sponsors" class="sidebar clearfix">
-<h2>Sponsors</h2>
+<h4>Platinum Sponsor</h4>
+<p><a href="#" title="Erskine"><img alt="Erskine" src="_img/sponsors/erskine.png"></a></p>
 
-<ul class="clearfix">
-<li><a href="#" title="MobStac     "><img alt="MobStac     " src="_img/sponsors/mobstac.png"></a></li>
-<li><a href="#" title="HTCDev      "><img alt="HTCDev      " src="_img/sponsors/htcdev.png"></a></li>
-<li><a href="#" title="Cisco       "><img alt="Cisco       " src="_img/sponsors/cisco.png"></a></li>
-<li><a href="#" title="Micromax    "><img alt="Micromax    " src="_img/sponsors/micromax.jpg"></a></li>
-<li><a href="#" title="NovoJuris   "><img alt="NovoJuris   " src="_img/sponsors/novojuris.png"></a></li>
+
+<h4>Gold Sponsors</h4>
+<ul class="gold clearfix">
+<li><a href="#" title="MobStac"><img alt="MobStac" src="_img/sponsors/mobstac.png"></a></li>
+<li><a href="#" title="Cisco"><img alt="Cisco" src="_img/sponsors/cisco.png"></a></li>
+<li><a href="#" title="Sony Erricson"><img alt="Sony Erricson" src="_img/sponsors/sonyericsson.png"></a></li>
+<li><a href="#" title="NovoJuris"><img alt="NovoJuris" src="_img/sponsors/novojuris.png"></a></li>
+</ul>
+
+<h4>Silver Sponsors</h4>
+<ul class="silver clearfix">
+<li><a href="#" title="MobStac"><img alt="MobStac" src="_img/sponsors/mobstac.png"></a></li>
+<li><a href="#" title="HTCDev"><img alt="HTCDev" src="_img/sponsors/htcdev.png"></a></li>
+<li><a href="#" title="Micromax"><img alt="Micromax" src="_img/sponsors/micromax.jpg"></a></li>
+<li><a href="#" title="NovoJuris"><img alt="NovoJuris" src="_img/sponsors/novojuris.png"></a></li>
 <li><a href="#" title="FusionCharts"><img alt="FusionCharts" src="_img/sponsors/fusioncharts.jpg"></a></li>
-<li><a href="#" title="Talk.to     "><img alt="Talk.to     " src="_img/sponsors/talkto.png"></a></li>
+<li><a href="#" title="Talk.to"><img alt="Talk.to" src="_img/sponsors/talkto.png"></a></li>
 </ul>
 
 <hr>

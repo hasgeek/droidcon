@@ -257,19 +257,25 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	margin-left: 0.5em;
 }
 
-#sponsors { margin-bottom: 2em; }
-#sponsors ul { margin: 0; padding: 0; }
+#sponsors { margin-bottom: 2em; text-align: center; padding-bottom: 2em; }
+#sponsors h4 { color: gray; text-transform: uppercase; font-size: 12px; font-weight: normal; }
+#sponsors ul {
+	margin: 0 auto;
+	padding: 0;
+}
+/*#sponsors .silver { width: 80%; }*/
 #sponsors li {
 	list-style-type: none;
-	float: left;
-	width: 50%;
-	height: 6em;
 	margin: 0;
-	padding: 0;
-	text-align: left;
+	padding: 1em 0;
+	text-align: center;
+	vertical-align: middle;
+	outline: 1px solid #EEE;
+	background: white;
 }
-#sponsors li:nth-child(even) { text-align: right; }
+#sponsors .silver li { float: left; width: 33%; height: 3em; }
 #sponsors li img { max-width: 90%; max-height: 90%; width: auto; height: auto; vertical-align: middle; }
+#sponsors p img { max-width: 100%; height: auto; vertical-align: middle; }
 #sponsors hr { display: none; }
 
 
