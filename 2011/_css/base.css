@@ -108,7 +108,7 @@ nav ul {
 	border-left: none;
 	border-right: none;
 }
-nav li { float: left; width: 25%; }
+nav li { float: left; width: 20%; }
 nav li a { display: block; text-decoration: none; color: gray; text-align: center; }
 nav .active a { color: white; border-bottom: 1px solid #666; }
 nav li > a:hover { color: white; background: rgba(255,255,255,0.1); }

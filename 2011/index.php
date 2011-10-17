@@ -1,6 +1,6 @@
 <?php include "_template.php" ?>
 <?php html_header() ?>
-<?php page_header() ?>
+<?php page_header(0) ?>
 
 
 <div id="content">

@@ -65,8 +65,8 @@
 	nav ul { margin-top: -1px; }
 	#header nav .expanded { display: inline; }
 	.tickets { font-size: 14px; }
-	.tickets a dt { width: 65%; margin-bottom: 1.5em; }
-	.tickets a dd { width: 35%; margin-bottom: 1.5em; }
+	.tickets a dt { width: 50%; margin-bottom: 1.5em; }
+	.tickets a dd { width: 50%; margin-bottom: 1.5em; }
 	
 	#content { position: static; }
 	.strip { margin: 4em auto; }

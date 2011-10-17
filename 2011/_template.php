@@ -49,14 +49,13 @@ function page_header($active_tab = false) {
 <hgroup class="clearfix">
 <h3><a href="//hasgeek.com"><span class="has">Has</span><span class="geek">Geek</span> Presents</a></h3>
 
-<ul id="parallax">
+<!-- <ul id="parallax">
 <li id="parallax-layer-1" data-xrange="48"></li>
 <li id="parallax-layer-2" data-xrange="28"></li>
 <li id="parallax-layer-3" data-xrange="0"></li>
 <li id="parallax-layer-4" data-xrange="5"></li>
 <li id="parallax-layer-5" data-xrange="-25" data-yrange="-13"></li>
-
-</ul>
+</ul> -->
 
 <div class="titles">
 <h1><a href="./">Droidcon</a></h1>
@@ -68,18 +67,19 @@ function page_header($active_tab = false) {
 
 <nav>
 <ul class="clearfix flexlist">
-<li<?php echo $active_tab == 1 ? ' class="active"':'' ?>><a href="blog.php">News<span class="expanded"> &amp; Updates</span></a></li>
-<li<?php echo $active_tab == 2 ? ' class="active"':'' ?>><a href="http://funnel.hasgeek.com/droidcon/">Programme</a></li>
-<li<?php echo $active_tab == 3 ? ' class="active"':'' ?>><a href="venue">Venue<span class="expanded"> Information</span></a></li>
+<li<?php echo $active_tab === 0 ? ' class="active"':'' ?>><a href="./">Home</a></li>
+<li<?php echo $active_tab === 1 ? ' class="active"':'' ?>><a href="blog.php">News<span class="expanded"> &amp; Updates</span></a></li>
+<li<?php echo $active_tab === 2 ? ' class="active"':'' ?>><a href="http://funnel.hasgeek.com/droidcon/">Programme</a></li>
+<li<?php echo $active_tab === 3 ? ' class="active"':'' ?>><a href="venue">Venue<span class="expanded"> Information</span></a></li>
 <li class="register">
 <a href="http://droidcon.doattend.com/">Register<span class="expanded"> Now</span></a>
 <div class="tickets">
 <a href="http://droidcon.doattend.com/">	
 <dl class="clearfix">
 <dt>Regular</dt>
-<dd>Rs 1800</dd>
+<dd><span class="expanded">Rs </span>1800</dd>
 <dt class="inactive">At Venue</dt>
-<dd class="inactive">Rs 2200</dd>
+<dd class="inactive"><span class="expanded">Rs </span>2200</dd>
 <!-- <dt>Early Geek</dt>
 <dd>Rs 1400</dd>
 <dt class="inactive">Super Early Geek</dt>
