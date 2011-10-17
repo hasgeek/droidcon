@@ -14,8 +14,10 @@
 	
 	#header hgroup {
 		height: 35em;
-		background: url(../_img/illos-day.jpg) no-repeat bottom center;
-		background-size: 90em auto;
+		background: url(../_img/illos-day_large.jpg) no-repeat bottom center;
+		-webkit-background-size: 90em auto;
+		   -moz-background-size: 90em auto;
+				background-size: 90em auto;
 	}
 	#header .titles {
 		margin: 18em 1.7em 0 auto;

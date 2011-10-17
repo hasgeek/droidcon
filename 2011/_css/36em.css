@@ -21,9 +21,11 @@
 
 	#header { margin: 0 auto; }
 	#header hgroup {
-		height: 24.14em;
+		height: 23.8em;
 		background: url(../_img/illos-day.jpg) no-repeat bottom center;
-		background-size: 60em auto;
+		-webkit-background-size: 60em auto;
+		   -moz-background-size: 60em auto;
+				background-size: 60em auto;
 	}
 	#header h3 {
 		font-size: 1em;

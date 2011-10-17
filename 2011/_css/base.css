@@ -49,8 +49,10 @@ hr { margin: 1em 0; }
 	position: relative;
 	padding: 0 1.5em;
 	height: 14.2em;
-	background: url(../_img/illos-day.jpg) no-repeat bottom center;
-	background-size: 36em auto;
+	background: url(../_img/illos-day_small.jpg) no-repeat bottom center;
+	-webkit-background-size: 36em auto;
+	   -moz-background-size: 36em auto;
+			background-size: 36em auto;
 	margin: 0;
 }
 #header h3,
