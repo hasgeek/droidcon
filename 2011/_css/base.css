@@ -263,18 +263,35 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	margin: 0 auto;
 	padding: 0;
 }
-/*#sponsors .silver { width: 80%; }*/
 #sponsors li {
 	list-style-type: none;
 	margin: 0;
-	padding: 1em 0;
+	padding: 0;
+	height: 7em;
+	line-height: 7em;
 	text-align: center;
 	vertical-align: middle;
 	outline: 1px solid #EEE;
 	background: white;
 }
-#sponsors .silver li { float: left; width: 33%; height: 3em; }
-#sponsors li img { max-width: 90%; max-height: 90%; width: auto; height: auto; vertical-align: middle; }
+#sponsors .silver li { float: left; width: 33%; height: 4em; line-height: 4em; }
+#sponsors a { display: block; vertical-align: middle; }
+#sponsors li a {
+	height: 100%; 
+	-webkit-box-shadow: #E6FBDF 0 0 0 inset, #B3FA71 0 0 0 inset;
+   	   -moz-box-shadow: #E6FBDF 0 0 0 inset, #B3FA71 0 0 0 inset;
+			box-shadow: #E6FBDF 0 0 0 inset, #B3FA71 0 0 0 inset;
+	-webkit-transition: all 0.1s linear;
+	   -moz-transition: all 0.1s linear;
+			transition: all 0.1s linear;
+}
+#sponsors li a:hover {
+	-webkit-box-shadow: #E6FBDF 0 0 1.5em inset, #B3FA71 0 0 0.75em inset;
+   	   -moz-box-shadow: #E6FBDF 0 0 1.5em inset, #B3FA71 0 0 0.75em inset;
+			box-shadow: #E6FBDF 0 0 1.5em inset, #B3FA71 0 0 0.75em inset;
+}
+#sponsors li img { max-width: 90%; max-height: 80%; width: auto; height: auto; }
+#sponsors .silver li img { max-width: 80%; }
 #sponsors p img { max-width: 100%; height: auto; vertical-align: middle; }
 #sponsors hr { display: none; }
 
