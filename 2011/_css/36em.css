@@ -126,6 +126,16 @@
 	
 	#sponsors .silver li { width: 50%; height: 4em; }
 	
+	.schedule {
+		margin: 0 -35% 3em 0;
+		
+		border: 1px solid rgba(200,200,200,0.2);
+		-webkit-border-radius: 0.3em;
+		   -moz-border-radius: 0.3em;
+				border-radius: 0.3em;
+		-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	}
+	
 	.blogpost { margin: 3em 0 4em; }
 	
 	#partners h3 {

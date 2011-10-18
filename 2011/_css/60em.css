@@ -95,6 +95,12 @@
 	#about-event .box { margin: 0 -2em; }
 	#about-event .lead { font-size: 24px; line-height: 36px; }
 	
+	.schedule table { word-break: normal; }
+	.schedule .expanded { display: inline; }
+	.schedule td { padding: 1em; }
+	.schedule .time { display: block; min-width: 6em; }
+	
+	
 	#footer {
 /*		background: url(../_img/andy_separator.png) scroll repeat-x top center;
 		padding-top: 80px;*/

@@ -296,6 +296,28 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 #sponsors hr { display: none; }
 
 
+.schedule { margin: 0 -1.5em 3em; overflow: hidden; }
+.schedule table { max-width: 100%; word-break: break-word; }
+.schedule .expanded { display: none; }
+.schedule .time { word-break: normal; text-align: center; }
+.schedule td.time { font-size: 11px; line-height: 21px; }
+.schedule .track-col { background: rgba(200,200,200,0.075); }
+.schedule .alt-col { background: none; }
+.schedule thead { border-bottom: 2px solid #121212; background: rgba(255,255,255,0.075); }
+.schedule tr { border-bottom: 1px solid #121212; }
+.schedule tr:last-child { border-bottom: none; }
+.schedule tbody tr:hover { background: black; }
+.schedule th,
+.schedule td { padding: 1em 0.5em; font-size: 13px; line-height: 18px; }
+.schedule .speaker {
+	display: block;
+	margin: 0.5em 0 0;
+	font-size: 12px;
+	color: gray;
+}
+.schedule .break td { text-align: center; vertical-align: middle; background: rgba(0,0,0,0.3); }
+
+
 #hasgeek h2 { font-size: 24px; }
 
 
