@@ -343,18 +343,10 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 
 
 #partners {
-	border-top: 1px solid #000;
-	background: white;
 	overflow: hidden;
+	background: url(../_img/footer-slice.png) repeat-x scroll top left;
 }
-#partners .shadow {
-	overflow: hidden;
-	margin: 0 -10px -7px;
-	padding:0  10px  7px;
-	-webkit-box-shadow: inset 0 3px 10px #121212;
-   	   -moz-box-shadow: inset 0 3px 10px #121212;
-			box-shadow: inset 0 3px 10px #121212;
-}
+#partners .shadow {}
 #partners h3 { font-size: 1em; margin: 1em 0 0.5em 1.5em; color: gray;  }
 #partners ul { margin: 0 0 1em 0; width: auto; padding: 0; overflow: auto;  }
 #partners li {
