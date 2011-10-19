@@ -306,10 +306,6 @@ FileETag None
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
-   
-  RewriteRule ^$ %{REQUEST_URI}2011 [R,L]
-  RewriteCond %{REQUEST_URI} ^(.+)/SponsorKit.pdf$
-  RewriteRule ^SponsorKit.pdf$ %1/2011/SponsorKit.pdf [R,L]
 </IfModule>
 
 

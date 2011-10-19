@@ -69,7 +69,7 @@ function page_header($active_tab = false) {
 <nav>
 <ul class="clearfix flexlist">
 <li<?php echo $active_tab === 0 ? ' class="active"':'' ?>><a href="./">Home</a></li>
-<li<?php echo $active_tab === 1 ? ' class="active"':'' ?>><a href="blog.php">News<span class="expanded"> &amp; Updates</span></a></li>
+<li<?php echo $active_tab === 1 ? ' class="active"':'' ?>><a href="blog">News<span class="expanded"> &amp; Updates</span></a></li>
 <li<?php echo $active_tab === 2 ? ' class="active"':'' ?>><a href="schedule">Programme</a></li>
 <li<?php echo $active_tab === 3 ? ' class="active"':'' ?>><a href="venue">Venue<span class="expanded"> Information</span></a></li>
 <li class="register">
