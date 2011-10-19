@@ -8,7 +8,7 @@
 <h3>The Droidcon India Blog</h3>
 
 <div class="blogpost detail">
-<h2 class="title"><a href="#">Droidcon Comes to India</a></h2>
+<h2 class="title"><a href="#">Droidcon comes to India</a></h2>
 <h4 class="date">13 Oct, 2011</h4>
 <div class="body">
 	<p>HasGeek&#8217;s next event is a big one. We&#8217;re bringing Droidcon to India!</p>
@@ -31,23 +31,23 @@
 
 <div class="blog container strip clearfix">
 <div class="blogpost detail">
-<h2 class="title"><a href="#">Registrations Now Open</a></h2>
+<h2 class="title"><a href="#">Registrations now open</a></h2>
 <h4 class="date">10 Oct, 2011</h4>
 <div class="body">
 	<p>Registrations for the first edition of Droidcon India are now open.
 	Head over to <a href="http://droidcon.doattend.com/">droidcon.doattend.com</a>,
 	our official ticketing partner and reserve your seats. There are discounts for
-	early as well as bulk registrations, so don't wait too long. <a class="timestamp" href="#">2&nbsp;days&nbsp;ago</a></p>
+	early as well as bulk registrations, so don't wait too long.</p>
 </div><!-- .body -->
 <p class="meta">Kiran <span class="timestamp">Posted on <a href="#">10th October, 2011</a>.</span></p>
 </div><!-- .blogpost -->
 <div class="blogpost detail">
-<h2 class="title"><a href="#">Calling Potential Speakers</a></h2>
+<h2 class="title"><a href="#">Calling potential speakers</a></h2>
 <h4 class="date">10 Oct, 2011</h4>
 <div class="body">
 	<p>The HasGeek funnel is now taking Droidcon India submissions.
 	Head over and enter your proposal for a talk or check out
-	the existing submissions and vote for the ones you want to see. <a class="timestamp" href="#">5&nbsp;days&nbsp;ago</a></p>
+	the existing submissions and vote for the ones you want to see.</p>
 </div><!-- .body -->
 <p class="meta">Kiran <span class="timestamp">Posted on <a href="#">10th October, 2011</a>.</span></p>
 </div><!-- .blogpost -->

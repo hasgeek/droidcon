@@ -6,36 +6,39 @@
 <div id="content">
 <div id="about-event" class="strip container clearfix">
 <div class="box">
-	<p><span class="lead">Droidcon is India&#8217;s first international Android conference and a part of the worldwide Droidcon series of events.</span> Android has been the single most successful mobile platform in the last few years and is a hotbed of innovation on hardware, software and business models. Droidcon brings together hands-on developers with various ecosystem partners. It&#8217;s now the world&#8217;s largest series of Android events, reaching out to thousands of developers.</p>
+	<p><span class="lead">Droidcon is coming to India!</span>
+        Droidcon India is part of the world’s largest series of Android conferences, with other editions in <a href="http://uk.droidcon.com/">London</a>, <a href="http://ro.droidcon.com/">Bucharest</a>, <a href="http://droidcon.be/">Brussels</a>, <a href="http://droidcon.nl/">Amsterdam</a> and <a href="http://de.droidcon.com/">Berlin</a>. It's coming to India for the first time this November 18th and 19th at the brand new <a href="/2011/venue">MLR Convention Centre in Bangalore</a>.</p>
 
-	<p>Droidcon India follows HasGeek&#8217;s typical model of participant-driven selection of sessions. Session proposals are <a href="http://funnel.hasgeek.com/droidcon/">currently being accepted</a> and tickets are already <a href="http://droidcon.doattend.com">on sale</a>. Early Geek pricing expires this weekend, so hurry!</p>
+  <p>Organized by developers for developers, the multi-track two day event will provide a rich variety of content for delegates by attracting the best speakers in the Android community. The event's community driven model enables open submissions via HasGeek’s portal and selection based on participant voting and the program committee.</p>
+
+  <p>The theme for the conference covers a range of topics that include building well designed apps, dealing with device diversity, performance optimization, NFC, Arduino, and usage in the Enterprise. The sessions also include a special talk by international speaker <a href="twitter.com/defer">Diogo Ferreira</a> of <a href="http://www.cyanogenmod.com/">CyanogenMod</a>.</p>
+
+  <p>Session proposals are currently being accepted and tickets are already on sale.</p>
 </div>
 
-<p class="images separator"><img alt="" src="_img/separators/andy-auto.png" width="552" height"222"></p>
 </div>
 
 
 <div id="sponsors" class="sidebar clearfix">
 <h4>Platinum Sponsor</h4>
-<p><a href="#" title="Erskine"><img alt="Erskine" src="_img/sponsors/erskine.png"></a></p>
+<p><a href="/2011/SponsorKit.pdf" title="Available">Position Available</a></p>
 
 
 <h4>Gold Sponsors</h4>
 <ul class="gold clearfix">
-<li><a href="#" title="MobStac"><img alt="MobStac" src="_img/sponsors/mobstac.png"></a></li>
-<li><a href="#" title="Cisco"><img alt="Cisco" src="_img/sponsors/cisco.png"></a></li>
-<li><a href="#" title="Sony Erricson"><img alt="Sony Erricson" src="_img/sponsors/sonyericsson.png"></a></li>
-<li><a href="#" title="NovoJuris"><img alt="NovoJuris" src="_img/sponsors/novojuris.png"></a></li>
+<li><a href="/2011/SponsorKit.pdf" title="Available">Position Available</a></li>
 </ul>
 
 <h4>Silver Sponsors</h4>
 <ul class="silver clearfix">
-<li><a href="#" title="MobStac"><img alt="MobStac" src="_img/sponsors/mobstac.png"></a></li>
-<li><a href="#" title="HTCDev"><img alt="HTCDev" src="_img/sponsors/htcdev.png"></a></li>
-<li><a href="#" title="Micromax"><img alt="Micromax" src="_img/sponsors/micromax.jpg"></a></li>
-<li><a href="#" title="NovoJuris"><img alt="NovoJuris" src="_img/sponsors/novojuris.png"></a></li>
-<li><a href="#" title="FusionCharts"><img alt="FusionCharts" src="_img/sponsors/fusioncharts.jpg"></a></li>
-<li><a href="#" title="Talk.to"><img alt="Talk.to" src="_img/sponsors/talkto.png"></a></li>
+<li><a href="/2011/SponsorKit.pdf" title="Available">Available</a></li>
+<li><a href="/2011/SponsorKit.pdf" title="Available">Available</a></li>
+</ul>
+
+<h4>Community Sponsors</h4>
+<ul class="community clearfix">
+<li><a href="/2011/SponsorKit.pdf" title="Available">Available</a></li>
+<li><a href="/2011/SponsorKit.pdf" title="Available">Available</a></li>
 </ul>
 
 <hr>
@@ -47,18 +50,18 @@
 <h3>Latest Updates</h3>
 
 <div class="blogpost summary">
-<h3><a href="#">Registrations Now Open</a></h3>
+<h3>Registrations Now Open</h3>
 <p>Registrations for the first edition of Droidcon India are now open.
 Head over to <a href="http://droidcon.doattend.com/">droidcon.doattend.com</a>,
 our official ticketing partner and reserve your seats. There are discounts for
-early as well as bulk registrations, so don't wait too long. <a class="timestamp" href="#">2&nbsp;days&nbsp;ago</a></p>
+early as well as bulk registrations, so don't wait too long. <a class="timestamp" href="#">9&nbsp;days&nbsp;ago</a></p>
 </div><!-- .blogpost -->
 
 <div class="blogpost summary">
-<h3><a href="#">Calling Potential Speakers</a></h3>
-<p>The HasGeek funnel is now taking Droidcon India submissions.
+<h3>Calling Potential Speakers</h3>
+<p>The <a href="http://funnel.hasgeek.com/droidcon/">HasGeek Funnel is now taking Droidcon India submissions</a>.
 Head over and enter your proposal for a talk or check out
-the existing submissions and vote for the ones you want to see. <a class="timestamp" href="#">5&nbsp;days&nbsp;ago</a></p>
+the existing submissions and vote for the ones you want to see. <a class="timestamp" href="#">9&nbsp;days&nbsp;ago</a></p>
 </div><!-- .blogpost -->
 
 <div class="blogpost headline">

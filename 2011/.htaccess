@@ -3,4 +3,5 @@
   
   RewriteRule ^venue$ %{REQUEST_URI}.php [L]
   RewriteRule ^schedule$ %{REQUEST_URI}.php [L]
+  RewriteRule ^blog$ %{REQUEST_URI}.php [L]
 </IfModule>

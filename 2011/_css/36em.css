@@ -64,7 +64,7 @@
 	}
 	.tickets a { color: inherit; text-align: left; padding: 0; }
 	.tickets a dt { float: left;  width: 50%; clear: both; font-weight: bold; margin-bottom: 1em; }
-	.tickets a dd { float: right; width: 50%; font-family: Georgia, serif; margin: 0; text-align: right;  }
+	.tickets a dd { float: right; width: 50%; margin: 0; text-align: right;  }
 	.tickets .inactive { color: #AAB885; color: rgba(255,255,255,0.5); }
 	
 	
@@ -124,7 +124,8 @@
 		line-height: 30px;
 	}
 	
-	#sponsors .silver li { width: 50%; height: 4em; }
+	#sponsors .silver li,
+	#sponsors .community li { width: 50%; height: 4em; }
 	
 	.schedule {
 		margin: 0 -35% 3em 0;

@@ -274,7 +274,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 	outline: 1px solid #EEE;
 	background: white;
 }
-#sponsors .silver li { float: left; width: 33%; height: 4em; line-height: 4em; }
+#sponsors .silver li, #sponsors .community li { float: left; width: 33%; height: 4em; line-height: 4em; }
 #sponsors a { display: block; vertical-align: middle; }
 #sponsors li a {
 	height: 100%; 
@@ -291,7 +291,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 			box-shadow: #E6FBDF 0 0 1.5em inset, #B3FA71 0 0 0.75em inset;
 }
 #sponsors li img { max-width: 90%; max-height: 80%; width: auto; height: auto; }
-#sponsors .silver li img { max-width: 80%; }
+#sponsors .silver li img, #sponsors .community li img { max-width: 80%; }
 #sponsors p img { max-width: 100%; height: auto; vertical-align: middle; }
 #sponsors hr { display: none; }
 
