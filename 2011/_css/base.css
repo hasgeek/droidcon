@@ -140,7 +140,7 @@ nav li.register > a { background: url(../_img/stripes_green.png); color: white; 
 .flexbox .flexlist > li.register {
 	width: 25%;
 	-webkit-box-flex: 0;
-	   -moz-box-flex: 0;
+	   -moz-box-flex: 1;
 			box-flex: 0;
 }
 
