@@ -1,3 +1,4 @@
+/*
 function main () {
 	parallax();
 }
@@ -8,3 +9,4 @@ function parallax () {
 }
 
 $(main);
+*/
