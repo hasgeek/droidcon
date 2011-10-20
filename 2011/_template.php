@@ -14,6 +14,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700">
+<link rel="stylesheet" href="_css/style.combined.css">
 <script type="text/javascript">
 WebFontConfig = {
 	custom: {
@@ -31,9 +32,6 @@ WebFontConfig = {
 	s.parentNode.insertBefore(wf, s);
 })();
 </script>
-<script type="text/javascript" src="_js/libs/leaflet/leaflet.js"></script>
-<link rel="stylesheet" href="_css/style.combined.css">
-
 <script src="_js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
