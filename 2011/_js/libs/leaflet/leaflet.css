@@ -252,6 +252,7 @@ a.leaflet-active {
 	}
 .leaflet-popup-content {
 	margin: 12px 25px 12px 15px;
+	color: #666;
 	}
 .leaflet-popup-tip-container {
 	margin: 0 auto;
