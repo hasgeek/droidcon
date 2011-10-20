@@ -113,9 +113,9 @@ nav ul {
 	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 nav li { float: left; width: 18.75%; height: 100%; }
-nav li a { display: block; height: 100%; text-decoration: none; color: gray; text-align: center; }
+nav li a { display: block; height: 100%; text-decoration: none; color: gray; text-align: center; border-bottom: 1px solid transparent;}
 nav .active a { color: white; border-bottom: 1px solid #666; }
-nav li > a:hover { color: white; background: rgba(255,255,255,0.1); }
+nav li > a:hover { color: white; background: rgba(255,255,255,0.1); border-bottom-color: rgba(140, 120, 100, 0.4);}
 nav li.register > a { background: url(../_img/stripes_green.png); color: white; }
 .register { float: right; width: 25%; }
 .tickets { display: none; }
