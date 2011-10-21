@@ -64,12 +64,12 @@ function page_header($active_tab = false) {
 <p><a title="Venue Information" href="venue"><span class="expanded">MLR Convention Centre, </span>Whitefield, Bangalore</a></p>
 </hgroup>
 
-<nav>
+<nav id="text">
 <ul class="clearfix flexlist">
-<li<?php echo $active_tab === 0 ? ' class="active"':'' ?>><a href="./">Home</a></li>
-<li<?php echo $active_tab === 1 ? ' class="active"':'' ?>><a href="blog">News<span class="expanded"> &amp; Updates</span></a></li>
-<li<?php echo $active_tab === 2 ? ' class="active"':'' ?>><a href="schedule">Programme</a></li>
-<li<?php echo $active_tab === 3 ? ' class="active"':'' ?>><a href="venue">Venue<span class="expanded"> Information</span></a></li>
+<li<?php echo $active_tab === 0 ? ' class="active"':'' ?>><a href="./#text">Home</a></li>
+<li<?php echo $active_tab === 1 ? ' class="active"':'' ?>><a href="blog#text">News<span class="expanded"> &amp; Updates</span></a></li>
+<li<?php echo $active_tab === 2 ? ' class="active"':'' ?>><a href="schedule#text">Programme</a></li>
+<li<?php echo $active_tab === 3 ? ' class="active"':'' ?>><a href="venue#text">Venue<span class="expanded"> Information</span></a></li>
 <li class="register">
 <a href="http://droidcon.doattend.com/">Register<span class="expanded"> Now</span></a>
 <div class="tickets">
