@@ -77,6 +77,8 @@ function page_header($active_tab = false) {
 <dl class="clearfix">
 <dt>Regular</dt>
 <dd><span class="expanded">Rs </span>1800</dd>
+<dt>Student</dt>
+<dd><span class="expanded">Rs </span>900</dd>
 <dt class="inactive">At Venue</dt>
 <dd class="inactive"><span class="expanded">Rs </span>2200</dd>
 <!-- <dt>Early Geek</dt>
