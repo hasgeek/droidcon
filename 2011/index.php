@@ -11,7 +11,7 @@
 
   <p>Organized by developers for developers, the multi-track two day event will provide a rich variety of content for delegates by attracting the best speakers in the Android community. The event's community driven model enables open submissions via HasGeek’s portal and selection based on participant voting and the program committee.</p>
 
-  <p>The theme for the conference covers a range of topics that include building well designed apps, dealing with device diversity, performance optimization, NFC, Arduino, and usage in the Enterprise. The sessions also include a special talk by international speaker <a href="twitter.com/defer">Diogo Ferreira</a> of <a href="http://www.cyanogenmod.com/">CyanogenMod</a>.</p>
+  <p>The theme for the conference covers a range of topics that include building well designed apps, dealing with device diversity, performance optimization, NFC, Arduino, and usage in the Enterprise. The sessions also include a special talk by international speaker <a href="http://twitter.com/defer">Diogo Ferreira</a> of <a href="http://www.cyanogenmod.com/">CyanogenMod</a>.</p>
 
   <p>Session proposals are <a href="http://funnel.hasgeek.com/droidcon/">currently being accepted</a> and tickets are <a href="http://droidcon.doattend.com/">already on sale</a>.</p>
 </div>
