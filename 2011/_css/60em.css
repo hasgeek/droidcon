@@ -103,7 +103,7 @@
 	
 	#footer {
 		background: url(../_img/andy_separator.png) scroll repeat-x top center;
-		padding-top: 80px;
+		padding: 80px 0;
 	}
 	#footer .container {
 		max-width: 39em;
