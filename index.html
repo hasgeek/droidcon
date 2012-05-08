@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="css/style.combined.css">
 
 <!-- For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-<!-- <script src="_js/libs/modernizr-2.5.3.js"></script> -->
+<script src="js/libs/modernizr-2.5.3.js"></script>
 </head>
 <body>
 <div id="page">
@@ -29,7 +29,7 @@
 
 <header id="header" class="container clearfix">
 	<h1>Droidcon 2012</h1>
-	<h2>November 2-3, 2012</h2>
+	<h2>November 2–3, 2012</h2>
 	<!-- <h3>MLR Convention Centre, Whitefield</h3> -->
 	<!-- <hr> -->
 
@@ -68,30 +68,21 @@
 
 
 <div id="content">
-	<!-- <ul class="flipboard">
-		<li style="z-index:100"><div class="flipcard"><p class="face front"><img src="media/DroidconIN (1).jpg"></p><p class="face back"><img src="media/DroidconIN (401).jpg"></p></div></li>
-		<li><img src="media/DroidconIN (20).jpg"></li>
-		<li><img src="media/DroidconIN (35).jpg"></li>
-		<li><img src="media/DroidconIN (40).jpg"></li>
-		<li><img src="media/DroidconIN (56).jpg"></li>
-		<li><img src="media/DroidconIN (360).jpg"></li>
-		<li><img src="media/DroidconIN (73).jpg"></li>
-		<li><img src="media/DroidconIN (80).jpg"></li>
-		<li><img src="media/DroidconIN (194).jpg"></li>
-		<li><img src="media/DroidconIN (10).jpg"></li>
-		<li><img src="media/DroidconIN (21).jpg"></li>
-		<li><img src="media/DroidconIN (31).jpg"></li>
-		<li><img src="media/DroidconIN (320).jpg"></li>
-		<li><img src="media/DroidconIN (335).jpg"></li>
-		<li><img src="media/DroidconIN (340).jpg"></li>
-		<li><img src="media/DroidconIN (356).jpg"></li>
-		<li><img src="media/DroidconIN (160).jpg"></li>
-		<li><img src="media/DroidconIN (373).jpg"></li>
-		<li><img src="media/DroidconIN (280).jpg"></li>
-		<li><img src="media/DroidconIN (194).jpg"></li>
-		<li><img src="media/DroidconIN (310).jpg"></li>
-		<li><img src="media/DroidconIN (321).jpg"></li>
-	</ul> -->
+	<script id="card-template" type="text/template">
+		<li>
+			<div class="flipcard">
+				<p class="face front">
+					<img src="<%= active %>">
+				</p>
+				<p class="face back">
+					<img src="<%= hidden %>">
+				</p>
+			</div>
+		</li>
+	</script>
+	<ul class="flipboard">
+		<!-- <li style="z-index:100"><div class="flipcard"><p class="face front"><img src="media/DroidconIN (1).jpg"></p><p class="face back"><img src="media/DroidconIN (401).jpg"></p></div></li>  -->
+	</ul>
 </div><!-- #content -->
 
 
@@ -100,10 +91,11 @@
 
 </div><!-- #page -->
 
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="_js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-<script src="./_js/plugins.js"></script>
-<script src="./_js/script.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+<script src="js/libs/underscore-min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
 
 <script>
 // if (location.hostname == '') {
