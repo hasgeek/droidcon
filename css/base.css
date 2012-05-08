@@ -1,0 +1,185 @@
+/* ======== */
+/* = Base = */
+/* ======== */
+body { font: 16px/24px PT Sans, Helvetica, Arial, sans-serif; }
+pre { word-wrap: normal; overflow: auto; }
+ul { padding: 0; }
+a { text-decoration: none; color: inherit; }
+
+.amp {
+	font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
+	font-style: italic;
+	font-size: 1.2em;
+	line-height: 0.5em;
+}
+.quo { margin-left: -0.24em; }
+.dquo { margin-left: -0.44em; }
+.tquo { margin-left: -0.68em; }
+
+/* natural box layout model */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* ======================== */
+/* = Droidcon 2012 Teaser = */
+/* ======================== */
+
+html { overflow-y: auto; }
+html, body { min-height: 100%; height: 100%; }
+body {
+	background: url(../img/stripes_dark_green.png);
+	color: white;
+}
+
+#page {
+/*	background: #D00 url(../img/mlr.jpg) no-repeat scroll top center;*/
+	background-size: 100%;
+	height: 100%;
+/*	-webkit-background-clip: text*/
+}
+
+.container {
+/*	width: 960px;*/
+/*	margin: auto;*/
+	text-align: center;
+}
+
+.half { width: 50%; }
+
+#header {
+	height: 100%;
+	background: url(../img/andy.png) no-repeat scroll;
+	background-position: center bottom;
+	overflow: hidden;
+}
+#header h1 {
+	font: 144px/1 'LeagueGothicRegular', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', Impact, 'PT Sans', sans-serif;
+	margin: 0.4em 0 0.3em;
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	text-shadow:
+		#580 1px 1px 0,
+		#580 2px 2px 0,
+		#580 3px 3px 0,
+		#580 4px 4px 0,
+		#580 5px 5px 0,
+		#580 6px 6px 0,
+		#580 7px 7px 0;
+}
+#header h2 {
+	margin: 2em 0;
+	font-weight: normal;
+}
+
+.strip {
+	background: rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset rgba(0,0,0,0.5) 0 0 2px;
+	margin: 0 -5px;
+	padding: 0 5px;
+}
+.strip a { display: block; color: white; }
+.strip a:hover { background-color: #A4C639; text-shadow: #692 1px 1px 1px; }
+.spotlight {
+	width: 20em;
+	margin: auto;
+	height: 6em;
+	background: rgba(0,0,0,0.5);
+}
+.strip .half { padding-right: 10em; margin-top: -6em; }
+.strip .half.flushright { padding-left: 10em; padding-right: 0; }
+.strip ul { margin: 0; }
+.strip li {
+	float: left;
+	width: 50%;
+	display: inline;
+}
+.strip .flushleft li { width: 33.3%; }
+.strip .flushright li + li,
+.strip li + li + li { float: right; }
+.strip li a { padding: 1.5em 0; }
+.strip h4 {
+	margin: 0;
+	font-weight: normal;
+}
+.strip h5 {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 10px;
+	margin: 0;
+	color: gray;
+}
+.strip a:hover h5 { color: white; }
+.spotlight {
+	background-image: url(../img/india.png);
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+	text-align: left;
+}
+.spotlight h3 {
+	font-weight: normal;
+	margin: 0;
+	margin: 1.35em 0 0 50%;
+}
+.spotlight h4 {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-left: 50%;
+}
+
+
+#content {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: auto;
+	width: auto;
+}
+
+
+.flipboard {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1117px;
+	z-index: 1;
+}
+.flipboard li {
+	float: left;
+	display: inline-block;
+	width: 278px;
+	height: 184px;
+	-webkit-perspective: 1000;
+	position: relative;
+	z-index: 10;
+}
+.flipcard {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1.0s linear;
+	width: 100%;
+	height: 100%;
+}
+.flipcard:hover {
+	-webkit-transform: rotateY(180deg);
+/*	box-shadow: -5px 5px 5px #aaa;*/
+}
+
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+.face.back {
+	-webkit-transform: rotateY(180deg);
+}
+.flipboard img { max-width: 100%; height: auto; }
+
