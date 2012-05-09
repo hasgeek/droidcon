@@ -2,11 +2,18 @@ var   PHOTOS = []
 	, PHOTOS_LOCAL
 	, PHOTOS_FLICKR
 	, ASPECT_RATIO = 1.5
-	, MAX_WIDTH = 175
-	, MIN_WIDTH = 125
+	, MAX_WIDTH = 240
+	, MIN_WIDTH = 175
+	, FLIP_INTERVAL = 2 * 1000 // in ms
 	, FLIPBOARD_SELECTOR = '.flipboard'
 	, CARD_TEMPLATE = '#card-template'
 	, CARD_SELECTOR = 'li'
+	, FRAME_SELECTOR = '.flipcard'
+	, FRONT_FACE = '.face.front'
+	, BACK_FACE = '.face.back'
+	, TRANSITION_TIME = 0.4 * 1000 // in ms
+	, TRANSITION_TO_BACK = 'reveal-backface'
+	, TRANSITION_TO_FRONT = 'reveal-frontface'
 	;
 
 function flipboard () {
@@ -15,6 +22,8 @@ function flipboard () {
 		, cards = []
 		, card_template = _.template($(CARD_TEMPLATE).html())
 		, shuffled_photos = []
+		, shuffled_cards = []
+		, flipper
 		, columns, rows, width, height;
 	
 	
@@ -24,20 +33,20 @@ function flipboard () {
 			, raw_rows;
 		
 		// start with _ideal_ number of cols
-		columns = Math.floor(full_width / MAX_WIDTH)
+		columns = Math.ceil(full_width / MAX_WIDTH)
 		
 		do {
 
 			width = Math.floor(full_width / columns);
 			raw_rows = full_height / (width / ASPECT_RATIO);
 			rows = Math.ceil(raw_rows);
-
+			
 		} while ( 
 
 			// try increasing the number of columns and iterating if the height clipping is beyond a certain percentage
 			rows - raw_rows >= 0.5 &&
-			columns++ &&
-			full_width/columns >= MIN_WIDTH
+			full_width/columns >= MIN_WIDTH &&
+			columns++
 		);
 
 		// now that we have the number of cols and rows, we compute the _ideal_ height
@@ -66,7 +75,6 @@ function flipboard () {
 		while (cards.length < columns * rows) {
 			$card = $(card_template({
 				  active: get_random_photo()
-				, hidden: get_random_photo()
 			}))
 			
 			$board.append($card);
@@ -78,21 +86,67 @@ function flipboard () {
 		
 		// update card dimensions
 		$(cards).width(width).height(height);
+		
+		// reset card flipper
+		shuffled_cards = [];
 	}
 	
 	function get_random_photo () {
-		if (!shuffled_photos.length) shuffled_photos = _.shuffle(PHOTOS);
+		if (!shuffled_photos || !shuffled_photos.length) shuffled_photos = _.shuffle(PHOTOS);
 		
 		return shuffled_photos.shift();
 	}
 	
+	function get_random_card () {
+		if (!shuffled_cards || !shuffled_cards.length) shuffled_cards = _.shuffle(cards);
+		
+		return shuffled_cards.shift();
+	}
+	
+	function start_flipping () {
+		if (!flipper) flipper = window.setInterval(function() {
+			
+			var   $frame = $(FRAME_SELECTOR, get_random_card())
+				, image = new Image()
+				, transition
+				;
+			
+			if ($frame.hasClass(TRANSITION_TO_BACK)) {
+				transition = {
+					  $face: $(FRONT_FACE, $frame)
+					, addClass: TRANSITION_TO_FRONT
+					, removeClass: TRANSITION_TO_BACK
+				}
+			} else {
+				transition = {
+					  $face: $(BACK_FACE, $frame)
+					, addClass: TRANSITION_TO_BACK
+					, removeClass: TRANSITION_TO_FRONT
+				}
+			}
+			
+			$(image).load(function() {
+				transition.$face.empty().append(image);
+				$frame.addClass(transition.addClass).removeClass(transition.removeClass);
+			})
+			
+			image.src = get_random_photo();
+			
+		}, FLIP_INTERVAL);
+	}
+	
+	function stop_flipping () {
+		if (flipper) window.clearInterval(flipper);
+	}
+	
 	reset_dimensions();
 	reset_cards();
+	start_flipping();
 	
-	$(window).resize(function() {
+	$(window).resize(_.throttle(function() {
 		reset_dimensions();
 		reset_cards();
-	});
+	}, 100));
 }
 
 function main () {

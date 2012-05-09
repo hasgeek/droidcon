@@ -148,14 +148,17 @@ body {
 }
 .flipcard {
 	-webkit-transform-style: preserve-3d;
-	-webkit-transition: all 1.0s linear;
+	-webkit-transition: all 0.4s linear;
 	width: 100%;
 	height: 100%;
 }
-.flipcard:hover {
+.flipcard.reveal-backface {
 	-webkit-transform: rotateY(180deg);
-/*	box-shadow: -5px 5px 5px #aaa;*/
 }
+.flipcard.reveal-frontface {
+	-webkit-transform: rotateY(360deg);
+}
+
 
 .face {
 	position: absolute;
@@ -163,6 +166,7 @@ body {
 	height: 100%;
 	margin: 0;
 	overflow: hidden;
+	text-align: center;
 	-webkit-backface-visibility: hidden;
 }
 .face.back {
