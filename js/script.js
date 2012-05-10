@@ -26,6 +26,7 @@ function Flipboard () {
 		, shuffled_photos = []
 		, shuffled_cards = []
 		, flipper
+		, resize_handler
 		, columns, rows, width, height;
 	
 	
@@ -60,14 +61,14 @@ function Flipboard () {
 		// <del>so we first look for flexbox and outsource this problem to the browser if possible</del>
 		// <ins>for now we'll just reduce the size of our board to suit our whole numbers</ins>
 
-		$board.css({
+		$board.show().css({
 			  'width': (columns * width) + 'px'
 			, 'height': (rows * height) + 'px'
 			, 'left': '50%'
 			, 'top': '50%'
 			, 'margin-left': - (columns * width / 2) + 'px'
 			, 'margin-top': - (rows * height / 2) + 'px'
-		})
+		});
 	}
 	
 	function reset_cards () {
@@ -105,12 +106,7 @@ function Flipboard () {
 		return shuffled_cards.shift();
 	}
 	
-	this.reset = function() {
-		reset_dimensions();
-		reset_cards();
-	};
-	
-	this.start = function() {
+	function start_flipping () {
 		if (!flipper) flipper = window.setInterval(function() {
 			
 			var   $frame = $(FRAME_SELECTOR, get_random_card())
@@ -140,16 +136,33 @@ function Flipboard () {
 			image.src = get_random_photo();
 			
 		}, FLIP_INTERVAL);
+	}
+	
+	function stop_flipping () {
+		if (flipper) window.clearInterval(flipper);
+	}
+	
+	this.reset = function() {
+		reset_dimensions();
+		reset_cards();
+	};
+	
+	this.start = function() {
+		if (!resize_handler) resize_handler = _.throttle(o.reset, 100); // execute max. once per 100 ms
+		
+		$(window).resize(resize_handler);
+		resize_handler();
+		
+		start_flipping();
 	};
 	
 	this.stop = function() {
-		if (flipper) window.clearInterval(flipper);
+		stop_flipping();
+		$(window).unbind('resize', resize_handler);
+		
+		$board.hide();
 	};
-	
-	o.reset();
-	o.start();
-	
-	$(window).resize(_.throttle(o.reset, 100));
+
 }
 
 function main () {
