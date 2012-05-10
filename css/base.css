@@ -48,9 +48,9 @@ body {
 
 #header {
 	height: 100%;
-	background: url(../img/andy.png) no-repeat scroll;
-	background-position: center bottom;
 	overflow: hidden;
+	position: relative;
+	z-index: 20;
 }
 #header h1 {
 	font: 144px/1 'LeagueGothicRegular', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', Impact, 'PT Sans', sans-serif;
@@ -67,27 +67,39 @@ body {
 		#580 5px 5px 0,
 		#580 6px 6px 0,
 		#580 7px 7px 0;
+	-webkit-transition:
+		text-shadow 0.4s ease,
+		-webkit-transform 0.4s ease;
 }
+#header.dismantle h1 {
+	text-shadow: none;
+	-webkit-transform: translate(7px,7px);
+}
+
 #header h2 {
 	margin: 2em 0;
 	font-weight: normal;
 }
 
 .strip {
-	background: rgba(0,0,0,0.25);
-	-webkit-box-shadow: inset rgba(0,0,0,0.5) 0 0 2px;
 	margin: 0 -5px;
 	padding: 0 5px;
 }
 .strip a { display: block; color: white; }
 .strip a:hover { background-color: #A4C639; text-shadow: #692 1px 1px 1px; }
 .spotlight {
+	position: absolute;
+	right: 50%;
+	margin-right: -10em;
 	width: 20em;
-	margin: auto;
 	height: 6em;
 	background: rgba(0,0,0,0.5);
 }
-.strip .half { padding-right: 10em; margin-top: -6em; }
+.strip .half {
+	padding-right: 10em;
+	background: rgba(0,0,0,0.25);
+/*	-webkit-box-shadow: rgba(0,0,0,0.5) 0 0 2px;*/
+}
 .strip .half.flushright { padding-left: 10em; padding-right: 0; }
 .strip ul { margin: 0; }
 .strip li {
@@ -116,7 +128,9 @@ body {
 	background-repeat: no-repeat;
 	background-position: 30% 50%;
 	text-align: left;
+	cursor: pointer;
 }
+.spotlight:hover { background-color: black; }
 .spotlight h3 {
 	font-weight: normal;
 	margin: 0;
@@ -129,6 +143,19 @@ body {
 }
 
 
+.andy {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 240px;
+	margin-left: -120px;
+	height: 122px;
+	margin-top: -122px;
+	background: url(../img/andy.png) no-repeat scroll;
+	background-position: center bottom;
+}
+
+
 #content {}
 
 
@@ -138,7 +165,7 @@ body {
 	margin: 0;
 	position: absolute;
 	background: black;
-	z-index: 100;
+	z-index: 10;
 }
 .flipboard li {
 	float: left;
