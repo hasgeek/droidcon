@@ -2,6 +2,7 @@ var   PHOTOS = []
 	, PHOTOS_LOCAL
 	, PHOTOS_FLICKR
 	, ASPECT_RATIO = 1.5
+	, PORTRAIT_CLASS = 'portrait'
 	, MAX_WIDTH = 240
 	, MIN_WIDTH = 175
 	, FLIP_INTERVAL = 2 * 1000 // in ms
@@ -26,6 +27,8 @@ function Flipboard () {
 		, shuffled_photos = []
 		, shuffled_cards = []
 		, flipper
+		, animator
+		, animation_queue = []
 		, resize_handler
 		, columns, rows, width, height;
 	
@@ -76,12 +79,12 @@ function Flipboard () {
 		
 		// add new cards
 		while (cards.length < columns * rows) {
-			$card = $(card_template({
-				  active: get_random_photo()
-			}))
+			$card = $(card_template())
 			
 			$board.append($card);
 			cards[cards.length] = $card[0];
+			
+			flip_card($card[0]);
 		}
 		
 		// discard unused cards
@@ -106,36 +109,59 @@ function Flipboard () {
 		return shuffled_cards.shift();
 	}
 	
-	function start_flipping () {
-		if (!flipper) flipper = window.setInterval(function() {
-			
-			var   $frame = $(FRAME_SELECTOR, get_random_card())
-				, image = new Image()
-				, transition
-				;
-			
-			if ($frame.hasClass(TRANSITION_TO_BACK)) {
-				transition = {
-					  $face: $(FRONT_FACE, $frame)
-					, addClass: TRANSITION_TO_FRONT
-					, removeClass: TRANSITION_TO_BACK
-				}
-			} else {
-				transition = {
-					  $face: $(BACK_FACE, $frame)
-					, addClass: TRANSITION_TO_BACK
-					, removeClass: TRANSITION_TO_FRONT
-				}
+	function flip_card (card) {
+		var   $frame = $(FRAME_SELECTOR, card || get_random_card())
+			, image = new Image()
+			, transition
+			;
+		
+		if ($frame.hasClass(TRANSITION_TO_BACK)) {
+			transition = {
+				  $face: $(FRONT_FACE, $frame)
+				, addClass: TRANSITION_TO_FRONT
+				, removeClass: TRANSITION_TO_BACK
 			}
-			
-			$(image).load(function() {
+		} else {
+			transition = {
+				  $face: $(BACK_FACE, $frame)
+				, addClass: TRANSITION_TO_BACK
+				, removeClass: TRANSITION_TO_FRONT
+			}
+		}
+		
+		$(image).load(function() {
+			animate(function() {
+				
+				// determine if portrait image
+				if (image.width < image.height) transition.$face.addClass(PORTRAIT_CLASS)
+				else transition.$face.removeClass(PORTRAIT_CLASS)
+				
 				transition.$face.empty().append(image);
 				$frame.addClass(transition.addClass).removeClass(transition.removeClass);
 			})
+		})
+		
+		image.src = get_random_photo();
+	}
+	
+	function animate (animation) {
+		if (animation && typeof animation == 'function') animation_queue.push(animation);
+		
+		if (!animator) animator = window.setInterval(function() {
 			
-			image.src = get_random_photo();
+			if (animation_queue.length) {
+				(animation_queue.shift())();
+				
+			} else {
+				window.clearInterval(animator);
+				animator = null;
+			}
 			
-		}, FLIP_INTERVAL);
+		}, 25);
+	}
+	
+	function start_flipping () {
+		if (!flipper) flipper = window.setInterval(flip_card, FLIP_INTERVAL);
 	}
 	
 	function stop_flipping () {
@@ -159,7 +185,6 @@ function Flipboard () {
 	this.stop = function() {
 		stop_flipping();
 		$(window).unbind('resize', resize_handler);
-		
 		$board.hide();
 	};
 

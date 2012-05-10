@@ -27,7 +27,7 @@ a { text-decoration: none; color: inherit; }
 html { overflow-y: auto; }
 html, body { min-height: 100%; height: 100%; }
 body {
-	background: url(../img/stripes_dark_green.png);
+	background: url(../img/stripes_dark_green.png) fixed top left;
 	color: white;
 }
 
@@ -168,8 +168,10 @@ body {
 	margin: 0;
 	overflow: hidden;
 	text-align: center;
+	background: url(../img/stripes_dark_green.png) fixed top left;
 	-webkit-backface-visibility: hidden;
 }
+.portrait { background: black; }
 .face.back {
 	-webkit-transform: rotateY(180deg);
 }
