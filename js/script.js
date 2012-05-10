@@ -186,6 +186,8 @@ function Flipboard () {
 		stop_flipping();
 		$(window).unbind('resize', resize_handler);
 		$board.hide();
+		columns = 0, rows = 0;
+		reset_cards();
 	};
 
 }
