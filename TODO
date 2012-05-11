@@ -19,4 +19,5 @@ Production
 
 Issues
 ------
-Nil.
+- Width 50% round off results in thin line behind .spotlight
+- Should be vertically responsive

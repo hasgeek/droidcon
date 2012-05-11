@@ -216,39 +216,31 @@ function Flipboard () {
 
 
 function dismantle () {
-	var $container = $('#header');
+	var   $container = $('#header').addClass('dismantle')
+		, $spotlight = $('.spotlight', $container)
+		, $left = $('.strip .flushleft', $container)
+		, $right = $('.strip .flushright', $container)
+		;
 	
-	var   $spotlight = $('.spotlight', $container)
-		, offset = $spotlight.offset();
-	$spotlight.css({
-		  marginRight: 0
-		, right: $container.outerWidth() - $spotlight.outerWidth() - offset.left
-		, bottom: $container.outerHeight() - $spotlight.outerHeight() - offset.top
-	}).animate({
-		  right: 0
-		, bottom: 0
-	}, 400);
-	
-	$container.addClass('dismantle');
+	$spotlight
+		.css({ bottom: $container.outerHeight() - $spotlight.outerHeight() - $spotlight.offset().top })
+		.animate({
+			  width: $container.outerWidth()
+			, marginRight: -$container.outerWidth() / 2
+			, opacity: 'toggle'
+		}, 400);
 	
 	$('h1,h2', $container).fadeOut(600);
 	
-	var $left = $('.strip .flushleft', $container);
-	$left.animate({
-		marginLeft: '-' + $left.outerWidth() + 'px'
-	}, 400, 'swing', function() { $left.hide() });
-	
-	var $right = $('.strip .flushright', $container);
-	$right.animate({
-		marginRight: '-' + $right.outerWidth() + 'px'
-	}, 400, 'swing', function() { $right.hide() });
+	$left.animate({ marginLeft: -$left.outerWidth() }, 400, 'swing', function() { $left.hide() });
+	$right.animate({ marginRight: -$right.outerWidth() }, 400, 'swing', function() { $right.hide() });
 	
 	$('.andy', $container).animate({ marginTop: 0 }, 600, 'swing', function() { $(this).hide() });
 	$('.footer a', $container).fadeOut(400);
 }
 
 function assemble () {
-	var $container = $('#header');
+	var $container = $('#header').removeClass('dismantle');
 	
 	// in reverse
 	
@@ -258,32 +250,36 @@ function assemble () {
 	$('.strip .flushleft', $container).show().animate({ marginLeft: 0 }, 400, 'swing');
 	$('h1,h2', $container).fadeIn(600);
 	
-	$container.removeClass('dismantle');
-	
-	var   $spotlight = $('.spotlight', $container)
-		, offset = $spotlight.offset();
-	$spotlight.css({
-		bottom: 'auto'
-	}).animate({
-		  right: '50%'
-		, marginRight: '-' + ($spotlight.outerWidth()/2) + 'px'
-	}, 400);
+	$('.spotlight', $container)
+		.css({ bottom: 'auto' })
+		.animate({
+			  width: '20em'
+			, marginRight: '-10em'
+			, opacity: 'toggle'
+		}, 400);
 	
 }
 
 function main () {
 	active_board = new Flipboard();
 	
-	$('.spotlight').toggle(function() {
-		
+	function activate (e) {
 		dismantle();
 		_.delay(active_board.start, 600);
 		
-	}, function() {
-		
+		if (e.stopPropagation) e.stopPropagation();
+	}
+	
+	function deactivate () {
 		active_board.stop();
 		_.delay(assemble, 600);
+	}
+	
+	$('.spotlight').bind('click', activate);
+	$('#header').click(function() {
+		if (!$(this).hasClass('dismantle')) return;
 		
+		deactivate();
 	})
 }
 
