@@ -165,7 +165,7 @@ function Flipboard () {
 	}
 	
 	function stop_flipping () {
-		if (flipper) return;
+		if (!flipper) return;
 
 		window.clearInterval(flipper);
 		flipper = null;
