@@ -155,6 +155,18 @@ body {
 	background-position: center bottom;
 }
 
+.footer hr { display: none; }
+.footer a {
+	position: absolute;
+	left: 50%;
+	margin-left: 90px;
+	bottom: 40px;
+	width: 65px;
+	height:60px;
+	border-radius: 25px 25px 25px 0;
+	background: rgba(0,0,0,0.2) url(../img/hasgeek.png) no-repeat center center;
+}
+.footer a:hover { background-color: black; }
 
 #content {}
 
