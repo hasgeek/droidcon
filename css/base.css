@@ -165,8 +165,13 @@ body {
 	height:60px;
 	border-radius: 25px 25px 25px 0;
 	background: rgba(0,0,0,0.2) url(../img/hasgeek.png) no-repeat center center;
+	-webkit-transition: margin 0.4s ease;
 }
 .footer a:hover { background-color: black; }
+.dismantle .footer a {
+	margin-left: 110px;
+	margin-bottom: 20px;
+}
 
 #content {}
 

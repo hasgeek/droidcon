@@ -192,43 +192,51 @@ function Flipboard () {
 
 }
 
+
 function dismantle () {
-	var $container = $('#header')
+	var $container = $('#header');
 	
 	var   $spotlight = $('.spotlight', $container)
 		, offset = $spotlight.offset();
 	$spotlight.css({
 		  marginRight: 0
-		, right: $container.width() - $spotlight.width() - offset.left
-		, bottom: $container.height() - $spotlight.height() - offset.top
+		, right: $container.outerWidth() - $spotlight.outerWidth() - offset.left
+		, bottom: $container.outerHeight() - $spotlight.outerHeight() - offset.top
 	}).animate({
 		  right: 0
 		, bottom: 0
-	}, 400)
+	}, 400);
 	
 	$container.addClass('dismantle');
 	
-	$('h1,h2', $container).animate({
-		opacity: 'toggle'
-	}, 600);
+	$('h1,h2', $container).fadeOut(600);
 	
 	var $left = $('.strip .flushleft', $container);
 	$left.animate({
-		marginLeft: '-' + $left.width() + 'px'
+		marginLeft: '-' + $left.outerWidth() + 'px'
 	}, 400, 'swing', function() { $left.hide() });
 	
 	var $right = $('.strip .flushright', $container);
 	$right.animate({
-		marginRight: '-' + $right.width() + 'px'
+		marginRight: '-' + $right.outerWidth() + 'px'
 	}, 400, 'swing', function() { $right.hide() });
 	
-	$('.andy', $container).animate({
-		marginTop: 0
-	}, 600, 'swing', function() { $(this).hide() });
+	$('.andy', $container).animate({ marginTop: 0 }, 600, 'swing', function() { $(this).hide() });
+	$('.footer a', $container).fadeOut(400);
 }
 
 function assemble () {
-	var $container = $('#header')
+	var $container = $('#header');
+	
+	// in reverse
+	
+	$('.footer a', $container).fadeIn(400);
+	$('.andy', $container).show().animate({ marginTop: -122 }, 600, 'swing');
+	$('.strip .flushright', $container).show().animate({ marginRight: 0 }, 400, 'swing');
+	$('.strip .flushleft', $container).show().animate({ marginLeft: 0 }, 400, 'swing');
+	$('h1,h2', $container).fadeIn(600);
+	
+	$container.removeClass('dismantle');
 	
 	var   $spotlight = $('.spotlight', $container)
 		, offset = $spotlight.offset();
@@ -236,28 +244,9 @@ function assemble () {
 		bottom: 'auto'
 	}).animate({
 		  right: '50%'
-		, marginRight: '-' + ($spotlight.width()/2) + 'px'
-	}, 400)
+		, marginRight: '-' + ($spotlight.outerWidth()/2) + 'px'
+	}, 400);
 	
-	$container.removeClass('dismantle');
-	
-	$('h1,h2', $container).animate({
-		opacity: 'toggle'
-	}, 600);
-	
-	var $left = $('.strip .flushleft', $container);
-	$left.show().animate({
-		marginLeft: 0
-	}, 400, 'swing');
-	
-	var $right = $('.strip .flushright', $container);
-	$right.show().animate({
-		marginRight: 0
-	}, 400, 'swing');
-	
-	$('.andy', $container).show().animate({
-		marginTop: -122
-	}, 600, 'swing');
 }
 
 function main () {
