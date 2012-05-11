@@ -99,7 +99,15 @@ body {
 	margin: 0 -5px;
 	padding: 0 5px;
 }
-.strip a { display: block; color: white; }
+.strip a {
+	display: block;
+	color: white;
+	-webkit-transition: background-color 0.2s ease;
+	   -moz-transition: background-color 0.2s ease;
+		-ms-transition: background-color 0.2s ease;
+		 -o-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
 .strip a:hover { background-color: #A4C639; text-shadow: #692 1px 1px 1px; }
 .spotlight {
 	position: absolute;
@@ -145,8 +153,16 @@ body {
 	background-position: 30% 50%;
 	text-align: left;
 	cursor: pointer;
+	-webkit-transition: background-color 0.2s ease;
+	   -moz-transition: background-color 0.2s ease;
+		-ms-transition: background-color 0.2s ease;
+		 -o-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
 }
-.spotlight:hover { background-color: black; }
+.spotlight:hover {
+	background-color: #DF5E0E;
+	text-shadow: #720 1px 1px 1px;
+}
 .spotlight h3 {
 	font-weight: normal;
 	margin: 0;
