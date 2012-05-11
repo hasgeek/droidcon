@@ -32,10 +32,8 @@ body {
 }
 
 #page {
-/*	background: #D00 url(../img/mlr.jpg) no-repeat scroll top center;*/
 	background-size: 100%;
 	height: 100%;
-/*	-webkit-background-clip: text*/
 }
 
 .container {
@@ -70,10 +68,26 @@ body {
 	-webkit-transition:
 		text-shadow 0.4s ease,
 		-webkit-transform 0.4s ease;
+	-moz-transition:
+		text-shadow 0.4s ease,
+		-moz-transform 0.4s ease;
+	-ms-transition:
+		text-shadow 0.4s ease,
+		-ms-transform 0.4s ease;
+	-o-transition:
+		text-shadow 0.4s ease,
+		-o-transform 0.4s ease;
+	transition:
+		text-shadow 0.4s ease,
+		transform 0.4s ease;
 }
 #header.dismantle h1 {
 	text-shadow: none;
 	-webkit-transform: translate(7px,7px);
+	   -moz-transform: translate(7px,7px);
+		-ms-transform: translate(7px,7px);
+		 -o-transform: translate(7px,7px);
+			transform: translate(7px,7px);
 }
 
 #header h2 {
@@ -93,10 +107,12 @@ body {
 	margin-right: -10em;
 	width: 20em;
 	height: 6em;
+	background: #1B2107;
 	background: rgba(0,0,0,0.5);
 }
 .strip .half {
 	padding-right: 10em;
+	background: #3C4910;
 	background: rgba(0,0,0,0.25);
 /*	-webkit-box-shadow: rgba(0,0,0,0.5) 0 0 2px;*/
 }
@@ -163,9 +179,15 @@ body {
 	bottom: 40px;
 	width: 65px;
 	height:60px;
-	border-radius: 25px 25px 25px 0;
+	background-color: #3C4910;
 	background: rgba(0,0,0,0.2) url(../img/hasgeek.png) no-repeat center center;
+	-webkit-border-radius: 25px 25px 25px 0;
+			border-radius: 25px 25px 25px 0;
 	-webkit-transition: margin 0.4s ease;
+	   -moz-transition: margin 0.4s ease;
+		-ms-transition: margin 0.4s ease;
+		 -o-transition: margin 0.4s ease;
+			transition: margin 0.4s ease;
 }
 .footer a:hover { background-color: black; }
 .dismantle .footer a {
@@ -187,21 +209,37 @@ body {
 .flipboard li {
 	float: left;
 	display: inline;
-	-webkit-perspective: 1000;
 	position: relative;
 	z-index: 10;
+	-webkit-perspective: 1000;
+	   -moz-perspective: 1000;
+		-ms-perspective: 1000;
+			perspective: 1000;
 }
 .flipcard {
-	-webkit-transform-style: preserve-3d;
-	-webkit-transition: all 0.4s linear;
 	width: 100%;
 	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+	-webkit-transition: all 0.4s ease;
+	   -moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		 -o-transition: all 0.4s ease;
+			transition: all 0.4s ease;	
 }
 .flipcard.reveal-backface {
 	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+			transform: rotateY(180deg);
 }
 .flipcard.reveal-frontface {
 	-webkit-transform: rotateY(360deg);
+	   -moz-transform: rotateY(360deg);
+		-ms-transform: rotateY(360deg);
+			transform: rotateY(360deg);
 }
 
 
@@ -214,10 +252,16 @@ body {
 	text-align: center;
 	background: url(../img/stripes_dark_green.png) fixed top left;
 	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+			backface-visibility: hidden;
 }
 .portrait { background: black; }
 .face.back {
 	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+			transform: rotateY(180deg);
 }
 .flipboard img { max-width: 100%; height: auto; }
 
