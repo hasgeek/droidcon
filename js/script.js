@@ -165,7 +165,10 @@ function Flipboard () {
 	}
 	
 	function stop_flipping () {
-		if (flipper) window.clearInterval(flipper);
+		if (flipper) return;
+
+		window.clearInterval(flipper);
+		flipper = null;
 	}
 	
 	this.reset = function() {
