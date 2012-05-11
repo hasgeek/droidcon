@@ -109,9 +109,13 @@ function Flipboard () {
 		return shuffled_cards.shift();
 	}
 	
-	function flip_card (card) {
+	function flip_card (card, close_card) {
+		
+		// close card or flip over with a new image
+		close_card = !!close_card;
+		
 		var   $frame = $(FRAME_SELECTOR, card || get_random_card())
-			, image = new Image()
+			, image = (close_card ? null : new Image())
 			, transition
 			;
 		
@@ -129,19 +133,26 @@ function Flipboard () {
 			}
 		}
 		
-		$(image).load(function() {
+		function flip () {
 			animate(function() {
 				
-				// determine if portrait image
-				if (image.width < image.height) transition.$face.addClass(PORTRAIT_CLASS)
-				else transition.$face.removeClass(PORTRAIT_CLASS)
+				transition.$face.empty().removeClass(PORTRAIT_CLASS);
 				
-				transition.$face.empty().append(image);
+				if (image) {
+					if (image.width < image.height) transition.$face.addClass(PORTRAIT_CLASS)
+					transition.$face.append(image);
+				}
+				
 				$frame.addClass(transition.addClass).removeClass(transition.removeClass);
-			})
-		})
+			});
+		}
 		
-		image.src = get_random_photo();
+		if (image) {
+			$(image).load(flip);
+			image.src = get_random_photo();
+			
+		} else flip();
+		
 	}
 	
 	function animate (animation) {
@@ -188,9 +199,17 @@ function Flipboard () {
 	this.stop = function() {
 		stop_flipping();
 		$(window).unbind('resize', resize_handler);
-		$board.hide();
-		columns = 0, rows = 0;
-		reset_cards();
+		
+		for (var i = cards.length; i--; ) flip_card(cards[i], true);
+		
+		animate(function() {
+			_.delay(function() {
+				$board.hide();
+
+				columns = 0, rows = 0;
+				reset_cards();
+			}, TRANSITION_TIME);
+		});
 	};
 
 }
