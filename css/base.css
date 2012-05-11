@@ -165,11 +165,13 @@ body {
 	left: 50%;
 	width: 240px;
 	margin-left: -120px;
-	height: 122px;
+	height: 125px;
 	margin-top: -122px;
 	background: url(../img/andy.png) no-repeat scroll;
-	background-position: center bottom;
+	background-position: center top;
+	cursor: pointer;
 }
+.andy:hover { margin-top: -125px !important; }
 
 .footer hr { display: none; }
 .footer a {

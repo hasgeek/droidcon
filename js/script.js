@@ -275,7 +275,7 @@ function main () {
 		_.delay(assemble, 600);
 	}
 	
-	$('.spotlight').bind('click', activate);
+	$('.spotlight, .andy').bind('click', activate);
 	$('#header').click(function() {
 		if (!$(this).hasClass('dismantle')) return;
 		
