@@ -241,11 +241,11 @@ body {
 	   -moz-transform-style: preserve-3d;
 		-ms-transform-style: preserve-3d;
 			transform-style: preserve-3d;
-	-webkit-transition: all 0.4s ease;
-	   -moz-transition: all 0.4s ease;
-		-ms-transition: all 0.4s ease;
-		 -o-transition: all 0.4s ease;
-			transition: all 0.4s ease;	
+	-webkit-transition: all 0.4s linear;
+	   -moz-transition: all 0.4s linear;
+		-ms-transition: all 0.4s linear;
+		 -o-transition: all 0.4s linear;
+			transition: all 0.4s linear;	
 }
 .flipcard.reveal-backface {
 	-webkit-transform: rotateY(180deg);
