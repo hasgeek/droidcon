@@ -227,7 +227,7 @@ function dismantle () {
 		.animate({
 			  width: $container.outerWidth()
 			, marginRight: -$container.outerWidth() / 2
-			, opacity: 'toggle'
+			, opacity: 0
 		}, 400);
 	
 	$('h1,h2', $container).fadeOut(600);
@@ -255,7 +255,7 @@ function assemble () {
 		.animate({
 			  width: '20em'
 			, marginRight: '-10em'
-			, opacity: 'toggle'
+			, opacity: 1
 		}, 400);
 	
 }
