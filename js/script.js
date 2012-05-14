@@ -240,21 +240,29 @@ function dismantle () {
 }
 
 function assemble () {
-	var $container = $('#header').removeClass('dismantle');
+	var   $container = $('#header').removeClass('dismantle')
+		, $andy = $('.andy', $container)
+		, $spotlight = $('.spotlight', $container)
+		;
 	
 	// in reverse
 	
 	$('.footer a', $container).fadeIn(400);
-	$('.andy', $container).show().animate({ marginTop: -122 }, 600, 'swing');
+	$andy.show().animate({ marginTop: - ($andy.height() - 3) }, 600, 'swing');
 	$('.strip .flushright', $container).show().animate({ marginRight: 0 }, 400, 'swing');
 	$('.strip .flushleft', $container).show().animate({ marginLeft: 0 }, 400, 'swing');
 	$('h1,h2', $container).fadeIn(600);
 	
-	$('.spotlight', $container)
-		.css({ bottom: 'auto' })
+	$spotlight.css('width', '');
+	var old_width = $spotlight.outerWidth();
+	$spotlight
+		.css({
+			  bottom: 'auto'
+			, width: $container.outerWidth()
+		})
 		.animate({
-			  width: '20em'
-			, marginRight: '-10em'
+			  width: old_width
+			, marginRight: - old_width/2
 			, opacity: 1
 		}, 400);
 	
