@@ -223,12 +223,11 @@ function dismantle () {
 		;
 	
 	$spotlight
-		.css({ bottom: $container.outerHeight() - $spotlight.outerHeight() - $spotlight.offset().top })
 		.animate({
 			  width: $container.outerWidth()
 			, marginRight: -$container.outerWidth() / 2
 			, opacity: 0
-		}, 400);
+		}, 400, function() { $spotlight.hide() });
 	
 	$('h1,h2', $container).fadeOut(600);
 	
@@ -253,13 +252,14 @@ function assemble () {
 	$('.strip .flushleft', $container).show().animate({ marginLeft: 0 }, 400, 'swing');
 	$('h1,h2', $container).fadeIn(600);
 	
-	$spotlight.css('width', '');
-	var old_width = $spotlight.outerWidth();
 	$spotlight
 		.css({
-			  bottom: ''
-			, width: $container.outerWidth()
-		})
+			width: '',
+			opacity: 0
+		});
+	var old_width = $spotlight.show().outerWidth();
+	$spotlight
+		.css('width', $container.outerWidth())
 		.animate({
 			  width: old_width
 			, marginRight: - old_width/2
