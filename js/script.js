@@ -21,7 +21,7 @@ var   PHOTOS = []
 function Flipboard () {
 	var   o = this
 		, $board = $(FLIPBOARD_SELECTOR)
-		, $parent = $(window)
+		, $parent = $(document.body)
 		, cards = []
 		, card_template = _.template($(CARD_TEMPLATE).html())
 		, shuffled_photos = []

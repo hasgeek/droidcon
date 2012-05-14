@@ -1,0 +1,11 @@
+@media only screen and (min-width: 830px) {
+	/* Style adjustments for viewports 830px and wider go here */
+	
+	.spotlight {
+		margin-right: -10em;
+		width: 20em;
+		background-position: 30% 50%;
+	}
+	.strip .half { padding: 0 10em; }
+	
+}

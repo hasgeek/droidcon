@@ -1,0 +1,43 @@
+@media only screen and (min-height: 625px) and (min-width: 620px) {
+	/* Style adjustments for viewports 625px and higher (provided they are 620px and wider) go here */
+	
+	#header h1 {
+		font-size: 144px;
+		top: 15%;
+		margin-top: -0.4em;
+		text-shadow:
+			#580 1px 1px 0,
+			#580 2px 2px 0,
+			#580 3px 3px 0,
+			#580 4px 4px 0,
+			#580 5px 5px 0,
+			#580 6px 6px 0,
+			#580 7px 7px 0;
+	}
+	#header.dismantle h1 {
+		-webkit-transform: translate(7px,7px);
+		   -moz-transform: translate(7px,7px);
+			-ms-transform: translate(7px,7px);
+			 -o-transform: translate(7px,7px);
+				transform: translate(7px,7px);
+	}
+	#header h2 {
+		top: 15%;
+		font-size: 1.5em;
+		margin-top: 10.5em;
+	}
+	.strip { bottom: 22.5%; }
+	.andy {
+		width: 240px;
+		margin-left: -120px;
+		height: 125px;
+		margin-top: -122px;
+		background-image: url(../img/andy.png);
+	}
+	.andy:hover { margin-top: -125px; }
+	.footer a {
+		margin-left: 90px;
+		bottom: 40px;
+	}
+	
+}

@@ -1,0 +1,20 @@
+@media only screen and (min-width: 620px) {
+	/* Style adjustments for viewports 620px and wider go here */
+	
+	.strip li {
+		float: left;
+		width: 50%;
+		display: inline;
+		clear: none;
+		height: auto;
+	}
+	.strip .flushleft li { width: 33.3%; height: auto; }
+	.strip .flushright li + li,
+	.strip li + li + li { float: right; }
+	.strip li a { padding: 1.5em 0; }
+	.strip h4 { line-height: 1.5; }
+	.strip .flushleft h4 { float: none; line-height: 1.5; }
+	.strip h5 { line-height: 2.4; }
+	.strip .flushleft h5 { text-align: center; padding-top: 0; }
+	
+}
