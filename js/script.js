@@ -281,6 +281,17 @@ function main () {
 		
 		deactivate();
 	})
+	
+	// fix sub-pixel css rounding off issue
+	var   $left = $('.half.flushleft')
+		, $right = $('.half.flushright')
+		, pageWidth = $(window).width()
+		;
+	if ($left.width() + $right.width() != pageWidth) {
+		$left.width( Math.ceil(pageWidth/2) )
+		$right.width( Math.floor(pageWidth/2) )
+	}
+	
 }
 
 
