@@ -248,7 +248,7 @@ function assemble () {
 	// in reverse
 	
 	$('.footer a', $container).fadeIn(400);
-	$andy.show().animate({ marginTop: - ($andy.height() - 3) }, 600, 'swing');
+	$andy.show().animate({ marginTop: - ($andy.height() - 3) }, 600, 'swing', function() { $andy.css('marginTop', '') });
 	$('.strip .flushright', $container).show().animate({ marginRight: 0 }, 400, 'swing');
 	$('.strip .flushleft', $container).show().animate({ marginLeft: 0 }, 400, 'swing');
 	$('h1,h2', $container).fadeIn(600);
@@ -257,14 +257,16 @@ function assemble () {
 	var old_width = $spotlight.outerWidth();
 	$spotlight
 		.css({
-			  bottom: 'auto'
+			  bottom: ''
 			, width: $container.outerWidth()
 		})
 		.animate({
 			  width: old_width
 			, marginRight: - old_width/2
 			, opacity: 1
-		}, 400);
+		}, 400, function() {
+			$spotlight.css({ width: '', marginRight: '' })
+		});
 	
 }
 
