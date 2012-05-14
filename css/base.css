@@ -32,7 +32,6 @@ body {
 }
 
 #page {
-	background-size: 100%;
 	height: 100%;
 }
 
@@ -42,7 +41,6 @@ body {
 	text-align: center;
 }
 
-.half { width: 50%; }
 
 #header {
 	height: 100%;
@@ -116,9 +114,11 @@ body {
 	width: 20em;
 	height: 6em;
 	background: #1B2107;
-	background: rgba(0,0,0,0.5);
+/*	background: rgba(0,0,0,0.5);*/
 }
 .strip .half {
+	width: 50%;
+	min-width: 50%;
 	padding-right: 10em;
 	background: #3C4910;
 	background: rgba(0,0,0,0.25);
