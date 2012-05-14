@@ -292,6 +292,8 @@ function main () {
 		deactivate();
 	})
 	
+	// hide iOS browser address bar
+	window.scrollTo(0,0);
 }
 
 
