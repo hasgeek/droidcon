@@ -144,6 +144,12 @@ function Flipboard () {
 				}
 				
 				$frame.addClass(transition.addClass).removeClass(transition.removeClass);
+				
+				// opacity fallback for older browsers
+				!Modernizr.csstransforms3d &&
+				(transition.addClass == TRANSITION_TO_FRONT && 
+				($(BACK_FACE, $frame).fadeOut('slow') && $(FRONT_FACE, $frame).fadeIn('slow')) ||
+				($(FRONT_FACE, $frame).fadeOut('slow') && $(BACK_FACE, $frame).fadeIn('slow')))					
 			});
 		}
 		
@@ -172,7 +178,7 @@ function Flipboard () {
 	}
 	
 	function start_flipping () {
-		if (!flipper) flipper = window.setInterval(flip_card, FLIP_INTERVAL);
+		if (!flipper) flipper = window.setInterval(function(){flip_card()}, FLIP_INTERVAL);
 	}
 	
 	function stop_flipping () {
