@@ -16,5 +16,6 @@
 	.strip .flushleft h4 { float: none; line-height: 1.5; }
 	.strip h5 { line-height: 2.4; }
 	.strip .flushleft h5 { text-align: center; padding-top: 0; }
+	.spotlight h4 { line-height: 2; }
 	
 }
