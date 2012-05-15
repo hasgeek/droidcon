@@ -84,6 +84,10 @@ function Flipboard () {
 			$board.append($card);
 			cards[cards.length] = $card[0];
 			
+			// opacity fallback for older browsers — hide back faces when cards reset
+			!Modernizr.csstransforms3d &&
+			$(BACK_FACE, $card[0]).hide();
+			
 			flip_card($card[0]);
 		}
 		
