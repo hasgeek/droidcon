@@ -1,7 +1,7 @@
 /* ======== */
 /* = Base = */
 /* ======== */
-body { font: 16px/24px PT Sans, Helvetica, Arial, sans-serif; }
+body { font: 16px/24px Lato, Helvetica, Arial, sans-serif; }
 pre { word-wrap: normal; overflow: auto; }
 ul { padding: 0; }
 a { text-decoration: none; color: inherit; }
@@ -48,7 +48,7 @@ body {
 	z-index: 20;
 }
 #header h1 {
-	font: 72px/1 'LeagueGothicRegular', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', Impact, 'PT Sans', sans-serif;
+	font: 72px/1 'LeagueGothicRegular', 'HelveticaNeue-CondensedBold', 'ArialNarrow-Bold', Impact, Lato, sans-serif;
 	margin: 0.25em auto 0.2em;
 	text-transform: uppercase;
 	text-shadow:
