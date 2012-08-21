@@ -1,1 +1,16 @@
 .DS_Store
+*.pyc
+test.db
+*.wpr
+.project
+.pydevproject
+.settings
+.sass-cache
+.webassets-cache
+error.log
+baseframe-packed.css
+baseframe-packed.js
+packed.css
+packed.js
+*.packed.css
+*.packed.js

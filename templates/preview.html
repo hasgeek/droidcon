@@ -17,11 +17,11 @@
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
-<link rel="stylesheet" href="css/league_gothic.css">
-<link rel="stylesheet" href="css/style.combined.css">
+<link rel="stylesheet" href="{{ theme_static('css/preview/league_gothic.css') }}">
+<link rel="stylesheet" href="{{ theme_static('css/preview/style.combined.css') }}">
 
 <!-- For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-<script src="js/libs/modernizr-2.5.3.js"></script>
+<script src="{{ theme_static('js/preview/libs/modernizr-2.5.3.js') }}"></script>
 </head>
 <body>
 <div id="page">
@@ -93,9 +93,9 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-<script src="js/libs/underscore-min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
+<script src="{{ theme_static('js/preview/libs/underscore-min.js') }}"></script>
+<script src="{{ theme_static('js/preview/plugins.js') }}"></script>
+<script src="{{ theme_static('js/preview/script.js') }}"></script>
 
 <script>
 if (location.hostname == 'droidcon.in') {

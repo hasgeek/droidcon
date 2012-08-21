@@ -26,7 +26,7 @@ a { text-decoration: none; color: inherit; }
 
 html, body { min-height: 100%; height: 100%; }
 body {
-	background: url(../img/stripes_dark_green.png) fixed top left;
+	background: url(../../img/preview/stripes_dark_green.png) fixed top left;
 	color: white;
 }
 
@@ -142,7 +142,7 @@ body {
 .strip .flushleft h5 { padding-top: 1.3em; text-align: left; }
 .strip a:hover h5 { color: white; }
 .spotlight {
-	background-image: url(../img/india.png);
+	background-image: url(../../img/preview/india.png);
 	background-repeat: no-repeat;
 	background-position: 20% 50%;
 	text-align: left;
@@ -178,7 +178,7 @@ body {
 	margin-left: -60px;
 	height: 65px;
 	margin-top: -63px;
-	background: url(../img/andy_small.png) no-repeat scroll;
+	background: url(../../img/preview/andy_small.png) no-repeat scroll;
 	background-position: center top;
 	cursor: pointer;
 }
@@ -194,7 +194,7 @@ body {
 	width: 65px;
 	height:60px;
 	background-color: #3C4910;
-	background: rgba(0,0,0,0.2) url(../img/hasgeek.png) no-repeat center center;
+	background: rgba(0,0,0,0.2) url(../../img/preview/hasgeek.png) no-repeat center center;
 	-webkit-border-radius: 25px 25px 25px 0;
 			border-radius: 25px 25px 25px 0;
 	-webkit-transition: margin 0.4s ease;
@@ -264,7 +264,7 @@ body {
 	margin: 0;
 	overflow: hidden;
 	text-align: center;
-	background: url(../img/stripes_dark_green.png) fixed top left;
+	background: url(../../img/preview/stripes_dark_green.png) fixed top left;
 	-webkit-backface-visibility: hidden;
 	   -moz-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;

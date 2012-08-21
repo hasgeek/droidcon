@@ -32,7 +32,7 @@
 		margin-left: -120px;
 		height: 125px;
 		margin-top: -122px;
-		background-image: url(../img/andy.png);
+		background-image: url(../../img/preview/andy.png);
 	}
 	.andy:hover { margin-top: -125px; }
 	.footer a {
