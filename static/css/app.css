@@ -1,0 +1,17 @@
+body {
+  background: url('../img/background.png?1343054999');
+  color: #cccccc;
+}
+
+header {
+  background: url('../img/header-wide.jpg?1345535804') 50% 0;
+  height: 119px;
+}
+
+#hg-bar.hg-dark {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+footer .footer-inner {
+  background: transparent;
+}
