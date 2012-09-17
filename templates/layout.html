@@ -3,7 +3,7 @@
 
 {% block headerbox %}
 <header class="header">
-  {{ networkbar(siteid='events', login=true) }}
+  {% block networkbar %}{{ networkbar(siteid='events', baseclass='hg-dark', login=false) }}{% endblock %}
   <div class="container masthead-container">
     <div id="masthead-short">
       
@@ -20,6 +20,7 @@
     </div>
   </div>
 </header>
+
 {% endblock %}
 
 {% block baseheadline -%}
@@ -46,3 +47,4 @@
     </div>
   </footer>
 {%- endblock %}
+
