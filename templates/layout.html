@@ -1,15 +1,32 @@
+{% from "baseframe/components.html" import networkbar with context -%}
 {% extends "eventframe.html" -%}
 
 {% block headerbox %}
-  <header>
-    {% block networkbar %}{{ networkbar(siteid='events', baseclass='hg-dark', login=false) }}{% endblock %}
-  </header>
+<header class="header">
+  {% block networkbar %}{{ networkbar(siteid='events', baseclass='hg-dark', login=false) }}{% endblock %}
+  <div class="container masthead-container">
+    <div id="masthead-short">
+      
+    </div>
+  </div>
+  <div class="main-navbar">
+    <div class="container">
+      <ul class="nav" id="main-nav">
+        <li><a href="/2012">Droidcon 2012</a></li>
+        <li><a href="/2012/schedule">Schedule</a></li>
+        <li><a href="/2012/data-workshops">Workshops</a></li>
+        <li class="register"><a href="/2012/register">Register for the Event</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
 {% endblock %}
 
 {% block baseheadline -%}
   {% block headline -%}
     <div class="page-header">
-      <h1>{{ self.title() }}</h1>
+      <h2>{{ self.title() }}</h2>
     </div>
   {%- endblock %}
 {%- endblock %}
@@ -17,3 +34,17 @@
 {% block basecontent -%}
   {% block content %}{% endblock %}
 {%- endblock %}
+
+{% block basefooter -%}
+  <footer>
+    <div class="footer-inner">
+      <div class="container">
+        <div class="footer-bar"></div>
+        {% block footer -%}
+          <span>Droidcon is a conference by <a href="http://hasgeek.com/">HasGeek</a>. Copyright &copy; 2010-12. All rights reserved.</span>
+        {%- endblock %}
+      </div>
+    </div>
+  </footer>
+{%- endblock %}
+
