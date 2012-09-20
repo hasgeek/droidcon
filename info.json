@@ -7,6 +7,7 @@
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
+        "favicon": "favicon.gif",
         "assets_css": [
             "js/leaflet/leaflet.css",
             "css/app.css"
