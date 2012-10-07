@@ -68,13 +68,14 @@ small {
 }
 
 h1 {
-  font-family: "League Gothic", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 44px;
   color: black;
 }
 
 h2, h3 {
-  font-family: "droid-sans", Helvetica, Arial, sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   color: black;
   margin-top: 24px;
 }
@@ -84,8 +85,14 @@ h2 {
   line-height: 48px;
 }
 
+#masthead .page-header {
+  padding: 2.5em 0 0 4em;
+}
+
 .page-header h2 {
-  font-family: "droid-sans", Helvetica, Arial, sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1;
   font-weight: normal;
   margin-top: 0;
 }
@@ -136,18 +143,12 @@ h1 small, h2 small, h3 small {
 }
 
 #masthead, #masthead-short {
-  margin-top: 31px;
   position: relative;
 }
 
 #masthead {
-  background: url('../img/2012/masthead.png?1347954704') no-repeat left top;
-  height: 486px;
-}
-
-#masthead-short {
-  background: url('../img/2012/masthead.png?1347954704') no-repeat left top;
-  height: 486px;
+  background: url('../img/2012/masthead.png?1349623913') no-repeat 50% top;
+  height: 400px;
 }
 
 #banner {
@@ -266,16 +267,7 @@ ul.twitter_update_list {
   margin-right: 0;
   margin-bottom: 0;
   width: 100%;
-  background-color: black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  -moz-border-radius-bottomleft: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  -moz-border-radius-bottomright: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  background-color: transparent;
 }
 .main-navbar .nav > li {
   display: -moz-inline-stack;
@@ -315,7 +307,7 @@ ul.twitter_update_list {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  color: white;
+  color: black;
   padding: 10px 10px 11px;
   line-height: 19px;
   text-decoration: none;
@@ -581,7 +573,7 @@ ul.twitter_update_list {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../img/2012/hasgeek.png?1347955493');
+  background-image: url('../img/2012/hasgeek.png?1349187987');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 100px;
@@ -709,22 +701,6 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
     border-radius: 0;
   }
 
-  #masthead-short {
-    background-position: -70px 0;
-    height: 328px;
-  }
-  #masthead-short h1 {
-    left: 0;
-    top: auto;
-    width: 100%;
-    bottom: 0;
-    padding-top: 10px;
-    font-size: 60px;
-    line-height: 1;
-    border-top: 2px solid black;
-    background-color: #b3a797;
-  }
-
   .main-navbar .container {
     padding: 0;
   }
@@ -818,31 +794,9 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 979px) {
-  #masthead {
-    background-position: -70px 0;
-  }
-
-  #masthead-short {
-    background-position: -70px 0;
-  }
   #masthead-short h1 {
     left: 330px;
     width: 380px;
     padding-top: 20px;
-  }
-}
-@media screen and (max-width: 979px) {
-  #masthead {
-    background-position: -110px 0;
-  }
-}
-@media screen and (min-width: 980px) {
-  #masthead {
-    background-position: -110px 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #masthead {
-    background-position: 0 0;
   }
 }

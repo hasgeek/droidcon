@@ -47,21 +47,6 @@
       @include border-radius(0);
     }
   }
-  #masthead-short {
-    background-position: -70px 0;
-    height: +image-height("2012/masthead-short.jpg") + ($border-thickness * 2) + 76px;
-    h1 {
-      left: 0;
-      top: auto;
-      width: 100%;
-      bottom: 0;
-      padding-top: 10px;
-      font-size: 60px;
-      line-height: 1;
-      border-top: $m-border;
-      background-color: #b3a797;
-    }
-  }
   .main-navbar {
     .container {
       padding: 0;
@@ -149,10 +134,8 @@
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
   #masthead {
-    background-position: -70px 0;
   }
   #masthead-short {
-    background-position: -70px 0;
     h1 {
       left: 330px;
       width: 380px;
@@ -165,7 +148,6 @@
 // -----------------
 @media screen and (max-width: 979px) {
   #masthead {
-    background-position: -110px 0;
   }
 }
 
@@ -174,7 +156,6 @@
 
 @media screen and (min-width: 980px) {
   #masthead {
-    background-position: -110px 0;
   }
 }
 
@@ -183,6 +164,5 @@
 
 @media screen and (min-width: 1200px) {
   #masthead {
-    background-position: 0 0;
   }
 }

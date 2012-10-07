@@ -85,12 +85,13 @@ small
   margin-bottom: $line-height * 1.5
 
 h1
-  font-family: 'League Gothic', Helvetica, Arial, sans-serif
-  font-weight: normal
+  font-family: Lato, Helvetica, Arial, sans-serif
+  font-weight: bold
+  font-size: 44px
   color: black
 
 h2, h3
-  font-family: "droid-sans", Helvetica, Arial, sans-serif
+  font-family: Lato, Helvetica, Arial, sans-serif
   color: black
   margin-top: $line-height
 
@@ -98,10 +99,16 @@ h2
   font-size: 30px
   line-height: $line-height * 2
 
-.page-header h2
-  font-family: "droid-sans", Helvetica, Arial, sans-serif
-  font-weight: normal
-  margin-top: 0
+#masthead .page-header
+  padding: 2.5em 0 0 4em
+
+.page-header
+  h2
+    font-family: Lato, Helvetica, Arial, sans-serif
+    font-size: 20px
+    line-height: 1
+    font-weight: normal
+    margin-top: 0
 
 h3
   font-size: 25px
@@ -142,16 +149,11 @@ h1 small, h2 small, h3 small
 
 
 #masthead, #masthead-short
-  margin-top: 31px
   position: relative
 
 #masthead
-  background: image-url("2012/masthead.png") no-repeat left top
-  height: +image-height("2012/masthead.png") + ($border-thickness * 2)
-
-#masthead-short
-  background: image-url("2012/masthead.png") no-repeat left top
-  height: +image-height("2012/masthead.png") + ($border-thickness * 2)
+  background: image-url("2012/masthead.png") no-repeat 50% top
+  height: +image-height("2012/masthead.jpg") // + ($border-thickness * 2)
 
 #banner
   background: #70bf32
@@ -251,50 +253,47 @@ ul.twitter_update_list
   margin-bottom: $navbar-height
 
 // Navigation bar
-.main-navbar .nav
-  float: none
-  +box-sizing(border-box)
-  +display-box
-  margin-right: 0
-  margin-bottom: 0
-  width: 100%
-  background-color: black
-  border-bottom: $m-border
-  border-left: $m-border
-  border-right: $m-border
-  +border-bottom-left-radius($border-radius)
-  +border-bottom-right-radius($border-radius)
+.main-navbar
 
-  & > li
-    +inline-block
+  .nav
     float: none
-    font-size: 20px
-    margin-bottom: 0
-    // background-color: black
+    +box-sizing(border-box)
     +display-box
-    +box-flex(1)
-    +box-pack(center)
-    +transition-property("color, background-color")
-    +transition-duration(0.2s)
+    margin-right: 0
+    margin-bottom: 0
+    width: 100%
+    background-color: transparent
 
-    & > a
-      display: block
-      text-align: center
-      +box-sizing(border-box)
-      width: 100%
-      color: white
-      padding: 10px 10px 11px
-      line-height: 19px
-      text-decoration: none
+    & > li
+      +inline-block
+      float: none
+      font-size: 20px
+      margin-bottom: 0
+      // background-color: black
+      +display-box
+      +box-flex(1)
+      +box-pack(center)
       +transition-property("color, background-color")
       +transition-duration(0.2s)
 
-    &:hover, &:hover > a
-      color: black
-      background-color: #b3a797
-      text-decoration: none
-      +transition-property("color, background-color")
-      +transition-duration(0.2s)
+      & > a
+        display: block
+        text-align: center
+        +box-sizing(border-box)
+        width: 100%
+        color: black
+        padding: 10px 10px 11px
+        line-height: 19px
+        text-decoration: none
+        +transition-property("color, background-color")
+        +transition-duration(0.2s)
+
+      &:hover, &:hover > a
+        color: black
+        background-color: #b3a797
+        text-decoration: none
+        +transition-property("color, background-color")
+        +transition-duration(0.2s)
 
 .navbar-fixed-top .nav
   & > .register, & > .register a
