@@ -86,7 +86,7 @@ h2 {
 }
 
 #masthead .page-header {
-  padding: 2.5em 0 0 4em;
+  padding: 2.5em 0 0 8em;
 }
 
 .page-header h2 {
@@ -147,7 +147,7 @@ h1 small, h2 small, h3 small {
 }
 
 #masthead {
-  background: url('../img/2012/masthead.png?1349623913') no-repeat 50% top;
+  background: url('../img/2012/masthead.png?1349683712') no-repeat 50% top;
   height: 400px;
 }
 

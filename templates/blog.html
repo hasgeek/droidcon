@@ -1,24 +1,37 @@
 {% extends theme("layout.html") %}
 
-{% block title %}{{ node.title }}{% endblock %}
+{% block titletags %}
+  <title>{% block title %}{{ node.title }}{% endblock %}</title>
+  <meta name="DC.title" content="{{ self.title() }}"/>
+{% endblock %}
 {% block description %}{{ node.description }}{% endblock %}
-
+{% block headline %}{% endblock %}
 {% block content %}
-<div class="description">
-  {{ node.content }}
-</div>
-<div class="row blog">
-  <div class="span7">
-    {% for post in feed() -%}
-      <h3>
-        <a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
-        <small>{{ post.published_at|longdate }}</small>
-      </h3>
-      {{ post.content }}
-      {#- <p class="author">{{ post.user.fullname }}</p> #}
-    {%- else -%}
-      <p>(No blog entries have been written so far)</p>
-    {%- endfor %}
+  <div class="row blog">
+    <div class="span8">
+      <div class="page-header">
+        <h1>{{ self.title() }}</h1>
+      </div>
+      <div class="description">
+        {{ node.content }}
+      </div>
+      {% for post in feed() -%}
+        <div class="post">
+          <h2 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h2>
+          <p>by <strong>{{ post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
+          {{ post.content }}
+        </div>
+      {%- else -%}
+        <p>(No blog entries have been written so far)</p>
+      {%- endfor %}
+    </div>
+    <div class="span4">
+      <ul class="well nav nav-list">
+        {%- with about=fragment('', 'about') %}
+          <li class="nav-header">{{ about.title }}</li>
+          <li>{{ about.content }}</li>
+        {%- endwith %}
+      </ul>
+    </div>
   </div>
-</div>
 {% endblock %}
