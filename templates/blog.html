@@ -1,29 +1,21 @@
 {% extends theme("layout.html") %}
 
-{% block titletags %}
-  <title>{% block title %}{{ node.title }}{% endblock %}</title>
-  <meta name="DC.title" content="{{ self.title() }}"/>
-{% endblock %}
+{% block title %}{{ node.title }}{% endblock %}
 {% block description %}{{ node.description }}{% endblock %}
+{% block masthead %}
+  <div id="masthead-small">
+    <div class="container">
+      <hgroup class="page-header">
+        <h1>{{ node.title }}</h1>
+      </hgroup>
+    </div>
+  </div>
+{% endblock %}
 {% block headline %}{% endblock %}
 {% block content %}
   <div class="row blog">
     <div class="span8">
-      <div class="page-header">
-        <h1>{{ self.title() }}</h1>
-      </div>
-      <div class="description">
-        {{ node.content }}
-      </div>
-      {% for post in feed() -%}
-        <div class="post">
-          <h2 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h2>
-          <p>by <strong>{{ post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
-          {{ post.content }}
-        </div>
-      {%- else -%}
-        <p>(No blog entries have been written so far)</p>
-      {%- endfor %}
+      {% include theme("inc/blog.html") %}
     </div>
     <div class="span4">
       <ul class="well nav nav-list">

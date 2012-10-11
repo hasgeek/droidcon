@@ -1,27 +1,29 @@
 #root {
-  margin-bottom: -87px;
+  margin-bottom: -60px;
 }
 #root #root_footer {
-  height: 87px;
+  height: 60px;
 }
 
 footer {
-  min-height: 77px;
+  min-height: 50px;
 }
 footer .footer-inner {
-  min-height: 77px;
+  min-height: 50px;
 }
 
 body, p {
   color: black;
-  font-family: "droid-sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 12px;
 }
 
+.container {
+  margin: 0 auto auto auto;
+}
+
 .btn {
-  font-family: "droid-sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -34,12 +36,15 @@ body, p {
   background: #669944;
 }
 
+.btn-primary {
+  border-radius: 3px;
+}
+
 form {
   margin-bottom: 12px;
 }
 
 .leaflet-popup-content {
-  font-family: "droid-sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -58,12 +63,16 @@ small {
   font-size: smaller;
 }
 
+.description {
+  padding: 15px;
+}
+
 .description p {
-  text-align: center;
-  font-size: 25px;
+  text-align: left;
+  font-size: 21px;
   line-height: 36px;
-  font-style: italic;
-  color: black;
+  font-style: normal;
+  color: #333333;
   margin-bottom: 36px;
 }
 
@@ -85,8 +94,20 @@ h2 {
   line-height: 48px;
 }
 
+#readmore {
+  font-size: 20px;
+}
+
 #masthead .page-header {
   padding: 2.5em 0 0 8em;
+}
+
+#masthead-small .page-header {
+  padding: 10em 0 0 0em;
+}
+
+#masthead-small h1 {
+  text-align: center;
 }
 
 .page-header h2 {
@@ -105,7 +126,6 @@ h3 {
 .blog h3 {
   line-height: 36px;
   font-weight: normal;
-  font-family: "droid-sans", Helvetica, Arial, sans-serif;
   margin-top: 26px;
 }
 .blog h3:first-child {
@@ -147,8 +167,13 @@ h1 small, h2 small, h3 small {
 }
 
 #masthead {
-  background: url('../img/2012/masthead.png?1349683712') no-repeat 50% top;
+  background: url('../img/2012/masthead.png?1349787064') no-repeat 50% top;
   height: 400px;
+}
+
+#masthead-small {
+  background: url('../img/2012/masthead-small.png?1349965768') no-repeat 50% top;
+  height: 224px;
 }
 
 #banner {
@@ -237,8 +262,14 @@ ul.twitter_update_list {
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.section-header h2 {
+  color: #666666;
+  font-size: 18px;
 }
 
 .btn-wide {
@@ -267,7 +298,8 @@ ul.twitter_update_list {
   margin-right: 0;
   margin-bottom: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: white;
+  border-bottom: 0.5px #efefef solid;
 }
 .main-navbar .nav > li {
   display: -moz-inline-stack;
@@ -299,6 +331,8 @@ ul.twitter_update_list {
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  border-bottom: 3px solid white;
+  margin-right: 1px;
 }
 .main-navbar .nav > li > a {
   display: block;
@@ -320,9 +354,12 @@ ul.twitter_update_list {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+.main-navbar .nav > li:hover {
+  border-bottom: 3px solid #e8e8e8;
+}
 .main-navbar .nav > li:hover, .main-navbar .nav > li:hover > a {
+  background-color: #f0f0f0;
   color: black;
-  background-color: #b3a797;
   text-decoration: none;
   -webkit-transition-property: color, background-color;
   -moz-transition-property: color, background-color;
@@ -333,9 +370,31 @@ ul.twitter_update_list {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-
-.navbar-fixed-top .nav > .register, .navbar-fixed-top .nav > .register a {
-  color: yellow;
+.main-navbar .nav #nav1 {
+  border-color: #488a40;
+}
+.main-navbar .nav #nav2 {
+  border-color: #50bfe3;
+}
+.main-navbar .nav #nav3 {
+  border-color: #a51e22;
+}
+.main-navbar .nav #nav4 {
+  border-color: #b7b7b7;
+}
+.main-navbar .nav .register {
+  border-color: #1958d1;
+}
+.main-navbar .nav .register a:hover {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+.main-navbar .nav-underline {
+  height: 20px;
+  background: url('../img/2012/nav-underline.jpg?1349902143') no-repeat top;
+  margin-top: -3px;
 }
 
 .box {
@@ -371,24 +430,17 @@ ul.twitter_update_list {
 }
 
 #about {
-  margin-top: 24px;
+  margin-top: 20px;
+  background: #f7f7f9;
 }
 
 #about h3 {
-  text-align: center;
-  font-family: bree-serif, Georgia, serif;
+  text-align: left;
   font-size: 30px;
   font-weight: normal;
   color: black;
   margin-bottom: 20px;
   margin-top: 0;
-  border-bottom: 2px solid black;
-  -moz-border-radius-bottomleft: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  -moz-border-radius-bottomright: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  border-bottom-right-radius: 2px;
 }
 
 .sharp-bottom-left {
@@ -416,11 +468,14 @@ ul.twitter_update_list {
 }
 
 .sponsors {
+  margin-top: 20px;
   display: block;
   text-align: center;
   float: right;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.09766);
+  padding: 15px 15px 15px 0;
+  background-color: #f7f7f9;
+  border: 1px solid #efefef;
+  border-radius: 5px;
 }
 .sponsors li {
   list-style: none;
@@ -573,7 +628,7 @@ ul.twitter_update_list {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../img/2012/hasgeek.png?1349187987');
+  background-image: url('../img/2012/hasgeek.png?1349787064');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 100px;
@@ -601,15 +656,10 @@ footer .footer-inner {
   background: none;
 }
 
-.footer-bar {
-  border-bottom: 2px solid black;
-  -moz-border-radius-bottomleft: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  -moz-border-radius-bottomright: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  margin-bottom: 12px;
+#footer-image {
+  margin-top: 20px;
+  background: url('../img/2012/footer_bg2.png?1349874158') no-repeat 49% top;
+  height: 138px;
 }
 
 .table td, .table th {

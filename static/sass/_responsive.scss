@@ -166,3 +166,35 @@
   #masthead {
   }
 }
+/*
+//Modified span8 and container1
+// ------------------
+
+@media (min-width: 1200px) {
+  .container{
+    width: 1070px;
+  }
+  .span8 {
+    width: 750px;
+  }
+  .span4 {
+    width: 370px;
+  }
+}
+@media (min-width: 979px) and (max-width: 1200px) {
+  .span8 {
+    width: 680px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .container{
+    width: 724px;
+  }
+  .span8 {
+    width: 520px;
+  }
+  .span4 {
+    width: 228px;
+  }
+}*/
+

@@ -1,56 +1,27 @@
-{% from "baseframe/components.html" import networkbar with context -%}
 {% from theme("inc/map_script.html") import mapscript -%}
 {% extends theme("layout.html") %}
 
-{% block titletags -%}
-  <title>{% block title %}{{ website.title }}{% endblock %}</title>
-  <meta name="DC.title" content="{{ website.title }}"/>
-{%- endblock %}
+{% block title %}{{ node.title }}{% endblock %}
 {% block description %}{{ node.description }}{% endblock %}
 
 {% block masthead %}
-  <div id="masthead">
+  <div id="masthead-small">
     <div class="container">
       <hgroup class="page-header">
-        <h1>Droidcon India</h1>
-        <h2>2 &amp; 3 November 2012, Bangalore</h2>
+        <h1>Venue</h1>
       </hgroup>
     </div>
   </div>
 {% endblock %}
 
 {% block main %}
-  <div class="container">
-    <div class="row">
-      <div class="span8">
-        {% include theme("inc/about.html") %}
-        {% include theme("inc/updates.html") %}
-      </div><!-- /span8 -->
-      <div class="span3 push-right sponsors">
-        <ul class="sponsor-platinum sponsor clearfix">
-         <li><a data-toggle="modal" href="#sponsor-redhat"><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-redhat.png') }}"></a></li>
-        </ul>
-        <ul class="sponsor-gold sponsor clearfix">
-          <li><a href=""><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-google.png') }}"></a></li>
-        </ul>
-
-        <ul class="sponsor-silver sponsor clearfix">
-         <li><a href=""><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-flipkart.png') }}"></a></li>
-        </ul>
-
-        <ul class="sponsor-community sponsor clearfix">
-         <li><a href=""><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-neo4j.png') }}"></a></li>
-        </ul>
-      </div><!-- /span3 -->
-    </div><!-- /row -->
-  </div><!-- /container -->
-
+  {% include theme("inc/venue.html") %}
 {% endblock %}
 
 
 
 {% block footerscripts %}
-{# {{ mapscript(getnode('2012', 'venue-map')) }} #}
+{{ mapscript(getnode('2012', 'venue-map')) }}
 <script type="text/javascript">
   $(function() {
     /*

@@ -3,20 +3,27 @@
 
 {% block headerbox %}
 <header class="header">
-  {% block networkbar %}{{ networkbar(siteid='events', baseclass='hg-dark', login=false) }}{% endblock %}
-  <div class="container masthead-container">
-    <div id="masthead-short">
-      
+  {{ networkbar(siteid='events', login=false) }}
+  {% block masthead %}
+  <div id="masthead-small">
+    <div class="container">
+      <hgroup class="page-header">
+        <h1>Droidcon India</h1>
+        <h2>2 &amp; 3 November 2012, Bangalore</h2>
+      </hgroup>
     </div>
   </div>
+  {% endblock %}
   <div class="main-navbar">
     <div class="container">
       <ul class="nav" id="main-nav">
-        <li><a href="/2012">Droidcon 2012</a></li>
-        <li><a href="/2012/schedule">Schedule</a></li>
-        <li><a href="/2012/data-workshops">Workshops</a></li>
-        <li class="register"><a href="/2012/register">Register for the Event</a></li>
+        <li id="nav1"><a href="/2012/#about">Home</a></li>
+        <li id="nav3"><a href="/2012/blog">Blog</a></li>
+        <li id="nav2"><a href="/2012/proposals">Proposals</a></li>
+        <li id="nav4"><a href="/2012/venue">Venue</a></li>
+        <li class="register btn-primary"><a href="/2012/register">Buy Ticket</a></li>
       </ul>
+      <!--<div class="nav-underline"></div>-->
     </div>
   </div>
 </header>
@@ -36,6 +43,8 @@
 {%- endblock %}
 
 {% block basefooter -%}
+  <div id="footer-image">
+  </div>
   <footer>
     <div class="footer-inner">
       <div class="container">

@@ -22,7 +22,7 @@ $navbar-height: 46px
     .footer-inner
       min-height: $height
 
-+footer-height(77px)
++footer-height(50px)
 
 @mixin rounded_border($size: 6px)
   -moz-border-radius: $size
@@ -33,13 +33,17 @@ $navbar-height: 46px
 body, p
   //background: #121212 image-url("black_denim.png") repeat scroll
   color: #000
-  font-family: "droid-sans", Helvetica, Arial, sans-serif
+  //font-family: "droid-sans", Helvetica, Arial, sans-serif
   font-size: $font-size
   line-height: $line-height
   margin-bottom: $line-height / 2
 
+.container
+  margin: 0 auto auto auto
+
+
 .btn
-  font-family: "droid-sans", Helvetica, Arial, sans-serif
+  //font-family: "droid-sans", Helvetica, Arial, sans-serif
   font-size: $font-size
   line-height: $line-height
 
@@ -55,13 +59,14 @@ body, p
   //background: linear-gradient(top, #a1e048, #693)
 
 .btn-primary
+  border-radius: 3px
   //background: #008012
 
 form
   margin-bottom: $line-height / 2
 
 .leaflet-popup-content
-  font-family: "droid-sans", Helvetica, Arial, sans-serif
+  //font-family: "droid-sans", Helvetica, Arial, sans-serif
   font-size: $font-size
   line-height: $line-height
   font-weight: bold
@@ -76,12 +81,15 @@ li
 small
   font-size: smaller
 
+.description
+  padding: 15px
+
 .description p
-  text-align: center
-  font-size: 25px
+  text-align: left
+  font-size: 21px
   line-height: 36px
-  font-style: italic
-  color: black
+  font-style: normal
+  color: #333
   margin-bottom: $line-height * 1.5
 
 h1
@@ -98,9 +106,16 @@ h2, h3
 h2
   font-size: 30px
   line-height: $line-height * 2
-
+#readmore
+  font-size: 20px
 #masthead .page-header
   padding: 2.5em 0 0 8em
+
+#masthead-small .page-header
+  padding: 10em 0 0 0.0em
+
+#masthead-small h1
+  text-align: center
 
 .page-header
   h2
@@ -117,7 +132,7 @@ h3
 .blog h3
   line-height: $line-height * 1.5
   font-weight: normal
-  font-family: "droid-sans", Helvetica, Arial, sans-serif
+  //font-family: "droid-sans", Helvetica, Arial, sans-serif
   margin-top: 26px
 
   &:first-child
@@ -155,6 +170,10 @@ h1 small, h2 small, h3 small
   background: image-url("2012/masthead.png") no-repeat 50% top
   height: +image-height("2012/masthead.png") // + ($border-thickness * 2)
 
+#masthead-small
+  background: image-url("2012/masthead-small.png") no-repeat 50% top
+  height: 18px +image-height("2012/masthead-small.png") // + ($border-thickness * 2)
+
 #banner
   background: #70bf32
   background: -moz-linear-gradient(top, #a1e048, #6a942f)
@@ -191,11 +210,8 @@ h1 small, h2 small, h3 small
     font-size: 19px
     line-height: $line-height
 
-
-
 .page-top
   margin-top: $line-height
-
 
 .sidebar
   top: 15em
@@ -212,9 +228,6 @@ h1 small, h2 small, h3 small
   @include rounded_border(10px)
   padding: $line-height - $border-thickness
   padding-bottom: $border-thickness
-
-
-
 
 .author
   text-align: right
@@ -234,11 +247,14 @@ ul.twitter_update_list
   margin: 0
   margin-top: $line-height * 2
 
-
 .section-header
-  text-align: center
+  text-align: left
   margin-bottom: 20px
+  margin-top: -20px
 
+.section-header h2
+  color: #666
+  font-size: 18px
 
 .btn-wide
   width: 70%
@@ -262,7 +278,9 @@ ul.twitter_update_list
     margin-right: 0
     margin-bottom: 0
     width: 100%
-    background-color: transparent
+    background-color: #fff
+    //opacity: 0.9
+    border-bottom: 0.5px #efefef solid
 
     & > li
       +inline-block
@@ -275,6 +293,8 @@ ul.twitter_update_list
       +box-pack(center)
       +transition-property("color, background-color")
       +transition-duration(0.2s)
+      border-bottom: 3px solid white
+      margin-right: 1px
 
       & > a
         display: block
@@ -288,16 +308,34 @@ ul.twitter_update_list
         +transition-property("color, background-color")
         +transition-duration(0.2s)
 
+      &:hover
+        border-bottom: 3px solid #E8E8E8
+
       &:hover, &:hover > a
+        background-color: #F0F0F0
         color: black
-        background-color: #b3a797
         text-decoration: none
         +transition-property("color, background-color")
         +transition-duration(0.2s)
-
+    #nav1
+      border-color: #488A40
+    #nav2
+      border-color: #50BFE3
+    #nav3
+      border-color: #A51E22
+    #nav4
+      border-color: #B7B7B7
+    .register
+      border-color: #1958D1
+    .register a:hover
+      +transition-property("none")
+  .nav-underline
+    height: 20px
+    background: image-url("2012/nav-underline.jpg") no-repeat  top
+    margin-top: -3px
 .navbar-fixed-top .nav
   & > .register, & > .register a
-    color: yellow
+    //color: yellow
 
 .box
   +box-sizing(border-box)
@@ -320,22 +358,20 @@ ul.twitter_update_list
     text-align: left
   .next
     text-align: right
-
 // About
 #about
-  margin-top: 24px
+  margin-top: 20px
+  background: #F7F7F9
+  
 
 #about h3
-  text-align: center
-  font-family: bree-serif, Georgia, serif
+  text-align: left
+  //font-family: bree-serif, Georgia, serif
   font-size: 30px
   font-weight: normal
   color: black
   margin-bottom: 20px
   margin-top: 0
-  border-bottom: $m-border
-  +border-bottom-left-radius($border-radius)
-  +border-bottom-right-radius($border-radius)
 
 .sharp-bottom-left
   +border-bottom-left-radius(0 !important)
@@ -352,11 +388,15 @@ ul.twitter_update_list
 // Sponsors
 
 .sponsors
+  margin-top: 20px
   display: block
   text-align: center
   float: right
-  padding: 10px
-  background-color: rgba(255, 255, 255, 0.0976563)
+  padding: 15px 15px 15px 0
+  background-color: #F7F7F9
+  border: 1px solid #efefef
+  border-radius: 5px
+  //background-color: rgba(255, 255, 255, 0.0976563)
 
   li
     list-style: none
@@ -491,12 +531,11 @@ ul.twitter_update_list
 
 footer .footer-inner
   background: none
+#footer-image
+  margin-top: 20px
+  background: image-url("2012/footer_bg2.png") no-repeat 49% top
+  height: +image-height("2012/footer_bg2.png") 
 
-.footer-bar
-  border-bottom: $m-border
-  +border-bottom-left-radius($border-radius)
-  +border-bottom-right-radius($border-radius)
-  margin-bottom: $line-height / 2
 
 .table td, .table th
   text-align: center !important
@@ -527,6 +566,4 @@ ul.grid.schedule > .row-fluid > [class*="span"]
   h4
     font-size: 16px
 
-
 @import "responsive"
-
