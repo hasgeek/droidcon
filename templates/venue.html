@@ -3,107 +3,20 @@
 
 {% block title %}{{ node.title }}{% endblock %}
 {% block description %}{{ node.description }}{% endblock %}
+{% block headline %}{% endblock %}
 
-{% block masthead %}
-  <div id="masthead-small">
-    <div class="container">
-      <hgroup class="page-header">
-        <h1>Venue</h1>
-      </hgroup>
+{% block basecontent %}
+  <div class="row">
+    <div class="span5">
+      <div class="page-header"><h1>{{ node.title }}</h1></div>
+      {{ node.content }}
     </div>
-  </div>
+    <div class="span7">
+      <div id="map" class="map"></div>
+    </div>
+  </div><!-- /row -->
 {% endblock %}
-
-{% block main %}
-  {% include theme("inc/venue.html") %}
-{% endblock %}
-
-
 
 {% block footerscripts %}
-{{ mapscript(getnode('2012', 'venue-map')) }}
-<script type="text/javascript">
-  $(function() {
-    /*
-    $("#main-nav > li:first-child").hover(function() {
-      $("#masthead").addClass('round-bottom-left');
-    }, function() {
-      $("#masthead").removeClass('round-bottom-left');
-    });
-    $("#main-nav > li:last-child").hover(function() {
-      $("#masthead").addClass('round-bottom-right');
-    }, function() {
-      $("#masthead").removeClass('round-bottom-right');
-    });
-    */
-  });
-</script>
-<script type="text/javascript">
-  $(function() {
-    // fixed nav-bar transition code
-    // adapted from twitter bootstrap docs' sub-nav
-    var $win = $(window)
-      , $nav = $('.main-navbar')
-      , $masthead = $('#masthead')
-      , navTop = $nav.length && $nav.offset().top // - 40
-      , isFixed = 0;
-    
-    var processScroll = function () {
-      var scrollTop = $win.scrollTop();
-      if (scrollTop >= navTop && !isFixed) {
-        isFixed = 1;
-        $nav.addClass('navbar-fixed-top');
-        $masthead.addClass('navbar-margin');
-      } else if (scrollTop <= navTop && isFixed) {
-        isFixed = 0;
-        $nav.removeClass('navbar-fixed-top');
-        $masthead.removeClass('navbar-margin');
-      };
-    };
-    
-    processScroll();
-    
-    $win.on('scroll', processScroll);
-    
-    // smooth scroll nav links
-    $('a', $nav).smoothScroll({
-        offset: -80
-      , speed: 900
-    });
-
-  });
-</script>
-
-<script type="text/javascript">
-  $(function() {
-    $(".sponsor-box").on('shown', function() {
-      if (typeof _gaq != 'undefined') {
-        _gaq.push(['_trackPageview', "/{{ folder.name }}/#" + $(this).attr('id')]);
-      };
-    });    
-    $(".sponsor-box").on('hidden', function() {
-      if (typeof _gaq != 'undefined') {
-        _gaq.push(['_trackPageview', "/{{ folder.name }}/#"]);
-      };
-    });    
-    $(".sponsor-exit").click(function() {
-      if (typeof _gaq != 'undefined') {
-        _gaq.push(['_trackPageview', "/out/" + $(this).attr('href')]);
-      };
-    });
-  });
-</script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#twitter").getTwitter({
-      userName: "droidconIN",
-      numTweets: 5,
-      loaderText: "Loading tweets...",
-      slideIn: true,
-      showHeading: false,
-      headingText: "Latest Tweets",
-      showProfileLink: false
-    });
-  });
-</script>
+  {{ mapscript(getnode(path='venue-map')) }}
 {% endblock %}

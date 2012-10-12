@@ -8,8 +8,7 @@
   <div id="masthead-small">
     <div class="container">
       <hgroup class="page-header">
-        <h1>Droidcon India</h1>
-        <h2>2 &amp; 3 November 2012, Bangalore</h2>
+        <h1>{{ node.properties.get('masthead-title') or folder.title }}</h1>
       </hgroup>
     </div>
   </div>
@@ -17,11 +16,11 @@
   <div class="main-navbar">
     <div class="container">
       <ul class="nav" id="main-nav">
-        <li id="nav1"><a href="/2012/#about">Home</a></li>
-        <li id="nav3"><a href="/2012/blog">Blog</a></li>
+        <li id="nav1"><a href="/2012/">Home</a></li>
+        <li id="nav3"><a href="/blog">Blog</a></li>
         <li id="nav2"><a href="/2012/proposals">Proposals</a></li>
         <li id="nav4"><a href="/2012/venue">Venue</a></li>
-        <li class="register btn-primary"><a href="/2012/register">Buy Ticket</a></li>
+        <li class="register"><a href="/2012/tickets">Buy Tickets</a></li>
       </ul>
       <!--<div class="nav-underline"></div>-->
     </div>
@@ -39,18 +38,34 @@
 {%- endblock %}
 
 {% block basecontent -%}
-  {% block content %}{% endblock %}
+  <div class="row">
+    <div class="span8">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="span4 sponsors">
+      <ul class="sponsor-platinum sponsor clearfix">
+       <li><img src="http://www.placehold.it/338x100&text=To+be+announced"></li>
+      </ul>
+
+      <ul class="sponsor-gold sponsor clearfix">
+        <li><img src="http://www.placehold.it/338x100&text=To+be+announced"></li>
+      </ul>
+
+      <ul class="sponsor-silver sponsor clearfix">
+       <li><img src="http://www.placehold.it/338x100&text=To+be+announced"></li>
+      </ul>
+    </div><!-- /span3 -->
+  </div>
 {%- endblock %}
 
 {% block basefooter -%}
-  <div id="footer-image">
-  </div>
   <footer>
     <div class="footer-inner">
+      <div id="footer-image"><!-- --></div>
       <div class="container">
         <div class="footer-bar"></div>
         {% block footer -%}
-          <span>Droidcon is a conference by <a href="http://hasgeek.com/">HasGeek</a>. Copyright &copy; 2010-12. All rights reserved.</span>
+          <span>Droidcon India is a conference by <a href="http://hasgeek.com/">HasGeek</a> in association with <a href="http://droidcon.com/">Mobile Seasons</a>. Copyright &copy; 2010-12. All rights reserved.</span>
         {%- endblock %}
       </div>
     </div>

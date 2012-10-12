@@ -4,10 +4,9 @@
 {% block description %}{{ node.description }}{% endblock %}
 
 {% block headline %}{% endblock %}
-{% block content %}
+{% block basecontent %}
 <div class="row page-top">
   <div class="span6">
-    <div class="page-header"><h2>{{ node.title }}</h2></div>
     {{ node.content }}
   </div>
   <div class="span6 box box-tight">

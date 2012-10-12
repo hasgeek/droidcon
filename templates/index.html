@@ -18,33 +18,24 @@
     </div>
   </div>
 {% endblock %}
+{% block headline %}{% endblock %}
 
-{% block main %}
-  <div class="container">
-    <div class="row">
-      <div class="span8">
-        {% include theme("inc/about.html") %}
-        {% include theme("inc/updates.html") %}
-      </div><!-- /span8 -->
-      <div class="span3 push-right sponsors">
-        <ul class="sponsor-platinum sponsor clearfix">
-         <li><a data-toggle="modal" href="#sponsor-redhat"><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-redhat.png') }}"></a></li>
-        </ul>
-        <ul class="sponsor-gold sponsor clearfix">
-          <li><a href=""><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-google.png') }}"></a></li>
-        </ul>
+{% block content %}
+  <div class="description">
+    {{ node.content }}
+  </div>
 
-        <ul class="sponsor-silver sponsor clearfix">
-         <li><a href=""><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-flipkart.png') }}"></a></li>
-        </ul>
-
-        <ul class="sponsor-community sponsor clearfix">
-         <li><a href=""><img alt="Add Text" src="{{ theme_static('img/2012/sponsors/sponsor-neo4j.png') }}"></a></li>
-        </ul>
-      </div><!-- /span3 -->
-    </div><!-- /row -->
-  </div><!-- /container -->
-
+  {% for post in feed(limit=4) -%}
+    <div class="post">
+      <h3 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
+      <small>by <strong>{{ post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</small>
+      </h3>
+      {{ post.description }}
+    </div>
+  {%- else -%}
+    <p>(No blog entries have been written so far)</p>
+  {%- endfor %}
+  <h3 class="post-title"><a href="/blog/">See all blog posts</a></h3>
 {% endblock %}
 
 

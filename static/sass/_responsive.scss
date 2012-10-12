@@ -6,46 +6,12 @@
 
 // Masthead only, for small screens
 @media screen and (max-width: 600px) {
-  #masthead {
-    @include pie-clearfix;
-    height: auto;
-    #banner {
-      position: static;
-      border: 0;
-      border-top: $m-border;
-      width: 100%;
-      @include border-radius(0);
-      margin-top: 460px;
-      background: #00a112;
-      h1 {
-        text-shadow: none;
-      }
-    }
+  #masthead .page-header {
+    padding-top: 1em;
+    padding-left: 1em;
   }
-}
-
-// UP TO LANDSCAPE PHONE
-// ---------------------
-
-@media screen and (max-width: 480px) {
-  #masthead #banner h1 {
-    font-size: 50px;
-  }
-}
-
-
-// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
-// --------------------------------------------------
-
-@media screen and (max-width: 767px) {
-  .masthead-container {
-    padding: 0;
-    #masthead, #masthead-short, .main-navbar .nav {
-      margin-top: 0;
-      border-left: 0;
-      border-right: 0;
-      @include border-radius(0);
-    }
+  #masthead-small .page-header {
+    padding-top: 8em;
   }
   .main-navbar {
     .container {
@@ -59,19 +25,28 @@
       & > li {
           display: block;
           float: left;
+          margin-bottom: 5px;
       }
     }
   }
-  .navbar-margin {
-    margin-bottom: 0;
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media screen and (max-width: 480px) {
+  #masthead {
   }
-  .navbar-fixed-top .nav {
-    & > .register, & > .register a {
-      color: white;
-    }
-  }
-  .section h2 {
-    display: block;
+}
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media screen and (max-width: 767px) {
+  #masthead .page-header {
+    padding-top: 2em;
+    padding-left: 0;
   }
   // FIXME: This is ugly. Use generic hide-on-phones, etc classes
   #funnel-preview .header .funnel-preview-by,
@@ -133,21 +108,17 @@
 // ----------------------------------
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
-  #masthead {
-  }
-  #masthead-short {
-    h1 {
-      left: 330px;
-      width: 380px;
-      padding-top: 20px;
-    }
+  #masthead .page-header {
+    padding-top: 2em;
+    padding-left: 0;
   }
 }
 
 // TABLETS AND BELOW
 // -----------------
 @media screen and (max-width: 979px) {
-  #masthead {
+  #masthead .page-header {
+    padding-left: 0;
   }
 }
 
@@ -155,7 +126,8 @@
 // ---------------
 
 @media screen and (min-width: 980px) {
-  #masthead {
+  #masthead .page-header {
+    padding-left: 4em;
   }
 }
 
@@ -163,38 +135,7 @@
 // ------------------
 
 @media screen and (min-width: 1200px) {
-  #masthead {
+  #masthead .page-header {
+    padding-left: 8.5em;
   }
 }
-/*
-//Modified span8 and container1
-// ------------------
-
-@media (min-width: 1200px) {
-  .container{
-    width: 1070px;
-  }
-  .span8 {
-    width: 750px;
-  }
-  .span4 {
-    width: 370px;
-  }
-}
-@media (min-width: 979px) and (max-width: 1200px) {
-  .span8 {
-    width: 680px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  .container{
-    width: 724px;
-  }
-  .span8 {
-    width: 520px;
-  }
-  .span4 {
-    width: 228px;
-  }
-}*/
-
