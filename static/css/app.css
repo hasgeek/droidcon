@@ -14,6 +14,7 @@ footer .footer-inner {
 
 body, p {
   color: black;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 12px;
@@ -171,12 +172,12 @@ h1 small, h2 small, h3 small {
 }
 
 #masthead {
-  background: url('../img/2012/masthead.png?1349692447') no-repeat 50% top;
+  background: url('../img/2012/masthead.jpg?1350066498') no-repeat 50% top;
   height: 400px;
 }
 
 #masthead-small {
-  background: url('../img/2012/masthead-small.png?1349967840') no-repeat 50% top;
+  background: url('../img/2012/masthead-small.jpg?1350066527') no-repeat 50% top;
   height: 224px;
 }
 
