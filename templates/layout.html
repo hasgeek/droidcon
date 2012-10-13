@@ -71,4 +71,41 @@
     </div>
   </footer>
 {%- endblock %}
+{%- block layoutscripts %}
+  <script type="text/javascript">
+    $(function() {
+      // fixed nav-bar transition code
+      // adapted from twitter bootstrap docs' sub-nav
+      var $win = $(window)
+        , $nav = $('.main-navbar')
+        , $masthead = $('#masthead')
+        , navTop = $nav.length && $nav.offset().top // - 40
+        , isFixed = 0;
+      
+      var processScroll = function () {
+        var scrollTop = $win.scrollTop();
+        if (scrollTop >= navTop && !isFixed) {
+          isFixed = 1;
+          $nav.addClass('navbar-fixed-top');
+          $masthead.addClass('navbar-margin');
+        } else if (scrollTop <= navTop && isFixed) {
+          isFixed = 0;
+          $nav.removeClass('navbar-fixed-top');
+          $masthead.removeClass('navbar-margin');
+        };
+      };
+      
+      processScroll();
+      
+      $win.on('scroll', processScroll);
+      
+      // smooth scroll nav links
+      $('a', $nav).smoothScroll({
+          offset: -80
+        , speed: 900
+      });
 
+    });
+  </script>
+  {% block footerscripts %}{% endblock %}
+{% endblock %}
