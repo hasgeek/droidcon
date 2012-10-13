@@ -7,11 +7,11 @@
 {% block basecontent %}
 {{ node.content }}
 <ul id="funnel-filter" class="nav nav-tabs nav-grid">
-  <li class="active"><a data-section="" href="">All</a></li>
+  <li class="active"><a data-toggle="tab" data-section="" href="#all">All</a></li>
   {% for s in node.sections() %}
-    <li><a data-section="{{ s.name }}" href="">{{ s.title }}</a></li>
+    <li><a data-toggle="tab" data-section="{{ s.name }}" href="#{{ s.name }}">{{ s.title }}</a></li>
   {% endfor %}
-  <li><a data-confirmed="True" href="">Confirmed Sessions</a></li>
+  <li><a data-toggle="tab" data-confirmed="True" href="#confirmed">Confirmed Sessions</a></li>
 </ul>
 <ul id="funnel-listing" class="grid container-fluid">
   <li class="row-fluid header">
@@ -40,10 +40,7 @@
 {% block footerscripts %}
 <script type="text/javascript">
   $(function() {
-    $("#funnel-filter a[data-section]").click(function(e) {
-      $("#funnel-filter .active").removeClass('active');
-      $(this).closest('li').addClass('active');
-
+    $("#funnel-filter a[data-section]").on('shown', function(e) {
       var section = $(this).attr('data-section');
       if (section == '') {
         $('#funnel-listing li.item').slideDown('fast');
@@ -51,12 +48,8 @@
         $('#funnel-listing li.item').not('[data-section="' + section + '"]').slideUp('fast');
         $('#funnel-listing li.item[data-section="' + section + '"]').slideDown('fast');
       };
-      e.preventDefault();
     });
-   $("#funnel-filter a[data-confirmed]").click(function(e) {
-      $("#funnel-filter .active").removeClass('active');
-      $(this).closest('li').addClass('active');
-
+    $("#funnel-filter a[data-confirmed]").on('shown', function(e) {
       var confirmed = $(this).attr('data-confirmed');
       if (confirmed == '') {
         $('#funnel-listing li.item').slideDown('fast');
@@ -64,9 +57,30 @@
         $('#funnel-listing li.item').not('[data-confirmed="' + confirmed + '"]').slideUp('fast');
         $('#funnel-listing li.item[data-confirmed="' + confirmed + '"]').slideDown('fast');
       };
- 
-      e.preventDefault();
     });
+
+    var matchtab = function() {
+      var url = document.location.toString();
+      if (url.match('#/')) {
+        $('.nav-tabs a[href="#'+url.split('#/')[1]+'"]').tab('show');
+      } else if (url.match('#')) {
+        $('.nav-tabs a[href="#'+url.split('#')[1]+'"]').tab('show');
+      }
+    };
+
+    // Load correct tab when fragment identifier changes
+    $(window).bind('hashchange', matchtab);
+    // Load correct tab when the page loads
+    matchtab();
+    // Change hash for tab click
+    $('.nav-tabs a').on('shown', function (e) {
+      window.location.hash = '#/' + e.target.hash.slice(1);
+    });
+    var url = document.location.toString();
+    if (!url.match('#')) {
+      // Activate the first tab if none are active
+      $('.nav-tabs a').filter(':first').tab('show');
+    }
   });
 </script>
 <script type="text/javascript">
