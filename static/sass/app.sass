@@ -37,7 +37,12 @@ body, p
   font-size: $font-size
   line-height: $line-height
   margin-bottom: $line-height / 2
-
+a
+  color: #787878
+  &:hover
+    color: #0045CC
+#funnel-links a
+  color: #0063CC
 .container
   margin: 0 auto auto auto
 
@@ -80,13 +85,23 @@ li
 
 small
   font-size: smaller
+.description p
+  margin-top: 5px
 
 .description p, .description li
   text-align: left
-  font-size: 21px
-  line-height: 36px
+  font-size: 16px
+  line-height: 28px
   font-style: normal
-  color: #333
+  color: #000
+.description li
+  font-size: 18px
+  list-style-image: image-url('2012/android.gif')
+  margin-top: 18px
+.description strong
+  color: #75B138
+.descriprtion p em
+  color: #999
 
 h1
   font-family: Lato, Helvetica, Arial, sans-serif
@@ -104,6 +119,8 @@ h2, h3
 h2
   font-size: 30px
   line-height: $line-height * 2
+h4
+  margin: 45px 0 20px 0
 #readmore
   font-size: 20px
 #masthead .page-header
@@ -253,7 +270,7 @@ h1 small, h2 small, h3 small
     width: 100%
     background-color: #fff
     //opacity: 0.9
-    border-bottom: 0.5px #efefef solid
+    border-bottom: 0px #efefef solid
 
     & > li
       +inline-block
@@ -290,16 +307,26 @@ h1 small, h2 small, h3 small
         text-decoration: none
         +transition-property("color, background-color")
         +transition-duration(0.2s)
+
+      &.active, &.active > a
+        background-oclor: #f0f0f0
+        color: black
+
     #nav1
       border-color: #488A40
     #nav2
-      border-color: #50BFE3
+      border-color: #FBCC62
     #nav3
-      border-color: #A51E22
+      border-color: #50BFE3
     #nav4
+      border-color: #A51E22
+    #nav5
       border-color: #B7B7B7
+    
     .register, .register:hover
       border-color: #04c
+      border-bottom-left-radius: 3px
+      border-bottom-right-radius: 3px
       +background(linear-gradient(#08c,#04c))
       &, & > a
         color: #fff
@@ -310,7 +337,7 @@ h1 small, h2 small, h3 small
         color: yellow
   .nav-underline
     height: 20px
-    background: image-url("2012/nav-underline.jpg") no-repeat  top
+    background: image-url("2012/nav-underline.png") no-repeat 1% top
     margin-top: -3px
 .navbar-fixed-top .nav
   & > .register, & > .register a
@@ -326,6 +353,9 @@ h1 small, h2 small, h3 small
     border-bottom: 2px solid black
     &:after
       color: black
+.post-title 
+  a:hover
+    color: #000
 
 .box
   +box-sizing(border-box)
@@ -379,7 +409,7 @@ h1 small, h2 small, h3 small
     right: 0
     font-weight: 500
     text-transform: uppercase
-    color: #CCC
+    color: #666
     letter-spacing: 0.1em
 
   a

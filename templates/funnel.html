@@ -5,6 +5,7 @@
 {% block headline %}{% endblock %}
 
 {% block basecontent %}
+
 {{ node.content }}
 <ul id="funnel-filter" class="nav nav-tabs nav-grid">
   <li class="active"><a data-toggle="tab" data-section="" href="#all">All</a></li>
@@ -13,6 +14,7 @@
   {% endfor %}
   <li><a data-toggle="tab" data-confirmed="True" href="#confirmed">Confirmed Sessions</a></li>
 </ul>
+<div id="funnel-links">
 <ul id="funnel-listing" class="grid container-fluid">
   <li class="row-fluid header">
     <div class="span6 funnel-title">Title</div>
@@ -35,7 +37,7 @@
     </li>  
   {%- endfor %}
 </ul>
-
+</div>
 {% endblock %}
 {% block footerscripts %}
 <script type="text/javascript">

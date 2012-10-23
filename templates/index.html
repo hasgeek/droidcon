@@ -24,7 +24,7 @@
   <div class="description">
     {{ node.content }}
   </div>
-
+  <h4>Latest Updates</h4>
   {% for post in feed(limit=4) -%}
     <div class="post">
       <h3 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
