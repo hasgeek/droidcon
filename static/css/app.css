@@ -24,7 +24,7 @@ a {
   color: #787878;
 }
 a:hover {
-  color: #0045cc;
+  color: #51bfe4;
 }
 
 #funnel-links a {
@@ -81,24 +81,41 @@ small {
 
 .description p, .description li {
   text-align: left;
-  font-size: 16px;
-  line-height: 28px;
-  font-style: normal;
+  font-size: 21px;
+  line-height: 35px;
+  font-style: italic;
   color: black;
 }
 
 .description li {
   font-size: 18px;
-  list-style-image: url('../img/2012/android.gif?1350967604');
+  list-style-image: url('../img/2012/droidheads/711.png?1351159108');
+  list-style-position: inside;
+  margin-left: -25px;
   margin-top: 18px;
 }
 
 .description strong {
-  color: #75b138;
+  color: #53bfe6;
 }
 
 .descriprtion p em {
   color: #999999;
+}
+
+.droid-head {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.black-header {
+  font-size: 20px;
+  float: left;
+}
+
+.clear {
+  padding-top: 80px;
 }
 
 h1 {
@@ -205,12 +222,12 @@ h1 small, h2 small, h3 small {
 }
 
 #masthead {
-  background: url('../img/2012/masthead.jpg?1350066498') no-repeat 50% top;
+  background: url('../img/2012/masthead.jpg?1351151116') no-repeat 50% top;
   height: 400px;
 }
 
 #masthead-small {
-  background: url('../img/2012/masthead-small.jpg?1350066527') no-repeat 50% top;
+  background: url('../img/2012/masthead-small.jpg?1351151116') no-repeat 50% top;
   height: 224px;
 }
 
@@ -393,22 +410,24 @@ h1 small, h2 small, h3 small {
   border-color: #b7b7b7;
 }
 .main-navbar .nav .register, .main-navbar .nav .register:hover {
-  border-color: #0044cc;
+  border-color: #53bfe6;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0088cc), color-stop(100%, #0044cc));
-  background: -webkit-linear-gradient(#0088cc, #0044cc);
-  background: -moz-linear-gradient(#0088cc, #0044cc);
-  background: -o-linear-gradient(#0088cc, #0044cc);
-  background: linear-gradient(#0088cc, #0044cc);
+  background-color: #53bfe6;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dd6e7), color-stop(100%, #53bfe6));
+  background: -webkit-linear-gradient(#8dd6e7, #53bfe6);
+  background: -moz-linear-gradient(#8dd6e7, #53bfe6);
+  background: -o-linear-gradient(#8dd6e7, #53bfe6);
+  background: linear-gradient(#8dd6e7, #53bfe6);
 }
 .main-navbar .nav .register, .main-navbar .nav .register > a, .main-navbar .nav .register:hover, .main-navbar .nav .register:hover > a {
-  color: white;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0088cc), color-stop(100%, #0044cc));
-  background: -webkit-linear-gradient(#0088cc, #0044cc);
-  background: -moz-linear-gradient(#0088cc, #0044cc);
-  background: -o-linear-gradient(#0088cc, #0044cc);
-  background: linear-gradient(#0088cc, #0044cc);
+  color: black;
+  background-color: #53bfe6;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dd6e7), color-stop(100%, #53bfe6));
+  background: -webkit-linear-gradient(#8dd6e7, #53bfe6);
+  background: -moz-linear-gradient(#8dd6e7, #53bfe6);
+  background: -o-linear-gradient(#8dd6e7, #53bfe6);
+  background: linear-gradient(#8dd6e7, #53bfe6);
   -moz-border-radius-topleft: 2px;
   -webkit-border-top-left-radius: 2px;
   border-top-left-radius: 2px;
@@ -417,12 +436,18 @@ h1 small, h2 small, h3 small {
   border-top-right-radius: 2px;
 }
 .main-navbar .nav .register > a:hover, .main-navbar .nav .register:hover > a:hover {
-  color: yellow;
+  color: white;
 }
 .main-navbar .nav-underline {
   height: 20px;
-  background: url('../img/2012/nav-underline.png?1350967604') no-repeat 1% top;
+  background: url('../img/2012/nav-underline.png?1351151117') no-repeat 1% top;
   margin-top: -3px;
+}
+
+#other-droidcons {
+  height: 300px;
+  background: url('../img/2012/worldmap.png?1351079018') no-repeat 1% top;
+  background-size: 90%;
 }
 
 .post-title a:after {
@@ -473,11 +498,15 @@ h1 small, h2 small, h3 small {
   text-align: right;
 }
 
+.home-box {
+  display: block;
+  border-top: 3px #efefef solid;
+}
+
 .sponsors {
   text-align: center;
   padding: 15px;
-  background-color: #f7f7f9;
-  border: 1px solid #efefef;
+  border: 1.5px solid #c2e6fc;
   border-radius: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -492,18 +521,25 @@ h1 small, h2 small, h3 small {
 .sponsors h4 {
   color: #bbbbbb;
 }
+.sponsors h3 {
+  margin-top: -10px;
+}
+
+.home-sponsor-adjust {
+  margin-top: 45px;
+}
 
 .sponsor {
-  margin-bottom: 2.5em;
+  margin-bottom: 3.5em;
   position: relative;
   text-align: center;
 }
-.sponsor:after {
-  font-size: 10px;
+.sponsor:before {
+  font-size: 12px;
   position: absolute;
   margin-top: 0.5em;
-  top: 100%;
-  right: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
   font-weight: 500;
   text-transform: uppercase;
   color: #666666;
@@ -528,6 +564,12 @@ h1 small, h2 small, h3 small {
   max-height: 100%;
   max-width: 100%;
   vertical-align: middle;
+  margin-top: 40px;
+}
+
+.partner {
+  float: left;
+  list-style-type: none;
 }
 
 .sponsor-platinum .logo {
@@ -552,6 +594,10 @@ h1 small, h2 small, h3 small {
 .sponsor-silver .logo, .sponsor-silver img {
   max-height: 100px;
   line-height: 100px;
+  float: right;
+  margin-right: 15px;
+  margin-left: 5px;
+  height: 30%;
 }
 
 .sponsor-bronze .logo {
@@ -578,23 +624,24 @@ h1 small, h2 small, h3 small {
   line-height: 100px;
 }
 
-.sponsor-platinum:after {
+.sponsor-platinum:before {
   content: "Platinum Sponsor";
+  text-align: center;
 }
 
-.sponsor-gold:after {
+.sponsor-gold:before {
   content: "Gold Sponsor";
 }
 
-.sponsor-silver:after {
-  content: "Silver Sponsor";
+.sponsor-silver:before {
+  content: "Silver Sponsors";
 }
 
-.sponsor-bronze:after {
+.sponsor-bronze:before {
   content: "Bronze Sponsor";
 }
 
-.sponsor-community:after {
+.sponsor-community:before {
   content: "Community Sponsor";
 }
 
@@ -602,20 +649,26 @@ h1 small, h2 small, h3 small {
   margin-top: -8px;
 }
 
+address h4 {
+  margin-top: 5px;
+  margin-bottom: -10px;
+}
+
 .map-box {
   position: relative;
 }
 
 .map {
-  border: 2px solid;
+  border: 2px solid #c2e6fc;
   width: 100%;
-  height: 400px;
+  height: 370px;
   overflow: hidden;
   margin: 0 0 24px 0;
   padding: 0;
 }
-.map.long {
-  height: 800px;
+
+#hotel-map {
+  height: 700px;
 }
 
 .nav.nav-grid {
@@ -626,7 +679,7 @@ h1 small, h2 small, h3 small {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../img/2012/hasgeek.png?1349187987');
+  background-image: url('../img/2012/hasgeek.png?1351151116');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 100px;
@@ -655,7 +708,7 @@ footer .footer-inner {
 }
 
 #footer-image {
-  background: url('../img/2012/footer_bg2.png?1349967840') no-repeat 49% top;
+  background: url('../img/2012/footer_bg2.png?1351151116') no-repeat 49% top;
   height: 138px;
 }
 

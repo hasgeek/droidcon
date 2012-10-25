@@ -7,11 +7,23 @@
 
 {% block basecontent %}
   <div class="row">
-    <div class="span5">
-      <div class="page-header"><h1>{{ node.title }}</h1></div>
+    <div class="span4">
+      <div class="page-header"><h1>{{ node.title }}</h1></div>  
       {{ node.content }}
     </div>
-    <div class="span7">
+    <div class="span4">
+      <img src="{{ theme_static('img/2012/mlrcc.jpeg') }}">
+      <address><br /><h4>Address:</h4><br />
+      <blockquote>
+        MLR Convention Centre<br />
+        4th Cross, Dyvasandra Industrial Layout<br />
+        Near Brigade Metropolis<br />
+        Whitefield Road, Mahadevapura<br />
+        Bangalore – 560 048
+      </blockquote>
+      </address>
+    </div>
+    <div class="span4">
       <div id="map" class="map"></div>
     </div>
   </div><!-- /row -->

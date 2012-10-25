@@ -40,12 +40,13 @@ body, p
 a
   color: #787878
   &:hover
-    color: #0045CC
+    color: #51BFE4
+
 #funnel-links a
   color: #0063CC
+
 .container
   margin: 0 auto auto auto
-
 
 .btn
   //font-family: "droid-sans", Helvetica, Arial, sans-serif
@@ -90,19 +91,30 @@ small
 
 .description p, .description li
   text-align: left
-  font-size: 16px
-  line-height: 28px
-  font-style: normal
+  font-size: 21px
+  line-height: 35px
+  font-style: italic
   color: #000
 .description li
   font-size: 18px
-  list-style-image: image-url('2012/android.gif')
+  list-style-image: image-url('2012/droidheads/711.png')
+  list-style-position: inside
+  margin-left: -25px
+  //list-style-type: circle
   margin-top: 18px
 .description strong
-  color: #75B138
+  color: #53BFE6
 .descriprtion p em
   color: #999
-
+.droid-head
+  float: left
+  margin-top: 10px
+  margin-right: 10px
+.black-header
+  font-size: 20px
+  float: left
+.clear
+  padding-top: 80px
 h1
   font-family: Lato, Helvetica, Arial, sans-serif
   font-weight: bold
@@ -180,7 +192,6 @@ h4, h5, h6
 
 h1 small, h2 small, h3 small
   line-height: $line-height
-
 
 #masthead, #masthead-short
   position: relative
@@ -324,21 +335,28 @@ h1 small, h2 small, h3 small
       border-color: #B7B7B7
     
     .register, .register:hover
-      border-color: #04c
+      border-color: #53BFE6
       border-bottom-left-radius: 3px
       border-bottom-right-radius: 3px
-      +background(linear-gradient(#08c,#04c))
+      background-color: #53BFE6
+      +background(linear-gradient(#8DD6E7,#53BFE6))
       &, & > a
-        color: #fff
-        +background(linear-gradient(#08c,#04c))
+        color: #000
+        background-color: #53BFE6
+        +background(linear-gradient(#8DD6E7,#53BFE6))
         +border-top-left-radius(2px)
         +border-top-right-radius(2px)
       & > a:hover
-        color: yellow
+        color: #fff
   .nav-underline
     height: 20px
     background: image-url("2012/nav-underline.png") no-repeat 1% top
     margin-top: -3px
+#other-droidcons
+  height: 300px
+  background: image-url("2012/worldmap.png") no-repeat 1% top
+  background-size: 90%
+
 .navbar-fixed-top .nav
   & > .register, & > .register a
     //color: yellow
@@ -380,12 +398,14 @@ h1 small, h2 small, h3 small
     text-align: right
 
 // Sponsors
-
+.home-box
+  display: block
+  border-top: 3px #efefef solid
 .sponsors
   text-align: center
   padding: 15px
-  background-color: #F7F7F9
-  border: 1px solid #efefef
+  //background-color: #F7F7F9
+  border: 1.5px solid #C2E6FC
   border-radius: 5px
   +box-sizing(border-box)
   //background-color: rgba(255, 255, 255, 0.0976563)
@@ -395,18 +415,23 @@ h1 small, h2 small, h3 small
     list-style: none
   h4
     color: #BBB
-
+  h3
+    margin-top: -10px
+.home-sponsor-adjust
+  margin-top: 45px
 .sponsor
-  margin-bottom: 2.5em
+  margin-bottom: 3.5em
   position: relative
   text-align: center
   
-  &:after
-    font-size: 10px
+  &:before
+    font-size: 12px
     position: absolute
     margin-top: 0.5em
-    top: 100%
-    right: 0
+    margin-bottom: 0.5em
+    //top: 100%
+    //right: 0
+    text-align: center
     font-weight: 500
     text-transform: uppercase
     color: #666
@@ -429,6 +454,12 @@ h1 small, h2 small, h3 small
     max-height: 100%
     max-width: 100%
     vertical-align: middle
+    //margin-bottom: 60px
+    margin-top: 40px
+    //border: 1px #333 solid
+.partner
+  float: left
+  list-style-type: none
 
 .sponsor-platinum
   .logo
@@ -448,6 +479,10 @@ h1 small, h2 small, h3 small
   .logo, img
     max-height: 100px
     line-height: 100px
+    float: right
+    margin-right: 15px
+    margin-left: 5px
+    height: 30%
 .sponsor-bronze
   .logo
     height: 75px
@@ -467,34 +502,38 @@ h1 small, h2 small, h3 small
     max-height: 100px
     line-height: 100px
 
-.sponsor-platinum:after
+.sponsor-platinum:before
   content: "Platinum Sponsor"
-.sponsor-gold:after
+  text-align: center
+.sponsor-gold:before
   content: "Gold Sponsor"
-.sponsor-silver:after
-  content: "Silver Sponsor"
-.sponsor-bronze:after
+.sponsor-silver:before
+  content: "Silver Sponsors"
+.sponsor-bronze:before
   content: "Bronze Sponsor"
-.sponsor-community:after
+.sponsor-community:before
   content: "Community Sponsor"
 
 
 #venue h3
   margin-top: -8px
+address
+  h4
+    margin-top: 5px
+    margin-bottom: -10px
 
 .map-box
   position: relative
 .map
-  border: 2px solid
+  border: 2px solid #C2E6FC
   width: 100%
-  height: 400px
+  height: 370px
   overflow: hidden
   margin: 0 0 $line-height 0
   padding: 0
 
-  &.long
-    height: 800px
-
+#hotel-map
+  height: 700px
 .nav.nav-grid
   margin-top: $line-height * 1.5
 
@@ -548,3 +587,4 @@ ul.grid.schedule > .row-fluid > [class*="span"]
     font-size: 16px
 
 @import "responsive"
+
