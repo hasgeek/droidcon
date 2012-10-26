@@ -45,9 +45,8 @@
       <h2>Latest Updates</h2>
       {% for post in feed(limit=4) -%}
         <div class="post">
-          <h3 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
-          <small>by <strong>{{ post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</small>
-          </h3>
+          <h3 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h3>
+          <p>by <strong>{{ post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
           {{ post.description }}
         </div>
       {%- else -%}
