@@ -12,11 +12,12 @@ def gentable(data):
         for counter, item in enumerate(row):
             if isinstance(item, dict):
                 print '    <div class="span%d">' % colsizes[counter]
+                print '    <div class="session-box {section}" title="{section}">'.format(**item)
                 if item.get('url'):
-                    print '      <a href="{url}" target="_blank">{title}</a><br>&mdash;{speaker}'.format(**item)
+                    print '      <a href="{url}" target="_blank">{title}</a><br><div class="author">{speaker}</div><br><div class="{level}" title="{level}"></div>'.format(**item)
                 else:
                     print '      {title}<br>&mdash;{speaker}'.format(**item)
-                print '    </div>'
+                print '    </div></div>'
             else:
                 print (u'    <div class="span%d">%s</div>' % (colsizes[counter], item)).encode('utf-8')
         print '  </li>'

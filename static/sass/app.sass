@@ -346,10 +346,7 @@ h1 small, h2 small, h3 small
         +border-top-right-radius(3px)
       & > a:hover
         color: #fff
-  .nav-underline
-    height: 20px
-    background: image-url("2012/nav-underline.png") no-repeat 1% top
-    margin-top: -3px
+
 #other-droidcons
   height: 300px
   background: image-url("2012/worldmap.png") no-repeat 1% top
@@ -375,11 +372,9 @@ h1 small, h2 small, h3 small
 
 .box
   +box-sizing(border-box)
-  border: $m-border
+  border: 1px solid #C2E6FC
   +border-radius($border-radius)
   padding: $line-height - $border-thickness
-  padding-bottom: $border-thickness
-
   h3:first-child
     margin-top: 0
 
@@ -574,6 +569,45 @@ footer .footer-inner
   text-align: center
   padding: 2px
 
+.session-box
+  border: 1px solid #efefef
+  border-top: 5px solid #A51E22
+  padding: 15px
+  padding-bottom: 55px
+  font-size: 12px
+
+  .author
+    font-size: 14px
+    font-style: italic
+    float: left
+
+  a
+    font-size: 15px
+    font-style: normal
+
+  .Beginner
+    width: 100px
+    height: 40px
+    float: right
+    background: image-url("2012/beginner.png")
+  .Intermediate
+    width: 100px
+    height: 40px
+    float: right
+    background: image-url("2012/intermediate.png")
+  .Advanced
+    width: 100px
+    height: 40px
+    float: right
+    background: image-url("2012/advanced.png")
+.App
+  border-top: 5px solid #488A40
+.Platforms,
+  border-top: 5px solid #A51E22
+.Specialized
+  border-top: 5px solid #50BFE3
+.General
+  border-top: 5px solid #B7B7B7
 .keynote
   text-align: center !important
 
