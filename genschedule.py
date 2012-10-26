@@ -16,7 +16,7 @@ def gentable(data):
                 print '    <div class="span%d">' % colsizes[counter]
                 print '    <div class="session-box {sectionname}" title="{section}">'.format(**item)
                 if item.get('url'):
-                    print '      <a href="{url}" target="_blank">{title}</a><br><div class="author">{speaker}</div><br><div class="{level}" title="{levelname}"></div>'.format(**item)
+                    print '      <a href="{url}" target="_blank">{title}</a><br><div class="author">{speaker}</div><br><div class="{levelname}" title="{level}"></div>'.format(**item)
                 else:
                     print '      {title}<br>&mdash;{speaker}'.format(**item)
                 print '    </div></div>'

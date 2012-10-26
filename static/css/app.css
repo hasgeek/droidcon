@@ -745,10 +745,16 @@ footer .footer-inner {
 }
 
 .session-box {
+  *zoom: 1;
   border: 1px solid #efefef;
   border-top: 5px solid #a51e22;
   padding: 15px;
   font-size: 12px;
+}
+.session-box:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .session-box .author {
   font-size: 14px;
