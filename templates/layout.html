@@ -45,9 +45,11 @@
     <div class="span8">
       {% block content %}{% endblock %}
     </div>
-    <div class="span4 sponsors">
-      {{ sponsors() }}
-    </div><!-- /span4 -->
+    {% block sponsor -%}
+      <div class="span4 sponsors">
+        {{ sponsors() }}
+      </div><!-- /span4 -->
+    {%- endblock %}
   </div>
 {%- endblock %}
 

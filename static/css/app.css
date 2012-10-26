@@ -572,6 +572,14 @@ h1 small, h2 small, h3 small {
   list-style-type: none;
 }
 
+.sponsor-silver-page .logo {
+  height: 150px;
+}
+.sponsor-silver-page .logo, .sponsor-silver-page img {
+  max-height: 150px;
+  line-height: 150px;
+}
+
 .sponsor-platinum .logo {
   height: 150px;
 }
@@ -641,6 +649,10 @@ h1 small, h2 small, h3 small {
   content: "Community Sponsor";
 }
 
+.sponsor-silver-page:before {
+  content: "Silver Sponsor";
+}
+
 #venue h3 {
   margin-top: -8px;
 }
@@ -706,7 +718,7 @@ footer .footer-inner {
 }
 
 #footer-image {
-  background: url('../img/2012/footer_bg2.png?1351238108') no-repeat 49% top;
+  background: url('../img/2012/footer_bg.png?1351238108') no-repeat 49% top;
   height: 138px;
 }
 
