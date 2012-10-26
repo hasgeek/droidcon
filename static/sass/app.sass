@@ -102,19 +102,17 @@ small
   margin-left: -25px
   //list-style-type: circle
   margin-top: 18px
-.description strong
-  color: #53BFE6
 .descriprtion p em
   color: #999
 .droid-head
   float: left
-  margin-top: 10px
+  margin-top: 0
   margin-right: 10px
 .black-header
   font-size: 20px
-  float: left
-.clear
-  padding-top: 80px
+  margin-top: 12px
+  margin-bottom: 6px
+  line-height: 26px
 h1
   font-family: Lato, Helvetica, Arial, sans-serif
   font-weight: bold
@@ -240,8 +238,8 @@ h1 small, h2 small, h3 small
     font-size: 19px
     line-height: $line-height
 
-.page-top
-  margin-top: $line-height
+.page-top > h3:first-child
+  margin-top: 0
 
 .sidebar
   top: 15em
@@ -282,6 +280,7 @@ h1 small, h2 small, h3 small
     background-color: #fff
     //opacity: 0.9
     border-bottom: 0px #efefef solid
+    +box-shadow(0 10px 10px #fff)
 
     & > li
       +inline-block
@@ -303,7 +302,7 @@ h1 small, h2 small, h3 small
         +box-sizing(border-box)
         width: 100%
         color: black
-        padding: 10px 10px 11px
+        padding: 10px 10px 8px
         line-height: 19px
         text-decoration: none
         +transition-property("color, background-color")
@@ -336,16 +335,15 @@ h1 small, h2 small, h3 small
     
     .register, .register:hover
       border-color: #53BFE6
-      border-bottom-left-radius: 3px
-      border-bottom-right-radius: 3px
+      +border-radius(3px)
       background-color: #53BFE6
       +background(linear-gradient(#8DD6E7,#53BFE6))
       &, & > a
         color: #000
         background-color: #53BFE6
         +background(linear-gradient(#8DD6E7,#53BFE6))
-        +border-top-left-radius(2px)
-        +border-top-right-radius(2px)
+        +border-top-left-radius(3px)
+        +border-top-right-radius(3px)
       & > a:hover
         color: #fff
   .nav-underline
@@ -401,9 +399,11 @@ h1 small, h2 small, h3 small
 .home-box
   display: block
   border-top: 3px #efefef solid
+  margin-bottom: $line-height
+
 .sponsors
   text-align: center
-  padding: 15px
+  padding: 15px 0
   //background-color: #F7F7F9
   border: 1.5px solid #C2E6FC
   border-radius: 5px
@@ -417,25 +417,32 @@ h1 small, h2 small, h3 small
     color: #BBB
   h3
     margin-top: -10px
-.home-sponsor-adjust
-  margin-top: 45px
+
 .sponsor
-  margin-bottom: 3.5em
   position: relative
   text-align: center
+  padding-top: 30px
+  padding-bottom: 22px
+  border-bottom: 1.5px solid #C2E6FC
   
+  &:last-child
+    padding-bottom: 0
+    border-bottom: none
+
   &:before
     font-size: 12px
     position: absolute
-    margin-top: 0.5em
-    margin-bottom: 0.5em
-    //top: 100%
-    //right: 0
+    top: 0
+    left: 0
+    right: 0
     text-align: center
-    font-weight: 500
     text-transform: uppercase
     color: #666
     letter-spacing: 0.1em
+    display: block
+
+  li
+    float: left
 
   a
     display: block
@@ -451,12 +458,9 @@ h1 small, h2 small, h3 small
     vertical-align: middle
     margin: 0
   img
-    max-height: 100%
     max-width: 100%
+    padding: 5px
     vertical-align: middle
-    //margin-bottom: 60px
-    margin-top: 40px
-    //border: 1px #333 solid
 .partner
   float: left
   list-style-type: none
@@ -479,10 +483,6 @@ h1 small, h2 small, h3 small
   .logo, img
     max-height: 100px
     line-height: 100px
-    float: right
-    margin-right: 15px
-    margin-left: 5px
-    height: 30%
 .sponsor-bronze
   .logo
     height: 75px
