@@ -563,20 +563,6 @@ footer .footer-inner
 .table td, .table th
   text-align: center !important
 
-.track
-  width: 30%
-
-.track-workshop
-  width: 40%
-
-.track-theme
-  font-weight: bold
-
-.all-tracks
-  text-transform: italic
-  text-align: center
-  padding: 2px
-
 .session-box
   +pie-clearfix
   border: 1px solid #efefef
@@ -608,20 +594,24 @@ footer .footer-inner
     height: 40px
     float: right
     background: image-url("2012/advanced.png")
-.app-demos
-  border: 1px solid #488A40
-  border-top-width: 5px
-.platforms-tools--libraries
-  border: 1px solid #A51E22
-  border-top-width: 5px
-.specialized-topics
-  border: 1px solid #50BFE3
-  border-top-width: 5px
-.general-topics
-  border: 1px solid #B7B7B7
-  border-top-width: 5px
-.keynote
-  text-align: center !important
+
+  &.app-demos
+    border: 1px solid #488A40
+    border-top-width: 5px
+  &.platforms-tools--libraries
+    border: 1px solid #A51E22
+    border-top-width: 5px
+  &.specialized-topics
+    border: 1px solid #50BFE3
+    border-top-width: 5px
+  &.general-topics
+    border: 1px solid #B7B7B7
+    border-top-width: 5px
+  &.workshops
+    border: 1px solid #A51E22
+    border-top-width: 5px
+  &.keynote
+    text-align: center !important
 
 ul.grid > li.item
   border-bottom: 0

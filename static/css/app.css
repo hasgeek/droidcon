@@ -726,24 +726,6 @@ footer .footer-inner {
   text-align: center !important;
 }
 
-.track {
-  width: 30%;
-}
-
-.track-workshop {
-  width: 40%;
-}
-
-.track-theme {
-  font-weight: bold;
-}
-
-.all-tracks {
-  text-transform: italic;
-  text-align: center;
-  padding: 2px;
-}
-
 .session-box {
   *zoom: 1;
   border: 1px solid #efefef;
@@ -783,28 +765,27 @@ footer .footer-inner {
   float: right;
   background: url('../img/2012/advanced.png?1351258706');
 }
-
-.app-demos {
+.session-box.app-demos {
   border: 1px solid #488a40;
   border-top-width: 5px;
 }
-
-.platforms-tools--libraries {
+.session-box.platforms-tools--libraries {
   border: 1px solid #a51e22;
   border-top-width: 5px;
 }
-
-.specialized-topics {
+.session-box.specialized-topics {
   border: 1px solid #50bfe3;
   border-top-width: 5px;
 }
-
-.general-topics {
+.session-box.general-topics {
   border: 1px solid #b7b7b7;
   border-top-width: 5px;
 }
-
-.keynote {
+.session-box.workshops {
+  border: 1px solid #a51e22;
+  border-top-width: 5px;
+}
+.session-box.keynote {
   text-align: center !important;
 }
 
