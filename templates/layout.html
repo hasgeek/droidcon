@@ -1,89 +1,71 @@
-{% from "baseframe/components.html" import networkbar with context -%}
+{% from "baseframe/components.html" import flash_messages, networkbar with context -%}
 {% from theme("inc/macros.html") import sponsors with context -%}
 {%- extends "eventframe.html" -%}
 
 {% block headerbox %}
-<header class="header">
-  {{ networkbar(siteid='events', login=false) }}
-  {% block masthead %}
-  <div id="masthead-small">
-    <div class="container">
-      <hgroup class="page-header">
-        <h1>{{ node.properties.get('masthead-title') or folder.title }}</h1>
-      </hgroup>
+  <header class="header">
+    {{ networkbar(siteid='events', login=false) }}
+    {% block masthead %}
+    <div id="masthead-small">
+      <div class="container">
+        <hgroup class="page-header">
+          <h1>{{ node.properties.get('masthead-title') or folder.title }}</h1>
+        </hgroup>
+      </div>
     </div>
-  </div>
-  {% endblock %}
-  <div class="main-navbar">
-    <div class="container">
-      <ul class="nav" id="main-nav">
-        <li id="nav1" class="active"><a href="/2012/">Home</a></li>
-        <li id="nav2"><a href="/blog">Blog</a></li>
-        <li id="nav3"><a href="/2012/proposals">Proposals</a></li>
-        <li id="nav4"><a href="/2012/schedule">Schedule</a></li>
-        <li id="nav5"><a href="/2012/venue">Venue</a></li>
-        <li class="register"><a href="/2012/tickets">Buy Tickets</a></li>
-      </ul>
-      {#-<div class="nav-underline"><!--<img src="{{ theme_static('img/2012/nav-underline.png') }}" />--></div>#}
+    {% endblock %}
+    <div class="main-navbar">
+      <div class="container">
+        <ul class="nav" id="main-nav">
+          <li id="nav1" class="active"><a href="/2012/">Home</a></li>
+          <li id="nav2"><a href="/blog">Blog</a></li>
+          <li id="nav3"><a href="/2012/proposals">Proposals</a></li>
+          <li id="nav4"><a href="/2012/schedule">Schedule</a></li>
+          <li id="nav5"><a href="/2012/venue">Venue</a></li>
+          <li class="register"><a href="/2012/tickets">Buy Tickets</a></li>
+        </ul>
+        {#-<div class="nav-underline"><!--<img src="{{ theme_static('img/2012/nav-underline.png') }}" />--></div>#}
+      </div>
     </div>
-  </div>
-</header>
-
+  </header>
 {% endblock %}
 
-{% block baseheadline -%}
-  {% block headline -%}
-    <div class="page-header">
-      <h2>{{ self.title() }}</h2>
-    </div>
-  {%- endblock %}
-{%- endblock %}
-
-
-{% block basecontent -%}
-  <div class="row">
-    <div class="span8">
-      {% block content %}{% endblock %}
-    </div>
-    {% block sponsor -%}
-      <div class="span4 sponsors">
-        {{ sponsors() }}
-      </div><!-- /span4 -->
+{% block main -%}
+  <div class="container">
+    {%- block messages %}{{ flash_messages() }}{% endblock %}
+    {% block baseheadline -%}
+      {% block headline -%}
+        <div class="page-header">
+          <h2>{{ self.title() }}</h2>
+        </div>
+      {%- endblock %}
     {%- endblock %}
+    {% block basecontent -%}
+      <div class="row">
+        <div class="span8">
+          {% block content %}{% endblock %}
+        </div>
+        {% block sponsor -%}
+          <div class="span4 sponsors">
+            {{ sponsors() }}
+          </div><!-- /span4 -->
+        {%- endblock %}
+      </div>
+    {%- endblock %}
+    <hr />
+    <ul class="sponsor-partner partner clearfix">
+      <li><h4>Our Partners</h4></li>
+      <li><a href="http://blrdroid.org/"><img src="{{ theme_static('img/2012/partners/baug.png') }}"></a></li>
+      <li><a href="http://www.cis-india.org/"><img src="{{ theme_static('img/2012/partners/cis.png') }}"></a></li>
+      <li><a href="http://www.androcid.com/"><img src="{{ theme_static('img/2012/partners/androcid.png') }}"></a></li>
+      <li><a href="http://careers.stackoverflow.com/"><img src="{{ theme_static('img/2012/partners/stack-overflow.png') }}"></a></li>
+      <li><a href="http://www.momob.in/"><img src="{{ theme_static('img/2012/partners/momo.png') }}"></a></li>
+      <li><a href="http://www.yourstory.in/"><img src="{{ theme_static('img/2012/partners/yourstory.png') }}"></a></li>
+    </ul>
   </div>
 {%- endblock %}
 
 {% block basefooter -%}
-
-  <div class="container">
-    <hr />
-    <div class="row">
-      <div class="span16"><h4>Our Partners </h4></div>
-      
-      <ul class="sponsor-partner partner clearfix">
-       <li><a href="http://blrdroid.org/"><img src="{{ theme_static('img/2012/partners/baug.png') }}"></a></li>
-      </ul>
-
-      <ul class="sponsor-partner partner clearfix">
-        <li><a href="http://www.cis-india.org/"><img src="{{ theme_static('img/2012/partners/cis.png') }}"></a></li>
-      </ul>
-
-      <ul class="sponsor-partner partner clearfix">
-        <li><a href="http://www.androcid.com/"><img src="{{ theme_static('img/2012/partners/androcid.png') }}"></a></li>
-      </ul>
-
-      <ul class="sponsor-partner partner clearfix">
-       <li><a href="http://careers.stackoverflow.com/"><img src="{{ theme_static('img/2012/partners/stack-overflow.png') }}"></a></li>
-      </ul>
-      
-      <ul class="sponsor-partner partner clearfix">
-       <li><a href="http://www.momob.in/"><img src="{{ theme_static('img/2012/partners/momo.png') }}"></a></li>
-      </ul>
-      
-      
-    </div>
-    <hr />
-  </div>
   <footer>
     <div class="footer-inner">
       <div id="footer-image"><!-- --></div>
@@ -96,6 +78,7 @@
     </div>
   </footer>
 {%- endblock %}
+
 {%- block layoutscripts %}
   <script type="text/javascript">
     $(function() {
@@ -129,7 +112,8 @@
           offset: -80
         , speed: 900
       });
-
+      // Tooltips for sponsor page links
+      $('.sponsor a').tooltip();
     });
   </script>
   {% block footerscripts %}{% endblock %}

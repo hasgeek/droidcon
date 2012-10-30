@@ -567,9 +567,11 @@ h1 small, h2 small, h3 small {
   vertical-align: middle;
 }
 
-.partner {
+.partner li {
   float: left;
   list-style-type: none;
+  padding-right: 12px;
+  padding-bottom: 12px;
 }
 
 .sponsor-silver-page .logo {

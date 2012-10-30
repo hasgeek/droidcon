@@ -14,8 +14,8 @@
 {% block sponsor -%}
   <div class="span4 sponsors">
     <div class="container-fluid">
-    <ul class="sponsor sponsor-gold row-fluid">
-      <li class="span12"><a href=""><img src="{{ theme_static('img/2012/sponsors/intel.png') }}"></a></li>
+    <ul class="sponsor {{ node.properties.get('category') }} row-fluid">
+      <li class="span12"><a title="{{ node.properties.get('link-title', 'Click to visit') }}" href="{{ node.properties.get('link', '#') }}"><img src="{{ theme_static(node.properties.get('image', '')) }}"></a></li>
     </ul>
   </div>
   </div><!-- /span4 -->
