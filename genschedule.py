@@ -1,5 +1,5 @@
 def gentable(data):
-    colsizes = [2, 4, 3, 3]
+    colsizes = [3, 3, 3, 3]
     print '<ul class="grid schedule container-fluid">'
     headers = data[:2]
     for row in headers:

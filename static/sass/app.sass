@@ -628,6 +628,7 @@ footer .footer-inner
 ul.grid > li.item
   border-bottom: 0
 
+
 ul.grid.schedule > .row-fluid > [class*="span"]
   white-space: normal
   p
@@ -639,3 +640,6 @@ ul.grid.schedule > .row-fluid > [class*="span"]
 
 @import "responsive"
 
+@media print
+  ul.grid > li.item
+    page-break-inside: avoid

@@ -89,7 +89,7 @@ small {
 
 .description li {
   font-size: 18px;
-  list-style-image: url('../img/2012/droidheads/711.png?1351661457');
+  list-style-image: url('../img/2012/droidheads/711.png?1351185019');
   list-style-position: inside;
   margin-left: -25px;
   margin-top: 18px;
@@ -216,12 +216,12 @@ h1 small, h2 small, h3 small {
 }
 
 #masthead {
-  background: url('../img/2012/masthead.jpg?1351661457') no-repeat 50% top;
+  background: url('../img/2012/masthead.jpg?1350066498') no-repeat 50% top;
   height: 400px;
 }
 
 #masthead-small {
-  background: url('../img/2012/masthead-small.jpg?1351661457') no-repeat 50% top;
+  background: url('../img/2012/masthead-small.jpg?1350066527') no-repeat 50% top;
   height: 224px;
 }
 
@@ -441,7 +441,7 @@ h1 small, h2 small, h3 small {
 
 #other-droidcons {
   height: 300px;
-  background: url('../img/2012/worldmap.png?1351661457') no-repeat 1% top;
+  background: url('../img/2012/worldmap.png?1351185019') no-repeat 1% top;
   background-size: 90%;
 }
 
@@ -705,7 +705,7 @@ address h4 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../img/2012/hasgeek.png?1351661457');
+  background-image: url('../img/2012/hasgeek.png?1349187987');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 100px;
@@ -734,7 +734,7 @@ footer .footer-inner {
 }
 
 #footer-image {
-  background: url('../img/2012/footer_bg.png?1351661457') no-repeat 49% top;
+  background: url('../img/2012/footer_bg.png?1351261432') no-repeat 49% top;
   height: 138px;
 }
 
@@ -767,19 +767,19 @@ footer .footer-inner {
   width: 100px;
   height: 40px;
   float: right;
-  background: url('../img/2012/beginner.png?1351661457');
+  background: url('../img/2012/beginner.png?1351516618');
 }
 .session-box .intermediate {
   width: 100px;
   height: 40px;
   float: right;
-  background: url('../img/2012/intermediate.png?1351661457');
+  background: url('../img/2012/intermediate.png?1351516618');
 }
 .session-box .advanced {
   width: 100px;
   height: 40px;
   float: right;
-  background: url('../img/2012/advanced.png?1351661457');
+  background: url('../img/2012/advanced.png?1351516618');
 }
 .session-box.app-demos {
   border: 1px solid #488a40;
@@ -941,5 +941,10 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
 @media screen and (min-width: 1200px) {
   #masthead .page-header {
     padding-left: 8.5em;
+  }
+}
+@media print {
+  ul.grid > li.item {
+    page-break-inside: avoid;
   }
 }
