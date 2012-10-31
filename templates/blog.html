@@ -10,7 +10,7 @@
   {% for post in feed() -%}
     <div class="post">
       <h2 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h2>
-      <p>by <strong>{{ post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
+      <p>by <strong>{{ post.author or post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
       {{ post.content }}
     </div>
   {%- else -%}
