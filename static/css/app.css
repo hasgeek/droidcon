@@ -994,7 +994,7 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
   .session-box .intermediate:after {
     content: "(I)";
   }
-  .session-box .intermediate:after {
+  .session-box .advanced:after {
     content: "(A)";
   }
 
