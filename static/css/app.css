@@ -822,7 +822,7 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
   font-size: 16px;
 }
 
-@media (min-width: 767px) {
+@media screen and (min-width: 767px), print {
   .scol0 {
     width: 13% !important;
   }
