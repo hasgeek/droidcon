@@ -488,16 +488,24 @@ h1 small, h2 small, h3 small
     line-height: 100px
 .sponsor-bronze
   .logo
-    height: 75px
+    height: 60px
+    vertical-align: middle
   .logo, img
-    max-height: 75px
-    line-height: 75px
+    max-height: 40px
+    line-height: 60px
+    margin: 10px 0 10px 0
 .sponsor-community
   .logo
     height: 50px
   .logo, img
-    max-height: 50px
+    max-height: 35px
     line-height: 50px
+.sponsor-hacknight
+  .logo
+    height: 100px
+  .logo, img
+    max-height: 100px
+    line-height: 100px
 .sponsor-partner
   .logo
     height: 100px
@@ -518,6 +526,8 @@ h1 small, h2 small, h3 small
   content: "Community Sponsor"
 .sponsor-silver-page:before
   content: "Silver Sponsor"
+.sponsor-hacknight:before
+  content: "Hacknight Sponsors"
 
 #venue h3
   margin-top: -8px
@@ -618,6 +628,7 @@ footer .footer-inner
 ul.grid > li.item
   border-bottom: 0
 
+
 ul.grid.schedule > .row-fluid > [class*="span"]
   white-space: normal
   p
@@ -627,5 +638,49 @@ ul.grid.schedule > .row-fluid > [class*="span"]
   h4
     font-size: 16px
 
+.scol0
+  width: 13% !important
+
+.scol1, .scol2, .scol3
+  width: 26% !important
+
 @import "responsive"
 
+@media print
+  ul.grid.schedule, ul.grid.schedule li, .session-box, .session-box a, .session-box .author
+    font-size: 12px
+    line-height: 17px
+
+  //ul.grid.schedule > .row-fluid > [class*="span"]:first-child
+  //  padding-left: 0
+  ul.grid.schedule
+    page-break-after: always
+  ul.grid.schedule > li.item
+    border-bottom: 1px solid #eee
+  ul.grid.schedule > li.item, ul.grid.schedule > li.header
+    page-break-inside: avoid
+    padding-top: 4px !important
+    padding-bottom: 4px !important
+    a, a:active, a:hover, a:visited
+      color: black !important
+
+  .session-box
+    position: relative
+    border: none !important
+    padding: 0
+    .beginner, .intermediate, .advanced
+      width: auto
+      height: auto
+      &:after
+        position: absolute
+        right: 0
+        bottom: 0
+    .beginner:after
+      content: "(B)"
+    .intermediate:after
+      content: "(I)"
+    .advanced:after
+      content: "(A)"
+
+  #root #root_footer
+    display: none

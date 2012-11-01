@@ -1,11 +1,11 @@
 def gentable(data):
-    colsizes = [2, 4, 3, 3]
+    colsizes = [3, 3, 3, 3]
     print '<ul class="grid schedule container-fluid">'
     headers = data[:2]
     for row in headers:
         print '  <li class="row-fluid header">'
         for counter, col in enumerate(row):
-            print (u'    <div class="span%d">%s</div>' % (colsizes[counter], col or '&nbsp;')).encode('utf-8')
+            print (u'    <div class="span%d scol%d">%s</div>' % (colsizes[counter], counter, col or '&nbsp;')).encode('utf-8')
         print '  </li>'
     for row in data[2:]:
         print '  <li class="row-fluid item">'
@@ -13,7 +13,7 @@ def gentable(data):
             if isinstance(item, dict):
                 item['sectionname'] = '-'.join(item.get('section', '').lower().replace('&', '').replace(',', '').split(' '))
                 item['levelname'] = '-'.join(item.get('level', '').lower().replace('&', '').replace(',', '').split(' '))
-                print '    <div class="span%d">' % colsizes[counter]
+                print '    <div class="span%d scol%s">' % (colsizes[counter], counter)
                 print '    <div class="session-box {sectionname}" title="{section}">'.format(**item)
                 if item.get('url'):
                     print '      <a href="{url}" target="_blank">{title}</a><br><div class="author">{speaker}</div><br><div class="{levelname}" title="{level}"></div>'.format(**item)
@@ -21,7 +21,7 @@ def gentable(data):
                     print '      {title}<br>&mdash;{speaker}'.format(**item)
                 print '    </div></div>'
             else:
-                print (u'    <div class="span%d">%s</div>' % (colsizes[counter], item)).encode('utf-8')
+                print (u'    <div class="span%d scol%d">%s</div>' % (colsizes[counter], counter, item)).encode('utf-8')
         print '  </li>'
     print '</ul>'
 

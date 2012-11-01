@@ -607,19 +607,29 @@ h1 small, h2 small, h3 small {
 }
 
 .sponsor-bronze .logo {
-  height: 75px;
+  height: 60px;
+  vertical-align: middle;
 }
 .sponsor-bronze .logo, .sponsor-bronze img {
-  max-height: 75px;
-  line-height: 75px;
+  max-height: 40px;
+  line-height: 60px;
+  margin: 10px 0 10px 0;
 }
 
 .sponsor-community .logo {
   height: 50px;
 }
 .sponsor-community .logo, .sponsor-community img {
-  max-height: 50px;
+  max-height: 35px;
   line-height: 50px;
+}
+
+.sponsor-hacknight .logo {
+  height: 100px;
+}
+.sponsor-hacknight .logo, .sponsor-hacknight img {
+  max-height: 100px;
+  line-height: 100px;
 }
 
 .sponsor-partner .logo {
@@ -653,6 +663,10 @@ h1 small, h2 small, h3 small {
 
 .sponsor-silver-page:before {
   content: "Silver Sponsor";
+}
+
+.sponsor-hacknight:before {
+  content: "Hacknight Sponsors";
 }
 
 #venue h3 {
@@ -753,19 +767,19 @@ footer .footer-inner {
   width: 100px;
   height: 40px;
   float: right;
-  background: url('../img/2012/beginner.png?1351258706');
+  background: url('../img/2012/beginner.png?1351516618');
 }
 .session-box .intermediate {
   width: 100px;
   height: 40px;
   float: right;
-  background: url('../img/2012/intermediate.png?1351258706');
+  background: url('../img/2012/intermediate.png?1351516618');
 }
 .session-box .advanced {
   width: 100px;
   height: 40px;
   float: right;
-  background: url('../img/2012/advanced.png?1351258706');
+  background: url('../img/2012/advanced.png?1351516618');
 }
 .session-box.app-demos {
   border: 1px solid #488a40;
@@ -806,6 +820,14 @@ ul.grid.schedule > .row-fluid > [class*="span"] p a {
 }
 ul.grid.schedule > .row-fluid > [class*="span"] h4 {
   font-size: 16px;
+}
+
+.scol0 {
+  width: 13% !important;
+}
+
+.scol1, .scol2, .scol3 {
+  width: 26% !important;
 }
 
 /* ================= */
@@ -927,5 +949,56 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
 @media screen and (min-width: 1200px) {
   #masthead .page-header {
     padding-left: 8.5em;
+  }
+}
+@media print {
+  ul.grid.schedule, ul.grid.schedule li, .session-box, .session-box a, .session-box .author {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  ul.grid.schedule {
+    page-break-after: always;
+  }
+
+  ul.grid.schedule > li.item {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  ul.grid.schedule > li.item, ul.grid.schedule > li.header {
+    page-break-inside: avoid;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  ul.grid.schedule > li.item a, ul.grid.schedule > li.item a:active, ul.grid.schedule > li.item a:hover, ul.grid.schedule > li.item a:visited, ul.grid.schedule > li.header a, ul.grid.schedule > li.header a:active, ul.grid.schedule > li.header a:hover, ul.grid.schedule > li.header a:visited {
+    color: black !important;
+  }
+
+  .session-box {
+    position: relative;
+    border: none !important;
+    padding: 0;
+  }
+  .session-box .beginner, .session-box .intermediate, .session-box .advanced {
+    width: auto;
+    height: auto;
+  }
+  .session-box .beginner:after, .session-box .intermediate:after, .session-box .advanced:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .session-box .beginner:after {
+    content: "(B)";
+  }
+  .session-box .intermediate:after {
+    content: "(I)";
+  }
+  .session-box .advanced:after {
+    content: "(A)";
+  }
+
+  #root #root_footer {
+    display: none;
   }
 }
