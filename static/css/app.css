@@ -822,6 +822,14 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
   font-size: 16px;
 }
 
+.scol0 {
+  width: 13% !important;
+}
+
+.scol1, .scol2, .scol3 {
+  width: 26% !important;
+}
+
 /* ================= */
 /* = Media Queries = */
 /* ================= */
@@ -944,7 +952,53 @@ ul.grid.schedule > .row-fluid > [class*="span"] h4 {
   }
 }
 @media print {
-  ul.grid > li.item {
+  ul.grid.schedule, ul.grid.schedule li, .session-box, .session-box a, .session-box .author {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  ul.grid.schedule {
+    page-break-after: always;
+  }
+
+  ul.grid.schedule > li.item {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  ul.grid.schedule > li.item, ul.grid.schedule > li.header {
     page-break-inside: avoid;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  ul.grid.schedule > li.item a, ul.grid.schedule > li.item a:active, ul.grid.schedule > li.item a:hover, ul.grid.schedule > li.item a:visited, ul.grid.schedule > li.header a, ul.grid.schedule > li.header a:active, ul.grid.schedule > li.header a:hover, ul.grid.schedule > li.header a:visited {
+    color: black !important;
+  }
+
+  .session-box {
+    position: relative;
+    border: none !important;
+    padding: 0;
+  }
+  .session-box .beginner, .session-box .intermediate, .session-box .advanced {
+    width: auto;
+    height: auto;
+  }
+  .session-box .beginner:after, .session-box .intermediate:after, .session-box .advanced:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .session-box .beginner:after {
+    content: "(B)";
+  }
+  .session-box .intermediate:after {
+    content: "(I)";
+  }
+  .session-box .intermediate:after {
+    content: "(A)";
+  }
+
+  #root #root_footer {
+    display: none;
   }
 }
