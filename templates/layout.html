@@ -2,6 +2,10 @@
 {% from theme("inc/macros.html") import sponsors with context -%}
 {%- extends "eventframe.html" -%}
 
+{% block pageheaders %}
+  <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block headerbox %}
   <header class="header">
     {{ networkbar(siteid='events', login=false) }}
