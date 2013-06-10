@@ -1,6 +1,3 @@
-{% from "baseframe/components.html" import networkbar with context -%}
-{% from theme("inc/map_script.html") import mapscript -%}
-{% from theme("inc/macros.html") import sponsors with context -%}
 {%- extends theme("layout.html") %}
 
 {% block titletags -%}
@@ -9,53 +6,89 @@
 {%- endblock %}
 {% block description %}{{ node.description }}{% endblock %}
 
-{% block masthead %}
-  <div id="masthead">
-    <div class="container">
-      <hgroup class="page-header">
-        <h1>Droidcon India</h1>
-        <h2>2 &amp; 3 November 2012, Bangalore</h2>
-      </hgroup>
-    </div>
-  </div>
-{% endblock %}
 {% block headline %}{% endblock %}
   
 {% block basecontent %}
-  <div class="row">
-    <div class="span12 description">
-      {{ node.content }}
-    </div>
-  </div>
-
-  <div class="row">
-    {% for fragment_name in ['about-demos', 'about-crossplatform', 'about-specialized', 'about-general'] %}{% with fragment = getnode(path=fragment_name) %}
-      <div class="span3 home-box">
-          <h3 class="black-header"><img class="droid-head" src="{{ theme_static('img/2012/droidheads/' + loop.index|string + '.png') }}">{{ fragment.title }}</h3>
-          {{ fragment.content }}
+  <div class="description centered">
+    <section id="preface">
+      <div class="row">
+        {{ node.content }}
       </div>
-    {% endwith %}{% endfor %}
-  </div>
-  <div class="row">
-    <div class="span8 page-top">
-      {%- with fragment = getnode(path='about-other') %}
-        <h3>{{ fragment.title }}</h3>
-        {{ fragment.content }}
-      {%- endwith %}
-      <h2>Latest Updates</h2>
-      {% for post in feed(limit=4) -%}
-        <div class="post">
-          <h3 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h3>
-          <p>by <strong>{{ post.author or post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
-          {{ post.description }}
-        </div>
-      {%- else -%}
-        <p>(No blog entries have been written so far)</p>
-      {%- endfor %}
-      <h3 class="post-title"><a href="/blog/">See all blog posts</a></h3>
-    </div>
-    <div class="span4 sponsors">
-      {{ sponsors() }}
+    </section>
+    <section id="previous-edition">
+      <div class="row">
+        <h4 id="previous-edition">Previously: <a href="http://droidcon.in/2012/">2012</a>, <a href="http://droidcon.in/2011/">2011</a></h4>
+      </div>
+    </section>
+    <section id="social">
+      <div class="row">
+            <span><i class="icon-twitter"></i><a href="https://twitter.com/droidconIN" target="_blank">@droidconIN</a>, &nbsp;&nbsp;<a href="https://twitter.com/hasgeek" target="_blank">@hasgeek</a></span>
+            <span><i class="icon-envelope-alt"></i><a href="mailto:info@hasgeek.com?Subject=From%20Droidcon2013%20website">info@hasgeek.com</a></span>
+      </div>
+    </section>
+    <section id="videos">
+      <div class="row">
+        <h3>Videos on <a href="http://hasgeek.tv/droidconin/">HasGeek TV</a></h3>
+        <ul>
+          <li>
+            <a href="http://hasgeek.tv/droidconin/2012/92-constructive-design-for-android" target="_blank">
+              <img src="{{ theme_static('img/videos/isaac.png') }}" />
+              <i class="icon-play icon-2x"></i>
+              <div class="video-title">Constructive Design for Android</div>
+              <div class="video-speaker">Isaac Wesley</div>
+            </a>
+          </li>
+          <li>
+            <a href="http://hasgeek.tv/droidconin/2012/211-building-the-flipkart-flyte-mp3-app-the-lean-startup-way" target="_blank">
+              <img src="{{ theme_static('img/videos/gaurav.png') }}" />
+              <i class="icon-play icon-2x"></i>
+              <div class="video-title">Building the Flipkart Flyte MP3 app, the 'Lean Startup' way</div>
+              <div class="video-speaker">Gaurav Lochan</div>
+            </a>
+          </li>
+          <li>
+            <a href="http://hasgeek.tv/droidconin/2012/334-building-your-app-for-multiple-app-stores" target="_blank">
+              <img src="{{ theme_static('img/videos/timur.png') }}" />
+              <i class="icon-play icon-2x"></i>
+              <div class="video-title">Building your app for multiple app stores</div>
+              <div class="video-speaker">Timur Dyussebayev</div>
+            </a>
+          </li>
+          <li>
+            <a href="http://hasgeek.tv/droidconin/2012/482-android-battery-consumption-the-what-how" target="_blank">
+              <img src="{{ theme_static('img/videos/kumar.png') }}" />
+              <i class="icon-play icon-2x"></i>
+              <div class="video-title">Android battery consumption: the what &amp; how</div>
+              <div class="video-speaker">Kumar Rangarajan</div>
+            </a>
+          </li>
+          <li>
+            <a href="hasgeek.tv/droidconin/2011/455-sudar-muthu-making-robots-using-android-and-arduino" target="_blank">
+              <img src="{{ theme_static('img/videos/sudar.png') }}" />
+              <i class="icon-play icon-2x"></i>
+              <div class="video-title">Making Robots Using Android and Arduino</div>
+              <div class="video-speaker">Sudar Muthu</div>
+            </a>
+          </li>
+          <li>
+            <a href="http://hasgeek.tv/droidconin/2011/467-diogo-ferreira-meet-cyanogenmod" target="_blank">
+              <img src="{{ theme_static('img/videos/diogo.png') }}" />
+              <i class="icon-play icon-2x"></i>
+              <div class="video-title">Meet Cyanogenmod</div>
+              <div class="video-speaker">Diogo Ferreira</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="row">
+      <div id="other-editions">
+        {%- with fragment = getnode(path='about-other') %}
+          <h3>{{ fragment.title }}</h3>
+          {{ fragment.content }}
+        {%- endwith %}
+      </div>
     </div>
   </div>
 {% endblock %}

@@ -1,16 +1,7 @@
 @import "compass"
 
-$border-thickness: 2px
-$border-color: black
-$m-border: $border-thickness solid $border-color
-$border-radius: 2px
-
 $font-size: 16px
 $line-height: 24px
-
-// Height: line-height + padding-top + padding-bottom + margin-bottom
-$navbar-height: 19px + 10px + 11px + 22px
-$navbar-height: 46px
 
 @mixin footer-height($height)
   #root
@@ -18,11 +9,12 @@ $navbar-height: 46px
     #root_footer
       height: $height + 10px
   footer
+    background-color: #FFF
     min-height: $height
     .footer-inner
       min-height: $height
 
-+footer-height(208px)
++footer-height(70px)
 
 @mixin rounded_border($size: 6px)
   -moz-border-radius: $size
@@ -30,8 +22,8 @@ $navbar-height: 46px
   -o-border-radius: $size
   border-radius: $size
 
+/********** Common *********/
 body, p
-  //background: #121212 image-url("black_denim.png") repeat scroll
   color: #000
   font-family: Lato, Helvetica, Arial, sans-serif
   font-size: $font-size
@@ -42,40 +34,30 @@ a
   &:hover
     color: #51BFE4
 
-#funnel-links a
-  color: #0063CC
-
 .container
   margin: 0 auto auto auto
 
-.btn
-  //font-family: "droid-sans", Helvetica, Arial, sans-serif
-  font-size: $font-size
-  line-height: $line-height
-
-.btn-success
-  color: #FFFFFF
-  background: #693
-  &:hover
-    background: #694
-  //background: -moz-linear-gradient(top, #a1e048, #693)
-  //background: -ms-linear-gradient(top, #a1e048, #693)
-  //background: -o-linear-gradient(top, #a1e048, #693)
-  //background: -webkit-linear-gradient(top, #a1e048, #693)
-  //background: linear-gradient(top, #a1e048, #693)
-
-.btn-primary
-  border-radius: 3px
-  //background: #008012
-
-form
-  margin-bottom: $line-height / 2
-
-.leaflet-popup-content
-  //font-family: "droid-sans", Helvetica, Arial, sans-serif
-  font-size: $font-size
-  line-height: $line-height
+h1
+  font-family: Lato, Helvetica, Arial, sans-serif
   font-weight: bold
+  font-size: 44px
+  color: black
+h2, h3
+  font-family: Lato, Helvetica, Arial, sans-serif
+  color: black
+  margin-top: $line-height
+  a, a:visited
+    color: black
+h2
+  font-size: 30px
+  line-height: $line-height * 2
+h3
+  font-size: 25px
+  line-height: $line-height * 2
+  a:hover
+    color: #51BFE4
+h4
+  margin: 45px 0 20px 0
 
 ul, ol
   margin-bottom: $line-height / 2
@@ -84,69 +66,20 @@ li
   line-height: $line-height
   margin-bottom: 0
 
-small
-  font-size: smaller
-.description p
-  margin-top: 5px
-
-.description p, .description li
-  text-align: left
-  font-size: 21px
-  line-height: 35px
-  font-style: italic
-  color: #000
-.description li
-  font-size: 18px
-  list-style-image: image-url('2012/droidheads/711.png')
-  list-style-position: inside
-  margin-left: -25px
-  //list-style-type: circle
-  margin-top: 18px
-.descriprtion p em
-  color: #999
-.droid-head
-  float: left
-  margin-top: 0
-  margin-right: 10px
-.black-header
-  font-size: 20px
-  margin-top: 12px
-  margin-bottom: 6px
-  line-height: 26px
-h1
-  font-family: Lato, Helvetica, Arial, sans-serif
-  font-weight: bold
-  font-size: 44px
-  color: black
-
-h2, h3
-  font-family: Lato, Helvetica, Arial, sans-serif
-  color: black
-  margin-top: $line-height
-  a, a:visited
-    color: black
-
-h2
-  font-size: 30px
-  line-height: $line-height * 2
-h4
-  margin: 45px 0 20px 0
-#readmore
-  font-size: 20px
+/*********** header **********/
 #masthead .page-header
   padding: 2.5em 0 0 8.5em
 
-#masthead-small .page-header
-  padding: 10em 0 0 0.0em
-  h1
-    font-size: 44px
-
-#masthead-small h1
-  text-align: center
+#masthead
+  position: relative
+  background: image-url("2013/masthead.jpg") no-repeat 50% top
+  height: +image-height("2013/masthead.jpg") // + ($border-thickness * 2)
 
 .page-header
+  margin-top: 5px
+  margin-left: 15px
   h1
-    font-size: 30px
+    font-size: 36px
   h2
     font-family: Lato, Helvetica, Arial, sans-serif
     font-size: 20px
@@ -154,534 +87,142 @@ h4
     font-weight: normal
     margin-top: 0
 
-h3
-  font-size: 25px
-  line-height: $line-height * 2
+/*********** index ***********/
+.description p
+  margin-top: 5px
+  text-align: left
+  font-size: 21px
+  line-height: 35px
+  color: #000
+.descriprtion p em
+  color: #999
 
-#about h3
-  line-height: $line-height * 1.5
-  font-weight: normal
-  //font-family: "droid-sans", Helvetica, Arial, sans-serif
-  margin-top: 26px
+.centered
+  margin-left: auto
+  margin-right: auto
+  width: 800px
+  top: 0
+  text-align: center
 
-  &:first-child
-    margin-top: 0
+#previous-edition
+  font-size: 20px
+  .seperator
+    padding: 15px
+    i
+      color: #51BFE4
 
-  a
-    color: inherit
-    text-decoration: none
-    border-bottom: $border-thickness solid transparent
-    +border-bottom-left-radius($border-radius)
-    +border-bottom-right-radius($border-radius)
-
-    &:after
-      content: "\0000a0»"
-      color: transparent    
-
+#social
+  margin-top: 0px
+  margin-bottom: 50px
+  border-radius: 10px
+  padding-bottom: 10px
+  span
+    display: inline-block
     &:hover
-      color: inherit
-      border-bottom: $m-border
+      i
+        color: #ccc
+  .icon-twitter
+    font-size: 24px
+    padding-right: 5px
+  .icon-envelope-alt
+    font-size: 20px
+    padding-right: 10px
+    margin-left: 50px
 
-      &:after
-        color: inherit
-
-h4, h5, h6
-  line-height: $line-height
-
-h1 small, h2 small, h3 small
-  line-height: $line-height
-
-#masthead, #masthead-short
-  position: relative
-
-#masthead
-  background: image-url("2012/masthead.jpg") no-repeat 50% top
-  height: +image-height("2012/masthead.jpg") // + ($border-thickness * 2)
-
-#masthead-small
-  background: image-url("2012/masthead-small.jpg") no-repeat 50% top
-  height: 18px +image-height("2012/masthead-small.jpg") // + ($border-thickness * 2)
-
-#banner
-  background: #70bf32
-  background: -moz-linear-gradient(top, #a1e048, #6a942f)
-  background: -ms-linear-gradient(top, #a1e048, #6a942f)
-  background: -o-linear-gradient(top, #a1e048, #6a942f)
-  background: -webkit-linear-gradient(top, #a1e048, #6a942f)
-  background: linear-gradient(top, #a1e048, #6a942f)
-  position: relative
-  float: right
-  top: 30px
-  right: 25px
-  bottom: 25px
-  left: 5px
-  width: 400px
-  padding: 10px
-  text-align: center
-  //border: 2px solid
-  @include rounded_border(10px)
-  
-  h1
-    font-size: 80px
-    line-height: 1
-    text-shadow: white 0 1px 10px
-
-
-  h2
-    margin-top: 0
-    font-size: 25px
-    line-height: $line-height * 2
-    text-shadow: white 0 1px 10px
-
-  h3
-    margin-top: 0
-    font-size: 19px
-    line-height: $line-height
-
-.page-top > h3:first-child
-  margin-top: 0
-
-.sidebar
-  top: 15em
-  right: 0
-  border-left: 1px solid rgba(200, 200, 200, 0.3)
-  border-right: 1px solid #666
-  position: absolute
-  left: 75%
-  margin-top: 0
-  border-left: 1px solid #666
-
-.side-blurb
-  border: 2px solid
-  @include rounded_border(10px)
-  padding: $line-height - $border-thickness
-  padding-bottom: $border-thickness
-
-.author
-  text-align: right
-  font-style: italic
-
-  &:before
-    content: "— "
-
-.navbar-margin
-  margin-bottom: $navbar-height
-
-// Navigation bar
-.main-navbar
-
-  .nav
-    float: none
-    +box-sizing(border-box)
-    +display-box
-    margin-right: 0
-    margin-bottom: 0
-    width: 100%
-    background-color: #fff
-    //opacity: 0.9
-    border-bottom: 0px #efefef solid
-    +box-shadow(0 10px 10px #fff)
-
-    & > li
-      +inline-block
-      float: none
-      font-size: 20px
-      margin-bottom: 0
-      // background-color: black
-      +display-box
-      +box-flex(1)
-      +box-pack(center)
-      +transition-property("color, background-color")
-      +transition-duration(0.2s)
-      border-bottom: 3px solid white
-      margin-right: 1px
-
-      & > a
-        display: block
-        text-align: center
-        +box-sizing(border-box)
-        width: 100%
-        color: black
-        padding: 10px 10px 8px
-        line-height: 19px
-        text-decoration: none
-        +transition-property("color, background-color")
-        +transition-duration(0.2s)
-
-      &:hover
-        border-bottom: 3px solid #E8E8E8
-
-      &:hover, &:hover > a
-        background-color: #F0F0F0
-        color: black
-        text-decoration: none
-        +transition-property("color, background-color")
-        +transition-duration(0.2s)
-
-      &.active, &.active > a
-        background-oclor: #f0f0f0
-        color: black
-
-    #nav1
-      border-color: #488A40
-    #nav2
-      border-color: #FBCC62
-    #nav3
-      border-color: #50BFE3
-    #nav4
-      border-color: #A51E22
-    #nav5
-      border-color: #B7B7B7
-    
-    .register, .register:hover
-      border-color: #53BFE6
-      +border-radius(3px)
-      background-color: #53BFE6
-      +background(linear-gradient(#8DD6E7,#53BFE6))
-      &, & > a
-        color: #000
-        background-color: #53BFE6
-        +background(linear-gradient(#8DD6E7,#53BFE6))
-        +border-top-left-radius(3px)
-        +border-top-right-radius(3px)
-      & > a:hover
-        color: #fff
-
-#other-droidcons
-  height: 300px
-  background: image-url("2012/worldmap.png") no-repeat 1% top
-  background-size: 90%
-
-.navbar-fixed-top .nav
-  & > .register, & > .register a
-    //color: yellow
-
-.post-title
-  a
-    &:after
-      content: " »"
-      color: transparent
-  a:hover
-    text-decoration: none
-    border-bottom: 2px solid black
-    &:after
-      color: black
-.post-title 
-  a:hover
-    color: #000
-
-.box
-  +box-sizing(border-box)
-  border: 1px solid #C2E6FC
-  +border-radius($border-radius)
-  padding: $line-height - $border-thickness
-  h3:first-child
-    margin-top: 0
-
-.box-tight
-  padding: 0
-
-.pager
-  font-size: 18px
-  line-height: $line-height
-
-  .previous
-    text-align: left
-  .next
-    text-align: right
-
-// Sponsors
-.home-box
-  display: block
-  border-top: 3px #efefef solid
-  margin-bottom: $line-height
-
-.sponsors
-  text-align: center
-  padding: 15px 0
-  //background-color: #F7F7F9
-  border: 1.5px solid #C2E6FC
-  border-radius: 5px
-  +box-sizing(border-box)
-  //background-color: rgba(255, 255, 255, 0.0976563)
-  ul
-    margin-left: 0
+#videos
   li
-    list-style: none
-  h4
-    color: #BBB
-  h3
-    margin-top: -10px
-
-.sponsor
-  position: relative
-  text-align: center
-  padding-top: 30px
-  padding-bottom: 22px
-  border-bottom: 1.5px solid #C2E6FC
-  
-  &:last-child
-    padding-bottom: 0
-    border-bottom: none
-
-  &:before
-    font-size: 12px
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    text-align: center
-    text-transform: uppercase
-    color: #666
-    letter-spacing: 0.1em
-    display: block
-
-  li
+    list-style-type: none
     float: left
-
-  a
+    padding: 15px
     display: block
-    margin: 0
-    padding: 0
-    border: none
-    height: 100%
-    width: 100%
-  a:hover
-    text-decoration: none
+    position: relative
+    width: 220px
+    a:hover
+      text-decoration: none
+      .video-speaker
+        color: #000
+      i
+        color: #51BFE4 
+    .video-title
+      position: relative
+      font-size: 14px
+      top: -28px
+      line-height: 18px
+    .video-speaker
+      position: relative
+      top: -28px
+      text-transform: uppercase
+      font-size: 11px
+    img
+      width: 200px
+      height: 115px
+      position: relative
+      top: 0
+      left: 0
+      right: 0
+    i
+      position: relative
+      top: -78px
+      left: 0px
+      font-size: 20px
+      padding-left: 10px
+      padding-right: 8px
+      padding-top: 1px
+      padding-bottom: 1px
+      background: #000000
+      opacity: 0.8
+      border-radius: 5px
 
-  .logo
-    vertical-align: middle
-    margin: 0
-  img
-    max-width: 100%
-    padding: 5px
-    vertical-align: middle
-.partner li
-  float: left
-  list-style-type: none
-  padding-right: $line-height/2
-  padding-bottom: $line-height/2
-
-.sponsor-silver-page
-  .logo
-    height: 150px
-  .logo, img
-    max-height: 150px
-    line-height: 150px
-.sponsor-platinum
-  .logo
-    height: 150px
-  .logo, img
-    max-height: 150px
-    line-height: 150px
-.sponsor-gold
-  .logo
-    height: 150px
-  .logo, img
-    max-height: 150px
-    line-height: 150px
-.sponsor-silver
-  .logo
-    height: 100px
-  .logo, img
-    max-height: 100px
-    line-height: 100px
-.sponsor-bronze
-  .logo
-    height: 60px
-    vertical-align: middle
-  .logo, img
-    max-height: 40px
-    line-height: 60px
-    margin: 10px 0 10px 0
-.sponsor-community
-  .logo
-    height: 50px
-  .logo, img
-    max-height: 35px
-    line-height: 50px
-.sponsor-hacknight
-  .logo
-    height: 100px
-  .logo, img
-    max-height: 100px
-    line-height: 100px
-.sponsor-partner
-  .logo
-    height: 100px
-  .logo, img
-    max-height: 100px
-    line-height: 100px
-
-.sponsor-platinum:before
-  content: "Platinum Sponsor"
-  text-align: center
-.sponsor-gold:before
-  content: "Gold Sponsor"
-.sponsor-silver:before
-  content: "Silver Sponsors"
-.sponsor-bronze:before
-  content: "Bronze Sponsor"
-.sponsor-community:before
-  content: "Community Sponsor"
-.sponsor-silver-page:before
-  content: "Silver Sponsor"
-.sponsor-hacknight:before
-  content: "Hacknight Sponsors"
-
-#venue h3
-  margin-top: -8px
-address
-  h4
-    margin-top: 5px
-    margin-bottom: -10px
-
-.map-box
-  position: relative
-.map
-  border: 2px solid #C2E6FC
-  height: 370px
-  overflow: hidden
-  margin: 0 0 $line-height 0
-  padding: 0
-  &.long
-    height: 800px
-
-#hotel-map
-  height: 700px
-.nav.nav-grid
-  margin-top: $line-height * 1.5
-
-.hasgeek
-  +replace-text-with-dimensions('2012/hasgeek.png')
-
-.leaflet-popup-content-wrapper
-  +border-radius(8px)
-
-.leaflet-popup-content
-  margin: 12px 25px 12px 15px
-
-.tooltip
-  font-weight: bold
-  font-size: 14px
+#other-editions
+  margin-top: 30px
+  li
+    font-size: 18px
+    list-style-image: image-url('2013/droidheads/li-other-editions.png')
+    list-style-position: inside
+    margin-left: 30px
+    margin-top: 18px
+    float: left
 
 footer .footer-inner
-  background: none
-#footer-image
-  background: image-url("2012/footer_bg.png") no-repeat 49% top
-  height: +image-height("2012/footer_bg.png") 
-
-
-.table td, .table th
-  text-align: center !important
-
-.session-box
-  +pie-clearfix
-  border: 1px solid #efefef
-  border-top: 5px solid #A51E22
-  padding: 15px
-  font-size: 12px
-
-  .author
-    font-size: 14px
-    font-style: italic
-    float: left
-
-  a
-    font-size: 15px
-    font-style: normal
-
-  .beginner
-    width: 100px
-    height: 40px
-    float: right
-    background: image-url("2012/beginner.png")
-  .intermediate
-    width: 100px
-    height: 40px
-    float: right
-    background: image-url("2012/intermediate.png")
-  .advanced
-    width: 100px
-    height: 40px
-    float: right
-    background: image-url("2012/advanced.png")
-
-  &.app-demos
-    border: 1px solid #488A40
-    border-top-width: 5px
-  &.platforms-tools--libraries
-    border: 1px solid #A51E22
-    border-top-width: 5px
-  &.specialized-topics
-    border: 1px solid #50BFE3
-    border-top-width: 5px
-  &.general-topics
-    border: 1px solid #B7B7B7
-    border-top-width: 5px
-  &.workshops
-    border: 1px solid #A51E22
-    border-top-width: 5px
-  &.keynote
-    text-align: center !important
-
-ul.grid > li.item
-  border-bottom: 0
-
-
-ul.grid.schedule > .row-fluid > [class*="span"]
-  white-space: normal
-  p
-    font-size: 14px
-    a
-      font-style: italic
-  h4
-    font-size: 16px
-
-@media screen and (min-width: 767px), print
-  .scol0
-    width: 13% !important
-
-  .scol1, .scol2, .scol3
-    width: 26% !important
+  background: none 
 
 @import "responsive"
 
-@media print
-  ul.grid.schedule, ul.grid.schedule li, .session-box, .session-box a, .session-box .author
-    font-size: 12px
-    line-height: 17px
+@media screen and (max-width: 767px)
+  .centered
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+  #videos
+    li
+      float: none
+      padding: 0px
+      padding-bottom: 15px
+      width: 100%
+      img
+        left: 20px
+      i
+        top: -48px
+        left: -100px
+      .video-title
+        top: 2px
+      .video-speaker
+        top: 5px
 
-  //ul.grid.schedule > .row-fluid > [class*="span"]:first-child
-  //  padding-left: 0
-  ul.grid.schedule
-    page-break-after: always
-  ul.grid.schedule > li.item
-    border-bottom: 1px solid #eee
-  ul.grid.schedule > li.item, ul.grid.schedule > li.header
-    page-break-inside: avoid
-    padding-top: 4px !important
-    padding-bottom: 4px !important
-    a, a:active, a:hover, a:visited
-      color: black !important
+@media (min-width: 768px) and (max-width: 979px)
+  .centered
+    width: 600px
+  #videos
+    li
+      padding: 15px
+      width: 235px
 
-  .session-box
-    position: relative
-    border: none !important
-    padding: 0
-    .beginner, .intermediate, .advanced
-      width: auto
-      height: auto
-      &:after
-        position: absolute
-        right: 0
-        bottom: 0
-    .beginner:after
-      content: "(B)"
-    .intermediate:after
-      content: "(I)"
-    .advanced:after
-      content: "(A)"
+@media (min-width: 980px) and (max-width: 1200px)
+  .centered
+    width: 750px
+  #videos
+    li
+      padding: 12px
+      width: 210px
 
-  #root #root_footer
-    display: none
+      
