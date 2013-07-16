@@ -155,6 +155,62 @@ li {
   margin-left: 50px;
 }
 
+#highlights {
+  margin-bottom: 50px;
+}
+#highlights .title {
+  font-size: 20px;
+}
+#highlights ul {
+  margin-left: 0;
+}
+#highlights li.card {
+  list-style-type: none;
+  width: 300px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  -moz-box-shadow: 1px 1px 3px #cccccc;
+  -webkit-box-shadow: 1px 1px 3px #cccccc;
+  box-shadow: 1px 1px 3px #cccccc;
+  background: url('../img/android.png?1373956261');
+}
+#highlights li.card:hover {
+  opacity: 0.8;
+}
+#highlights li.card a {
+  display: block;
+  padding: 10px;
+}
+#highlights li.card a:hover {
+  text-decoration: none;
+}
+#highlights .card-band {
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 12px;
+}
+#highlights .blueband {
+  background-color: #51bfe9;
+  color: black;
+  float: left;
+  padding-left: 2%;
+  text-align: right;
+  width: 65%;
+  padding-right: 3%;
+}
+#highlights .blackband {
+  background-color: black;
+  color: white;
+  float: right;
+  padding-right: 2%;
+  padding-left: 3%;
+  text-align: left;
+  width: 25%;
+}
+#highlights h4 {
+  color: #787878;
+}
+
 #videos li {
   list-style-type: none;
   float: left;
@@ -388,5 +444,10 @@ footer .footer-inner {
   #videos li {
     padding: 12px;
     width: 210px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .centered {
+    width: 100%;
   }
 }

@@ -129,6 +129,53 @@ li
     padding-right: 10px
     margin-left: 50px
 
+#highlights
+  margin-bottom: 50px
+  .title
+    font-size: 20px
+  ul
+    margin-left: 0
+  li.card
+    //margin-left: 28%
+    list-style-type: none
+    width: 300px
+    border: 1px solid #ccc
+    border-radius: 5px
+    -moz-box-shadow: 1px 1px 3px #ccc
+    -webkit-box-shadow: 1px 1px 3px #ccc
+    box-shadow: 1px 1px 3px #ccc
+    background: image-url('android.png')
+    &:hover
+      //background-color: #efefef
+      opacity: 0.8
+    a
+      display: block
+      padding: 10px
+      &:hover
+        text-decoration: none
+  .card-band
+    margin-left: -10px
+    margin-right: -10px
+    font-size: 12px
+  .blueband
+    background-color: #51BFE9
+    color: #000
+    float: left
+    padding-left: 2%
+    text-align: right
+    width: 65%
+    padding-right: 3%
+  .blackband
+    background-color: #000
+    color: #fff
+    float: right
+    padding-right: 2%
+    padding-left: 3%
+    text-align: left
+    width: 25%
+  h4
+    color: #787878
+
 #videos
   li
     list-style-type: none
@@ -224,5 +271,8 @@ footer .footer-inner
     li
       padding: 12px
       width: 210px
+@media screen and (max-width: 480px)
+  .centered
+    width: 100%
 
       
