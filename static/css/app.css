@@ -155,6 +155,37 @@ li {
   margin-left: 50px;
 }
 
+#initial-buttons {
+  margin-bottom: 30px;
+}
+
+.btn-blue {
+  display: inline-block;
+  font-size: 20px;
+  background-color: #51bfe4;
+  padding: 7px 10px 9px 10px;
+  color: black;
+  box-shadow: 1px 1px 2px #333333;
+  text-decoration: none;
+  margin: 10px;
+  width: 180px;
+  border-radius: 3px;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+}
+.btn-blue i {
+  margin-right: 10px;
+}
+.btn-blue:hover {
+  color: black;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
 #highlights {
   margin-bottom: 50px;
 }
