@@ -1,0 +1,49 @@
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'               : ''
+    , 'description'         : ''
+    , 'sections'            : [
+        ('conference-summary',        'red')
+      , ('workshop-summary',          '')
+      , ('program-committee-summary', 'red')
+      , ('funnel-proposals',          '')
+      , ('past-highlights',           'red')
+      , ('venue-summary',             'dark')
+      , ('sponsors-summary',          'dark')
+      , ('credits',                   'red')
+    ]
+  }
+%}
+{% block banner %}
+<header class="banner banner-home text-center clearfix">
+  <h1><a class="ir logo" href="/">Droidcon India 2013</a></h1>
+  <h2 class="legible-prose calm all-caps">
+    <span>28<sup>th</sup> — 30<sup>st</sup></span>
+    <span>November</span>
+    <span>2013</span>
+  </h2>
+  <h2 class="legible-prose calm space-one-top space-two-bottom regular">
+    <a href="http://goo.gl/maps/pTOsq">MLR Convention Centre, Whitefield</a>
+  </h2>
+  <h3 class="red calm all-lower extralarge">
+    <a href="conference">Conference</a>
+    <i class="amp">&amp;</i>
+    <a href="workshops">Workshops</a>
+    <i class="on">on</i>
+    <span>Android</span>
+    <i>in</i>
+    <a href="venue">Bangalore</a>
+  </h3>
+  
+  <div class="intro row-fluid text-left prose prose-type">
+    <p class="span8 offset2 large-prose">
+      Droidcon is back! India's largest Android conference is on 28 - 30 November 2013 at the MLR Convention Centre, Whitefield, Bangalore. Join us for three days of in-depth, hands-on sessions on everything about Android.
+    </p>
+  </div>
+  
+  <p class="secondary space-six-bottom">
+    <a class="button" href="http://jsfoo.doattend.com/">Buy your Ticket</a>
+  </p>
+</header>
+{% endblock %}
