@@ -55,7 +55,7 @@
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
-    background: url(../img/logo.png) no-repeat scroll center center;
+    background: url(../img/placeholder.png) no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width: 100%;

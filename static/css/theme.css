@@ -28,7 +28,7 @@ a.link-silent   { border-bottom: none; }
 .gray           { color: #AAAAAA !important; }
 .light          { color: #EEEEEE !important; }
 .red            { color: #FF3333 !important; }
-.green          { color: #86B44E !important; }
+.green          { color: #648A64 !important; }
 .white          { color: #FFFFFF !important; }
 .faded          { color: rgba(255,255,255,.8) !important; }
 
@@ -39,8 +39,9 @@ a.link-silent   { border-bottom: none; }
 .fill-silver    { background-color: #F2F2F3 !important; color: #333; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
-.fill-green     { background-color: #86B44E !important; color: #FCF3F3; }
+.fill-green     { background-color: #648A64 !important; color: #FCF3F3; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
+.fill-greengray   { background-color: #EFEFEF !important; color: #222020; }
 
 .fade-red-to-dark {
     background-image: -webkit-linear-gradient(top,       #BB3311 20%, #121212);
