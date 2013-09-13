@@ -98,5 +98,5 @@ abbr {
     .inline-on-mobile dd { display: inline; margin-right: 0.5rem; }
 }
 .prose li { line-height: inherit; }
-
+.why-attend li { line-height: inherit !important; }
 
