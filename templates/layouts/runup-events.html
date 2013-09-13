@@ -1,0 +1,11 @@
+<section class="runup-events page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid">
+    <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Runup Events{% if page_link %}</a>{% endif %}</h2>
+        
+    <div class="offset1 span5 legible-prose space-one-top">
+      <ul class="list-space-line list-plain clearfix">
+  		{% include theme("layouts/partials/linked-event-date-venue-blurb.html") %}
+      </ul>
+    </div>
+  </div>
+</section>
