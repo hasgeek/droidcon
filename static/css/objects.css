@@ -1,7 +1,7 @@
 
 .button {
     display: inline-block;
-    background: #3A3;
+    background: #BB3311;
     color: white;
     line-height: 1.4;
     padding: 1em 2em 1em;
@@ -55,7 +55,7 @@
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
-    background: url(../img/placeholder.png) no-repeat scroll center center;
+    background: url(../img/logo.png) no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width: 100%;
@@ -98,7 +98,7 @@
 @media (min-width: 768px) {
     .banner h1                { margin: 1.25rem auto .5rem; }
     .banner .logo             { height: 4rem;}
-    .banner.banner-home h1    { margin: 4rem auto 3rem; width: 12rem; }
+    .banner.banner-home h1    { margin: 4rem auto 3rem; width: 14rem; }
     .banner.banner-home h3    { padding-left: 0; }
     .banner.banner-home h3    { text-align: center; }
     .banner.banner-home h3 span,
