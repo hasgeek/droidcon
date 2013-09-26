@@ -1,11 +1,13 @@
-{%
-  set types = [
+{#
       {
         'id'    : 'platinum'
       , 'title' : 'Platinum'
       , 'size'  : 'xl'
     }
-    , {
+-#}
+{%
+  set types = [
+    {
         'id'    : 'gold'
       , 'title' : 'Gold'
       , 'size'  : 'l'
@@ -21,6 +23,11 @@
       , 'size'  : 'm'
     }
     , {
+        'id'    : 'speaker-travel'
+      , 'title' : 'Speaker Travel Support'
+      , 'size'  : 'm'
+    }
+    , {
         'id'    : 'community'
       , 'title' : 'Community'
       , 'size'  : 's'
@@ -30,115 +37,32 @@
       , 'title' : 'Corporate Tickets'
       , 'size'  : 'compact'
     }
+    , {
+        'id'    : 'partners'
+      , 'title' : 'Community Partners'
+      , 'size'  : 'compact'
+    }
   ]
-%}  
+%}
 {# Logo Orientation can be either 'landscape' or 'portrait' #}
 {%
   set items = [
-      {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-1'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
+    {
+        'title'       : 'Sony'
+      , 'id'          : 'sony'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/e0b4ae9d0fae4902a990bef89b74dba7?size=640'
       , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'platinum'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'attendee'    : '<a href="http://twitter.com/jackerhack">Kiran Jonnalagadda</a>'
-      , 'contact'     : '<a href="mailto:you@example.com">you@example.com</a>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-2'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'platinum'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'attendee'    : 'Kiran Jonnalagadda'
-      , 'contact'     : 'you@example.com'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-3'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
+      , 'link'        : 'http://sonymobile.com/developer'
       , 'type'        : 'gold'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'attendee'    : 'Mr. Kiran Jonnalagadda'
+      , 'blurb'       : '<p>Sony is a leading global innovator of audio, video, game and information technology products for both the consumer and professional markets. Our Developer Program assists third party developers worldwide to be successful, by offering tools, knowledge, support and visibility to both contracted partners and grass root developers.</p><p>Developer World, available at <a href="http://sonymobile.com/developer">sonymobile.com/developer</a>, is our free hub for developer tutorials, tools and news related to Android in general, and Sony Xperia™ devices in particular. Developer World offers everything from open sourced code examples, to complementary developer tools and SDKs for Sony Xperia™ product APIs.</p><p>Get the edge with <a href="http://sonymobile.com/developer">Developer World</a>!</p>'
     }
     , {
-        'name'        : 'HasGeek'
-      , 'id'          : 'hasgeek-3'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'silver'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-      , 'contact'     : 'you@example.com'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-4'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'bronze'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-5'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'community'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-6'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-7'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-8'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-9'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
-    }
-    , {
-        'title'       : 'HasGeek'
-      , 'id'          : 'hasgeek-10'
-      , 'logo'        : theme_static('img/hasgeek-large-logo.png')
-      , 'orientation' : 'portrait'
-      , 'link'        : 'hasgeek.com'
-      , 'type'        : 'corporate'
-      , 'blurb'       : '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>'
+        'title'       : 'Bangalore Android User Group (BlrDroid)'
+      , 'id'          : 'blrdroid'
+      , 'logo'        : 'https://images.hasgeek.com/embed/file/80997ed1935d465fbc960d041865c17d?size=320'
+      , 'link'        : 'http://blrdroid.org/'
+      , 'type'        : 'partners'
+      , 'blurb'       : ''
     }
   ]
 %}
