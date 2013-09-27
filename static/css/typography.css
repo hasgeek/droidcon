@@ -6,13 +6,22 @@
 /*  Families  */
 
 body,
+.title-type     { font-family: "Roboto", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+
+i,
+em,
+.prose-type     { font-family: "Droid Serif", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+
+/*
+
+body,
 .title-type     { font-family: brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 i,
 em,
 .prose-type     { font-family: adobe-caslon-pro, "Adobe Caslon Pro", serif; }
 
-
+*/
 /*  Scale  */
 
 html                    { font-size: 16px;     line-height: 1.5; }
@@ -23,12 +32,12 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .large                  { font-size: 1.500rem; line-height: 1.15; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
 .legible                { font-size: 1.125rem; line-height: 1.15; }
-.legible-prose          { font-size: 1.125rem; line-height: 1.40; }
+.legible-prose          { font-size: 0.900rem; line-height: 1.55; }
 .regular                { font-size: 1.000rem; line-height: 1.50; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
 .secondary              { font-size: 0.875rem; line-height: 1.90; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
-.tiny                   { font-size: 0.750rem; line-height: 1.60; }
+.tiny                   { font-size: 0.600rem; line-height: 1.60; }
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
@@ -39,15 +48,15 @@ html                    { font-size: 16px;     line-height: 1.5; }
 @media only screen and (min-width: 45em) {
     html                { font-size: 21px; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
-    .extralarge         { font-size: 2.000rem; line-height: 1.30; }
-    .large-prose        { font-size: 1.500rem; line-height: 1.44; }
+    .extralarge         { font-size: 1.850rem; line-height: 1.30; }
+    .large-prose        { font-size: 1.200rem; line-height: 1.54; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.50; }
     .secondary-prose    { font-size: 0.800rem; line-height: 1.49; }
-    .tiny               { font-size: 0.750rem; line-height: 1.49; }
+    .tiny               { font-size: 0.650rem; line-height: 1.49; }
 }
 @media only screen and (min-width: 55em) {
 /*    .huge.body-type     { font-size: 3.500rem; line-height: 0.95; }*/
-    .regular-prose      { font-size: 1.000rem; line-height: 1.60; }
+    .regular-prose      { font-size: 0.800rem; line-height: 1.60; }
 }
 @media only screen and (min-width: 85em) {
     html                { font-size: 24px; }
@@ -64,8 +73,8 @@ abbr {
 }
 
 .thin           { font-weight: 300;    }
-.calm           { font-weight: normal; }
-.semibold       { font-weight: 600;    }
+.calm           { font-weight: 400; }
+.semibold       { font-weight: 500;    }
 .bold           { font-weight: bold;   }
 .extrabold      { font-weight: 900;    }
 .italic         { font-style: italic;  }
@@ -102,3 +111,7 @@ abbr {
 .runup-events li { padding-bottom: 1em;}
 .runup-events li:last-child { padding-bottom: 0; }
 
+
+.video-thumbnail h4{
+    font-size: 14px;
+}
