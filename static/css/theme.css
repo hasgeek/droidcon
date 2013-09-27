@@ -55,3 +55,49 @@ a.link-silent   { border-bottom: none; }
     background-image:      -o-linear-gradient(top,       #648A64 20%, #121212);
     background-image:         linear-gradient(top bottom,#648A64 20%, #121212);
 }
+.schedule > li{
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #d5d5d5;
+}
+.schedule > li h3{
+    padding-top: 6px;
+}
+.fill-dark .schedule > li{
+    border-top: 1px solid #1E1E1E;
+    border-bottom: 1px solid #000000;
+}
+.fill-dark .schedule > li h3{
+    padding-top: 6px;
+}
+.schedule > li:first-child, .fill-dark .schedule > li:first-child{
+    border-top: none;
+}
+.schedule > li:last-child, .fill-dark .schedule > li:last-child{
+    border-bottom: none;
+}
+.theme-box-left{
+    border-right: 3px solid red;
+    padding-right: 30px;
+}
+.theme-box-right{
+    border-left: 3px solid red;
+    padding-left: 30px;
+}
+.theme-red{
+    border-color: red;
+}
+.theme-yellow{
+    border-color: yellow;
+}
+.theme-blue{
+    border-color: blue;
+}
+.theme-green{
+    border-color: green;
+}
+.theme-orange{
+    border-color: orange;
+}
+.theme-transparent{
+    border-color: transparent;;
+}

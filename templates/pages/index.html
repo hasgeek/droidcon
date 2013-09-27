@@ -1,4 +1,6 @@
 {% extends theme('layouts/page.html') %}
+{% from theme("data/conference-schedule-day1.html") import schedule as schedule_day1 %}
+{% from theme("data/conference-schedule-day2.html") import schedule as schedule_day2 %}
 {%
   set page = {
       'title'               : ''
@@ -7,6 +9,8 @@
         ('why-attend', 'green')
       , ('funnel-proposals',          '')
       , ('program-committee-summary', 'green')
+      , ('conference-schedule-day1',  '')
+      , ('conference-schedule-day2',  'dark')
       , ('runup-events',          '')
       , ('past-highlights',           'green')
       , ('venue-summary',             'dark')
