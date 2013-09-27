@@ -10,7 +10,7 @@
       {% with item = sessions[item.track1] %}
       {{item.track1}}
         <div class="span5 nospace-bottom clearfix text-right theme-box-left {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <h3 class="nospace-top legible-prose prose-type italic"><span class="">{{ item.title }}</span></h3>
+          <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
               <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span>
@@ -29,7 +29,7 @@
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
         <div class="span5 nospace-bottom clearfix theme-box-right {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <h3 class="nospace-top legible-prose prose-type italic"><span class="">{{ item.title }}</span></h3>
+          <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
               <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span>

@@ -6,11 +6,11 @@
 /*  Families  */
 
 body,
-.title-type     { font-family: "Roboto", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: "Roboto Slab", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 i,
 em,
-.prose-type     { font-family: "Droid Serif", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+.prose-type     { font-family: "Roboto Slab", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
 
 /*
 
@@ -32,7 +32,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .large                  { font-size: 1.500rem; line-height: 1.15; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
 .legible                { font-size: 1.125rem; line-height: 1.15; }
-.legible-prose          { font-size: 0.900rem; line-height: 1.55; }
+.legible-prose          { font-size: 0.900rem; line-height: 1.65; }
 .regular                { font-size: 1.000rem; line-height: 1.50; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
 .secondary              { font-size: 0.875rem; line-height: 1.90; }
@@ -48,7 +48,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
 @media only screen and (min-width: 45em) {
     html                { font-size: 21px; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
-    .extralarge         { font-size: 1.850rem; line-height: 1.30; }
+    .extralarge         { font-size: 2.100rem; line-height: 1.30; }
     .large-prose        { font-size: 1.200rem; line-height: 1.54; }
     .regular-prose      { font-size: 1.000rem; line-height: 1.50; }
     .secondary-prose    { font-size: 0.800rem; line-height: 1.49; }
