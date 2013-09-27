@@ -83,21 +83,59 @@ a.link-silent   { border-bottom: none; }
     border-left: 3px solid red;
     padding-left: 30px;
 }
-.theme-red{
-    border-color: red;
+.theme-orange{
+    border-color: #EDA634;
 }
-.theme-yellow{
-    border-color: yellow;
+.theme-red{
+    border-color: #CB1D1E;
 }
 .theme-blue{
-    border-color: blue;
+    border-color: #2D9DCD;
 }
 .theme-green{
-    border-color: green;
+    border-color: #73BD2C;
 }
-.theme-orange{
-    border-color: orange;
+.theme-violet{
+    border-color: #B889AD;
 }
 .theme-transparent{
     border-color: transparent;;
+}
+
+#schedule-day1.page-section{
+    padding-bottom: 1em;
+}
+.color-index.page-section{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.color-index ul{
+    margin-left: auto;
+    margin-right: auto;
+}
+.color-index li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.color-index li span{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    box-shadow: 1px 1px 3px #ccc;
+}
+.color-index .theme-orange span{
+    background-color: #EDA634;
+}
+.color-index .theme-red span{
+    background-color: #CB1D1E;
+}
+.color-index .theme-blue span{
+    background-color: #2D9DCD;
+}
+.color-index .theme-violet span{
+    background-color: #B889AD;
+}
+.color-index .theme-green span{
+    background-color: #73BD2C;
 }
