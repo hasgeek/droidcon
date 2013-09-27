@@ -1,11 +1,25 @@
 <section class="runup-events page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid">
-    <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Runup Events{% if page_link %}</a>{% endif %}</h2>
-        
-    <div class="offset1 span5 legible-prose space-one-top">
-      <ul class="list-space-line list-plain clearfix">
-  		{% include theme("layouts/partials/linked-event-date-venue-blurb.html") %}
-      </ul>
-    </div>
-  </div>
+  	<div class="row-fluid">
+	    <h2 class="offset1 span4 extralarge all-caps">{% if page_link %}<a href="{{ page_link }}" class="link-silent">{% endif %}Runup Events{% if page_link %}</a>{% endif %}</h2>
+	        
+	   
+	    <div class="offset2 span7">
+	    	<ul id="timeline">
+	    		{% for item in items -%}
+	    			<li class="event-node">
+	    				<div class="radio {% if item.timeline == 'past' %}theme-red{% elif item.timeline == 'upcoming' %}theme-green{% endif %}"></div>
+		    			<div class="relative">
+		      				<span class="date">{{ item.date }}</span>
+		      				<span class="circle"></span>
+		    			</div>
+			    		<div class="content">
+			    			<div class="legible-prose"><a href="{{ item.link }}">{{ item.title }}</a></div>
+						    <div class="secondary-prose space-1q-top space-half-bottom">{{ item.venue }}</div>
+						    <p>{{ item.blurb }}</p>
+			    		</div>
+			  		</li>
+				{%- endfor %}
+			</ul>    
+		</div>
+  	</div>
 </section>
