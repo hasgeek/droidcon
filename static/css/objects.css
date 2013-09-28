@@ -338,6 +338,9 @@
     background-size: 100% auto;
     padding-bottom: 36%;
 }
+.page-footer > div{
+    margin-bottom: 160px;
+}
 .hasgeek-logo {
     background: url(../img/hasgeek-logo.png) no-repeat scroll center center;
     width:  130px;
