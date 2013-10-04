@@ -10,8 +10,6 @@
         "assets_css": [
             "css/vendor/bootstrap.min.css",
             "css/vendor/bootstrap-responsive.min.css",
-            "css/vendor/font-awesome-ie7.min.css",
-            "css/vendor/font-awesome.min.css",
             "css/typography.css",
             "css/layout.css",
             "css/theme.css",
