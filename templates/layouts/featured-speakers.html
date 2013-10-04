@@ -1,0 +1,24 @@
+<section class="featured-speakers page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid">
+    <h2 class="span12 large all-caps text-center space-two-bottom">Featured speakers</h2>
+  {% for item in items -%}
+    {% if loop.first %}
+    <div class="row-fluid space-three-top space-two-bottom">
+      <div class="offset1 span10 legible-prose prose prose-type">
+        <ul class="space-half-top list-space-line list-plain link-silent row">
+    {% endif %}
+          <li class="span3 text-center">
+
+          <img class="photo" src="{{ item.photo }}">
+          <h3>{{ item.speaker }}</h3>
+          <h5>{{ item.designation }}</h5>
+          <h4>{{ item.type }} track</h4>
+          </li>
+    {% if loop.last %}
+        </ul>
+      </div>    
+    </div>
+    {% endif %}
+  {%- endfor %}
+</section>
+

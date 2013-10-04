@@ -1,4 +1,4 @@
-<section id="{{ schedule.id }}" class="page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="{{ schedule.id }}" class="schedule page-section full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
   <div class="row-fluid">
     <h2 class="text-center extralarge all-caps space-two-bottom">Schedule{% if schedule.date %} — {{ schedule.date|safe }}{% endif %}</h2>
   </div>
@@ -11,7 +11,7 @@
       <div class="span2 legible space-one-bottom clearfix text-center">
         <h3 class="nospace-top legible-prose prose-type"><span class="">Starts at</span></h3>
       </div>
-      <div class="span5 nospace-bottom clearfix theme-box-right theme-transparent">
+      <div class="span5 nospace-bottom clearfix text-left theme-box-right theme-transparent">
         <h3 class="nospace-top legible-prose prose-type"><span class="">Track 2</span></h3>
       </div>
     </li>
@@ -39,7 +39,7 @@
       </div>
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
-        <div class="span5 nospace-bottom clearfix theme-box-right {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
+        <div class="span5 nospace-bottom clearfix text-left theme-box-right {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
           <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
@@ -58,7 +58,7 @@
         </div> -->
       {% endwith %}
       {% else %}
-        <div class="span5 legible-prose prose prose-type clearfix theme-box-right theme-transparent">
+        <div class="span5 legible-prose prose prose-type clearfix text-left theme-box-right theme-transparent">
           <h3><span class="calm italic nospace-top regular-prose">{{ item.title }}</span></h3>
         </div>
       {% endif %}

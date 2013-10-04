@@ -53,7 +53,8 @@
     {{ networkbar(siteid='events', login=false) }}
   {% endblock %}
 </div>
-  
+
+
 <div id="page">
 
 {% block banner %}
@@ -65,15 +66,8 @@
       </a>
     </h1>
   </div>
-  <nav class="span3 secondary">
-    <ul class="inline-on-mobile list-plain green prose">
-      <li><a href="/2013">Home</a></li>
-      <li><a href="https://funnel.hasgeek.com/droidcon2013/">Proposals</a></li>
-      <li><a href="https://hacknight.in/droidconin">Hacknights</a></li>
-      <li><a href="/2013/sponsors">Sponsors</a></li>
-    </ul>
-  </nav>
-  <h3 class="calm tiny nospace-bottom all-caps span2">
+
+  <h3 class="calm tiny nospace-bottom all-caps span5">
     28<span class="hidden-phone"><sup class="date">th</sup> </span>—<span class="hidden-phone"> </span>30<sup class="date">th</sup>
     Nov<span class="hidden-phone">ember</span>&nbsp;2013
     <br>
@@ -90,6 +84,22 @@
 </header>
 {% endblock %}
 
+<!-- <div id="nav-wrap">
+  <div id="navigation">
+    <nav class="navigation-menu">
+      <ul>
+        <li><a href="/2013/conference">Conference</a></li>
+        <li><a href="/2013/workshops">Workshops</a></li>
+        <li><a href="/2013/runup-events">Runup events</a></li>
+        <li><a href="/2013/conference#schedule-day1">Schedule</a></li>
+        <li><a href="/2013/sponsors">Sponsors</a></li>
+        <li><a href="/2013/blog">Blog</a></li>
+        <li><a href="/2013/venue">Venue</a></li>
+        <li>Buy Ticket</li>
+      </ul>
+    </nav> 
+  </div>
+</div> -->
 
 {% block content %}
   {% for item in page.sections  %}
@@ -136,6 +146,25 @@ if (location.hostname == 'droidcon.in') {
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 }
+</script>
+
+<script>
+  var previousScroll = 0,
+    headerOrgOffset = $('#navigation').height();
+
+    $('#nav-wrap').height($('#navigation').height());
+
+    $(window).scroll(function () {
+        var currentScroll = $(this).scrollTop();
+        if (currentScroll > headerOrgOffset) {
+            if (currentScroll > previousScroll) {
+                $('#nav-wrap').slideUp("slow");
+            } else {
+                $('#nav-wrap').slideDown(100);
+            }
+        } 
+        previousScroll = currentScroll;
+    });
 </script>
 
 <!-- Prompt IE 6 users to install Chrome Frame. -->

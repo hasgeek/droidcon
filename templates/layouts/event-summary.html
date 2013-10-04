@@ -25,12 +25,21 @@
   {% for item in session.list|selectattr('featured') -%}
     {% if loop.first %}
     <div class="row-fluid space-three-top space-two-bottom">
-      <h3 class="offset1 span4 legible all-caps space-one-bottom">Featured {{ session.label }}</h3>
-      <div class="offset1 span5 legible-prose prose prose-type">
-        <ul class="space-half-top list-space-line list-plain link-silent">
+      <h3 class="offset1 span11 legible all-caps space-one-bottom">Featured {{ session.label }}</h3>
+      <div class="offset1 span10 legible-prose prose prose-type">
+        <ul class="space-half-top list-space-line list-plain link-silent row">
     {% endif %}
-          <li>
-          {% include theme("layouts/partials/linked-talk-speaker-single.html") %}
+          <li class="span3">
+          {% if item.link %}
+            <a href="{{ item.link }}">{{ item.title }}</a>
+          {% else %}
+            <span class="italic">{{ item.title }}</span>
+          {% endif %}
+
+          {% if item.speaker %}
+            <em class="occupy space-1q-top secondary">{% if types and item.type %}a {{ types[item.type].title|lower }}{% endif %} by <strong>{{ item.speaker }}</strong></em>
+            <img class="speaker-photo" src="{{ item.photo }}">
+          {% endif %}
           </li>
     {% if loop.last %}
         </ul>
@@ -43,3 +52,4 @@
   {%- endfor %}
   {% endblock %}
 </section>
+
