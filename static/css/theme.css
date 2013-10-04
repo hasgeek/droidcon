@@ -93,12 +93,12 @@ a.link-silent   { border-bottom: none; }
       }
       .theme-box-left{
         border-left: 3px solid red;
-        padding-left: 30px;
+        padding-left: 10px;
         border-right: 0;
       }
       .theme-box-right{
         border-right: 3px solid red;
-        padding-right: 30px;
+        padding-right: 10px;
         border-left: 0;
       }
 }
