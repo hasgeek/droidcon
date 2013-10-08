@@ -150,6 +150,11 @@
   }
 }
 @media screen and (max-width: 767px){
+  .masthead-home {
+    height: 750px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
   .masthead-home .logo { 
     width: 15em;
     margin-left: auto;
@@ -162,19 +167,30 @@
     height: 20em;
     border-bottom-right-radius: 80px;
     border-bottom-left-radius: 80px;
-    margin-left: -10px;
+    margin-left: 0;
   }
   .right{
     border-top-left-radius: 80px;
-    margin-left: -20px;
+    margin-left: 0;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 2em;
+    padding-right: 30px;
+  }
+  .masthead-banner{
+    max-height: 100em;
   }
   .left-bg{
     height: 0;
     width: 0;
   }
-  .center-bg{
-    height: 60em;
-    top: 0;
+  .right-bg{
+    height: 30em;
+    width: 50%;
+  }
+  .center-bg{    
+    width: 0;    
+    height: 0;
   }
 }
 
