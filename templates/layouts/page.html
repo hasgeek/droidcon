@@ -82,6 +82,11 @@
     </p>
   </div>
 </header>
+{% endblock %}
+
+{% block nav %}
+<nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav>
+
 <div id="nav-wrap">
   <div id="navigation" class="container">
     <nav class="navigation-menu">
@@ -149,6 +154,7 @@ if (location.hostname == 'droidcon.in') {
 </script>
 
 <script>
+if( Modernizr.mq('only screen and (min-width: 768px)')){
   var previousScroll = 0,
   headerOrgOffset = $('#navigation').height();
 
@@ -160,9 +166,9 @@ if (location.hostname == 'droidcon.in') {
 
     //alert(currentScroll);
     if( currentScroll > 250){
-      $('#nav-wrap').css('visibility', 'visible');
+      $('#nav-wrap').addClass('visible');
     }  else {
-      $('#nav-wrap').css('visibility', 'hidden');
+      $('#nav-wrap').removeClass('visible');
     }
     
     if (currentScroll > headerOrgOffset) {
@@ -174,6 +180,19 @@ if (location.hostname == 'droidcon.in') {
     } 
     previousScroll = currentScroll;
   });
+} else {
+  $('.mob-nav').click(function(){
+    if( $('#nav-wrap').hasClass('visible')){
+      $('#nav-wrap').removeClass('visible');
+      $(this).find('i').addClass('icon-reorder');
+      $(this).find('i').removeClass('icon-remove');
+    } else {
+      $('#nav-wrap').addClass('visible');
+      $(this).find('i').addClass('icon-remove');
+      $(this).find('i').removeClass('icon-reorder');
+    }
+  });
+}
 </script>
 
 <!-- Prompt IE 6 users to install Chrome Frame. -->

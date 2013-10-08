@@ -694,6 +694,7 @@ li.event-node{
   z-index: 6;
 }
 */
+
 #navigation {
   height: 60px;
 }
@@ -708,6 +709,10 @@ li.event-node{
   margin-left: auto;
   margin-right: auto;
 }
+#nav-wrap.visible{
+  visibility: visible;
+}
+
 .navigation-menu ul{
   margin: 0;
 }
@@ -735,6 +740,65 @@ li.event-node{
 }
 .navigation-menu li > a:focus{
   color: #000;
+}
+
+@media screen and (min-width: 980px) and (max-width: 1200px){
+  .navigation-menu li{
+    padding: 20px 15px 20px 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 979px){
+  .navigation-menu li{
+    padding: 20px 11.5px 20px 11.5px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .mob-nav{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #FFF;
+    padding: 12px 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1035;
+  } 
+  .navigation-menu li{
+    display: block;
+    width: 200px;
+    float: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    margin: 0;  
+  }
+  #nav-wrap{
+    visibility: visible;
+    height: 0;
+    border: 0;
+    -webkit-transition: height 10s;
+    overflow: hidden;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 410px;
+  }
+  #nav-wrap.visible{
+    height: auto;  
+    border: 5px solid #132633;
+    z-index: 999;
+  }
+}
+@media screen and (max-width: 600px){
+  .mob-nav{
+    z-index: 1015;
+  } 
+}
+@media screen and (max-width: 498px){
+  #nav-wrap{
+    width: 200px;
+  }
 }
 
 .event-highlights li{
