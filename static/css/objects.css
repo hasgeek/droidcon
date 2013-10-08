@@ -64,7 +64,13 @@
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
-
+.masthead-home .logo { 
+  background: url(../img/logo.png) no-repeat scroll center center;
+  background-size: contain;
+  height: auto;
+  width: 50%;
+  padding-top: 50%;
+}
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
     background: url(../img/logo.png) no-repeat scroll center center;
@@ -74,7 +80,7 @@
     padding-top: 100%;
 }
 .banner .logo:hover { background-color: transparent; }
-.banner.banner-home h1 { width: 10rem; float: none; margin: 3rem auto; }
+.banner.banner-home h1 { float: none; margin: 3rem auto; }
 .banner.banner-home h2 span + span { display: inline-block; margin-left: 0.5rem; }
 .banner sup, sup.date { top: 0; font-size: 65%; }
 .banner.banner-home h3 {
@@ -561,7 +567,7 @@ li.event-node{
 
 .navigation-menu{
   background-color: #132633;
-  
+  z-index: 1030;
 }
 
 #navigation {

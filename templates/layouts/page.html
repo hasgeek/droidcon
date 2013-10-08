@@ -84,7 +84,7 @@
 </header>
 {% endblock %}
 
-<!-- <div id="nav-wrap">
+<div id="nav-wrap">
   <div id="navigation">
     <nav class="navigation-menu">
       <ul>
@@ -99,7 +99,7 @@
       </ul>
     </nav> 
   </div>
-</div> -->
+</div>
 
 {% block content %}
   {% for item in page.sections  %}
@@ -156,6 +156,8 @@ if (location.hostname == 'droidcon.in') {
 
     $(window).scroll(function () {
         var currentScroll = $(this).scrollTop();
+
+            //alert("diff="+(previousScroll-currentScroll));
         if (currentScroll > headerOrgOffset) {
             if (currentScroll > previousScroll) {
                 $('#nav-wrap').slideUp("slow");
