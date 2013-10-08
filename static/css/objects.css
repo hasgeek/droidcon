@@ -687,42 +687,54 @@ li.event-node{
    padding-bottom: 30px;
   }
 }
-
+/*
 .navigation-menu{
   background-color: #132633;
-  z-index: 1030;
-}
-
-#navigation {
-  color: #fff;
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  top: 0;
-  width: 100%;
   position: absolute;
-  bottom: 0;
+  z-index: 6;
 }
-
+*/
+#navigation {
+  height: 60px;
+}
 #nav-wrap {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #132633;
+  background-color: #FFF;
+  z-index: 10;
+  visibility: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+.navigation-menu ul{
+  margin: 0;
+}
 .navigation-menu li{
   list-style-type: none;
   display: inline-block;
   padding: 20px 30px 20px 30px;
   font-size: 18px;
+  margin: 0;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  background-color: #FFF;
 }
 .navigation-menu li:hover{
+  /*background-color: #000;*/
+  color: #fff;
   background-color: #000;
 }
 .navigation-menu li > a {
   text-decoration: none;
   border-bottom: 0;
+}
+.navigation-menu li > a:hover, .navigation-menu li > a:focus, .navigation-menu li > a:active {
+  background-color: transparent;
+}
+.navigation-menu li > a:focus{
+  color: #000;
 }
 
 .event-highlights li{

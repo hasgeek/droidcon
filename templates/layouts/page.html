@@ -82,10 +82,8 @@
     </p>
   </div>
 </header>
-{% endblock %}
-
-<!-- <div id="nav-wrap">
-  <div id="navigation">
+<div id="nav-wrap">
+  <div id="navigation" class="container">
     <nav class="navigation-menu">
       <ul>
         <li><a href="/2013/conference">Conference</a></li>
@@ -99,7 +97,9 @@
       </ul>
     </nav> 
   </div>
-</div> -->
+</div>
+{% endblock %}
+
 
 {% block content %}
   {% for item in page.sections  %}
@@ -150,23 +150,30 @@ if (location.hostname == 'droidcon.in') {
 
 <script>
   var previousScroll = 0,
-    headerOrgOffset = $('#navigation').height();
+  headerOrgOffset = $('#navigation').height();
 
-    $('#nav-wrap').height($('#navigation').height());
+  $('#nav-wrap').height($('#navigation').height());
+  currentScroll = 0;
+    //$('#nav-wrap').css('visibility', 'visible');
+  $(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
 
-    $(window).scroll(function () {
-        var currentScroll = $(this).scrollTop();
-
-            //alert("diff="+(previousScroll-currentScroll));
-        if (currentScroll > headerOrgOffset) {
-            if (currentScroll > previousScroll) {
-                $('#nav-wrap').slideUp("slow");
-            } else {
-                $('#nav-wrap').slideDown(100);
-            }
-        } 
-        previousScroll = currentScroll;
-    });
+    //alert(currentScroll);
+    if( currentScroll > 250){
+      $('#nav-wrap').css('visibility', 'visible');
+    }  else {
+      $('#nav-wrap').css('visibility', 'hidden');
+    }
+    
+    if (currentScroll > headerOrgOffset) {
+        if (currentScroll > previousScroll) {
+            $('#nav-wrap').slideUp("slow");
+        } else {
+            $('#nav-wrap').slideDown(100);
+        }
+    } 
+    previousScroll = currentScroll;
+  });
 </script>
 
 <!-- Prompt IE 6 users to install Chrome Frame. -->
