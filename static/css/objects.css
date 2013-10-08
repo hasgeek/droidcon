@@ -64,13 +64,74 @@
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
+.masthead-home {
+  background-color: #6E8A31;
+  height: 580px;
+}
 .masthead-home .logo { 
   background: url(../img/logo.png) no-repeat scroll center center;
   background-size: contain;
   height: auto;
-  width: 50%;
+  width: 70%;
   padding-top: 50%;
 }
+.masthead-home i.on{
+  font-style: normal;
+  font-size: 0.85em;
+}
+.left{
+  background-color: #EFF6EF;
+  padding-bottom: 6em;
+  border-top-right-radius: 180px;
+  border-bottom-right-radius: 180px;
+  height: 34em;
+  padding-top: 9em;
+}
+.masthead-banner{
+  z-index: 4;
+  position: absolute;
+}
+.left-bg{
+  width: 300px;
+  float: left;
+  background-color: #EFF6EF;
+  height: 36.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+.right-bg{
+  width: 300px;
+  float: right;
+  background-color: #132633;
+  height: 20em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.center-bg{
+  width: 100%;
+  float: left;
+  background-color: #132633;
+  height: 25em;/*16.2em*/
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 20em;
+  z-index: 2;
+}
+.right{
+  background-color: #132633;
+  border-top-left-radius: 180px;
+  margin-left: 0px;
+  padding-left: 60px;
+  padding-top: 5em;
+  margin-right: -30px;
+  color: #EFF6EF;
+}
+
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
     background: url(../img/logo.png) no-repeat scroll center center;
