@@ -84,6 +84,26 @@ a.link-silent   { border-bottom: none; }
     border-left: 3px solid red;
     padding-left: 30px;
 }
+.schedule .gray a{
+    border-bottom: 0;
+}
+.schedule .gray a:hover{
+    background-color: transparent;
+    color: #333;
+}
+.fill-dark .schedule .gray a{
+    color: #333;
+}
+.fill-dark .schedule .gray a:hover{
+    color: #EAEAEA;
+}
+.theme-box-left i{
+    padding-left: 5px;
+}
+.theme-box-right i{
+    padding-right: 5px;
+}
+
 @media (max-width: 767px){
       .schedule .text-right{
         text-align: left;

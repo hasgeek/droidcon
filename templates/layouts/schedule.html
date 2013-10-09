@@ -24,7 +24,7 @@
           <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
-              <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span>
+              <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span> <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
             </p>
           {% endif %}
         </div>
@@ -43,7 +43,7 @@
           <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
-              <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span>
+                <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span>
             </p>
           {% endif %}
         </div>
