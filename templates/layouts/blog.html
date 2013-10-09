@@ -1,0 +1,20 @@
+<section class="blog page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
+  <div class="row-fluid">
+    <h2 class="offset1 span4 extralarge all-caps">Blog</h2>
+
+    <div class="offset1 span6">
+      {{ node.content }}
+      
+      {% for post in feed() -%}
+        <div class="post space-one-bottom">
+          <h2 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h2>
+          <p>by <strong>{{ post.author or post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
+          <div class="secondary-prose ">{{ post.description }}</div>
+        </div>
+      {%- else -%}
+        <p>(No blog entries have been written so far)</p>
+      {%- endfor %}
+    </div>
+  </div>
+    
+</section>
