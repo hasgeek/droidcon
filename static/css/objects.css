@@ -65,7 +65,7 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
 .masthead-home {
-  height: 650px;
+  height: 600px;
 }
 .masthead-home .logo { 
   background: url(../img/logo.png) no-repeat scroll center center;
@@ -874,5 +874,12 @@ li.event-node{
   text-transform: uppercase;
 }
 
+
+
+@media (min-width: 1200px){
+  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 1170px !important;
+  }
+}
 
 
