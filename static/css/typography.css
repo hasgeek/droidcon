@@ -117,10 +117,13 @@ abbr {
     font-size: 14px;
 }
 
-.navbar .nav>li>a{
+.navbar .nav>li>a, .navbar-brand{
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05em;
   color: #9793AD;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: inherit;
 }

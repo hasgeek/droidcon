@@ -601,7 +601,7 @@ li.event-node{
 
 
 .featured-speakers li, .program-committee-summary li{
-  height: 330px;
+  height: 300px;
 }
 .featured-speakers .span3:nth-child(5n), .program-committee-summary .span3:nth-child(5n){
   margin-left: 0;
@@ -632,6 +632,7 @@ li.event-node{
 }
 #site-nav.navbar{
   margin-bottom: 0;
+  border-radius: 0;
 }
 #site-nav .navbar-inner{
   border-radius: 0;
@@ -776,10 +777,10 @@ li.event-node{
   width: 18%;
   text-align: center;
 }
-.event-themes p{
+/*.event-themes p{
   font-size: 1.3em;
   line-height: 1.5em;
-}
+}*/
 .theme{
   height: 150px;
   width: 150px;
@@ -790,6 +791,10 @@ li.event-node{
   margin-right: auto;
   background-size: 100% 100%;
   border: 15px solid rgba(0,0,0, 0.1);
+  box-shadow: inset 1px 1px 4px rgba(0,0,0,0.4);
+  -moz-box-shadow: inset 1px 1px 4px rgba(0,0,0,0.4);
+  -webkit-box-shadow: inset 1px 1px 4px rgba(0,0,0,0.4);
+  -o-box-shadow: inset 1px 1px 4px rgba(0,0,0,0.4);
 }
 
 @media (min-width: 768px) and (max-width: 980px){
@@ -860,7 +865,7 @@ li.event-node{
 .navbar a{
   border-bottom: 0;
 }
-.dropdown-list>ul{
+/*.dropdown-list>ul{
   height: 0;
   overflow: hidden;
   padding: 0;
@@ -870,7 +875,7 @@ li.event-node{
 .dropdown-list:hover>ul{
   height: auto;
 }
-.masthead-home h2.green{
+*/.masthead-home h2.green{
   text-transform: uppercase;
 }
 
@@ -882,4 +887,24 @@ li.event-node{
   }
 }
 
+.navbar-inverse{
+  border-bottom: 0;
+}
+.zigzag-seperator{
+  display: block;
+  height: 5px;
+  width: 100%;
+  position: relative;
 
+  background-color: transparent;
+  background-image: url(../img/border-triangle.svg);
+  background-repeat: repeat-x;
+}
+.navbar-fixed-top+.zigzag-seperator{
+  position: fixed;
+  top: 50px;
+  z-index: 1030;
+}
+ul{
+  margin-left: 0 !important;
+}

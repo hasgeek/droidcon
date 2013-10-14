@@ -60,7 +60,7 @@
 
 {% block banner %}
 <header class="banner-internal row-fluid push-two resetcoords clearfix">
-  <div class="offset1 span2">
+  <div class="offset1 col-lg-2 col-md-2 col-sm-2 col-xs-12">
     <h1 class="nospace">
       <a class="ir logo" href="/2013">
         Droidcon India 2013
@@ -68,13 +68,13 @@
     </h1>
   </div>
 
-  <h3 class="calm tiny nospace-bottom all-caps span5">
+  <h3 class="calm tiny nospace-bottom all-caps col-lg-5">
     28<span class="hidden-phone"><sup class="date">th</sup> </span>—<span class="hidden-phone"> </span>30<sup class="date">th</sup>
     Nov<span class="hidden-phone">ember</span>&nbsp;2013
     <br>
     Bangalore
   </h3>
-  <div class="ticket-link-container span3">
+  <div class="ticket-link-container col-lg-3">
     <p class="text-right space-line">
       <a class="button" href="http://droidcon.doattend.com/">
         <span class="hidden-phone">Buy Your</span>
@@ -86,87 +86,64 @@
 {% endblock %}
 
 {% block nav %}
-<div class="navbar navbar-inverse" id="site-nav">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="#">Droidcon India</a>
-      <div class="nav-collapse collapse navbar-responsive-collapse">
-        <ul class="nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="/2013/#tickets">Ticket Pricing</a></li>
-              <li><a href="/2013/venue">Venue &amp; Hotels</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="/2013/conference">Conference</a></li>
-              <li><a href="/2013/workshops">Workshops</a></li>
-              <li><a href="#">Runup Events</a></li>
-              <li><a href="#">Schedule</a></li>            
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sponsors <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="/2013/sponsors">Sponsors</a></li>
-              <li><a href="#">Partners</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="/2013/program-committee">Program Committee</a></li>
-              <li><a href="#">About HasGeek</a></li>
-              <li><a href="#">Previous Editions</a></li>
-              <li><a href="/2013/code-of-conduct">Code of conduct</a></li>
-            </ul>
-          </li>
-          <li><a href="/2013/blog">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div><!-- /.nav-collapse -->
-    </div>
-  </div><!-- /navbar-inner -->
-</div><!-- /navbar -->
+<!-- <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav> -->
 
-<nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav>
-
-<!-- <div id="nav-wrap">
-  <div id="navigation" class="container">
-    <nav class="navigation-menu">
-      <ul>
-        <li><a href="/2013/conference">Register</a>
-          <ul>
-            <li>Ticket Pricing</li>
-            <li>Venue, Hotel and Travel</li>
-          </ul>
-        </li>
-        <li><a href="/2013/workshops">Event</a>
-          <ul>
-            <li>Conference</li>
-            <li>Workshops</li>
-            <li>Schedule</li>
-            <li>Runup Events</li>
-          </ul>
-        </li>
-        <li><a href="/2013/runup-events">Runup events</a></li>
-        <li><a href="/2013/conference#schedule-day1">Schedule</a></li>
-        <li><a href="/2013/sponsors">Sponsors</a></li>
-        <li><a href="/2013/blog">Blog</a></li>
-        <li><a href="/2013/venue">Venue</a></li>
-        <li>Buy Ticket</li>
-      </ul>
-    </nav> 
+<nav class="navbar navbar-inverse" id="site-nav" role="navigation">
+  <div class="container">
+   <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Droidcon India</a>
   </div>
-</div> -->
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/#tickets">Ticket Pricing</a></li>
+          <li><a href="/2013/venue">Venue and Hotels</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/conference">Conference</a></li>
+          <li><a href="/2013/workshops">Workshops</a></li>
+          <li><a href="/2013/runup-events">Runup events</a></li>
+          <li><a href="/2013/conference">Schedule</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sponsors <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/sponsors">Sponsors</a></li>
+          <li><a href="/2013/sponsors">Partners</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/2013/program-committee">Program Committee</a></li>
+          <li><a href="#">About HasGeek</a></li>
+          <li><a href="#">Previous Editions</a></li>
+          <li><a href="/2013/code-of-conduct">Code of conduct</a></li>
+        </ul>
+      </li>
+      <li><a href="/2013/blog">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->   
+  </div>
+</nav>
+
+<div class="zigzag-seperator"></div>
 {% endblock %}
 
 
