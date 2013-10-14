@@ -8,11 +8,11 @@
         <ul class="space-half-top list-space-line list-plain link-silent row">
     {% endif %}
           <li class="span3 text-center">
-
-          <img class="photo" src="{{ item.photo }}">
-          <h3>{{ item.speaker }}</h3>
-          <h5>{{ item.designation }}</h5>
-          <h4>{{ item.type }} track</h4>
+            <span class="img-wrapper {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
+              <img class="photo" src="{{ item.photo }}">
+            </span>
+            <h3>{{ item.speaker }}</h3>
+            <h5>{{ item.designation }}</h5>
           </li>
     {% if loop.last %}
         </ul>
@@ -20,5 +20,6 @@
     </div>
     {% endif %}
   {%- endfor %}
+  </div>
 </section>
 

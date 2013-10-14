@@ -34,6 +34,7 @@
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
 <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
@@ -85,14 +86,77 @@
 {% endblock %}
 
 {% block nav %}
+<div class="navbar navbar-inverse" id="site-nav">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">Droidcon India</a>
+      <div class="nav-collapse collapse navbar-responsive-collapse">
+        <ul class="nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/2013/#tickets">Ticket Pricing</a></li>
+              <li><a href="/2013/venue">Venue &amp; Hotels</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/2013/conference">Conference</a></li>
+              <li><a href="/2013/workshops">Workshops</a></li>
+              <li><a href="#">Runup Events</a></li>
+              <li><a href="#">Schedule</a></li>            
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sponsors <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/2013/sponsors">Sponsors</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/2013/program-committee">Program Committee</a></li>
+              <li><a href="#">About HasGeek</a></li>
+              <li><a href="#">Previous Editions</a></li>
+              <li><a href="/2013/code-of-conduct">Code of conduct</a></li>
+            </ul>
+          </li>
+          <li><a href="/2013/blog">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div><!-- /navbar-inner -->
+</div><!-- /navbar -->
+
 <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav>
 
-<div id="nav-wrap">
+<!-- <div id="nav-wrap">
   <div id="navigation" class="container">
     <nav class="navigation-menu">
       <ul>
-        <li><a href="/2013/conference">Conference</a></li>
-        <li><a href="/2013/workshops">Workshops</a></li>
+        <li><a href="/2013/conference">Register</a>
+          <ul>
+            <li>Ticket Pricing</li>
+            <li>Venue, Hotel and Travel</li>
+          </ul>
+        </li>
+        <li><a href="/2013/workshops">Event</a>
+          <ul>
+            <li>Conference</li>
+            <li>Workshops</li>
+            <li>Schedule</li>
+            <li>Runup Events</li>
+          </ul>
+        </li>
         <li><a href="/2013/runup-events">Runup events</a></li>
         <li><a href="/2013/conference#schedule-day1">Schedule</a></li>
         <li><a href="/2013/sponsors">Sponsors</a></li>
@@ -102,7 +166,7 @@
       </ul>
     </nav> 
   </div>
-</div>
+</div> -->
 {% endblock %}
 
 
@@ -155,30 +219,30 @@ if (location.hostname == 'droidcon.in') {
 
 <script>
 if( Modernizr.mq('only screen and (min-width: 768px)')){
-  var previousScroll = 0,
-  headerOrgOffset = $('#navigation').height();
+  // var previousScroll = 0,
+  // headerOrgOffset = $('#navigation').height();
 
-  $('#nav-wrap').height($('#navigation').height());
-  currentScroll = 0;
+  // $('#nav-wrap').height($('#navigation').height());
+  // currentScroll = 0;
     //$('#nav-wrap').css('visibility', 'visible');
   $(window).scroll(function () {
     var currentScroll = $(this).scrollTop();
 
     //alert(currentScroll);
-    if( currentScroll > 250){
-      $('#nav-wrap').addClass('visible');
+    if( currentScroll > 550){
+      $('#site-nav').addClass('navbar-fixed-top');
     }  else {
-      $('#nav-wrap').removeClass('visible');
+      $('#site-nav').removeClass('navbar-fixed-top');
     }
     
-    if (currentScroll > headerOrgOffset) {
-        if (currentScroll > previousScroll) {
-            $('#nav-wrap').slideUp("slow");
-        } else {
-            $('#nav-wrap').slideDown(100);
-        }
-    } 
-    previousScroll = currentScroll;
+    // if (currentScroll > headerOrgOffset) {
+    //     if (currentScroll > previousScroll) {
+    //         $('#nav-wrap').slideUp("slow");
+    //     } else {
+    //         $('#nav-wrap').slideDown(100);
+    //     }
+    // } 
+    // previousScroll = currentScroll;
   });
 } else {
   $('.mob-nav').click(function(){
@@ -193,6 +257,13 @@ if( Modernizr.mq('only screen and (min-width: 768px)')){
     }
   });
 }
+</script>
+<script>
+  $(function(){
+    $('ul.dropdown.open').click(function(){
+      $('li.dropdown').addClass('open');
+    });
+  });
 </script>
 
 <!-- Prompt IE 6 users to install Chrome Frame. -->

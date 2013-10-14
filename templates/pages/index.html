@@ -6,13 +6,10 @@
       'title'               : ''
     , 'description'         : ''
     , 'sections'            : [      
-       ('event-highlights',          'green')
-      , ('event-themes',          'blue')
+       ('event-themes',          '')
       , ('tickets',          'green')
-      , ('funnel-proposals',          '')
-      , ('program-committee-summary', 'green')
       , ('featured-speakers',           'blue')
-      , ('runup-events',          '')
+      , ('funnel-proposals',          '')
       , ('past-highlights',           'green')
       , ('venue-summary',             'dark')
       , ('sponsors-summary',          'dark')
@@ -20,30 +17,27 @@
   }
 %}
 {% block banner %}
-<header class="masthead-home">
+<header class="masthead-home fill-blue"><!-- 
   <div class="left-bg"></div>
   <div class="right-bg"></div>
-  <div class="center-bg"></div>
+  <div class="center-bg"></div> -->
   <div class="container">
     <div class="row masthead-banner">
-      <div class="span4 left">
+      <div class="span4">
+        <h1>Droidcon India</h1>
       <a class="ir logo" href="/">Droidcon India 2013</a>
       </div>
-      <div class="span8 right">
-        <h2 class="green calm all-lower extralarge-prose space-two-top">
-          <span class="link">Conference</span>
+      <div class="span8 text-right">
+        <h2 class="green extrabold all-lower extralarge space-two-top">
+          <span class="link">Conference</span><br>
           <i class="amp">&amp;</i>
-          <span class="link">Workshops</span><br>
-          <i class="on">on</i>
+          <span class="link">Workshops</span>
+          <i class="on">on</i><br>
           <span class="link">Android</span>
-          <i class="on">in</i>
-          <span class="link">Bangalore</span>
         </h2>
         
-        <div class="intro row-fluid text-left prose prose-type thin space-two-top">
-          <p class="legible-prose">
-            Droidcon is back! India's largest Android conference is on 28th - 30th November 2013 at the <a href="http://goo.gl/maps/9IDoI" target="_blank">MLR Convention Centre, Whitefield, Bangalore</a>. Join us for three days of in-depth, hands-on sessions on everything about Android.
-          </p>
+        <div class="intro row-fluid prose prose-type thin space-two-top">
+          <div class="large thin">28 - 30 November 2013  |  Bangalore</div>
         </div>
         
         <p class="secondary space-two-top">
