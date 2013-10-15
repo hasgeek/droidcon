@@ -641,16 +641,32 @@ li.event-node{
   -webkit-transform: none;
 }
 
+.featured-speakers h5{
+  line-height: 20px;
+}
 
 @media (max-width: 767px){
   .photo{
-    width: 30%;
+    width: 100%;
+  }
+  .img-wrapper{
+    width: 200px;
   }
   .featured-speakers li, .program-committee-summary li{
-    height: auto;
-   padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
+@media (max-width: 45em){
+  .img-wrapper{
+    width: 200px;
+  }
+}
+@media (max-width: 35em){
+  .img-wrapper{
+    width: 50%;
+  }
+}
+
 /*
 .navigation-menu{
   background-color: #132633;
