@@ -939,7 +939,7 @@ li.event-node{
   top: 50px;
   z-index: 1030;
 }
-#highlights ul, .sponsors ul, #tickets ul, .code-of-conduct ul{
+#highlights ul, .sponsors ul, #tickets ul, .code-of-conduct ul, .event-summary ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
