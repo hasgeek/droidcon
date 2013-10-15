@@ -623,6 +623,9 @@ li.event-node{
 .featured-speakers h5{
   line-height: 20px;
 }
+.program-committee .prose.prose-type a{
+  text-decoration: none;
+}
 
 @media (max-width: 767px){
   .photo{
