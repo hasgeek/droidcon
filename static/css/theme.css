@@ -41,8 +41,11 @@ a.link-silent   { border-bottom: none; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
 .fill-green     { background-color: #778B4C !important; color: #FCF3F3; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
-.fill-greengray   { background-color: #E5E5E5 !important; color: #222020; background-image: url(../img/debut_light.png); } /*#789733*/
+.fill-greengray { background-color: #E5E5E5 !important; color: #222020; background-image: url(../img/debut_light.png); } /*#789733*/
 .fill-blue      { background-color: #46425a !important; color: #FFFFFF;}
+.fill-lightgray { background-color: rgba(0,0,0,0.1) !important; color: #FCF3F3; }
+.fill-mediumgray { background-color: rgba(0,0,0,0.2) !important; color: #FCF3F3; }
+.fill-darkgray { background-color: rgba(0,0,0,0.3) !important; color: #FCF3F3; }
 
 .fade-red-to-dark {
     background-image: -webkit-linear-gradient(top,       #BB3311 20%, #121212);

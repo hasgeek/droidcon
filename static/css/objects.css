@@ -897,13 +897,24 @@ li.event-node{
 }
 ul{
   margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 .logo-text{
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   color: #46425a;
   width: 235px;
   line-height: 50px;
   border-radius: 50%;
   padding: 68px 20px 68px 10px;
+}
+
+#tickets li{
+  list-style-type: none;
+  line-height: 25px;
+}
+#tickets .subsection{
+  /*margin-top: -10px;*/
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
