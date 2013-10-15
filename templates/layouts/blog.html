@@ -1,20 +1,23 @@
 <section class="blog page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid">
-    <h2 class="offset1 span4 extralarge all-caps">Blog</h2>
-
-    <div class="offset1 span6">
-      {{ node.content }}
-      
-      {% for post in feed() -%}
-        <div class="post space-one-bottom">
-          <h2 class="post-title"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h2>
-          <p>by <strong>{{ post.author or post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
+  <div class="container">
+    <div class="row-fluid space-two-bottom">
+      <h2 class="col-lg-12 text-center extralarge all-caps">Blog</h2>
+    </div>
+    {% for post in feed() -%}
+    <div class="row-fluid">
+      <div class="col-lg-offset-2 col-lg-1">
+        <div class="post-date fill-green text-center">{{ post.published_at|shortdate }}</div>
+      </div>
+      <div class="col-lg-7">
+        <div class="post space-two-bottom">       
+          <div class="post-title legible semibold"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></div>
+          <p class="space-half-top green">by <strong>{{ post.author or post.user.fullname }}</strong> &middot; </p>
           <div class="secondary-prose ">{{ post.description }}</div>
         </div>
-      {%- else -%}
-        <p>(No blog entries have been written so far)</p>
-      {%- endfor %}
+      </div> 
     </div>
-  </div>
-    
+    {%- else -%}
+      <p>(No blog entries have been written so far)</p>
+    {%- endfor %}
+  </div>  
 </section>

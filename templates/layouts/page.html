@@ -59,21 +59,24 @@
 <div id="page">
 
 {% block banner %}
-<header class="banner-internal row-fluid push-two resetcoords clearfix">
-  <div class="offset1 col-lg-2 col-md-2 col-sm-2 col-xs-12">
+<header class="fill-blue banner-internal row-fluid push-two resetcoords clearfix">
+  <div class="container">
+  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
     <h1 class="nospace">
       <a class="ir logo" href="/2013">
         Droidcon India 2013
       </a>
     </h1>
   </div>
+  <div class="col-lg-7">
+    <h1 class="extrabold legible">Droidcon India</h1>
+    <h3 class="calm tiny nospace-bottom all-caps">
+      28 - 30 November&nbsp;2013
+      <br>
+      Bangalore
+    </h3>
+  </div>
 
-  <h3 class="calm tiny nospace-bottom all-caps col-lg-5">
-    28<span class="hidden-phone"><sup class="date">th</sup> </span>—<span class="hidden-phone"> </span>30<sup class="date">th</sup>
-    Nov<span class="hidden-phone">ember</span>&nbsp;2013
-    <br>
-    Bangalore
-  </h3>
   <div class="ticket-link-container col-lg-3">
     <p class="text-right space-line">
       <a class="button" href="http://droidcon.doattend.com/">
@@ -82,6 +85,7 @@
       </a>
     </p>
   </div>
+</div>
 </header>
 {% endblock %}
 
@@ -195,54 +199,18 @@ if (location.hostname == 'droidcon.in') {
 </script>
 
 <script>
-if( Modernizr.mq('only screen and (min-width: 768px)')){
-  // var previousScroll = 0,
-  // headerOrgOffset = $('#navigation').height();
-
-  // $('#nav-wrap').height($('#navigation').height());
-  // currentScroll = 0;
-    //$('#nav-wrap').css('visibility', 'visible');
-  $(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
-
-    //alert(currentScroll);
-    if( currentScroll > 600){
-      $('#site-nav').addClass('navbar-fixed-top');
-    }  else {
-      $('#site-nav').removeClass('navbar-fixed-top');
-    }
-    
-    // if (currentScroll > headerOrgOffset) {
-    //     if (currentScroll > previousScroll) {
-    //         $('#nav-wrap').slideUp("slow");
-    //     } else {
-    //         $('#nav-wrap').slideDown(100);
-    //     }
-    // } 
-    // previousScroll = currentScroll;
-  });
-} else {
-  $('.mob-nav').click(function(){
-    if( $('#nav-wrap').hasClass('visible')){
-      $('#nav-wrap').removeClass('visible');
-      $(this).find('i').addClass('icon-reorder');
-      $(this).find('i').removeClass('icon-remove');
-    } else {
-      $('#nav-wrap').addClass('visible');
-      $(this).find('i').addClass('icon-remove');
-      $(this).find('i').removeClass('icon-reorder');
-    }
-  });
-}
-</script>
-<script>
-  $(function(){
-    $('ul.dropdown.open').click(function(){
-      $('li.dropdown').addClass('open');
+  if( Modernizr.mq('only screen and (min-width: 768px)')){
+    $(window).scroll(function () {
+      var currentScroll = $(this).scrollTop();
+      if( currentScroll > 705){
+        $('#site-nav').addClass('navbar-fixed-top');
+      }  else {
+        $('#site-nav').removeClass('navbar-fixed-top');
+      }
     });
-  });
+  }
 </script>
-
+{% block footerscripts %}{% endblock %}
 <!-- Prompt IE 6 users to install Chrome Frame. -->
 <!-- chromium.org/developers/how-tos/chrome-frame-getting-started -->
 <!--[if lt IE 7 ]>

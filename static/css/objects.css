@@ -885,6 +885,7 @@ li.event-node{
   height: 5px;
   width: 100%;
   position: relative;
+  margin-bottom: -5px;
 
   background-color: transparent;
   background-image: url(../img/border-triangle.svg);
@@ -919,4 +920,11 @@ ul{
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
   border: 1px solid #ccc;
+}
+
+.post-date{
+  padding: 12px 5px 12px 5px;
+  width: 60px;
+  text-transform: uppercase;
+  border: 10px solid rgba(0, 0, 0, 0.1);
 }
