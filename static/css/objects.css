@@ -939,7 +939,7 @@ li.event-node{
   top: 50px;
   z-index: 1030;
 }
-#highlights ul, .sponsors ul, #tickets ul{
+#highlights ul, .sponsors ul, #tickets ul, .code-of-conduct ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
@@ -977,3 +977,22 @@ li.event-node{
     display: inline-block !important;
   }
 }
+
+.navbar-nav>li>.dropdown-menu{
+  background-color: #222;
+  margin-top: -1px;
+}
+.dropdown-menu>li>a{
+  color: #D5D5D5;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:active{
+  background-color: #9793AD;
+  color: #333;
+}
+.dropdown-menu>li>a:hover{
+  background-color: #B49B33;
+}
+
