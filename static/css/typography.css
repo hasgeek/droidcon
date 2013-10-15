@@ -116,6 +116,22 @@ abbr {
 .video-thumbnail h4{
     font-size: 14px;
 }
+.link{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.line1{
+    font-size: 1.12em;
+}
+.line2{
+    font-size: 2.1em;
+    line-height: 1em;
+}
+.line3{
+    font-size: 1.42em;
+}
+.line4{
+    font-size: 2.04em;
+}
 
 .navbar .nav>li>a, .navbar-brand{
   font-family: 'Oswald', sans-serif;
@@ -127,3 +143,5 @@ abbr {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-family: inherit;
 }
+
+
