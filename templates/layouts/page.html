@@ -141,7 +141,6 @@
         </ul>
       </li>
       <li><a href="/2013/blog">Blog</a></li>
-      <li><a href="#">Contact</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->   
   </div>
@@ -199,7 +198,6 @@ if (location.hostname == 'droidcon.in') {
 </script>
 
 <script>
-  if( Modernizr.mq('only screen and (min-width: 768px)')){
     $(window).scroll(function () {
       var currentScroll = $(this).scrollTop();
       if( currentScroll > 705){
@@ -208,7 +206,6 @@ if (location.hostname == 'droidcon.in') {
         $('#site-nav').removeClass('navbar-fixed-top');
       }
     });
-  }
 </script>
 {% block footerscripts %}{% endblock %}
 <!-- Prompt IE 6 users to install Chrome Frame. -->

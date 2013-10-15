@@ -70,6 +70,51 @@
   height: auto;
   width: 70%;
   padding-top: 50%;
+  margin-top: 12em;
+}
+
+.logo-text{
+  background: rgba(255, 255, 255, 0.8);
+  color: #46425a;
+  width: 235px;
+  line-height: 50px;
+  border-radius: 50%;
+  padding: 68px 20px 68px 10px;
+}
+@media (min-width: 768px) and (max-width: 979px){
+  .masthead-home .logo{
+    margin-top: 15em;
+    margin: 15em auto 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .masthead-home .col-lg-8.text-right{
+    text-align: center;
+  }
+  .logo-text{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2em !important;
+  }
+}
+
+@media (max-width: 45em){
+  .logo-text{
+    width: 180px;    
+    padding: 47px 10px 47px 15px; 
+    line-height: 40px; 
+  }
+}
+@media (max-width: 35em){
+  .logo-text{
+    width: 165px;    
+    padding: 45px 10px 45px 10px;  
+    line-height: 35px;
+  }
+  .line4{
+    font-size: 1.2em;
+  }
 }
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
@@ -900,15 +945,10 @@ ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
-
-.logo-text{
-  background: rgba(255, 255, 255, 0.8);
-  color: #46425a;
-  width: 235px;
-  line-height: 50px;
-  border-radius: 50%;
-  padding: 68px 20px 68px 10px;
+.sponsors p{
+  margin-left: -15px;
 }
+
 
 #tickets li{
   list-style-type: none;
