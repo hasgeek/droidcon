@@ -915,6 +915,8 @@ ul{
 }
 #tickets .subsection{
   /*margin-top: -10px;*/
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding: 5px 5px 10px 5px;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+  border: 1px solid #ccc;
 }
