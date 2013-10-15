@@ -461,7 +461,7 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
   margin-top: -20px;
 }
 .content:after {
-  border-right-color: #EFF6EF;
+  border-right-color: #FFF;
   border-width: 17px;
   top: 50%;
   margin-top: -17px;
@@ -939,7 +939,7 @@ li.event-node{
   top: 50px;
   z-index: 1030;
 }
-ul{
+#highlights ul, .sponsors ul, #tickets ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
