@@ -116,7 +116,16 @@ a.link-silent   { border-bottom: none; }
     padding-right: 5px;
 }
 
+@media (min-width: 768px){
+  .schedule{
+      overflow: hidden;
+  }
+}
 @media (max-width: 767px){
+  .schedule{
+    padding-left: 40px;
+    padding-right: 20px;
+  }
   .schedule .text-right{
     text-align: left;
   }

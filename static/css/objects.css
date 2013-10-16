@@ -25,12 +25,12 @@
     padding-top:    3rem;
     padding-bottom: 3rem;
 }
-@media (min-width: 768px){
+/*@media (min-width: 768px){
   #page{
     overflow: hidden;
   }
 }
-
+*/
 @media (max-width: 767px) {
     .page-section {
         padding: 2rem 0;
@@ -46,14 +46,12 @@
         padding-right: 20px;
     }
 }
-.bleed-section {}
 @media (max-width: 767px) {
     .bleed-section {
         margin-left:  -20px;
         margin-right: -20px;
     }
 }
-.pad-section-bleeding {}
 @media (max-width: 767px) {
     .pad-section-bleeding {
         padding-left:  20px;
@@ -230,12 +228,16 @@
 }
 .program-committee .list-space-line{
   padding-left: 0;
-  margin-left: -30px;
   width: 100%;
   overflow: hidden;
 }
 .program-committee .list-space-line li{
   height: 350px;
+}
+@media (min-width: 1200px){
+  .program-committee .list-space-line li{
+    height: 400px;
+  }
 }
 
 
@@ -949,13 +951,18 @@ li.event-node{
   top: 50px;
   z-index: 1030;
 }
-#highlights ul, .sponsors ul, #tickets ul, .code-of-conduct ul, .event-summary ul, .sessions h3, .sessions h5, .venue ul{
+#highlights ul, .schedule ul, .featured-speakers ul, .sponsors ul, #tickets ul, .code-of-conduct ul, .event-summary ul, .sessions h3, .event-themes ul, .sessions h5, .venue ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
 .sponsors p{
   margin-left: -15px;
 }
+/*.schedule{
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+}*/
 
 
 #tickets li{

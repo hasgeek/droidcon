@@ -1,11 +1,11 @@
-<section id="workshop-details" class="full-width clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="workshop-details" class=" clearfix{% if background %} fill-{{ background }}{% endif %}">
 <div class="">
   {% with %}
     {% from theme("data/workshop-details.html") import types, items %}
 
     {% for type in types %}
-      <div id="{{ type.id }}" class="row {% if type.fill %}fill-{{ type.fill }}{% endif %}">
-        <div class="container space-three">
+      <div id="{{ type.id }}" class="row-fluid {% if type.fill %}fill-{{ type.fill }}{% endif %}">
+        <div class="container push-three">
         <h1 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large bold all-caps space-one-bottom">
           {{ type.title }}
         </h1>
@@ -34,7 +34,7 @@
               <h4 class="blue bold regular-prose">{{ item.title }}</h4>
               <h3>{{ item.name }}</h3>
               <h5>{{ item.designation }}</h5>
-              <h4 class="yellow shadow-text-white"><a href="{{ item.link }}">@{{ item.twitter }}</a></h4>
+              <h4 class="yellow shadow-text-white"><a href="https://twitter.com/{{ item.twitter }}">@{{ item.twitter }}</a></h4>
             </li>
         {% if loop.last %}
           </ul>

@@ -1,4 +1,4 @@
-<section id="{{ venue_id|default('venue') }}" class="venue page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="{{ venue_id|default('venue') }}" class="venue push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
 
   <div class="row-fluid space-three-bottom container">
     <h2 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 extralarge all-caps"> <i class="icon-map-marker"></i>&nbsp;&nbsp;{% if node.name == 'venue' %}{{ event.title }}{% else %}Venue{% endif %}</h2>

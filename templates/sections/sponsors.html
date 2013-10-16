@@ -1,4 +1,4 @@
-<section class="sponsors page-section full-width clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
+<section class="sponsors push-two clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
   <div class="row-fluid container">
     <h2 class="extralarge all-caps space-one-bottom">Sponsors</h2>
   </div>
@@ -10,7 +10,7 @@
     {% set outer = loop %}
     {% for item in items if item.type == type.id and type.size != 'compact'  %}
       {% if loop.first %}
-      <section class="sponsor-platinum {{ fill_cycler.next() }} full-width clearfix">
+      <section class="sponsor-platinum {{ fill_cycler.next() }} clearfix">
         <div class="row-fluid container">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h2 class="legible all-caps space-one-bottom">{{ type.title }}</h2>
