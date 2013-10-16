@@ -6,50 +6,52 @@
       'title'               : ''
     , 'description'         : ''
     , 'sections'            : [      
-       ('event-highlights',          'blue')
-      , ('event-themes',          'green')
-      , ('funnel-proposals',          '')
-      , ('program-committee-summary', 'green')
+       ('event-themes',          '')
+      , ('tickets',          'green')
       , ('featured-speakers',           'blue')
-      , ('conference-schedule-day1',  '')
-      , ('color-index',  '')
-      , ('conference-schedule-day2',  'dark')
-      , ('runup-events',          '')
+      , ('funnel-proposals',          '')
       , ('past-highlights',           'green')
       , ('venue-summary',             'dark')
-      , ('sponsors-summary',          'dark')
+      , ('sponsors-summary',          'blue')
     ]
   }
 %}
+{% block navtype %}
+<div id="nav-home">
+{% endblock %}
+
 {% block banner %}
-<header class="banner banner-home text-center clearfix">
-  <h1><a class="ir logo" href="/">Droidcon India 2013</a></h1>
-  <h2 class="legible-prose calm all-caps">
-    <span>28<sup>th</sup> — 30<sup>th</sup></span>
-    <span>November</span>
-    <span>2013</span>
-  </h2>
-  <h2 class="legible-prose calm space-one-top space-two-bottom regular">
-    <a href="http://goo.gl/maps/9IDoI" target="_blank">MLR Convention Centre, Whitefield</a>
-  </h2>
-  <h3 class="green thin all-lower extralarge">
-    <span class="link">Conference</span>
-    <i class="amp">&amp;</i>
-    <span class="link">Workshops</span>
-    <i class="on">on</i>
-    <span class="link">Android</span>
-    <i>in</i>
-    <span class="link">Bangalore</span>
-  </h3>
-  
-  <div class="intro row-fluid text-left prose prose-type">
-    <p class="span8 offset2 large-prose">
-      Droidcon is back! India's largest Android conference is on 28th - 30th November 2013 at the MLR Convention Centre, Whitefield, Bangalore. Join us for three days of in-depth, hands-on sessions on everything about Android.
-    </p>
+<header class="masthead-home fill-blue"><!-- 
+  <div class="left-bg"></div>
+  <div class="right-bg"></div>
+  <div class="center-bg"></div> -->
+  <div class="container">
+    <div class="row masthead-banner">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <h1 class="logo-text extralarge bold space-two-top">
+          <div class="text-left">Droidcon</div>
+          <div class="text-right">India.</div>
+        </h1>
+        <a class="ir logo hidden-xs" href="/">Droidcon India 2013</a>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-right">
+        <h2 class="green extrabold all-lower extralarge space-four-top">
+          <div class="link line1">India's Largest</div>
+          <div class="link line2">Android</div>
+          <div class="link line3">Conference</div>
+        </h2>
+        
+        <div class="intro row-fluid prose prose-type thin space-two-top">
+          <div class="line4 thin">28 - 30 November 2013&nbsp;&nbsp;|&nbsp;&nbsp;Bangalore</div>
+        </div>
+        
+        <p class="secondary space-two-top space-two-bottom">
+          <a class="button" href="http://droidcon.doattend.com/">Buy your Ticket</a>
+        </p>
+        <p><br></p>
+      </div>
+
+    </div>
   </div>
-  
-  <p class="secondary space-six-bottom">
-    <a class="button" href="http://droidcon.doattend.com/">Buy your Ticket</a>
-  </p>
 </header>
 {% endblock %}

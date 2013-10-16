@@ -29,6 +29,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .huge                   { font-size: 3.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
+.extralarge-prose       { font-size: 1.650rem; line-height: 1.30; }
 .large                  { font-size: 1.500rem; line-height: 1.15; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
 .legible                { font-size: 1.125rem; line-height: 1.15; }
@@ -115,3 +116,37 @@ abbr {
 .video-thumbnail h4{
     font-size: 14px;
 }
+.link{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.line1{
+    font-size: 1.12em;
+}
+.line2{
+    font-size: 2.1em;
+    line-height: 1em;
+}
+.line3{
+    font-size: 1.42em;
+}
+.line4{
+    font-size: 2.04em;
+}
+
+.navbar .nav>li>a, .navbar-brand{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: #9793AD;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: inherit;
+}
+@media (min-width: 768px) and (max-width: 979px){
+    .navbar .nav>li>a, .navbar-brand{
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+}
+
