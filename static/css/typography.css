@@ -143,5 +143,10 @@ abbr {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-family: inherit;
 }
-
+@media (min-width: 768px) and (max-width: 979px){
+    .navbar .nav>li>a, .navbar-brand{
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+}
 

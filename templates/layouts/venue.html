@@ -1,4 +1,4 @@
-<section id="{{ venue_id|default('venue') }}" class="page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
+<section id="{{ venue_id|default('venue') }}" class="venue page-section clearfix{% if background %} fill-{{ background }}{% endif %}">
 
   <div class="row-fluid space-three-bottom container">
     <h2 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 extralarge all-caps"> <i class="icon-map-marker"></i>&nbsp;&nbsp;{% if node.name == 'venue' %}{{ event.title }}{% else %}Venue{% endif %}</h2>
@@ -47,11 +47,11 @@
   
 
   <div class="row-fluid space-three-top container">
-    <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 legible all-caps space-two-bottom">Directions</h3>
+    <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 legible all-caps space-two-bottom">Location</h3>
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 regular-prose prose prose-type">
       {% for item in venue.directions %}
-        <h4 class="{% if not loop.first %}space-two-top {% endif %}space-one-bottom semibold legible-prose">From {{ item.from }}</h4>
+        <h4 class="{% if not loop.first %}space-two-top {% endif %}space-one-bottom semibold legible-prose">{{ item.from }}</h4>
         {{ item.route|safe }}
       {% endfor %}
     </div>
