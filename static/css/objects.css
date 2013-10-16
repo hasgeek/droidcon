@@ -1006,3 +1006,17 @@ li.event-node{
   background-color: #B49B33;
 }
 
+.info-box{
+  border-radius: 5px;
+  width: 40%;
+  margin: 5%;
+}
+@media (max-width: 767px){
+  .info-box{
+    width: 90%;
+  }
+  .event-summary .col-xs-12 a{
+    text-decoration: none;
+  }
+}
+

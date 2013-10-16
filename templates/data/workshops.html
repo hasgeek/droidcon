@@ -1,40 +1,15 @@
 {% 
   set event = {
       'title' : 'Workshops'
-    , 'when'  : '18 — 19 September 2013'
-    , 'blurb' : '<p>Workshops will cover Android frameworks</p>'
+    , 'when'  : '23 — 27 September 2013'
+    , 'blurb' : '<div class="row text-center"><a href="workshops#beginners-android-workshop"><div class="fill-lightgray push-one dark col-lg-6 col-md-6 col-sm-6 col-xs-12 info-box"> <i class="icon-android icon-4x"></i><i class="icon-cog icon-2x"></i><br>Beginner\'s<br>Android&nbsp;Workshop</div></a><a href="workshops#advanced-android-workshop">
+    <div class="fill-lightgray push-one dark col-lg-6 col-md-6 col-sm-6 col-xs-12 info-box"> <i class="icon-android icon-4x"></i><i class="icon-cogs icon-3x"></i><br>Advanced<br>Android&nbsp;Workshop</div></a></div>'  
   }
 %}
 {% from theme("data/workshop-schedule.html") import schedule %}
-{% if schedule is defined and schedule %}
-  {% 
-    set nav = [
-        {
-          'display' : 'Sessions + Schedule'
-        , 'link'    : 'workshops#schedule'
-      }
-      , {
-          'display' : 'Venue'
-        , 'link'    : 'workshops#venue'
-      }
-    ] 
-  %}
-{% else %}
-  {% 
-    set nav = [
-        {
-          'display' : 'Sessions'
-        , 'link'    : 'workshops#sessions'
-      }
-      , {
-          'display' : 'Venue'
-        , 'link'    : 'workshops#venue'
-      }
-    ] 
-  %}
-{% endif %}
+
 {% 
-  set action = '<a class="button" href="http://droidcon.doattend.com">Buy Workshop Tickets</a>'
+  set action = ''
 %}
 {% from theme("data/workshop-sessions.html") import sessions, types %}
 {% 

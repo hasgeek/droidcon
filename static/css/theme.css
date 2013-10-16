@@ -173,7 +173,10 @@ a.link-silent   { border-bottom: none; }
     border-left-color: #B889AD;
 }
 .theme-transparent{
-    border-color: transparent;;
+    border-color: transparent;
+}
+.theme-dark-transparent.img-wrapper{
+    border-color: rgba(0,0,0,0.1);
 }
 .theme-orange.img-wrapper{
     border-right-color: #EDA634;

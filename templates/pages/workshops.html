@@ -1,27 +1,13 @@
 {% extends theme('layouts/page.html') %}
 {% from theme("data/workshop-schedule.html") import schedule %}
-{% if schedule is defined %}
-  {%
-    set page = {
-        'title'       : 'Workshops'
-      , 'description' : 'Workshops in Droidcon India 2013'
-      , 'sections'    : [
-          ('workshop-intro',    'green')
-        , ('workshop-schedule', 'dark')
-        , ('sponsors-summary',  'blue')
-      ]
-    }
-  %}
-{% else %}
-  {%
-    set page = {
-        'title'       : 'Workshops'
-      , 'description' : 'Workshops in Droidcon India 2013'
-      , 'sections'    : [
-          ('workshop-intro',    'green')
-        , ('workshop-sessions', '')
-        , ('sponsors-summary',   'blue')
-      ]
-    }
-  %}
-{% endif %}
+{%
+  set page = {
+      'title'       : 'Workshops'
+    , 'description' : 'Workshops in Droidcon India 2013'
+    , 'sections'    : [
+        ('workshop-intro',    'green')
+      , ('workshop-details', '')
+      , ('sponsors-summary',   'blue')
+    ]
+  }
+%}
