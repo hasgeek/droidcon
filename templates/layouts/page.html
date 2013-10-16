@@ -90,9 +90,11 @@
 </header>
 {% endblock %}
 
+{% block navtype %}
+<div id="nav-inner">
+{% endblock %}
 {% block nav %}
 <!-- <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav> -->
-
 <nav class="navbar navbar-inverse" id="site-nav" role="navigation">
   <div class="container">
    <!-- Brand and toggle get grouped for better mobile display -->
@@ -145,7 +147,7 @@
 
 <div class="zigzag-seperator"></div>
 {% endblock %}
-
+</div>
 
 {% block content %}
   {% for item in page.sections  %}
@@ -197,10 +199,15 @@ if (location.hostname == 'droidcon.in') {
 <script>
     $(window).scroll(function () {
       var currentScroll = $(this).scrollTop();
-      if( currentScroll > 705){
-        $('#site-nav').addClass('navbar-fixed-top');
+      if( currentScroll > 700){
+        $('#nav-home').addClass('navbar-fixed-top');
       }  else {
-        $('#site-nav').removeClass('navbar-fixed-top');
+        $('#nav-home').removeClass('navbar-fixed-top');
+      }
+      if( currentScroll > 248){
+        $('#nav-inner').addClass('navbar-fixed-top');
+      }  else {
+        $('#nav-inner').removeClass('navbar-fixed-top');
       }
     });
 </script>
