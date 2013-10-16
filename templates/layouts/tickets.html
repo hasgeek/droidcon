@@ -5,8 +5,8 @@
   <div class="row-fluid container">
   {% for ticket in items -%}
     {% if ticket.open %}
-      <div class="{% if items|length == 4 %}col-lg-3{% elif items|length == 3 %}col-lg-4 col-md-4 col-sm-4 col-xs-12{% endif %} text-center fill-lightgray space-one">
-        <div class="subsection fill-mediumgray space-one-top">        
+      <div class="{% if items|length == 4 %}col-lg-3{% elif items|length == 3 %}col-lg-4 col-md-4 col-sm-4 col-xs-12{% endif %} text-center fill-lightgray push-one">
+        <div class="subsection fill-mediumgray">        
           <h3>{{ ticket.type }}</h3>
           <div><i class="icon-ticket icon-3x"></i></div>
           <h5>{{ ticket.price }} Rs.</h5>
@@ -14,7 +14,7 @@
         <div class="subsection fill-darkgray">
           {% if ticket.end_date %}<div class="yellow">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
         </div>
-        <div class="subsection fill-green space-half-top space-one-bottom">
+        <div class="subsection fill-green push-half-top push-one-bottom">
           {{ ticket.package | safe }}
         </div>
       </div>
@@ -22,7 +22,7 @@
   {%- endfor %}
   </div>
   <div class="row-fluid container text-center">
-    <p class="secondary nospace-top space-two-bottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <p class="secondary space-one-top space-two-bottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <a class="button" href="http://droidcon.doattend.com/">Get your Ticket</a>
     </p>
   </div>
