@@ -9,7 +9,7 @@
         <div class="subsection fill-mediumgray">        
           <h3>{{ ticket.type }}</h3>
           <div><i class="icon-ticket icon-3x"></i></div>
-          <h5>{{ ticket.price }} Rs.</h5>
+          <h5>Rs. {{ ticket.price }}</h5>
         </div>
         <div class="subsection fill-darkgray">
           {% if ticket.end_date %}<div class="yellow">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
