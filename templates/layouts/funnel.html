@@ -23,7 +23,7 @@
         <tr><td colspan="5" class="bold text-center">App Demos</td></tr>
         {% for proposal in node.proposals() -%}
           {% if proposal['section_name'] == 'app-demos' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="{% if proposal['confirmed'] %}{% elif proposal['section_name'] == 'business' %}theme-blue-light{% elif proposal['section_name'] == 'systems' %}theme-red-light{% elif proposal['section_name'] == 'games' %}theme-orange-light{% elif proposal['section_name'] == 'design' %}theme-violet-light{% elif proposal['section_name'] == 'app-demos' %}theme-green-light{% elif proposal['section_name'] == 'workshops' %}fill-lightgray dark{% endif %}" data-confirmed="{{ proposal['confirmed'] }}">
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-green-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
@@ -35,7 +35,7 @@
         <tr><td colspan="5" class="bold text-center">Business</td></tr>
         {% for proposal in node.proposals() -%}
           {% if proposal['section_name'] == 'business' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="theme-blue-light" data-confirmed="{{ proposal['confirmed'] }}">
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-blue-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
@@ -47,7 +47,7 @@
         <tr><td colspan="5" class="bold text-center">Systems</td></tr>
         {% for proposal in node.proposals() -%}
           {% if proposal['section_name'] == 'systems' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light" data-confirmed="{{ proposal['confirmed'] }}">
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
@@ -59,7 +59,7 @@
         <tr><td colspan="5" class="bold text-center">Gaming</td></tr>
         {% for proposal in node.proposals() -%}
           {% if proposal['section_name'] == 'games' %}
-            <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light" data-confirmed="{{ proposal['confirmed'] }}">
+            <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
               <td>{{ proposal['submitted']|shortdate }}</td>
@@ -116,7 +116,7 @@
       <tbody>        
       {% for proposal in node.proposals() -%}
         {% if proposal['confirmed'] %}
-          <tr data-section="{{ proposal['section_name'] }}">
+          <tr data-section="{{ proposal['section_name'] }}" class="{% if proposal['section_name'] == 'business' %}theme-blue-light{% elif proposal['section_name'] == 'systems' %}theme-red-light{% elif proposal['section_name'] == 'games' %}theme-orange-light{% elif proposal['section_name'] == 'design' %}theme-violet-light{% elif proposal['section_name'] == 'app-demos' %}theme-green-light{% elif proposal['section_name'] == 'workshops' %}fill-lightgray dark{% endif %}">           
             <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
             <td>{{ proposal['proposer'] }}</td>
             <td>{{ proposal['submitted']|shortdate }}</td>
