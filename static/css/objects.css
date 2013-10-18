@@ -957,6 +957,10 @@ li.event-node{
   margin-right: 0 !important;
   padding-right: 0 !important;
 }
+.schedule ul{
+  margin-right: 0 !important;
+  padding-right: 15px !important;
+}
 .sponsors p{
   margin-left: -15px;
 }
