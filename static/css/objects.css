@@ -63,7 +63,7 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
 .masthead-home .logo { 
-  background: url(../img/logo.png) no-repeat scroll center center;
+  background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
   background-size: contain;
   height: auto;
   width: 70%;
@@ -117,7 +117,7 @@
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
-    background: url(../img/logo.png) no-repeat scroll center center;
+    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width: 100%;
@@ -181,7 +181,7 @@
 }
 
 .banner-internal .logo {
-    background: url(../img/logo.png) no-repeat scroll center center;
+    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
@@ -396,7 +396,7 @@
     margin-bottom: 160px;
 }
 .hasgeek-logo {
-    background: url(../img/hasgeek-logo.png) no-repeat scroll center center;
+    background: url(https://images.hasgeek.com/embed/file/11bac6c19b904e4e94db44a9aa1bf831) no-repeat scroll center center;
     width:  130px;
     height: 120px;
     -webkit-border-radius: 30px 30px 30px 0;
@@ -661,13 +661,6 @@ li.event-node{
   }
 }
 
-/*
-.navigation-menu{
-  background-color: #132633;
-  position: absolute;
-  z-index: 6;
-}
-*/
 #site-nav{
   width: 100%;
   /*visibility: hidden;*/
@@ -682,68 +675,6 @@ li.event-node{
 #site-nav .navbar-inner{
   border-radius: 0;
 }
-/*
-#navigation {
-  height: 60px;
-}
-#nav-wrap {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #FFF;
-  z-index: 10;
-  visibility: hidden;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#nav-wrap.visible{
-  visibility: visible;
-}
-
-.navigation-menu ul{
-  margin: 0;
-}
-.navigation-menu li{
-  list-style-type: none;
-  display: inline-block;
-  padding: 20px 30px 20px 30px;
-  font-size: 18px;
-  margin: 0;
-  transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  background-color: #FFF;
-}
-.navigation-menu li:hover{
-  color: #fff;
-  background-color: #000;
-}
-.navigation-menu li > a {
-  text-decoration: none;
-  border-bottom: 0;
-}
-.navigation-menu li > a:hover, .navigation-menu li > a:focus, .navigation-menu li > a:active {
-  background-color: transparent;
-}
-.navigation-menu li > a:focus{
-  color: #000;
-}
-
-.navigation-menu li>ul{
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  margin-top: 100px;
-}
-.navigation-menu li:hover>ul{
-  height: auto;
-  width: auto;
-  overflow: hidden;
-}
-.navigation-menu li>ul>li{
-  display: block;
-}
-*/
 
 @media screen and (min-width: 980px) and (max-width: 1200px){
   .navigation-menu li{
@@ -881,23 +812,23 @@ li.event-node{
 }
 
 .theme#app-demos{
-  background-image: url(../img/themes/app-demos.png);
+  background-image: url(https://images.hasgeek.com/embed/file/363bae34271a4843b12f2a0cb83fa492);
   background-repeat: no-repeat;
 }
 .theme#business{
-  background-image: url(../img/themes/business.png);
+  background-image: url(https://images.hasgeek.com/embed/file/513b6b98c0aa46e58a89aa311a0e4fac);
   background-repeat: no-repeat;
 }
 .theme#gaming{
-  background-image: url(../img/themes/gaming.png);
+  background-image: url(https://images.hasgeek.com/embed/file/f2f5369f618a4f3f927bce66a632b351);
   background-repeat: no-repeat;
 }
 .theme#systems{
-  background-image: url(../img/themes/systems.png);
+  background-image: url(https://images.hasgeek.com/embed/file/44811261e1e44630a57d784c56cd6267);
   background-repeat: no-repeat;
 }
 .theme#ux{
-  background-image: url(../img/themes/ux.png);
+  background-image: url(https://images.hasgeek.com/embed/file/6c3e77d1d07a428b961100aecd88503e);
   background-repeat: no-repeat;
 }
 
@@ -943,7 +874,7 @@ li.event-node{
   margin-bottom: -5px;
 
   background-color: transparent;
-  background-image: url(../img/border-triangle.svg);
+  background-image: url('https://images.hasgeek.com/embed/file/e752ea21f4904c18af0745ce0f2d425e');
   background-repeat: repeat-x;
 }
 .navbar-fixed-top+.zigzag-seperator{
