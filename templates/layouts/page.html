@@ -211,6 +211,10 @@ if (location.hostname == 'droidcon.in') {
       }
     });
 </script>
+<script type="text/javascript">
+  $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
+  $(".popover-left").popover({ placement: 'right', animation: true, trigger: 'hover'});
+</script>
 {% block footerscripts %}{% endblock %}
 <!-- Prompt IE 6 users to install Chrome Frame. -->
 <!-- chromium.org/developers/how-tos/chrome-frame-getting-started -->

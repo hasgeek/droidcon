@@ -1,9 +1,9 @@
 <section id="{{ schedule.id }}" class="schedule push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row text-center">
+  <div class="row text-center container">
     <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 extralarge all-caps space-two-bottom">Schedule{% if schedule.date %} — {{ schedule.date|safe }}{% endif %}</h2>
   </div>
-  
-  <ul class="unstyled schedule">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <ul class="unstyled schedule ">
     <li class="row">
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 nospace-bottom clearfix text-right theme-box-left theme-transparent">
         <h3 class="nospace-top legible-prose prose-type"><span class="">Track 1</span></h3>
@@ -21,17 +21,17 @@
       {% if item.track1 %}
       {% with item = sessions[item.track1] %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-left {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
+          <a class="{% if item.featured == true %}popover-left{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}"><h3 class="nospace-top legible-prose prose-type"><span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span></h3></a>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
-              <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span> <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
+              <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker | safe }}</span><span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
             </p>
           {% endif %}
         </div>
       {% endwith %}
       {% else %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-right theme-box-left theme-transparent">
-          <h3><span class="calm italic nospace-top regular-prose">{{ item.title }}</span></h3>
+          <h3><span class="calm italic nospace-top regular-prose">{{ item.title|safe }}</span></h3>
         </div>
       {% endif %}
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 legible space-one-bottom clearfix text-center">
@@ -40,10 +40,11 @@
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-left theme-box-right {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <h3 class="nospace-top legible-prose prose-type"><span class="">{{ item.title }}</span></h3>
+          <a class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}"><h3 class="nospace-top legible-prose prose-type"><span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span></h3></a>
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
-                <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> <span class="regular-prose">{{ item.speaker }}</span>{% if item.speaker and item.designation %}, {% endif %}<span class="italic">{{ item.designation }}</span>
+                <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> 
+                <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker|safe }}</span>
             </p>
           {% endif %}
         </div>
@@ -65,4 +66,6 @@
     </li>
   {% endfor %}
   </ul>
+</div>
 </section>
+

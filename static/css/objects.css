@@ -1036,3 +1036,21 @@ li.event-node{
 .speaker-photo{
   width: 30%;
 }
+
+.popover{
+  border: 3px solid #778B4C;
+  padding: 0;
+  min-width: 300px;
+  max-width: 400px;
+}
+.popover-title{
+  color: #efefef;
+  background-color: #B49B33;
+  border-radius: 3px 3px 0 0;
+}
+.popover-content{
+  color: #333;
+}
+.popover.bottom .arrow:after {
+    border-bottom-color: #B49B33;
+}
