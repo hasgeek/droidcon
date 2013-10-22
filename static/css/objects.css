@@ -638,6 +638,18 @@ li.event-node{
   text-decoration: none;
 }
 
+@media (min-width: 980px) and (max-width: 1200px){
+  .featured-speakers li, .program-committee-summary li{    
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+  .featured-speakers li, .program-committee-summary li{    
+    height: 280px;
+  }
+}
+
 @media (max-width: 767px){
   .photo{
     width: 100%;
@@ -984,4 +996,90 @@ li.event-node{
 }
 .popover.bottom .arrow:after {
     border-bottom-color: #B49B33;
+}
+.offer{
+  padding: 25px 35px 25px 20px;
+  float: left;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  font-size: 1.45em;
+}
+.offer:after{
+  display: inline-block;
+  content: "";
+  height: 5px;
+  width: 5px;
+  float: right;
+  position: absolute;
+  left: 192px;
+  top: 0;
+  border-left: 39px solid #46425A;
+  border-top: 39px solid #46425A;
+  border-bottom: 39px solid #B49B33;
+  border-right: 39px solid #B49B33;
+  z-index: -1;
+}
+.offer-text{
+  padding: 27px 0 29px 80px;
+  font-size: 1.15em;
+}
+.offer-text:before{
+  display: inline-block;
+  content: "";
+  height: 5px;
+  width: 5px;
+  float: right;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  border-color: rgba(0,0,0,0.1);
+  border-left: 39px solid #B49B33;
+  border-top: 39px solid #B49B33;
+  border-bottom: 39px solid transparent;
+  border-right: 39px solid transparent;
+}
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  .offer{
+    padding: 29px 35px 28px 10px;
+    font-size: 1.05em;
+  }
+  .offer:after{
+    left: 142px;
+  }
+  .offer-text{
+    padding: 11px 0 11px 80px;
+    font-size: 1.15em;
+    line-height: 1.8em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .offer{
+    padding: 18px 35px 18px 0;
+    font-size: 1.1em;
+  }
+  .offer:after{
+    left: 87px;
+  }
+  .offer-text{
+    padding: 11px 0 11px 80px;
+    font-size: 1.15em;
+    line-height: 1.8em;
+  }
+}
+@media screen and (max-width: 767px){
+  .offer{
+    padding: 8px 0 8px 8px;
+    font-size: 1.2em; 
+    float: none;
+  }
+  .offer:after{
+    display: none;
+  }
+  .offer-text:before{
+    display: none;
+  }
+  .offer-text{
+    padding: 20px 0 20px 10px;
+  }
 }
