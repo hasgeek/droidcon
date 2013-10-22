@@ -1066,6 +1066,9 @@ li.event-node{
     font-size: 1.15em;
     line-height: 1.8em;
   }
+  .index-links .fill-lightgray{
+    min-height: 170px;
+  }
 }
 @media screen and (max-width: 767px){
   .offer{
@@ -1081,5 +1084,11 @@ li.event-node{
   }
   .offer-text{
     padding: 20px 0 20px 10px;
+  }
+  .index-links{
+    margin-bottom: 30px;
+  }
+  .index-links .fill-lightgray{
+    min-height: 160px;
   }
 }
