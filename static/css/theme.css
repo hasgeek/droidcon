@@ -267,6 +267,9 @@ a.link-silent   { border-bottom: none; }
     display: inline-block;
     box-shadow: 1px 1px 3px #ccc;
 }
+.fill-dark.color-index li span, .fill-blue.color-index li span{
+    box-shadow: none;
+}
 .color-index .theme-orange span{
     background-color: #EDA634;
 }
