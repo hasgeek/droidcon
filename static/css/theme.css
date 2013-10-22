@@ -73,6 +73,9 @@ a.link-silent   { border-bottom: none; }
     border-bottom: 1px solid #d5d5d5;
     list-style-type: none;
 }
+.schedule > li a:hover{
+    color: #999;
+}
 .schedule > li h3{
     padding-top: 6px;
 }
