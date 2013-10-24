@@ -199,7 +199,15 @@ if (location.hostname == 'droidcon.in') {
 <script>
     $(window).scroll(function () {
       var currentScroll = $(this).scrollTop();
-      if( currentScroll > 700){
+      var checkPoint;
+      if(Modernizr.mq('only screen and (max-width: 45em)')){
+        checkPoint = 890;
+      } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
+        checkPoint = 1100;
+      } else {
+        checkPoint = 700;
+      }
+      if( currentScroll > checkPoint){
         $('#nav-home').addClass('navbar-fixed-top');
       }  else {
         $('#nav-home').removeClass('navbar-fixed-top');

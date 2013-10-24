@@ -95,6 +95,17 @@
     margin-left: auto;
     margin-top: 2em !important;
   }
+  .logo-text .text-left, .logo-text .text-right{
+    text-align: center;
+  }
+  .masthead-home .logo{
+    display: block;
+    height: 140px;
+    margin: 0 auto;
+    padding-top: 0;
+    text-align: center;
+    width: 180px;
+  }
 }
 
 @media (max-width: 45em){
