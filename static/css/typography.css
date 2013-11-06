@@ -121,14 +121,14 @@ abbr {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .line1{
-    font-size: 1.12em;
+    font-size: 2.1em;
 }
 .line2{
-    font-size: 2.1em;
+    font-size: 1.43em;
     line-height: 1em;
 }
 .line3{
-    font-size: 1.42em;
+    font-size: 1.3em;
 }
 .line4{
     font-size: 2.04em;
@@ -148,6 +148,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     .navbar .nav>li>a, .navbar-brand{
       font-size: 14px;
       letter-spacing: 0.05em;
+    }
+    .line4{
+        font-size: 1.85em;
     }
 }
 
