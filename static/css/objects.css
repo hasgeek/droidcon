@@ -933,6 +933,10 @@ li.event-node{
   /*margin-top: -10px;*/
   padding: 5px 5px 10px 5px;
 }
+#tickets .icon-container{
+  padding: 12px 5px 7px 5px;
+  display: block;
+}
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
   border: 1px solid #ccc;
 }

@@ -8,10 +8,12 @@
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center fill-lightgray push-one">
         <div class="subsection fill-mediumgray">        
           <h3>{{ ticket.type }}</h3>
-          <div><i class="icon-ticket icon-3x"></i></div>
-          <h5>Rs. {{ ticket.price }}</h5>
+          <div class="icon-container">
+            <img src="{{ticket.icon}}" alt="">
+          </div>
+          <h5 class="legible-prose">Rs. {{ ticket.price }}</h5>
         </div>
-        <div class="subsection fill-darkgray">
+        <div class="subsection tiny fill-darkgray">
           {% if ticket.end_date %}<div class="yellow">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
         </div>
         <div class="subsection fill-green push-half-top push-one-bottom">
@@ -34,13 +36,13 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center fill-lightgray push-one">
         <div class="subsection fill-mediumgray">        
           <h3>{{ ticket.type }}</h3>
-          <div><i class="icon-ticket icon-3x"></i></div>
-          <h5>Rs. {{ ticket.price }}</h5>
+          <div class="icon-container"><i class="icon-{{ticket.icon}} icon-3x"></i></div>
+          <h5 class="legible-prose">Rs. {{ ticket.price }}</h5>
         </div>
-        <div class="subsection fill-darkgray">
+        <div class="subsection tiny fill-darkgray">
           {% if ticket.end_date %}<div class="yellow">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
         </div>
-        <div class="subsection fill-green push-half-top push-one-bottom">
+        <div class="subsection tiny fill-green push-half-top push-one-bottom">
           {{ ticket.package | safe }}
           <p class="tiny space-one-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <a class="button" target="_blank" href="{{ ticket.link }}">Buy Ticket</a>
