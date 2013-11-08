@@ -4,7 +4,7 @@
   </div>
 </section>
 
-{% with fill_cycler = cycler('fill-green', 'fill-dark') %}
+{% with fill_cycler = cycler('fill-green', 'fill-blue') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}
