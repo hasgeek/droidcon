@@ -20,7 +20,7 @@
           {% endif %}
           {% if type.id == 'beginners-android-workshop' %}
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-              <p class="yellow secondary-prose">For prerequisites and getting in touch with instructors, <a href="{{ type.funnel }}">visit Funnel <i class="icon-double-angle-right"></i></a></p>
+              <p class="yellow secondary-prose">For prerequisites and getting in touch with instructors, <a href="{{ type.funnel }}" target="_blank">visit Funnel <i class="icon-double-angle-right"></i></a></p>
             </div>
           {% endif %}
         </div>
@@ -48,7 +48,7 @@
                   {% if item.title %}
                     <h3 class="legible bold">{{ item.title|safe }}</h3>
                     <p class="tiny">{{ item.session|safe }}</p>
-                    <a class="green secondary" href="{{ item.funnel }}">Queries? Talk to the instructor >></a>
+                    <a target="_blank" class="green secondary-prose" href="{{ item.funnel }}">For prerequisites and getting in touch with instructor, visit Funnel <i class="icon-double-angle-right"></i></a>
                   {% endif %}
                 </div>
               </div>
