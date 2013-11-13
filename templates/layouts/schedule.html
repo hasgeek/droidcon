@@ -31,7 +31,7 @@
       {% endwith %}
       {% else %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-right theme-box-left theme-transparent">
-          <h3><span class="calm italic nospace-top regular-prose">{{ item.title|safe }}</span></h3>
+          <div class="push-1q-top"><span class="calm italic nospace-top regular-prose">{{ item.title|safe }}</span></div>
         </div>
       {% endif %}
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 legible space-one-bottom clearfix text-center">
@@ -60,7 +60,7 @@
       {% endwith %}
       {% else %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-left theme-box-right theme-transparent">
-          <h3><span class="calm italic nospace-top regular-prose">{{ item.title }}</span></h3>
+          <div class="push-1q-top"><span class="calm italic nospace-top regular-prose">{{ item.title }}</span></div>
         </div>
       {% endif %}
     </li>
