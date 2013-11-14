@@ -32,8 +32,8 @@
   {% include theme('sections/special-offers.html') %}
   <div class="row-fluid container">
   {% for ticket in items -%}
-    {% if ticket.open and ticket.category=='workshop' %}
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center fill-lightgray push-one">
+    {% if ticket.open and ticket.category!='conference' %}
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center fill-lightgray push-one">
         <div class="subsection fill-mediumgray">        
           <h3>{{ ticket.type }}</h3>
           <div class="icon-container"><i class="icon-{{ticket.icon}} icon-3x"></i></div>

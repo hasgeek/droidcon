@@ -1021,7 +1021,7 @@ li.event-node{
 }
 .offer-text li{
   list-style-type: none;
-  margin-left: 60px;
+  margin-left: 70px;
 }
 @media screen and (min-width:768px) and (max-width: 979px){
   .offer-text li{
