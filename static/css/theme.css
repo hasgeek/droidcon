@@ -101,11 +101,11 @@ a.link-silent   { border-bottom: none; }
     border-bottom: none;
 }
 .theme-box-left{
-    border-right: 3px solid transparent;
+    border-right: 4px solid transparent;
     padding-right: 30px;
 }
 .theme-box-right{
-    border-left: 3px solid transparent;
+    border-left: 4px solid transparent;
     padding-left: 30px;
 }
 .schedule .gray a{

@@ -1092,6 +1092,7 @@ li.event-node{
 @media screen and (min-width: 768px) and (max-width: 991px){
   .index-links .fill-lightgray{
     min-height: 170px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 767px){
