@@ -928,7 +928,21 @@ li.event-node{
 #tickets li{
   list-style-type: none;
   line-height: 25px;
+  border-radius: 5px;
 }
+@media (min-width: 1200px){
+  #tickets li.offer-block{
+    height: 222px;
+    overflow:hidden;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  #tickets li.offer-block{
+    height: 205px;
+    overflow:hidden;
+  }
+}
+
 #tickets .subsection{
   /*margin-top: -10px;*/
   padding: 5px 5px 10px 5px;
@@ -1026,7 +1040,7 @@ li.event-node{
 @media screen and (min-width:768px) and (max-width: 979px){
   .offer-text li{
     list-style-type: none;
-    margin-left: 115px;
+    margin-left: 145px;
   }
 }
 @media screen and (max-width:767px){
