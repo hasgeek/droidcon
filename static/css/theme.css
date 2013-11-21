@@ -115,8 +115,11 @@ a.link-silent   { border-bottom: none; }
     background-color: transparent;
     color: #333;
 }
-.fill-dark .schedule .gray a{
-    color: #333;
+.schedule i.icon-youtube-play{
+    color: #9C3E3E;
+}
+.schedule i.icon-filter{
+    color: #DAAB79;
 }
 .fill-dark .schedule .gray a:hover{
     color: #EAEAEA;
