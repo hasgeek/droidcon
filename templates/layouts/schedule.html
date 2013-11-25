@@ -40,23 +40,16 @@
     {% if item.track2 %}
       {% with item = sessions[item.track2] %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-left theme-box-right {% if item.type == 'business' %}theme-blue{% elif item.type == 'systems' %}theme-red{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'app-demos' %}theme-green{% elif item.type == 'ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <a class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}"><h3 class="nospace-top legible-prose prose-type"><span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span></h3></a>
+          <a class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}"><h3 class="nospace-top legible-prose prose-type"><span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span>{% if item.sponsor %}<div class="green secondary-prose">Sponsored talk - {{ item.sponsor }}</div>{% endif %}</h3></a>
+
           {% if item.speaker or item.designation %}
             <p class="prose-type tiny calm">
                 <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> 
                 <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker|safe }}</span>
             </p>
           {% endif %}
+
         </div>
-        <!-- <div class="offset1 span4 legible-prose prose prose-type">
-          <div class="prose-type regular-prose space-three-bottom">
-            {{ item.blurb|safe }}
-            <ul class="list-plain secondary prose space-one-top">
-              {#{% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}#}
-              {#{% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}#}
-            </ul>
-          </div>
-        </div> -->
       {% endwith %}
       {% else %}
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-left theme-box-right theme-transparent">
