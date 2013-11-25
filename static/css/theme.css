@@ -36,6 +36,7 @@ a.link-silent   { border-bottom: none; }
 
 .blue-bg        { background: #46425A; padding: 0 5px 0 5px;}
 .shadow-text-white   { text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
+.block-shadow-light { box-shadow: 0 1px 5px rgba(0,0,0,0.1);}
 
 .fill-white     { background-color: #FFFFFF !important; color: #444; }
 .fill-dark      { background-color: #121212 !important; color: #EEE; }
