@@ -52,6 +52,10 @@
             <p class="tiny space-one-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <a class="button button-on-dark" target="_blank" href="{{ ticket.photo }}">View Photos</a>
             </p>
+          {% elif ticket.closed_link %}
+            <p class="tiny space-one-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <a class="button" target="_blank" href="{{ ticket.link }}">Sales Closed</a>
+            </p>
           {% endif %}
         </div>
 
