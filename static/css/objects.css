@@ -1037,11 +1037,11 @@ li.event-node{
   list-style-type: none;
   margin-left: 70px;
 }
-#hackathon .offer-text li{
+#hackathon .offer-text li, #offers .offer-text li{
   margin-left: 50px;
 }
 @media screen and (min-width:980px) and (max-width: 1199px){
-  #hackathon .offer-text li{
+  #hackathon .offer-text li, #offers .offer-text li{
     margin-left: 40px;
   }
 }
@@ -1050,7 +1050,7 @@ li.event-node{
     list-style-type: none;
     margin-left: 145px;
   }
-  #hackathon .offer-text li{
+  #hackathon .offer-text li, #offers .offer-text li{
     margin-left: 125px;
   }
 }
@@ -1068,7 +1068,7 @@ li.event-node{
     list-style-type: none;
     margin-left: 0px;
   }
-  #hackathon .offer-text li{
+  #hackathon .offer-text li, #offers .offer-text li{
     margin-left: 0px;
   }
 }
