@@ -36,23 +36,26 @@
 		font-family:'Roboto', Arial, sans-serif;
 		font-size:15px;
 	}
-	.table-bordered{
+	.table{
+		margin-bottom: 0;
+	}
+	#theme-tracks-table.table-bordered{
 		border: 0;
 	}
-	.table-bordered>thead>tr>th{
+	#theme-tracks-table.table-bordered>thead>tr>th{
 		background-color:#777777;
 	}
-	.table-bordered>tbody:last-child{
+	#theme-tracks-table.table-bordered>tbody:last-child{
 		border-bottom: 1px solid #ccc;
 	}
-	.table-bordered>tbody>tr>td{
+	#theme-tracks-table.table-bordered>tbody>tr>td{
 		border: 0;
 		border-bottom: 1px solid #ccc;
 	}
-	.table-bordered>tbody>tr:last-child>td{
+	#theme-tracks-table.table-bordered>tbody>tr:last-child>td{
 		border-bottom: 0;
 	}
-	.table-bordered>thead>tr>th{
+	#theme-tracks-table.table-bordered>thead>tr>th{
 		border: 0;
 		line-height: 16px;
 		padding-top: 10px;
@@ -64,7 +67,7 @@
 		border-bottom: 1px solid #BBB;
 	}
 
-	#sponsor-activities-table>tbody>tr{
+	.sponsor-activities-table>tbody>tr{
 		background-color: #EFEFEF;
 	}
 	.time{
@@ -105,6 +108,26 @@
 		background-size:100%;
 		background-color: #FFF;
 	}
+	.panel-heading{
+		padding: 0;
+	}
+	.panel-group .panel{
+		border-radius: 0;
+	}
+	.panel-group .panel+.panel{
+		margin-top: 0;
+	}
+	.panel{
+		border: 0;
+	}
+	.sponsor-activities-table{
+		border: 0;
+		margin-bottom: -1px;
+	}
+	.panel-title a:hover, .panel-title a:focus{
+		color:#333;
+	}
+
 </style>
 </head>
 <body>
@@ -187,78 +210,159 @@
 			</tr>
 		</tbody>
 	</table>
-	<table class="table table-bordered" id="sponsor-activities-table">
-		<tbody>
-			<tr style="background-color:#efefef;">
-				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/7b5998f0dd56408aa0307f6fae4e82f9_w60_h54.png');"></div></td>
-				<td></td>
-				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
-			</tr>
+
+	<table id="theme-tracks-table" class="table table-bordered">
+		<thead>
 			<tr>
-				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/020703af89a0416a8cd2473235b8cc44_w80_h27.png');"></div></td>
-				<td></td>
-				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+				<th colspan="2">SPONSOR BOOTH ACTIVITIES</th>
 			</tr>
-			<tr>
-				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/5372add71f7446338d29d61eae19046e_w60_h43.png');"></div></td>
-				<td></td>
-				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
-			</tr>
-			<tr>
-				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/0d57cd51ab0549f5bf8f656e9b325ecb_w100_h33.png');"></div></td>
-				<td></td>
-				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
-			</tr>
-			<tr>
-				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/187518a22c8d47b39e0395d44541181e_w60_h20.png');"></div></td>
-				<td></td>
-				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
-			</tr>
-		</tbody>
+		</thead>
 	</table>
 	<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Collapsible Group Item #2
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse in">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse in">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/7b5998f0dd56408aa0307f6fae4e82f9_w60_h54.png');"></div></td>
+									<td><div class="bold">INTEL</div><div class="secondary-prose">Tweet Jam . App Reviews . Beacon Mountain Tool</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<span class="bold-text">Intel's Tweet Jam from 27th Nov to 4th Dec:</span>
+					<p>
+						<ol>
+							<li>Developing a Native (NDK) Android App? Join our experts in the TweetJam this November to know more! #IntelDZ #IntelAndroid</li>
+							<li>Developing a Cross Platform App? Have questions about Intel XDK cross platform Kit? #IntelDZ #IntelAndroid</li>
+							<li>You have a queries for using Intel Tools on Android? Join our experts in the TweetJam this November to know more! #IntelDZ #IntelAndroid</li>
+							<li>Wondering what Android can do for you? Ask our experts in a TweetJam this November #IntelDZ #IntelAndroid</li>
+							<li>Bring on all your queries and get them answered by experts at Intel's TweetJam this November! #IntelDZ #IntelAndroid</li>
+						</ol>
+					</p>
+					<p><span class="bold-text">App Reviews:</span> Send your app (Google Play Link) for review to apptetweet@droidcon.in, and get more downloads. The Intel review team will compile and share the feedback to respective app developers and give few surprise gifts to the best feedback.</p>
+					<p>Meet Intel's partners Reverie Language Solutions, Path Partner and Focus Medica at Droidcon at booth number 1.</p>
+					<p><span class="bold-text">Download Intel's Beacon Mountain Tool</span> (<a href="http://software.intel.com/en-us/vcsource/tools/beaconmountain">http://software.intel.com/en-us/vcsource/tools/beaconmountain</a>) or productivity-oriented design, coding, and debugging for apps targeting Android-based ARM and Intel® Atom™ processor-based devices, including smartphones and tablets. If you are an Android developer, especially working on gaming and NDK, <a href="http://software.intel.com/en-us/vcsource/tools/beaconmountain">download Beacon Mountain</a> and share your feedback with Intel at Droidcon.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/020703af89a0416a8cd2473235b8cc44_w80_h27.png');"></div></td>
+									<td><div class="bold">SONY</div><div class="secondary-prose">Win an Xperia phone with lucky draw</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>
+						<ol>
+							<li>Developers and ISVs interested in meeting Sony representatives at Droidcon, send an email to Sonyindia_Developer@ap.sony.com</li>
+							<li>Win an Xperia phone with Sony's lucky draw on 28th and 29th Nov. Drop your visiting card at the Sony booth on 28th and 29th. You must be present at the venue when Sony announces the winner at 5:30 PM on both days.</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/5372add71f7446338d29d61eae19046e_w60_h43.png');"></div></td>
+									<td><div class="bold">ADAPTXT</div><div class="secondary-prose">Play activities and win goodies</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>
+						<ol>
+							<li>Visit our stall and get hands-on information on our smart predictive text input solution – Adaptxt</li>
+							<li>Register for a special Beta program and be the first to get updates on our product</li>
+							<li>Play activities at the stall and win goodies like T-shirts and Mugs</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/0d57cd51ab0549f5bf8f656e9b325ecb_w100_h33.png');"></div></td>
+									<td><div class="bold">HUWEI</div><div class="secondary-prose">Meet geeks, EMUI &amp; Popular tweet contest</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseFour" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<p>We are planning to do the following major activities/contests in droidcon.</p>
+					<p>
+						<ol>
+							<li><div class="bold">Meet the Huawei Geeks @ predefined time @ our booth</div>We will have two huawei experts for first two days who has worked on latest EMUI and they will share the thoughts and ideas about the specific features they have conceived/developed.</li>
+							<li><div class="bold">Globalizing EMUI Contest</div>Come and Experience EMUI in our booth and give us the feedback using the feedback form and in our HuaweiClub thread. The best feedbacks will be given some goodies from Huawei.</li>
+							<li><div class="bold">Twitter or write about droidcon with #huawei @huawei_club handle</div>Win a gift from Huawei for the most popular tweet.</li>
+						</ol>
+					</p>
+					<p>Lucky Draw Contest for “Like our facebook page “ and register with club.vmall.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+						<table class="table table-bordered sponsor-activities-table">
+							<tbody>
+								<tr style="background-color:#efefef;">
+									<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/187518a22c8d47b39e0395d44541181e_w60_h20.png');"></div></td>
+									<td><div class="bold">AMAZON</div><div class="secondary-prose">Win Kindle Fire and t-shirts</div></td>
+									<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseFive" class="panel-collapse collapse in">
+				<div class="panel-body">
+					Visit Amazon booth at Droidcon to learn about distributing your android apps on Amazon AppStore and for your chance to win a Kindle Fire and t-shirts.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </div>
 
 {%- if not config['DEBUG'] %}
@@ -270,7 +374,16 @@
     <script src="{{ ASSET_URL }}"></script>
   {% endassets -%}
 {%- endif %}
-<script>$(".collapse").collapse()
+<script>
+	$(".collapse").collapse();
+</script>
+<script>
+	$(function(){
+		if($('.panel-link').hasClass('collapsed')){
+			$(this).find('i').addClass('icon-chevron-down');
+			
+		}
+	});
 </script>
 </body>
 </html>
