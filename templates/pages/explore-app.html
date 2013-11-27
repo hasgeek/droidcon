@@ -1,0 +1,91 @@
+{% from "baseframe/components.html" import networkbar with context -%}
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9">     <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js{%- if config['DEBUG'] %} wf-active{% endif %}">        <!--<![endif]-->
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Droidcon India: Android Conference in Bangalore, India">
+<meta name="author" content="HasGeek and friends">
+
+<meta property="og:title" content="Droidcon India 2013"/>
+<meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
+<meta property="og:url" content="{{ request.url }}"/>
+<meta property="og:description" content="Droidcon India: Android Conference in Bangalore, India"/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<title>Droidcon India 2013</title>
+
+{%- if _theme %}
+  {% assets "css_" + _theme -%}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+  {% endassets -%}
+{%- endif %}
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
+<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/_baseframe/css/networkbar.css">
+
+<script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+
+{%- if config['DEBUG'] %}
+  <link rel="stylesheet" href="{{ theme_static('css/fonts.css') }}">
+{%- else %}
+  <script type="text/javascript" src="//use.typekit.net/ewq6otu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{%- endif %}
+
+</head>
+<body>
+	<ul>
+		<li>
+			<ul>
+				<li>11:45</li>
+				<li><i class="icon-gamepad"></i></li>
+				<li>Intel: Game engines for Android</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>02:15</li>
+				<li><i class="icon-gamepad"></i></li>
+				<li>Nilesh Jahagirdar</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>03:00</li>
+				<li><i class="icon-briefcase"></i></li>
+				<li>Business</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>03:00</li>
+				<li><i class="icon-cog"></i></li>
+				<li>Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>04:00</li>
+				<li><i class="icon-briefcase"></i></li>
+				<li>Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</li>
+			</ul>
+		</li>
+	</ul>
+
+
+</body>
+</html>
