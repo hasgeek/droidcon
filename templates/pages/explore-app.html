@@ -30,81 +30,114 @@
 <link href='//fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+<style>
+	.table-bordered>thead>tr>td, .table-bordered>tbody>tr>td{
+		border: 0;
+		border-top: 1px solid #ccc;
+	}
+	.table-bordered>thead>tr>th{
+		border: 0;
+		line-height: 14px;
+	}
 
+	.time{
+		background-color:#E5E5E5;
+	}
+	.theme-corner{
+		width: 30px;
+		color:#fff;
+		line-height:14px;
+	}
+	.gaming{
+		background-color:#EDA634;
+		font-size:15px;
+	}
+	.systems{
+		background-color:#CB1D1E;
+		font-size:16px;
+	}
+	.business{
+		background-color:#2D9DCD;
+	}
+	.ux{
+		background-color:#B889AD;
+		font-size:18px;
+	}
+</style>
 </head>
 <body style="font-family:'Roboto', Arial, sans-serif;font-size:15px;">
 	<table class="table table-bordered" style="border:0;">
 		<thead style="background-color:#777777">
 			<tr>
-				<th style="font-weight:normal;color:#FFF;font-size:15px;" colspan="3">28 NOVEMBER 2013</th>
+				<th style="font-weight:normal;color:#FFF;font-size:14px;" colspan="3">28 NOVEMBER 2013</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td style="background-color:#E5E5E5">11:45</td>
-				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:15px;line-height:14px;"><i class="icon-gamepad"></i></td>
+				<td class="time">11:45</td>
+				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
 				<td><span style="font-weight:500">Intel's Talk:</span> Game engines for Android</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">02:15</td>
-				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:15px;line-height:14px;"><i class="icon-gamepad"></i></td>
+				<td class="time">02:15</td>
+				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
 				<td><span style="font-weight:500">Meet Speaker:</span> Nilesh Jahagirdar</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">03:00</td>
-				<td align="center" style="width:30px;background-color:#2D9DCD;color:#fff;"><i class="icon-briefcase"></i></td>
+				<td class="time">03:00</td>
+				<td align="center" class="theme-corner business"><i class="icon-briefcase"></i></td>
 				<td><span style="font-weight:500">Meet Business Speakers</span></td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">03:00</td>
-				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td class="time">03:00</td>
+				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
 				<td><span style="font-weight:500">Meet Speakers:</span> Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">04:00</td>
-				<td align="center" style="width:30px;background-color:#2D9DCD;color:#fff;"><i class="icon-briefcase"></i></td>
+				<td class="time">04:00</td>
+				<td align="center" class="theme-corner business"><i class="icon-briefcase"></i></td>
 				<td>Sequoia Capital</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">04:00</td>
-				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td class="time">04:00</td>
+				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
 				<td><span style="font-weight:500">Intel's Talk</span> Building android applications on Intel architecture</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">04:45</td>
-				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td class="time">04:45</td>
+				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
 				<td><span style="font-weight:500">Intel's Talk:</span> Step by step walkthrough of NDK app porting to Intel architecture</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">05:30</td>
-				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:15px;line-height:14px;"><i class="icon-gamepad"></i></td>
+				<td class="time">05:30</td>
+				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
 				<td><span style="font-weight:500">Meet Speakers:</span> Manish Mathai, Samarth Shah, Amit Shukla</td>
 			</tr>
 		</tbody>
 		<thead style="background-color:#777777">
 			<tr>
-				<th style="font-weight:normal;color:#FFF;font-size:15px;" colspan="3">29 NOVEMBER 2013</th>
+				<th style="font-weight:normal;color:#FFF;font-size:14px;" colspan="3">29 NOVEMBER 2013</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td style="background-color:#E5E5E5">11:45</td>
-				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:18px;line-height:14px;"><i class="icon-mobile-phone"></i></td>
+				<td class="time">11:45</td>
+				<td align="center" class="theme-corner ux"><i class="icon-mobile-phone"></i></td>
 				<td>Design</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">12:30</td>
-				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:18px;line-height:14px;"><i class="icon-mobile-phone"></i></td>
+				<td class="time">12:30</td>
+				<td align="center" class="theme-corner ux"><i class="icon-mobile-phone"></i></td>
 				<td>Design</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">02:15</td>
-				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td class="time">02:15</td>
+				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
 				<td><span style="font-weight:500">Meet Speakers:</span> Christopher Neugebauer, Sriram Ramani</td>
 			</tr>
 			<tr>
-				<td style="background-color:#E5E5E5">05:30</td>
-				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td class="time">05:30</td>
+				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
 				<td><span style="font-weight:500">Meet Speakers:</span> Bhaskar Gupta, Anshul Rai, Arun Joseph</td>
 			</tr>
 		</tbody>
