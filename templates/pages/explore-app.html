@@ -27,19 +27,41 @@
   {% endassets -%}
 {%- endif %}
 
-<link href='//fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
 <style>
-	.table-bordered>thead>tr>td, .table-bordered>tbody>tr>td{
+	body{
+		font-family:'Roboto', Arial, sans-serif;
+		font-size:15px;
+	}
+	.table-bordered{
 		border: 0;
-		border-top: 1px solid #ccc;
+	}
+	.table-bordered>thead{
+		background-color:#777777;
+	}
+	.table-bordered>tbody:last-child{
+		border-bottom: 1px solid #ccc;
+	}
+	.table-bordered>tbody>tr>td{
+		border: 0;
+		border-bottom: 1px solid #ccc;
+	}
+	.table-bordered>tbody>tr:last-child>td{
+		border-bottom: 0;
 	}
 	.table-bordered>thead>tr>th{
 		border: 0;
 		line-height: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		font-weight:400;
+		color:#FFF;
+		font-size:14px;
+		border-bottom: 1px solid #BBB;
 	}
-
 	.time{
 		background-color:#E5E5E5;
 	}
@@ -54,7 +76,7 @@
 	}
 	.systems{
 		background-color:#CB1D1E;
-		font-size:16px;
+		font-size:17px;
 	}
 	.business{
 		background-color:#2D9DCD;
@@ -63,35 +85,38 @@
 		background-color:#B889AD;
 		font-size:18px;
 	}
+	.bold-text{
+		font-weight:500;
+	}
 </style>
 </head>
-<body style="font-family:'Roboto', Arial, sans-serif;font-size:15px;">
-	<table class="table table-bordered" style="border:0;">
-		<thead style="background-color:#777777">
+<body>
+	<table class="table table-bordered">
+		<thead>
 			<tr>
-				<th style="font-weight:normal;color:#FFF;font-size:14px;" colspan="3">28 NOVEMBER 2013</th>
+				<th colspan="3">28 NOVEMBER 2013</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td class="time">11:45</td>
 				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
-				<td><span style="font-weight:500">Intel's Talk:</span> Game engines for Android</td>
+				<td><span class="bold-text">Intel's Talk:</span> Game engines for Android</td>
 			</tr>
 			<tr>
 				<td class="time">02:15</td>
 				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
-				<td><span style="font-weight:500">Meet Speaker:</span> Nilesh Jahagirdar</td>
+				<td><span class="bold-text">Meet Speaker:</span> Nilesh Jahagirdar</td>
 			</tr>
 			<tr>
 				<td class="time">03:00</td>
 				<td align="center" class="theme-corner business"><i class="icon-briefcase"></i></td>
-				<td><span style="font-weight:500">Meet Business Speakers</span></td>
+				<td><span class="bold-text">Meet Business Speakers</span></td>
 			</tr>
 			<tr>
 				<td class="time">03:00</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span style="font-weight:500">Meet Speakers:</span> Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</td>
+				<td><span class="bold-text">Meet Speakers:</span> Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</td>
 			</tr>
 			<tr>
 				<td class="time">04:00</td>
@@ -101,22 +126,22 @@
 			<tr>
 				<td class="time">04:00</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span style="font-weight:500">Intel's Talk</span> Building android applications on Intel architecture</td>
+				<td><span class="bold-text">Intel's Talk</span> Building android applications on Intel architecture</td>
 			</tr>
 			<tr>
 				<td class="time">04:45</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span style="font-weight:500">Intel's Talk:</span> Step by step walkthrough of NDK app porting to Intel architecture</td>
+				<td><span class="bold-text">Intel's Talk:</span> Step by step walkthrough of NDK app porting to Intel architecture</td>
 			</tr>
 			<tr>
 				<td class="time">05:30</td>
 				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
-				<td><span style="font-weight:500">Meet Speakers:</span> Manish Mathai, Samarth Shah, Amit Shukla</td>
+				<td><span class="bold-text">Meet Speakers:</span> Manish Mathai, Samarth Shah, Amit Shukla</td>
 			</tr>
 		</tbody>
-		<thead style="background-color:#777777">
+		<thead>
 			<tr>
-				<th style="font-weight:normal;color:#FFF;font-size:14px;" colspan="3">29 NOVEMBER 2013</th>
+				<th colspan="3">29 NOVEMBER 2013</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -133,12 +158,12 @@
 			<tr>
 				<td class="time">02:15</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span style="font-weight:500">Meet Speakers:</span> Christopher Neugebauer, Sriram Ramani</td>
+				<td><span class="bold-text">Meet Speakers:</span> Christopher Neugebauer, Sriram Ramani</td>
 			</tr>
 			<tr>
 				<td class="time">05:30</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span style="font-weight:500">Meet Speakers:</span> Bhaskar Gupta, Anshul Rai, Arun Joseph</td>
+				<td><span class="bold-text">Meet Speakers:</span> Bhaskar Gupta, Anshul Rai, Arun Joseph</td>
 			</tr>
 		</tbody>
 	</table>
