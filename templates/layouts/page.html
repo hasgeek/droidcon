@@ -221,8 +221,10 @@ if (location.hostname == 'droidcon.in') {
     });
 </script>
 <script type="text/javascript">
-  $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
-  $(".popover-left").popover({ placement: 'right', animation: true, trigger: 'hover'});
+  Modernizr.mq('only screen and (min-width: 768px)'){
+    $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
+    $(".popover-left").popover({ placement: 'right', animation: true, trigger: 'hover'});
+  } 
 </script>
 {% block footerscripts %}{% endblock %}
 <!-- Prompt IE 6 users to install Chrome Frame. -->

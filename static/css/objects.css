@@ -1117,3 +1117,6 @@ li.event-node{
     min-height: 160px;
   }
 }
+.padding{
+  padding: 30px;
+}
