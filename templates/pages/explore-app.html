@@ -27,121 +27,88 @@
   {% endassets -%}
 {%- endif %}
 
-<!-- Leaflet -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
-<!--[if lte IE 8]>
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
-<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="/_baseframe/css/networkbar.css">
+<link href='//fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
 
-{%- if config['DEBUG'] %}
-  <link rel="stylesheet" href="{{ theme_static('css/fonts.css') }}">
-{%- else %}
-  <script type="text/javascript" src="//use.typekit.net/ewq6otu.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-{%- endif %}
-
 </head>
-<body>
-	<div class="day">
-		28 NOVEMBER 2013
-	</div>
-	<ul>
-		<li>
-			<ul>
-				<li>11:45</li>
-				<li><i class="icon-gamepad"></i></li>
-				<li>Intel: Game engines for Android</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>02:15</li>
-				<li><i class="icon-gamepad"></i></li>
-				<li>Nilesh Jahagirdar</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>03:00</li>
-				<li><i class="icon-briefcase"></i></li>
-				<li>Business</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>03:00</li>
-				<li><i class="icon-cog"></i></li>
-				<li>Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>04:00</li>
-				<li><i class="icon-briefcase"></i></li>
-				<li>Sequoia Capital</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>04:00</li>
-				<li><i class="icon-cog"></i></li>
-				<li>Building android applications on Intel architecture</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>04:45</li>
-				<li><i class="icon-cog"></i></li>
-				<li>Step by step walkthrough of NDK app porting to Intel architecture</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>05:30</li>
-				<li><i class="icon-gamepad"></i></li>
-				<li>Manish Mathai, Samarth Shah, Amit Shukla</li>
-			</ul>
-		</li>
-	</ul>
-	<div class="day">
-		29 NOVEMBER 2013
-	</div>
-	<ul>
-		<li>
-			<ul>
-				<li>11:45</li>
-				<li><i class="icon-mobile-phone"></i></li>
-				<li>Design</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>12:30</li>
-				<li><i class="icon-mobile-phone"></i></li>
-				<li>Design</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>02:15</li>
-				<li><i class="icon-cog"></i></li>
-				<li>Christopher Neugebauer, Sriram Ramani</li>
-			</ul>
-		</li>
-		<li>
-			<ul>
-				<li>05:30</li>
-				<li><i class="icon-gamepad"></i></li>
-				<li>Manish Mathai, Samarth Shah, Amit Shukla</li>
-			</ul>
-		</li>
-	</ul>
+<body style="font-family:'Roboto', Arial, sans-serif;">
+	<table class="table table-bordered">
+		<thead style="background-color:#999">
+			<tr>
+				<th style="font-weight:normal;color:#FFF;font-size:12px;" colspan="3">28 NOVEMBER 2013</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>11:45</td>
+				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:15px;line-height:14px;"><i class="icon-gamepad"></i></td>
+				<td><span style="font-weight:500">Intel's Talk:</span> Game engines for Android</td>
+			</tr>
+			<tr>
+				<td>02:15</td>
+				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:15px;line-height:14px;"><i class="icon-gamepad"></i></td>
+				<td><span style="font-weight:500">Meet Speaker:</span> Nilesh Jahagirdar</td>
+			</tr>
+			<tr>
+				<td>03:00</td>
+				<td align="center" style="width:30px;background-color:#2D9DCD;color:#fff;"><i class="icon-briefcase"></i></td>
+				<td><span style="font-weight:500">Meet Business Speakers</span></td>
+			</tr>
+			<tr>
+				<td>03:00</td>
+				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td>Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</td>
+			</tr>
+			<tr>
+				<td>04:00</td>
+				<td align="center" style="width:30px;background-color:#2D9DCD;color:#fff;"><i class="icon-briefcase"></i></td>
+				<td>Sequoia Capital</td>
+			</tr>
+			<tr>
+				<td>04:00</td>
+				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td>Building android applications on Intel architecture</td>
+			</tr>
+			<tr>
+				<td>04:45</td>
+				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td>Step by step walkthrough of NDK app porting to Intel architecture</td>
+			</tr>
+			<tr>
+				<td>05:30</td>
+				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:15px;line-height:14px;"><i class="icon-gamepad"></i></td>
+				<td>Manish Mathai, Samarth Shah, Amit Shukla</td>
+			</tr>
+		</tbody>
+		<thead style="background-color:#999">
+			<tr>
+				<th style="font-weight:normal;color:#FFF;font-size:12px;" colspan="3">29 NOVEMBER 2013</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>11:45</td>
+				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:18px;line-height:14px;"><i class="icon-mobile-phone"></i></td>
+				<td>Design</td>
+			</tr>
+			<tr>
+				<td>12:30</td>
+				<td align="center" style="width:30px;background-color:#EDA634;color:#fff;font-size:18px;line-height:14px;"><i class="icon-mobile-phone"></i></td>
+				<td>Design</td>
+			</tr>
+			<tr>
+				<td>02:15</td>
+				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td>Christopher Neugebauer, Sriram Ramani</td>
+			</tr>
+			<tr>
+				<td>05:30</td>
+				<td align="center" style="width:30px;background-color:#CB1D1E;color:#fff;font-size:16px;line-height:14px;"><i class="icon-cog"></i></td>
+				<td>Bhaskar Gupta, Anshul Rai, Arun Joseph</td>
+			</tr>
+		</tbody>
+	</table>
 
 </body>
 </html>
