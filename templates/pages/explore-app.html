@@ -30,6 +30,7 @@
 <link href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+<script src="../../static/js/vendor/bootstrap.min.js"></script>
 <style>
 	body{
 		font-family:'Roboto', Arial, sans-serif;
@@ -38,7 +39,7 @@
 	.table-bordered{
 		border: 0;
 	}
-	.table-bordered>thead{
+	.table-bordered>thead>tr>th{
 		background-color:#777777;
 	}
 	.table-bordered>tbody:last-child{
@@ -61,6 +62,10 @@
 		color:#FFF;
 		font-size:14px;
 		border-bottom: 1px solid #BBB;
+	}
+
+	#sponsor-activities-table>tbody>tr{
+		background-color: #EFEFEF;
 	}
 	.time{
 		background-color:#E5E5E5;
@@ -88,10 +93,22 @@
 	.bold-text{
 		font-weight:500;
 	}
+	.sponsor-logo-wrapper{
+		width: 80px;
+		height: 80px;
+	}
+	.sponsor-logo-placeholder{
+		height:60px;
+		width:60px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:100%;
+		background-color: #FFF;
+	}
 </style>
 </head>
 <body>
-	<table class="table table-bordered">
+	<table id="theme-tracks-table" class="table table-bordered">
 		<thead>
 			<tr>
 				<th colspan="3">28 NOVEMBER 2013</th>
@@ -104,27 +121,30 @@
 				<td><span class="bold-text">Intel's Talk:</span> Game engines for Android</td>
 			</tr>
 			<tr>
+				<td class="time">12:30</td>
+				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
+				<td><span class="bold-text">Meet Speakers:</span> Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</td>
+			</tr>
+			<tr>
 				<td class="time">02:15</td>
 				<td align="center" class="theme-corner gaming"><i class="icon-gamepad"></i></td>
 				<td><span class="bold-text">Meet Speaker:</span> Nilesh Jahagirdar</td>
 			</tr>
 			<tr>
-				<td class="time">03:00</td>
+				<td class="time" rowspan="2">03:00</td>
 				<td align="center" class="theme-corner business"><i class="icon-briefcase"></i></td>
 				<td><span class="bold-text">Meet Business Speakers</span></td>
 			</tr>
 			<tr>
-				<td class="time">03:00</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span class="bold-text">Meet Speakers:</span> Satyam Kandula, Kumar Sukhani, Christopher Neugebauer</td>
+				<td><span class="bold-text">Meet Speakers:</span> Arun Joseph, Christopher Neugebauer</td>
 			</tr>
 			<tr>
-				<td class="time">04:00</td>
+				<td class="time" rowspan="2">04:00</td>
 				<td align="center" class="theme-corner business"><i class="icon-briefcase"></i></td>
 				<td>Sequoia Capital</td>
 			</tr>
 			<tr>
-				<td class="time">04:00</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
 				<td><span class="bold-text">Intel's Talk</span> Building android applications on Intel architecture</td>
 			</tr>
@@ -163,39 +183,94 @@
 			<tr>
 				<td class="time">05:30</td>
 				<td align="center" class="theme-corner systems"><i class="icon-cog"></i></td>
-				<td><span class="bold-text">Meet Speakers:</span> Bhaskar Gupta, Anshul Rai, Arun Joseph</td>
+				<td><span class="bold-text">Meet Speakers:</span> Bhaskar Gupta, Anshul Rai</td>
 			</tr>
 		</tbody>
 	</table>
-	<table class="table table-bordered">
+	<table class="table table-bordered" id="sponsor-activities-table">
 		<tbody>
-			<tr>
-				<td style="width:80px"><div style="height:60px;width:60px;background-image:url('https://imgee.s3.amazonaws.com/imgee/7b5998f0dd56408aa0307f6fae4e82f9_w60_h54.png');background-repeat:no-repeat;background-position:center center;background-size:100%;"></div></td>
+			<tr style="background-color:#efefef;">
+				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/7b5998f0dd56408aa0307f6fae4e82f9_w60_h54.png');"></div></td>
 				<td></td>
 				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
 			</tr>
 			<tr>
-				<td style="width:80px"><div style="height:60px;width:60px;background-image:url('https://imgee.s3.amazonaws.com/imgee/020703af89a0416a8cd2473235b8cc44_w80_h27.png');background-repeat:no-repeat;background-position:center center;background-size:100%;"></div></td>
+				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/020703af89a0416a8cd2473235b8cc44_w80_h27.png');"></div></td>
 				<td></td>
 				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
 			</tr>
 			<tr>
-				<td style="width:80px"><div style="height:60px;width:60px;background-image:url('https://imgee.s3.amazonaws.com/imgee/5372add71f7446338d29d61eae19046e_w60_h43.png');background-repeat:no-repeat;background-position:center center;background-size:100%;"></div></td>
+				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/5372add71f7446338d29d61eae19046e_w60_h43.png');"></div></td>
 				<td></td>
 				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
 			</tr>
 			<tr>
-				<td style="width:80px"><div style="height:60px;width:60px;background-image:url('https://imgee.s3.amazonaws.com/imgee/0d57cd51ab0549f5bf8f656e9b325ecb_w100_h33.png');background-repeat:no-repeat;background-position:center center;background-size:100%;"></div></td>
+				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/0d57cd51ab0549f5bf8f656e9b325ecb_w100_h33.png');"></div></td>
 				<td></td>
 				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
 			</tr>
 			<tr>
-				<td style="width:80px"><div style="height:60px;width:60px;background-image:url('https://imgee.s3.amazonaws.com/imgee/187518a22c8d47b39e0395d44541181e_w60_h20.png');background-repeat:no-repeat;background-position:center center;background-size:100%;"></div></td>
+				<td class="sponsor-logo-wrapper"><div class="sponsor-logo-placeholder" style="background-image:url('https://imgee.s3.amazonaws.com/imgee/187518a22c8d47b39e0395d44541181e_w60_h20.png');"></div></td>
 				<td></td>
 				<td style="width:30px; vertical-align:middle;"><i class="icon-chevron-down"></i></td>
 			</tr>
 		</tbody>
 	</table>
+	<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
 
+{%- if not config['DEBUG'] %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{%- endif %}
+<script>window.jQuery || document.write('<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"><\/script>')</script>
+{%- if _theme %}
+  {% assets "js_" + _theme -%}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+{%- endif %}
+<script>$(".collapse").collapse()
+</script>
 </body>
 </html>
