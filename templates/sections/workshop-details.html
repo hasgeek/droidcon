@@ -87,6 +87,8 @@
               <p class="regular-prose"><a href="{{ type.link }}" target="_blank" class="button">Purchase ticket</a></p>
             {% elif type.photo %}
               <p class="regular-prose"><a href="{{ type.photo }}" target="_blank" class="button button-on-dark">View Photos</a></p>
+            {% elif type.closed_link %}
+            <p class="regular-prose"><a class="button button-on-dark">Sales Closed</a></p>
             {% endif %}
           </div>
         </article>

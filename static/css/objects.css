@@ -62,6 +62,17 @@
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
+.masthead-home.fill-image{
+  /*background: rgba(255, 0, 0, 0.25), url('http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg');*/
+  background-position: center center;
+  background: 
+    linear-gradient(
+      rgba(93, 84, 136, 0.8), 
+      rgba(93, 84, 136, 0.8)
+    ),
+    url(http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg) center center;
+}
+
 .masthead-home .logo { 
   background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
   background-size: contain;
@@ -69,6 +80,17 @@
   width: 70%;
   padding-top: 50%;
   margin-top: 12em;
+}
+.masthead-home .logo-center { 
+  background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
+  background-size: contain;
+  height: auto;
+  width: 450px;
+  padding-top: 50%;
+  margin-top: -33em;
+  margin-left: 6em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo-text{
@@ -79,15 +101,80 @@
   border-radius: 50%;
   padding: 68px 20px 68px 10px;
 }
+.logo-text-large{
+  background: rgba(255, 255, 255, 0.8);
+  color: #46425a;
+  width: 620px;
+  line-height: 50px;
+  border-radius: 50%;
+  padding: 100px 20px 230px 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1199px) and (max-width: 1359px){
+  .logo-text-large{
+    width: 520px;
+    padding: 100px 20px 180px 10px;
+  }
+  .masthead-home .logo-center {     
+    width: 350px;
+    margin-top: -30em;
+    margin-left: 28.2em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+  .logo-text-large{
+    width: 520px;
+    padding: 100px 20px 180px 10px;
+  }
+  .masthead-home .logo-center {     
+    width: 350px;
+    margin-top: -26em;
+    margin-left: 21.1em;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 991px){
+  .logo-text-large{
+    width: 520px;
+    padding: 100px 20px 180px 10px;
+  }
+  .masthead-home .logo-center {     
+    width: 350px;
+    margin-top: -23em;
+    margin-left: 13.2em;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 979px){
   .masthead-home .logo{
     margin-top: 15em;
     margin: 15em auto 0 auto;
   }
+  .logo-text-large{
+    width: 520px;
+    padding: 100px 20px 180px 10px;
+  }
+  .masthead-home .logo-center {     
+    width: 350px;
+    margin-top: -23em;
+    margin-left: 13.2em;
+  }
 }
 @media (max-width: 767px) {
   .masthead-home .col-lg-8.text-right{
     text-align: center;
+  }
+  .logo-text-large{
+    width: 90%;
+    padding: 10% 5% 30% 5%;
+  }
+  .masthead-home .logo-center {     
+    width: 60%;
+    margin-top: -50%;
+    margin-left: 20%;
   }
   .logo-text{
     display: block;

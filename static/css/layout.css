@@ -38,6 +38,8 @@
 .contain-width  img { max-width:  100%; height: auto; }
 .contain-height img { max-height: 100%; width:  auto; }
 
+#videos .contain-width img{ max-width: 90%; height: auto; border: 8px solid rgba(0,0,0,0.1); border-radius: 5px;}
+
 .js .js-hidden      { display: none; }
 .no-js .no-js-hidden{ display: none; }
 
