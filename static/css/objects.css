@@ -14,7 +14,6 @@
     border-radius: 0.25em;
     border: 0;
 }
-
 .button-Propose-a-session {
     display: inline-block;
     background: #00BFFF;
@@ -26,7 +25,6 @@
     border-radius: 0.25em;
     border: 0;
 }
-
 .buyticket{
     display: inline-block;
     background: #00BFFF;
@@ -38,7 +36,6 @@
     border-radius: 0.25em;
     border: 0;
 }
-
 .button-sponsorship-deck{
     display: inline-block;
     background: #26CCF2;
@@ -120,7 +117,6 @@
     ),
     url(http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg) center center;
    }
-
 .masthead-home .logo { 
   background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
   background-size: contain;
@@ -163,7 +159,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 @media (min-width: 1199px) and (max-width: 1359px){
   .logo-text-large{
     width: 520px;
