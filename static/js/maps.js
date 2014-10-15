@@ -3,7 +3,7 @@ $(function initLeaflets() {
         var   $container = $(this)
             , defaults = {
                   zoom: 5
-                , marker: [12.9833, 77.5833] // bangalore
+                , marker: [12.89994, 77.58519] // bangalore
                 , label: null
                 , maxZoom: 18
                 , attribution: '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'

@@ -1,10 +1,12 @@
 <section class="sponsors push-two clearfix nopush-bottom{% if background %} fill-{{ background }}{% endif %}">
   <div class="row-fluid container">
-    <h2 class="extralarge all-caps space-one-bottom">Sponsors</h2>
+    <h2 class="extralarge all-caps space-one-bottom"></h2>
+
   </div>
+
 </section>
 
-{% with fill_cycler = cycler('fill-green', 'fill-blue') %}
+{% with fill_cycler = cycler('fill-yellowgreen', 'fill-yellowgreen') %}
   {% from theme("data/sponsors.html") import types, items %}
   {% for type in types %}
     {% set outer = loop %}

@@ -1,18 +1,95 @@
 
-.button {
+
+.homebanner{
+  background-image: url('https://imgee.s3.amazonaws.com/imgee/802cede3e3d14968a56fdfa26eb2982a_w1296_h830.jpeg');
+  width: 100%;
+  height: auto;
+}
+
+
+
+.droid-logo{
+  margin-top: 10em;
+
+}
+
+
+
+
+.button-ticket {
     display: inline-block;
-    background: #B49B33;
+    background: #00BFFF;
     color: #000;
-    line-height: 1.4;
+    line-height: 0.5;
     padding: 1em 2em 1em;
     text-transform: uppercase;
     text-align: center;
     border-radius: 0.25em;
     border: 0;
+    }
+
+.button-Propose-a-session {
+  display: inline-block;
+    background: #00BFFF;
+    color: #000;
+    line-height: 0.5;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 0;
+
+}
+
+
+.buyticket{
+  display: inline-block;
+    background: #00BFFF;
+    color: #000;
+    line-height: 0.5;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 0;
+}
+
+
+
+
+.bcolor{
+
+}
+
+.panal {
+  font-size: 
+  color:#FFFFFF;
+}
+
+.button-sponsorship-deck{
+    display: inline-block;
+    background: #26CCF2;
+    color: #000;
+    line-height: 0.6;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0.19em;
+}
+.button {
+    display: inline-block;
+    background: #00BFFF;
+    color: #000;
+    line-height: 1.4;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 0;
 }
 .button-mini    { padding: 0.2em 0.6em; }
 .button-on-dark { background: #c55a40; }
-.button:focus   { text-decoration: none; }
+.button:focus   { text-decoration: #FFFFFF; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
 .separated-links + .separated-links:before {
@@ -82,7 +159,7 @@
   margin-top: 12em;
 }
 .masthead-home .logo-center { 
-  background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
+  background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w470_h284.png') no-repeat scroll center center;
   background-size: contain;
   height: auto;
   width: 450px;
@@ -92,11 +169,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+.logo-new {
+  background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w430_h260.png')no-repeat scroll center center;
+}
 
 .logo-text{
-  background: rgba(255, 255, 255, 0.8);
+  background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w430_h260.png') no-repeat scroll center center;
+  background-size: contain;
   color: #46425a;
-  width: 235px;
+  width: 240px;
   line-height: 50px;
   border-radius: 50%;
   padding: 68px 20px 68px 10px;
@@ -111,6 +192,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 
 @media (min-width: 1199px) and (max-width: 1359px){
   .logo-text-large{
@@ -176,6 +258,8 @@
     margin-top: -50%;
     margin-left: 20%;
   }
+
+
   .logo-text{
     display: block;
     margin-right: auto;
@@ -215,7 +299,7 @@
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
-    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
+    background: url('https://images.hasgeek.com/embed/file/4009dafe8f9045b1a07fd8185336508b?size=320x240') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width: 100%;
@@ -279,7 +363,7 @@
 }
 
 .banner-internal .logo {
-    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
+    background: url('https://images.hasgeek.com/embed/file/4009dafe8f9045b1a07fd8185336508b?size=320x240') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
@@ -930,11 +1014,11 @@ li.event-node{
   background-repeat: no-repeat;
 }
 .theme#gaming{
-  background-image: url(https://images.hasgeek.com/embed/file/f2f5369f618a4f3f927bce66a632b351);
+  background-image: url(https://images.hasgeek.com/embed/file/39403df54c8a4685a7de7b59956aa524);
   background-repeat: no-repeat;
 }
 .theme#systems{
-  background-image: url(https://images.hasgeek.com/embed/file/44811261e1e44630a57d784c56cd6267);
+  background-image: url(https://images.hasgeek.com/embed/file/596cc9b5fd0c46faa8da033c2c250577);
   background-repeat: no-repeat;
 }
 .theme#ux{

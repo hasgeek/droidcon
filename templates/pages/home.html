@@ -4,16 +4,18 @@
 {%
   set page = {
       'title'               : ''
-    , 'description'         : ''
+    , ' description'         : ''
     , 'sections'            : [      
        ('event-themes',          '')
-      , ('event-highlights',          'blue')
       , ('tickets',          'green')
-      , ('featured-speakers',           'blue')
-      , ('hackathon-summary', 'dark')
-      , ('past-highlights',           'green')
+      
+      , ('hackathon-summary', 'fill-blue')
+      
+      
+      , ('sponsors-summary',          'yellowgreen')
+      , ('event-highlights',          'liblue')
       , ('venue-summary',             'dark')
-      , ('sponsors-summary',          'blue')
+      , ('past-highlights',           'lightblue')
     ]
   }
 %}
@@ -22,34 +24,17 @@
 {% endblock %}
 
 {% block banner %}
-<header class="masthead-home fill-blue"><!-- 
-  <div class="left-bg"></div>
-  <div class="right-bg"></div>
-  <div class="center-bg"></div> -->
-  <div class="container">
-    <div class="row masthead-banner">
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <h1 class="logo-text extralarge bold space-two-top">
-          <div class="text-left">Droidcon</div>
-          <div class="text-right">India</div>
-        </h1>
-        <a class="ir logo" href="/">Droidcon India 2013</a>
+<header class=" ">
+  
+<div class="img_responsive">
+   <img src="https://imgee.s3.amazonaws.com/imgee/b78ecfd5c4ad4cadbcef84e09b3d8f1f_w1436_h920.jpeg"  width="100%" height="auto" alt="logo" />
+   
+</div>
+
+
       </div>
-      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-right">
-        <h2 class="green extrabold all-lower extralarge space-four-top">
-          <div class="link line1">Android</div>
-          <div class="link line2">Conference</div>
-          <div class="link line3">&amp; Hackathon</div>
-        </h2>
         
-        <div class="intro row-fluid prose prose-type thin space-two-top">
-          <div class="line4 thin">28 - 30 November 2013&nbsp;&nbsp;|&nbsp;&nbsp;Bangalore</div>
-        </div>
         
-        <p class="secondary space-two-top space-two-bottom">
-          <a class="button" href="http://droidcon.doattend.com/">Buy your Ticket</a>
-        </p>
-        <p><br></p>
       </div>
 
     </div>

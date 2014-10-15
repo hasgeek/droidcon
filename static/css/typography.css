@@ -12,14 +12,14 @@ i,
 em,
 .prose-type     { font-family: "Adelle", serif; }
 */
-
+@import url(http://fonts.googleapis.com/css?family=Varela);
 
 body,
-.title-type     { font-family: "Roboto Slab", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: "Varela", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
 
 i,
 em,
-.prose-type     { font-family: "Roboto Slab", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+.prose-type     { font-family: "Varela", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
 
 
 /*  Scale  */
@@ -40,7 +40,8 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
 .tiny                   { font-size: 0.600rem; line-height: 1.60; }
 .tiny-prose             { font-size: 0.500rem; line-height: 1.60; }
-
+.change-font-size       {font-size: 0.890rem; }
+.hack-summ               {font-size: 1.200rem;}
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
     .huge.body-type     { font-size: 2.500rem; line-height: 1.05; }
