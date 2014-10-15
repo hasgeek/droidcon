@@ -1,20 +1,9 @@
 
-
 .homebanner{
-  background-image: url('https://imgee.s3.amazonaws.com/imgee/802cede3e3d14968a56fdfa26eb2982a_w1296_h830.jpeg');
-  width: 100%;
-  height: auto;
+   background-image: url('https://imgee.s3.amazonaws.com/imgee/802cede3e3d14968a56fdfa26eb2982a_w1296_h830.jpeg');
+   width: 100%;
+   height: auto;
 }
-
-
-
-.droid-logo{
-  margin-top: 10em;
-
-}
-
-
-
 
 .button-ticket {
     display: inline-block;
@@ -26,10 +15,10 @@
     text-align: center;
     border-radius: 0.25em;
     border: 0;
-    }
+}
 
 .button-Propose-a-session {
-  display: inline-block;
+    display: inline-block;
     background: #00BFFF;
     color: #000;
     line-height: 0.5;
@@ -38,12 +27,10 @@
     text-align: left;
     border-radius: 0.25em;
     border: 0;
-
 }
-
 
 .buyticket{
-  display: inline-block;
+    display: inline-block;
     background: #00BFFF;
     color: #000;
     line-height: 0.5;
@@ -52,18 +39,6 @@
     text-align: left;
     border-radius: 0.25em;
     border: 0;
-}
-
-
-
-
-.bcolor{
-
-}
-
-.panal {
-  font-size: 
-  color:#FFFFFF;
 }
 
 .button-sponsorship-deck{
@@ -89,7 +64,7 @@
 }
 .button-mini    { padding: 0.2em 0.6em; }
 .button-on-dark { background: #c55a40; }
-.button:focus   { text-decoration: #FFFFFF; }
+.button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
 .separated-links + .separated-links:before {
@@ -136,19 +111,17 @@
     }
 }
 
-
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
 .masthead-home.fill-image{
   /*background: rgba(255, 0, 0, 0.25), url('http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg');*/
   background-position: center center;
   background: 
-    linear-gradient(
       rgba(93, 84, 136, 0.8), 
       rgba(93, 84, 136, 0.8)
     ),
     url(http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg) center center;
-}
+   }
 
 .masthead-home .logo { 
   background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
@@ -258,7 +231,6 @@
     margin-top: -50%;
     margin-left: 20%;
   }
-
 
   .logo-text{
     display: block;
@@ -389,8 +361,6 @@
     .banner-internal nav    { margin-top: -0.5rem; }
     .banner-internal h3     { margin-top: 1rem; }
 }
-
-
 .program-committee h2 {
     line-height: 1.2;
     margin-top: 1rem;
@@ -421,7 +391,6 @@
     height: 400px;
   }
 }
-
 
 .venue-home h2 {
     margin-bottom: 2rem;
@@ -502,8 +471,6 @@
     .video-thumbnail h5 { padding: 0 1rem 0 1rem; max-width: 300px; }
 }
 
-
-
 .sponsor-m > li {
     float: left !important;
     width: 48.5% !important;
@@ -526,11 +493,9 @@
     width: calc(100/3)% !important;
 }
 .sponsor-compact > li:nth-child(3n+1) { margin-left: 0; }
-
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
 .sponsor-logo:hover { background-color: #E5E5E5 !important; }
 .sponsor-logo img   { max-height: 100%; max-width: 100%; }
-
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
 .sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
 .sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
@@ -585,9 +550,6 @@
             border-radius: 30px 30px 30px 0;
 }
 a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
-
-
-
 
 /* -------------------------------------
  * timeline
@@ -1048,8 +1010,6 @@ li.event-node{
 */.masthead-home h2.green{
   text-transform: uppercase;
 }
-
-
 
 @media (min-width: 1200px){
   .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
