@@ -4,8 +4,8 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
         <h2 class="extralarge all-caps">Proposals</h2>
         <p class="secondary-prose space-two-top">Anyone is welcome to propose a session. Participants who have purchased conference tickets will vote on session proposals. The Programme Committee steering Droidcon India will also vote on submissions and balance the community voting.</p>
-        <p class="regular-prose all-caps gray space-one-bottom space-one-top">Status:&nbsp;&nbsp;<span class="red">Proposal selections over.</span> <span class="green">Open for post-event feedback</span></p>
-        <a href="https://funnel.hasgeek.com/droidcon2013/" class="button tiny">View proposals on Funnel</a>
+        <p class="regular-prose all-caps gray space-one-bottom space-one-top">Status:&nbsp;&nbsp;<span class="red">Proposal selections are open.</span> <span class="green"></span></p>
+        <a href="https://funnel.hasgeek.com/droidcon2014/" class="button tiny">Submit your proposals on Funnel</a>
         {% include theme('sections/color-index.html') %}
       </div>    
     </div>
@@ -33,9 +33,9 @@
             </tr>
           {% endif %} 
         {%- endfor %}
-        <tr><td colspan="5" class="bold text-center">Business</td></tr>
+        <tr><td colspan="5" class="bold text-center">UI/UX</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['section_name'] == 'business' %}
+          {% if proposal['section_name'] == 'UI/UX' %}
             <tr data-section="{{ proposal['section_name'] }}" class="theme-blue-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
@@ -45,9 +45,9 @@
             </tr>
           {% endif %}
         {%- endfor %}        
-        <tr><td colspan="5" class="bold text-center">Systems</td></tr>
+        <tr><td colspan="5" class="bold text-center">IoT</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['section_name'] == 'systems' %}
+          {% if proposal['section_name'] == 'IoT' %}
             <tr data-section="{{ proposal['section_name'] }}" class="theme-red-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
@@ -57,9 +57,9 @@
             </tr>
           {% endif %} 
         {%- endfor %}
-        <tr><td colspan="5" class="bold text-center">Gaming</td></tr>
+        <tr><td colspan="5" class="bold text-center">DataSync</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['section_name'] == 'games' %}
+          {% if proposal['section_name'] == 'DataSync' %}
             <tr data-section="{{ proposal['section_name'] }}" class="theme-orange-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
@@ -69,9 +69,9 @@
             </tr>
           {% endif %}
         {%- endfor %}
-        <tr><td colspan="5" class="bold text-center">Design</td></tr>
+        <tr><td colspan="5" class="bold text-center">Privacy & Security</td></tr>
         {% for proposal in node.proposals() -%}
-          {% if proposal['section_name'] == 'design' %}
+          {% if proposal['section_name'] == 'Privacy & Security' %}
             <tr data-section="{{ proposal['section_name'] }}" class="theme-violet-light">
               <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
               <td>{{ proposal['proposer'] }}</td>
@@ -114,7 +114,7 @@
       <tbody>        
       {% for proposal in node.proposals() -%}
         {% if proposal['confirmed'] %}
-          <tr data-section="{{ proposal['section_name'] }}" class="{% if proposal['section_name'] == 'business' %}theme-blue-light{% elif proposal['section_name'] == 'systems' %}theme-red-light{% elif proposal['section_name'] == 'games' %}theme-orange-light{% elif proposal['section_name'] == 'design' %}theme-violet-light{% elif proposal['section_name'] == 'app-demos' %}theme-green-light{% elif proposal['section_name'] == 'workshops' %}fill-lightgray dark{% endif %}">           
+          <tr data-section="{{ proposal['section_name'] }}" class="{% if proposal['section_name'] == 'UI/UX' %}theme-blue-light{% elif proposal['section_name'] == 'IoT' %}theme-red-light{% elif proposal['section_name'] == 'DataSync' %}theme-orange-light{% elif proposal['section_name'] == 'design' %}theme-violet-light{% elif proposal['section_name'] == 'app-demos' %}theme-green-light{% elif proposal['section_name'] == 'workshops' %}fill-lightgray dark{% endif %}">           
             <td><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></td>
             <td>{{ proposal['proposer'] }}</td>
             <td>{{ proposal['submitted']|shortdate }}</td>

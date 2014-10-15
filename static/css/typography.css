@@ -12,20 +12,16 @@ i,
 em,
 .prose-type     { font-family: "Adelle", serif; }
 */
-
-
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@import url(http://fonts.googleapis.com/css?family=Varela);
 body,
-.title-type     { font-family: "Roboto Slab", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
-
+.title-type     { font-family: "Varela Round", "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
 i,
 em,
-.prose-type     { font-family: "Roboto Slab", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+.prose-type     { font-family: "Varela Round","Adobe Caslon Pro", serif; }
 
-
-/*  Scale  */
-
+/*  Scale  */ 
 html                    { font-size: 16px;     line-height: 1.5; }
-
 .huge                   { font-size: 3.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
@@ -40,6 +36,8 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
 .tiny                   { font-size: 0.600rem; line-height: 1.60; }
 .tiny-prose             { font-size: 0.500rem; line-height: 1.60; }
+.change-font-size       {font-size: 0.890rem; }
+
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
@@ -64,10 +62,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
     html                { font-size: 24px; }
 }
 
-
-
 /*  Helpers  */
-
 abbr {
     font-size: 0.9em;
     font-variant: small-caps;
@@ -81,17 +76,15 @@ abbr {
 .extrabold      { font-weight: 900;    }
 .italic         { font-style: italic;  }
 .no-italic      { font-style: normal;  }
-
 .all-caps       { text-transform: uppercase;    }
 .all-lower      { text-transform: lowercase;    }
 .small-caps     { font-variant: small-caps;     }
 .strike         { text-decoration: line-through;}
 .no-underline   { text-decoration: none;        }
-
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
+    font-family: 'Hoefler Text', 'Book Antiqua','URW Palladio L';
     font-style: italic;
     font-size: 1.2em;
     line-height: 0.5em;
