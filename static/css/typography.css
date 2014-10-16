@@ -15,10 +15,10 @@ em,
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 @import url(http://fonts.googleapis.com/css?family=Varela);
 body,
-.title-type     { font-family: "Varela Round", "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: "Varela Round",  "Gill Sans", "Gill Sans MT", sans-serif; }
 i,
 em,
-.prose-type     { font-family: "Varela Round","Adobe Caslon Pro", serif; }
+.prose-type     { font-family: "Varela Round", serif; }
 
 /*  Scale  */ 
 html                    { font-size: 16px;     line-height: 1.5; }
@@ -37,7 +37,6 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .tiny                   { font-size: 0.600rem; line-height: 1.60; }
 .tiny-prose             { font-size: 0.500rem; line-height: 1.60; }
 .change-font-size       {font-size: 0.890rem; }
-
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
@@ -84,7 +83,7 @@ abbr {
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family: 'Hoefler Text', 'Book Antiqua','URW Palladio L';
+    font-family:'Varela Round' 'Hoefler Text', 'Book Antiqua','URW Palladio L';
     font-style: italic;
     font-size: 1.2em;
     line-height: 0.5em;
@@ -128,7 +127,7 @@ abbr {
 }
 
 .navbar .nav>li>a, .navbar-brand{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05em;
