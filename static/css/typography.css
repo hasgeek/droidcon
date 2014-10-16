@@ -2,24 +2,16 @@
 /* = Typography = */
 /* ============== */
 
-
 /*  Families  */
 
-/*body,
-.title-type     { font-family: "Adelle", sans-serif; }
-
-i,
-em,
-.prose-type     { font-family: "Adelle", serif; }
-*/
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Varela);
+/*body*/
+@import url(//fonts.googleapis.com/css?family=Varela+Round);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,400,600)
 body,
-.title-type     { font-family: "Varela Round",  "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: "Varela Round",'sans-serif';}
 i,
 em,
-.prose-type     { font-family: "Varela Round", serif; }
-
+.prose-type     { font-family: "Varela Round", sans-serif;}
 /*  Scale  */ 
 html                    { font-size: 16px;     line-height: 1.5; }
 .huge                   { font-size: 3.000rem; line-height: 1.10; }
@@ -83,7 +75,7 @@ abbr {
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family:'Varela Round' 'Hoefler Text', 'Book Antiqua','URW Palladio L';
+    font-family:'Varela Round', sans-serif;
     font-style: italic;
     font-size: 1.2em;
     line-height: 0.5em;
@@ -104,7 +96,6 @@ abbr {
 .why-attend li { line-height: inherit !important; }
 .runup-events li { padding-bottom: 1em;}
 .runup-events li:last-child { padding-bottom: 0; }
-
 
 .video-thumbnail h4{
     font-size: 14px;
@@ -145,4 +136,3 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
         font-size: 1.85em;
     }
 }
-
