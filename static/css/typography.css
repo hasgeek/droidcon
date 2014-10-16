@@ -2,7 +2,6 @@
 /* = Typography = */
 /* ============== */
 
-
 /*  Families  */
 
 /*body,
@@ -12,13 +11,15 @@ i,
 em,
 .prose-type     { font-family: "Adelle", serif; }
 */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Varela);
+@import url(http://fonts.googleapis.com/css?family=Varela);  font-family: , sans-serif;
 body,
-.title-type     { font-family: "Varela Round",  "Gill Sans", "Gill Sans MT", sans-serif; }
+.title-type     { font-family: "Varela Round" , 'Varela Round' , 'sans-serif';}
 i,
 em,
-.prose-type     { font-family: "Varela Round", serif; }
+.prose-type     { font-family: "Varela Round", "Open Sans", 'sans-serif' ; }
+
 
 /*  Scale  */ 
 html                    { font-size: 16px;     line-height: 1.5; }
@@ -83,7 +84,7 @@ abbr {
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family:'Varela Round' 'Hoefler Text', 'Book Antiqua','URW Palladio L';
+    font-family:'Varela Round' 'Hoefler Text', 'Book Antiqua',;
     font-style: italic;
     font-size: 1.2em;
     line-height: 0.5em;
@@ -127,7 +128,7 @@ abbr {
 }
 
 .navbar .nav>li>a, .navbar-brand{
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Varela Round';
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05em;

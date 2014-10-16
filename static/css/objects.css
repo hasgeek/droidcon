@@ -140,6 +140,20 @@
   background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w430_h260.png')no-repeat scroll center center;
 }
 
+ /*end*/
+.parent-element {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.element {
+  position: center;
+  top: 100%;
+  transform: translateY();
+}
+  /*end*/
+
 .logo-text{
   background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w430_h260.png') no-repeat scroll center center;
   background-size: contain;
@@ -159,6 +173,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+
 @media (min-width: 1199px) and (max-width: 1359px){
   .logo-text-large{
     width: 520px;
@@ -294,7 +310,7 @@
     padding-top: .3rem;
     margin-left: -5.75rem;
 }
-.banner h3 i.amp    { font-style: italic; line-height: inherit; font-size: inherit; margin-top: 0.3rem; }
+.banner h3 i.amp    { font-style: "Varela Round"; line-height: inherit; font-size: inherit; margin-top: 0.3rem; }
 .banner .intro {
     margin: 4rem auto 3rem;
     max-width: 28rem;
