@@ -5,9 +5,8 @@
 /*  Families  */
 
 /*body*/
-
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(//fonts.googleapis.com/css?family=Varela+Round);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,400,600)
 body,
 .title-type     { font-family: "Varela Round",'sans-serif';}
 i,
