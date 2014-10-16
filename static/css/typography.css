@@ -11,14 +11,14 @@ i,
 em,
 .prose-type     { font-family: "Adelle", serif; }
 */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Varela);  font-family: , sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Varela);
 body,
-.title-type     { font-family: "Varela Round" , 'Varela Round' , 'sans-serif';}
+.title-type     { font-family: "Varela Round",'sans-serif';}
 i,
 em,
-.prose-type     { font-family: "Varela Round", "Open Sans", 'sans-serif' ; }
+.prose-type     { font-family: "Varela Round", sans-serif;}
 
 
 /*  Scale  */ 
@@ -84,7 +84,7 @@ abbr {
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family:'Varela Round' 'Hoefler Text', 'Book Antiqua',;
+    font-family:'Varela Round', sans-serif;
     font-style: italic;
     font-size: 1.2em;
     line-height: 0.5em;
@@ -128,7 +128,7 @@ abbr {
 }
 
 .navbar .nav>li>a, .navbar-brand{
-  font-family: 'Varela Round';
+  font-family: 'Varela Round' sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05em;
