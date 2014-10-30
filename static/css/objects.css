@@ -109,7 +109,7 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
 .masthead-home.fill-image{
-  /*background: rgba(255, 0, 0, 0.25), url('http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg');*/
+  
   background-position: center center;
   background: 
       rgba(93, 84, 136, 0.8), 
@@ -974,6 +974,8 @@ li.event-node{
 .theme#app-demos{
   background-image: url(https://images.hasgeek.com/embed/file/363bae34271a4843b12f2a0cb83fa492);
   background-repeat: no-repeat;
+  
+
 }
 .theme#business{
   background-image: url(https://images.hasgeek.com/embed/file/513b6b98c0aa46e58a89aa311a0e4fac);
