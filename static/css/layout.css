@@ -15,7 +15,6 @@
 /*  Helpers  */
 
 .clearboth          { clear: both;  }
-
 .resetcoords        { position: relative; }
 .freeflow           { position: absolute; }
 .freeflow.pull-left { left: 0;     }
@@ -25,13 +24,11 @@
 .layer-base         { z-index: 0;  }
 .layer-one          { z-index: 10; }
 .layer-two          { z-index: 20; }
-
 .occupy             { display: block;  }
 .inline             { display: inline; }
 .inline-block       { display: inline-block; }
 .center-block       { margin-left: auto; margin-right: auto; }
 .right-block        { margin-left: auto; margin-right: 0;    }
-
 .truncate           { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 .forcewrap          { word-wrap: break-word; }
 

@@ -69,7 +69,7 @@
             </tr>
           {% endif %}
         {%- endfor %}
-        <tr><td colspan="5" class="bold text-center">Privacy & Security</td></tr>
+        <tr><td colspan="5" class="bold text-center">Privacy &amp; Security</td></tr>
         {% for proposal in node.proposals() -%}
           {% if proposal['section_name'] == 'Privacy & Security' %}
             <tr data-section="{{ proposal['section_name'] }}" class="theme-violet-light">
