@@ -11,7 +11,7 @@
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Droidcon India: Android Conference in Bangalore, India{% endif %}">
 <meta name="author" content="HasGeek and friends">
 
-<meta property="og:title" content="Droidcon India 2013{% if page.title %} — {{ page.title }}{% endif %}"/>
+<meta property="og:title" content="Droidcon India 2014{% if page.title %} — {{ page.title }}{% endif %}"/>
 <meta property="og:image" content="{{ request.url_root[:-1] }}{{ theme_static('img/logo.png') }}"/>
 <meta property="og:url" content="{{ request.url }}"/>
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Droidcon India: Android Conference in Bangalore, India{% endif %}"/>
@@ -19,33 +19,23 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<title>{% if page.title %}{{ page.title }} — {% endif %}Droidcon India 2013</title>
+<title>{% if page.title %}{{ page.title }} — {% endif %}Droidcon India 2014</title>
 
 {%- if _theme %}
   {% assets "css_" + _theme -%}
     <link rel="stylesheet" href="{{ ASSET_URL }}"/>
   {% endassets -%}
 {%- endif %}
-
 <!-- Leaflet -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
-<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,400,600" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
-
-{%- if config['DEBUG'] %}
-  <link rel="stylesheet" href="{{ theme_static('css/fonts.css') }}">
-{%- else %}
-  <script type="text/javascript" src="//use.typekit.net/ewq6otu.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-{%- endif %}
-
 </head>
 <body class="fill-greengray">
 
@@ -59,20 +49,20 @@
 <div id="page">
 
 {% block banner %}
-<header class="fill-blue banner-internal push-two resetcoords clearfix">
+<header class="fill-white banner-internal push-two resetcoords clearfix">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
         <h1 class="nospace">
-          <a class="ir logo" href="/2013">
-            Droidcon India 2013
+          <a class="ir logo" href="/2014">
+            Droidcon India 2014
           </a>
         </h1>
       </div>
       <div class="col-lg-7 col-md-7 col-sm-5 col-xs-5">
-        <h1 class="extrabold legible">Droidcon India</h1>
+        <h1 class="extrabold legible">Droidcon India </h1>
         <h3 class="calm tiny nospace-bottom all-caps">
-          28&nbsp;-&nbsp;30&nbsp;Nov<span class="hidden-xs">ember</span>&nbsp;2013
+          5th&nbsp;-&nbsp;6th&nbsp;Dec<span class="hidden-xs">ember</span>&nbsp;2014
           <br>
           Bangalore
         </h3>
@@ -80,9 +70,10 @@
 
       <div class="ticket-link-container col-lg-3 col-md-3 col-sm-4 col-xs-4">
         <p class="text-right space-line">
-          <a class="button" href="http://droidcon.doattend.com/">
-            <span class="hidden-xs">Buy Your</span> Ticket<span class="visible-xs">s</span>
+          <a class="button" href="https://in.explara.com/e/droidcon-2014">
+            <span class="hidden-xs">get your</span>Ticket <span class="visible-xs"></span>
           </a>
+
         </p>
       </div>
     </div>
@@ -105,44 +96,38 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand green" href="/2013/">Droidcon India</a>
+    <a class="navbar-brand green" href="/2014/">Droidcon India</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
+
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
+    
         <ul class="dropdown-menu">
-          <li><a href="/2013/#tickets">Ticket Pricing</a></li>
-          <li><a href="/2013/venue#hotels">Hotels</a></li>
-          <li><a href="/2013/proposals">Session Proposals</a></li>
+          <li><a href="/2014/proposals"></a></li>
         </ul>
       </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="/2013/conference">Conference</a></li>
-          <li><a href="/2013/hackathon">Hackathon</a></li>
-          <li><a href="/2013/workshops">Workshops</a></li>
-          <li><a href="/2013/runup-events">Runup events</a></li>
-        </ul>
-      </li>
-      <li><a href="/2013/schedule">Schedule</a></li>
-      <li><a href="/2013/sponsors">Sponsors</a></li>
+      <!--<li><a href="/2014/schedule">Schedule</a></li>
+      <li><a href="/2014/sponsors">Sponsors</a></li>-->
+      <li><a href="/2014/schedule">Schedule</a></li>
+      <li><a href="/2014/sponsors">Sponsors</a></li>
+      <li><a href="/2014/venue">Venue</a></li>
+      <li><a target="_blank" href="https://jobs.hasgeek.com/search?q=android">Jobs</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="/2013/program-committee">Program Committee</a></li>
-          <li><a href="/2013/about">About HasGeek</a></li>
-          <li><a href="/2013/#highlights">Previous Editions</a></li>
-          <li><a href="/2013/code-of-conduct">Code of conduct</a></li>
+          <!--<li><a href="/2014/program-committee">Program Committee</a></li>-->
+          <li><a href="/2014/about">About HasGeek</a></li>
+          <li><a href="/2014/#highlights">Previous Editions</a></li>
+          <li><a href="/2014/code-of-conduct">Code of conduct</a></li>
         </ul>
+
       </li>
-      <li><a href="/2013/venue">Venue</a></li>
-      <li><a target="_blank" href="https://jobs.hasgeek.com/search?q=android">Jobs</a></li>
     </ul>
-  </div><!-- /.navbar-collapse -->   
+
+  </div><!-- /.navbar-collapse -->
   </div>
 </nav>
 
@@ -163,7 +148,7 @@
 <footer class="page-footer push-two fill-dark clearfix">
   <div class="text-center tiny">
     <p class="gray"><a href="http://www.droidcon.com/">Droidcon</a> is a registered trademark by <a href="http://www.mobileseasons.com/">Mobile Seasons GmbH</a>.</p>
-    <p class="gray">Copyright &copy; 2010–13. All rights reserved.</p>
+    <p class="gray">Copyright &copy; 2010–14. All rights reserved.</p>
     <p><a href="mailto:info@hasgeek.com?subject=Hello Droidcon">info@hasgeek.com</a> /
     <a href="tel:+918067684422" class="link-silent">+91-80-67684422</a></p>
     <h3>
