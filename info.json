@@ -1,9 +1,9 @@
 {
     "application": "eventframe",
-    "identifier": "droidcon2013",
-    "name": "Droidcon India 2013",
+    "identifier": "droidcon2014",
+    "name": "Droidcon India 2014",
     "author": "Miranj and HasGeek",
-    "description": "Droidcon India 2013 website template, adapted from JSFoo 2013",
+    "description": "Droidcon India 2014 website template, adapted from JSFoo 2013",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
