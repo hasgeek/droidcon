@@ -1,14 +1,13 @@
-$(function initLeaflets() {
-    $('.leaflet-map').each(function initLeafletMap () {
+
+$(function init() {
+    $('.leaflet-map').each(function initMap () {
         var   $container = $(this)
             , defaults = {
                   zoom: 5
-                , marker: [12.9833, 77.5833] // bangalore
-                , label: null
-                , maxZoom: 18
-                , attribution: '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
-                , subdomains: ['otile1','otile2','otile3','otile4']
-                , scrollWheelZoom: false
+                , center: new google.maps.LatLng(12.9833, 77.5833)
+                , label: "Bangalore"
+                , scrollwheel: false
+                , styles: [{featureType:"administrative",stylers:[{visibility:"off"}]},{featureType:"poi",stylers:[{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility:"simplified"}]},{featureType:"landscape",stylers:[{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{visibility:"off"}]},{featureType:"road.local",stylers:[{visibility:"on"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{visibility:"on"}]},{featureType:"water",stylers:[{color:"#84afa3"},{lightness:52}]},{stylers:[{saturation:-17},{gamma:0.36}]},{featureType:"transit.line",elementType:"geometry",stylers:[{color:"#3f518c"}]}]
             }
             , args
             , options
@@ -22,21 +21,20 @@ $(function initLeaflets() {
         args = $container.data();
         if (args.marker) { args.marker = args.marker.split(','); }
         options = $.extend({}, defaults, args);
-        
-        map = new L.Map($container[0], {
-              center: options.center || options.marker
+
+        var map = new google.maps.Map($container[0], {
+              center: options.center
             , zoom: options.zoom
-            , scrollWheelZoom: options.scrollWheelZoom
+            , scrollwheel: options.scrollwheel
+            , styles: options.styles
         });
-        
-        L.tileLayer('http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
-              maxZoom: options.maxZoom
-            , attribution: options.attribution
-            , subdomains: options.subdomains
-        }).addTo(map);
-        
-        
-        marker = new L.marker(options.marker).addTo(map);
-        if (options.label) marker.bindPopup(options.label).openPopup();
-    })
+
+        var marker = new google.maps.Marker({
+            position: options.center,
+            map: map,
+            title: options.label
+        });
+    });
 });
+// When the window has finished loading create our google map below
+google.maps.event.addDomListener(window, 'load', init);

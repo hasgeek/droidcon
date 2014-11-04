@@ -4,27 +4,32 @@
       <h2 class="extralarge all-caps">Sponsors</h2>
     </div>
   </div>
-  {% with %}
-    {% from theme("data/sponsors.html") import types, items %}
-    {% for type in types %}
-      {% set outer = loop %}
-      {% for item in items if item.type == type.id  %}
-        {% if loop.first %}
-        <div id="sponsors-{{ type.id }}" class="row-fluid container space-two-top">
-          <h3 class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible all-caps space-one-bottom">{{ type.title }}</h3>
+  <div class="row-fluid">
+    <div class="col-lg-8 col-lg-offset-2">
+      {% with %}
+        {% from theme("data/sponsors.html") import types, items %}
+        {% for type in types %}
+          {% set outer = loop %}
+          {% for item in items if item.type == type.id  %}
+            {% if loop.first %}
+            <div id="sponsors-{{ type.id }}" class="row-fluid container space-two-top">
+              <h3 class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible all-caps space-one-bottom">{{ type.title }}</h3>
 
-          <ul class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
-        {% endif %}
-          <li>
-              <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
-                <img alt="{{ item.title }}" src="{{ item.logo }}">
-              </a>
-          </li>
-        {% if loop.last %}
-          </ul>
-        </div>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  {% endwith %}
+              <ul class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
+            {% endif %}
+              <li>
+                  <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
+                    <img alt="{{ item.title }}" src="{{ item.logo }}">
+                  </a>
+              </li>
+            {% if loop.last %}
+              </ul>
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endwith %}
+    </div>
+  </div>
+  
 </section>
