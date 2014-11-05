@@ -5,7 +5,8 @@
       class="leaflet-map city-level"
       data-label="{{ venue.map.osm.label }}"
       data-zoom="{{ venue.map.osm.zoom }}"
-      data-marker="{{ venue.map.osm.marker }}">
+      data-latitude="{{ venue.map.osm.latitude }}"
+      data-longitude="{{ venue.map.osm.longitude }}">
     
       <p class="col-lg-6 legible-prose">
         {{ venue.address|safe }}
@@ -17,7 +18,8 @@
       class="leaflet-map country-level"
       data-zoom="{{ venue.city.map.osm.zoom }}"
       data-label="{{ venue.city.map.osm.label }}"
-      data-marker="{{ venue.city.map.osm.marker }}">
+      data-latitude="{{ venue.map.osm.latitude }}"
+      data-longitude="{{ venue.map.osm.longitude }}">
     
       <p class="col-lg-6 legible-prose">
         {{ venue.city.address|safe }}
