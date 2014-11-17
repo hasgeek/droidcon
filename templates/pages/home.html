@@ -4,15 +4,16 @@
 {%
   set page = {
       'title'               : ''
-    , ' description'         : ''
-    , 'sections'            : [      
-       ('event-themes',          '')
-      , ('tickets',          'green')
-      , ('hackathon-summary', 'fill-blue')
-      , ('sponsors-summary',          'yellowgreen')
-      , ('event-highlights',          'liblue')
-      , ('venue-summary',             'dark')
-      , ('past-highlights',           'lightblue')
+    , 'description'         : ''
+    , 'sections'            : [  
+      ('event-intro',          '')    
+      , ('event-themes',          'dark')
+      , ('conference-schedule-day1',  '')
+      , ('color-index',  '')
+      , ('conference-schedule-day2',  'dark')
+      , ('past-highlights',          '')
+      , ('venue-summary',          'white')
+      , ('sponsors-summary',          '')
     ]
   }
 %}
@@ -21,13 +22,14 @@
 {% endblock %}
 
 {% block banner %}
-<header>
-<div class="masthead-home">
-
-<div class="header-image">
-   <img src="https://images.hasgeek.com/embed/file/b78ecfd5c4ad4cadbcef84e09b3d8f1f?size=1296x768"  width="100%" height="auto" alt="logo" />
-
-</div>
-</div>   
+<header id="circularheader">
+  <div>
+    <img src="https://imgee.s3.amazonaws.com/imgee/d110341bb8b745c48a8cbc6246fc872d.png" alt="">
+    <h1 class="sr-only">Droidcon India 2014</h1>
+    <h3>5th &amp; 6th December 2014</h3>
+    <h3 class="secondary-prose">MLR Convention Centre, JP Nagar, Bangalore</h3>
+    <a class="button tiny" href="https://in.explara.com/e/droidcon-2014" target="_blank">Get Tickets: Rs. 4000 (REGULAR)</a>
+    <p class="tiny"><em>Single day ticket are also available<sup>*</sup></em></p>
+  </div>
 </header>
 {% endblock %}

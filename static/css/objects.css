@@ -48,17 +48,18 @@
 }
 .button {
     display: inline-block;
-    background: #00BFFF;
-    color: #000;
+    background: #71BF44;
+    color: #FFF;
     line-height: 1.4;
     padding: 1em 2em 1em;
     text-transform: uppercase;
     text-align: left;
     border-radius: 0.25em;
     border: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .button-mini    { padding: 0.2em 0.6em; }
-.button-on-dark { background: #c55a40; }
+.button-on-dark { background: #aed581; }
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
@@ -108,6 +109,51 @@
 
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
+#circularheader {
+  height: 50em;
+}
+#circularheader div{
+  font-size: 4em;
+  text-align: center;
+  background: #FFF;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  display: block;
+  margin: 1em auto;
+  box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 3em rgba(255,255,255,0.3), -0.1em -0.1em 0 4.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 6em rgba(255,255,255,0.3);
+}
+@media (max-width:767px) {
+  header {
+    padding-top: 0 !important;
+  }
+  #circularheader {
+    height: 42em;
+  }
+  #circularheader div{
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0 auto;
+    box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3);
+ }
+  .event-themes.push-four-top {
+    padding-top: 2em !important;
+  }
+}
+#circularheader img {
+  width: 80%;
+  margin: 2.5em 0 0.5em 0;
+}
+#circularheader .button {
+  margin-top: 8em;
+}
+.masthead-home {
+  background-image: url(https://images.hasgeek.com/embed/file/b78ecfd5c4ad4cadbcef84e09b3d8f1f?size=1296x768);
+  height: 50em;
+  background-size: 100%;
+}
 .masthead-home.fill-image{
   
   background-position: center center;
@@ -343,23 +389,11 @@
 }
 
 .banner-internal .logo {
-    background: url('https://images.hasgeek.com/embed/file/4009dafe8f9045b1a07fd8185336508b?size=320x240') no-repeat scroll center center;
+    background: url('https://imgee.s3.amazonaws.com/imgee/d110341bb8b745c48a8cbc6246fc872d_w320_h162.png') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
     padding-top: 5.5rem;
-    -webkit-transition: all 0.5s;
-       -moz-transition: all 0.5s;
-         -o-transition: all 0.5s;
-            transition: all 0.5s;
-}
-.banner-internal .logo:hover,
-.banner-internal .logo:focus {
-    -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);
 }
 @media (max-width:767px) {
     .banner-internal .logo  { width: 1eem; }
@@ -538,7 +572,6 @@
 }
 
 .page-footer {
-    background-color: #000 !important;
     /*background-image: url(../img/2012-stage.jpg);*/
 /*    background-position: bottom center;
     background-repeat: no-repeat;
@@ -920,9 +953,10 @@ li.event-node{
 .theme{
   height: 150px;
   width: 150px;
+  opacity: 0.8;
   border-radius: 50%;
   display: block;
-  background-color: #FFF;
+  background-color: #798371;
   margin-left: auto;
   margin-right: auto;
   background-size: 100% 100%;
@@ -1026,17 +1060,7 @@ li.event-node{
 .navbar-inverse{
   border-bottom: 0;
 }
-.zigzag-seperator{
-  display: block;
-  height: 5px;
-  width: 100%;
-  position: relative;
-  margin-bottom: -5px;
 
-  background-color: transparent;
-  background-image: url('https://images.hasgeek.com/embed/file/e752ea21f4904c18af0745ce0f2d425e');
-  background-repeat: repeat-x;
-}
 .navbar-fixed-top+.zigzag-seperator{
   position: fixed;
   top: 50px;

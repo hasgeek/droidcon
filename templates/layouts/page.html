@@ -27,17 +27,19 @@
   {% endassets -%}
 {%- endif %}
 <!-- Leaflet -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" />
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.min.css" /> -->
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.3/leaflet.ie.css" />
 <![endif]-->
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" />
 <link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,400,600" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
 </head>
-<body class="fill-greengray">
+<body class="fill-silver">
 
 <div class="fill-silver">
   {% block networkbar %}
@@ -70,8 +72,8 @@
 
       <div class="ticket-link-container col-lg-3 col-md-3 col-sm-4 col-xs-4">
         <p class="text-right space-line">
-          <a class="button" href="https://in.explara.com/e/droidcon-2014">
-            <span class="hidden-xs">get your</span> Ticket <span class="visible-xs"></span>
+          <a target="_blank" class="button" href="https://in.explara.com/e/droidcon-2014">
+            <span class="hidden-xs">Buy Your</span> Ticket<span class="visible-xs">s</span>
           </a>
 
         </p>
@@ -85,10 +87,8 @@
 <div id="nav-inner">
 {% endblock %}
 {% block nav %}
-<!-- <nav class="visible-phone mob-nav"><i class="icon-reorder icon-2x nav"></i></nav> -->
-<nav class="navbar navbar-inverse" id="site-nav" role="navigation">
+<!-- <nav class="navbar navbar-default fill-white" id="site-nav" role="navigation">
   <div class="container">
-   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -99,8 +99,6 @@
     <a class="navbar-brand green" href="/2014/">Droidcon India</a>
   </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="dropdown">
@@ -109,8 +107,8 @@
           <li><a href="/2014/proposals"></a></li>
         </ul>
       </li>
-      <!--<li><a href="/2014/schedule">Schedule</a></li>
-      <li><a href="/2014/sponsors">Sponsors</a></li>-->
+      <li><a href="/2014/schedule">Schedule</a></li>
+      <li><a href="/2014/sponsors">Sponsors</a></li>
       <li><a href="/2014/schedule">Schedule</a></li>
       <li><a href="/2014/sponsors">Sponsors</a></li>
       <li><a href="/2014/venue">Venue</a></li>
@@ -118,7 +116,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <!--<li><a href="/2014/program-committee">Program Committee</a></li>-->
+          <li><a href="/2014/program-committee">Program Committee</a></li>
           <li><a href="/2014/about">About HasGeek</a></li>
           <li><a href="/2014/#highlights">Previous Editions</a></li>
           <li><a href="/2014/code-of-conduct">Code of conduct</a></li>
@@ -126,12 +124,9 @@
 
       </li>
     </ul>
-
-  </div><!-- /.navbar-collapse -->
+  </div>  
   </div>
-</nav>
-
-<div class="zigzag-seperator"></div>
+</nav> -->
 {% endblock %}
 </div>
 
@@ -195,8 +190,10 @@ if (location.hostname == 'droidcon.in') {
       }
       if( currentScroll > checkPoint){
         $('#nav-home').addClass('navbar-fixed-top');
+        $('#nav-home').removeClass('hide');
       }  else {
         $('#nav-home').removeClass('navbar-fixed-top');
+        $('#nav-home').addClass('hide');
       }
       if( currentScroll > 248){
         $('#nav-inner').addClass('navbar-fixed-top');
