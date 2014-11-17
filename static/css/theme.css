@@ -19,8 +19,6 @@ a:hover         { background-color: #444; }
 a.link-silent   { border-bottom: none; }
 
 .prose.prose-type a { border-bottom: none; text-decoration: underline; }
-
-
 /*  Colours  */
 
 .black          { color: #000000 !important; }
@@ -57,7 +55,6 @@ a.link-silent   { border-bottom: none; }
 .fill-gold      { background-color: rgba(204, 153, 0, 0.1); color: #333;}
 .fill-silver    { background-color: #aed581; color: #666;}
 .fill-bronze    { background-color: rgba(140, 120, 83, 0.1); color: #333;}
-
 
 
 .fade-red-to-dark {
@@ -163,6 +160,8 @@ a.link-silent   { border-bottom: none; }
     border-left: 0;
     border-right: 5px solid;
   }
+
+
 }
 .theme-orange-light{
     background-color: rgba(237, 166, 52, 0.4);
