@@ -33,9 +33,9 @@
   {% endif %}
   
   <div class="row-fluid space-four-top container">
-    <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 legible all-caps space-one-bottom">Address</h3>
+    <h3 class="col-sm-4 col-xs-12 legible all-caps space-one-bottom">Address</h3>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 legible-prose prose prose-type">
+    <div class="col-sm-8 col-xs-12 legible-prose prose prose-type">
       <div class="prose-type regular-prose space-three-bottom space-3q-top">
         <p>{{ venue.address|safe }}</p>
         <p>
@@ -46,9 +46,9 @@
   </div>
   
   <div class="row-fluid container">
-    <h3 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 legible all-caps space-two-bottom">Location</h3>
+    <h3 class="col-sm-4 col-xs-12 legible all-caps space-two-bottom">Location</h3>
 
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 regular-prose prose prose-type">
+    <div class="col-sm-8 col-xs-12 regular-prose prose prose-type">
       {% for item in venue.directions %}
         <h4 class="{% if not loop.first %}space-1q-top {% endif %} semibold legible-prose">{{ item.from }}</h4>
         {{ item.route|safe }}
