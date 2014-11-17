@@ -73,8 +73,8 @@ a.link-silent   { border-bottom: none; }
     background-image:         linear-gradient(top bottom,#778B4C 20%, #121212);
 }
 .schedule > li{
-    border-top: 1px solid #FFFFFF;
-    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #B8DD77;
+    border-bottom: 1px solid #9FBA7D;
     list-style-type: none;
 }
 .schedule > li a:hover{
@@ -84,8 +84,8 @@ a.link-silent   { border-bottom: none; }
     padding-top: 6px;
 }
 .fill-dark .schedule > li{
-    border-top: 1px solid #1E1E1E;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid #6E7368;
+    border-bottom: 1px solid #414240;
 }
 .fill-dark .schedule > li h3{
     padding-top: 6px;
