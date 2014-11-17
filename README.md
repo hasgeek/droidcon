@@ -1,1 +1,1 @@
-This is the Eventframe version of the Droidcon 2013 website.
+This is the Eventframe version of the Droidcon India 2014 website.

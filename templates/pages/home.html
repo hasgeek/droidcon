@@ -5,15 +5,15 @@
   set page = {
       'title'               : ''
     , 'description'         : ''
-    , 'sections'            : [      
-       ('event-themes',          '')
-      , ('event-highlights',          'blue')
-      , ('tickets',          'green')
-      , ('featured-speakers',           'blue')
-      , ('hackathon-summary', 'dark')
-      , ('past-highlights',           'green')
-      , ('venue-summary',             'dark')
-      , ('sponsors-summary',          'blue')
+    , 'sections'            : [  
+      ('event-intro',          '')    
+      , ('event-themes',          'dark')
+      , ('conference-schedule-day1',  '')
+      , ('color-index',  '')
+      , ('conference-schedule-day2',  'dark')
+      , ('past-highlights',          '')
+      , ('venue-summary',          'white')
+      , ('sponsors-summary',          '')
     ]
   }
 %}
@@ -22,37 +22,14 @@
 {% endblock %}
 
 {% block banner %}
-<header class="masthead-home fill-blue"><!-- 
-  <div class="left-bg"></div>
-  <div class="right-bg"></div>
-  <div class="center-bg"></div> -->
-  <div class="container">
-    <div class="row masthead-banner">
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <h1 class="logo-text extralarge bold space-two-top">
-          <div class="text-left">Droidcon</div>
-          <div class="text-right">India</div>
-        </h1>
-        <a class="ir logo" href="/">Droidcon India 2013</a>
-      </div>
-      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-right">
-        <h2 class="green extrabold all-lower extralarge space-four-top">
-          <div class="link line1">Android</div>
-          <div class="link line2">Conference</div>
-          <div class="link line3">&amp; Hackathon</div>
-        </h2>
-        
-        <div class="intro row-fluid prose prose-type thin space-two-top">
-          <div class="line4 thin">28 - 30 November 2013&nbsp;&nbsp;|&nbsp;&nbsp;Bangalore</div>
-        </div>
-        
-        <p class="secondary space-two-top space-two-bottom">
-          <a class="button" href="http://droidcon.doattend.com/">Buy your Ticket</a>
-        </p>
-        <p><br></p>
-      </div>
-
-    </div>
+<header id="circularheader">
+  <div>
+    <img src="https://imgee.s3.amazonaws.com/imgee/d110341bb8b745c48a8cbc6246fc872d.png" alt="">
+    <h1 class="sr-only">Droidcon India 2014</h1>
+    <h3>5th &amp; 6th December 2014</h3>
+    <h3 class="secondary-prose">MLR Convention Centre, JP Nagar, Bangalore</h3>
+    <a class="button tiny" href="https://in.explara.com/e/droidcon-2014" target="_blank">Get Tickets: Rs. 4000 (REGULAR)</a>
+    <p class="tiny"><em>Single day ticket are also available<sup>*</sup></em></p>
   </div>
 </header>
 {% endblock %}

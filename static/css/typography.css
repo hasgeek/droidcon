@@ -2,30 +2,17 @@
 /* = Typography = */
 /* ============== */
 
-
 /*  Families  */
 
-/*body,
-.title-type     { font-family: "Adelle", sans-serif; }
-
-i,
-em,
-.prose-type     { font-family: "Adelle", serif; }
-*/
-
+/*body*/
 
 body,
-.title-type     { font-family: "Roboto Slab", brandon-grotesque, "Brandon Grotesque", "Gill Sans", "Gill Sans MT", sans-serif; }
-
-i,
-em,
-.prose-type     { font-family: "Roboto Slab", adobe-caslon-pro, "Adobe Caslon Pro", serif; }
+.title-type     { font-family: "Varela Round", sans-serif; }
 
 
 /*  Scale  */
 
 html                    { font-size: 16px;     line-height: 1.5; }
-
 .huge                   { font-size: 3.000rem; line-height: 1.10; }
 .huge.body-type         { font-size: 2.125rem; line-height: 1.10; }
 .extralarge             { font-size: 1.750rem; line-height: 1.30; }
@@ -34,12 +21,13 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
 .legible                { font-size: 1.125rem; line-height: 1.15; }
 .legible-prose          { font-size: 0.900rem; line-height: 1.65; }
-.regular                { font-size: 1.000rem; line-height: 1.50; }
+.regular                { font-size: 0.850rem; line-height: 1.50; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
 .secondary              { font-size: 0.875rem; line-height: 1.90; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }
 .tiny                   { font-size: 0.600rem; line-height: 1.60; }
 .tiny-prose             { font-size: 0.500rem; line-height: 1.60; }
+.change-font-size       {font-size: 0.790rem; }
 
 @media only screen and (min-width: 30em) {
     html                { font-size: 18px; }
@@ -64,10 +52,7 @@ html                    { font-size: 16px;     line-height: 1.5; }
     html                { font-size: 24px; }
 }
 
-
-
 /*  Helpers  */
-
 abbr {
     font-size: 0.9em;
     font-variant: small-caps;
@@ -81,17 +66,15 @@ abbr {
 .extrabold      { font-weight: 900;    }
 .italic         { font-style: italic;  }
 .no-italic      { font-style: normal;  }
-
 .all-caps       { text-transform: uppercase;    }
 .all-lower      { text-transform: lowercase;    }
 .small-caps     { font-variant: small-caps;     }
 .strike         { text-decoration: line-through;}
 .no-underline   { text-decoration: none;        }
-
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family: 'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';
+    font-family:'Varela Round', sans-serif;
     font-style: italic;
     font-size: 1.2em;
     line-height: 0.5em;
@@ -112,7 +95,6 @@ abbr {
 .why-attend li { line-height: inherit !important; }
 .runup-events li { padding-bottom: 1em;}
 .runup-events li:last-child { padding-bottom: 0; }
-
 
 .video-thumbnail h4{
     font-size: 14px;
@@ -135,7 +117,7 @@ abbr {
 }
 
 .navbar .nav>li>a, .navbar-brand{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.05em;
@@ -153,4 +135,3 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
         font-size: 1.85em;
     }
 }
-
