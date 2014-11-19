@@ -193,6 +193,9 @@ a.link-silent   { border-bottom: none; }
 .theme-violet{
     border-color: #FAA61A;
 }
+.theme-pink{
+    border-color: #FF99FF;
+}
 .theme-transparent{
     border-color: transparent;;
 }
@@ -257,6 +260,9 @@ a.link-silent   { border-bottom: none; }
 .theme-violet.img-wrapper{
     border-right-color: #B889AD;
 }
+.theme-pink.img-wrapper{
+    border-right-color: #FF99FF;
+}
 
 #schedule-day1.page-section{
     padding-bottom: 1em;
@@ -297,4 +303,7 @@ a.link-silent   { border-bottom: none; }
 }
 .color-index .theme-green span{
     background-color: #71BF44;
+}
+.color-index .theme-pink span{
+    background-color: #FF99FF;
 }
