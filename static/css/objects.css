@@ -149,6 +149,7 @@
 #circularheader .button {
   margin-top: 8em;
 }
+
 .masthead-home {
   background-image: url(https://images.hasgeek.com/embed/file/b78ecfd5c4ad4cadbcef84e09b3d8f1f?size=1296x768);
   height: 50em;
@@ -397,7 +398,7 @@
 }
 @media (max-width:767px) {
     .banner-internal .logo  { width: 1eem; }
-    .ticket-link-container .button { padding: 0.2em 0.6em; }
+    /*.ticket-link-container .button { padding: 0.2em 0.6em; }*/
 }
 @media (min-width: 768px) {
     .banner-internal nav    { margin-top: -0.5rem; }
@@ -1278,3 +1279,7 @@ li.event-node{
 .padding{
   padding: 30px;
 }
+
+@media (max-width: 480px) { #circularheader img{ width: 80%; margin: .8em 0 .5em 0;}
+
+@media (max-width: 480px) { .ticket-button{ margin-top: 1em; font-size: 0.7rem; padding: 2em 2em 2em;} }
