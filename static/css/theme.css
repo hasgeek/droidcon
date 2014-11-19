@@ -193,6 +193,9 @@ a.link-silent   { border-bottom: none; }
 .theme-violet{
     border-color: #FAA61A;
 }
+.theme-pink{
+    border-color: #FF99FF;
+}
 .theme-transparent{
     border-color: transparent;;
 }
