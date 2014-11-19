@@ -38,6 +38,8 @@
 <link rel="stylesheet" href="/_baseframe/css/networkbar.css">
 
 <script src="{{ theme_static('js/vendor/modernizr-2.6.2.js') }}"></script>
+<!--<script src="{{ theme_static('js/vendor/jquery-1.10.2.min.js') }}"></script>-->
+<!--<script src="{{ theme_static('js/vendor/bootstrap.min.js') }}"></script>-->
 </head>
 <body class="fill-silver">
 
@@ -201,9 +203,19 @@ if (location.hostname == 'droidcon.in') {
         $('#nav-inner').removeClass('navbar-fixed-top');
       }
     });
+/*
+    $('#contentModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('content') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+});*/
 </script>
 <script type="text/javascript">
-  Modernizr.mq('only screen and (min-width: 768px)'){
+  if (Modernizr.mq('only screen and (min-width: 768px)') == true) {
     $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});
     $(".popover-left").popover({ placement: 'right', animation: true, trigger: 'hover'});
   } 
