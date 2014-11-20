@@ -14,9 +14,6 @@
     border-radius: 0.25em;
     border: 0;
 }
-.ticket-button {
-  margin-top: 8em;
-}
 .button-Propose-a-session {
     display: inline-block;
     background: #00BFFF;
@@ -1288,5 +1285,5 @@ li.event-node{
 
 @media (max-width: 480px) { #circularheader img{ width: 80%; margin: .8em 0 .5em 0;}
 
-.ticket-button { margin-top: 4em; }
+.ticket-button { margin-top: 5em; }
 @media (max-width: 480px) { .ticket-button{ margin-top: 4em; font-size: 0.7rem; padding: 2em 2em 2em;} }
