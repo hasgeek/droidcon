@@ -25,9 +25,15 @@
           <ul class="col-lg-7 col-md-7 col-sm-7 col-xs-12 nospace-bottom list-plain link-silent clearfix list-space-line sponsor-{{ type.size }}">
         {% endif %}
           <li>
+          {% if item.link %}
               <a href="{% if type.size == 'compact' %}{{ item.link }}{% else %}sponsors#{{ type.id }}-{{ item.id }}{% endif %}" class="occupy fill-white sponsor-logo {% if item.orientation == 'portrait' %}contain-height{% elif item.orientation == 'landscape' %}contain-width{% endif %}">
                 <img alt="{{ item.title }}" src="{{ item.logo }}">
               </a>
+          {% else %}
+            <a class="occupy fill-white sponsor-logo" href="#">
+              <img alt="{{ item.title }}" src="{{ item.logo }}">
+            </a>
+          {% endif %}
           </li>
         {% if loop.last %}
           </ul>
