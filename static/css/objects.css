@@ -14,6 +14,9 @@
     border-radius: 0.25em;
     border: 0;
 }
+.ticket-button {
+  margin-top: 8em;
+}
 .button-Propose-a-session {
     display: inline-block;
     background: #00BFFF;
@@ -145,9 +148,6 @@
 #circularheader img {
   width: 80%;
   margin: 2.5em 0 0.5em 0;
-}
-#circularheader .button {
-  margin-top: 8em;
 }
 
 .masthead-home {
@@ -512,6 +512,12 @@
     .video-thumbnails > li { width: 25% !important; margin: 0 !important; }
     .video-thumbnail h4,
     .video-thumbnail h5 { padding: 0 1rem 0 1rem; max-width: 300px; }
+}
+
+.sponsor-ml > li {
+    float: left !important;
+    width: 100% !important;
+    margin-left: 0;
 }
 
 .sponsor-m > li {
@@ -1282,4 +1288,5 @@ li.event-node{
 
 @media (max-width: 480px) { #circularheader img{ width: 80%; margin: .8em 0 .5em 0;}
 
-@media (max-width: 480px) { .ticket-button{ margin-top: 1em; font-size: 0.7rem; padding: 2em 2em 2em;} }
+.ticket-button { margin-top: 4em; }
+@media (max-width: 480px) { .ticket-button{ margin-top: 4em; font-size: 0.7rem; padding: 2em 2em 2em;} }
