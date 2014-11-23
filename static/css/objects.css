@@ -1,17 +1,65 @@
-
-.button {
+.homebanner{
+   background-image: url('https://imgee.s3.amazonaws.com/imgee/802cede3e3d14968a56fdfa26eb2982a_w1296_h830.jpeg');
+   width: 100%;
+   height: auto;
+}
+.button-ticket {
     display: inline-block;
-    background: #B49B33;
+    background: #00BFFF;
     color: #000;
-    line-height: 1.4;
+    line-height: 0.5;
     padding: 1em 2em 1em;
     text-transform: uppercase;
     text-align: center;
     border-radius: 0.25em;
     border: 0;
 }
+.button-Propose-a-session {
+    display: inline-block;
+    background: #00BFFF;
+    color: #000;
+    line-height: 0.5;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 0;
+}
+.buyticket{
+    display: inline-block;
+    background: #00BFFF;
+    color: #000;
+    line-height: 0.5;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 0;
+}
+.button-sponsorship-deck{
+    display: inline-block;
+    background: #26CCF2;
+    color: #000;
+    line-height: 0.6;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0.19em;
+}
+.button {
+    display: inline-block;
+    background: #71BF44;
+    color: #FFF;
+    line-height: 1.4;
+    padding: 1em 2em 1em;
+    text-transform: uppercase;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
 .button-mini    { padding: 0.2em 0.6em; }
-.button-on-dark { background: #c55a40; }
+.button-on-dark { background: #aed581; }
 .button:focus   { text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
@@ -59,20 +107,60 @@
     }
 }
 
-
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
+#circularheader {
+  height: 50em;
+}
+#circularheader div{
+  font-size: 4em;
+  text-align: center;
+  background: #FFF;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  display: block;
+  margin: 1em auto;
+  box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 3em rgba(255,255,255,0.3), -0.1em -0.1em 0 4.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 6em rgba(255,255,255,0.3);
+}
+@media (max-width:767px) {
+  header {
+    padding-top: 0 !important;
+  }
+  #circularheader {
+    height: 42em;
+  }
+  #circularheader div{
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0 auto;
+    box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3);
+ }
+  .event-themes.push-four-top {
+    padding-top: 2em !important;
+  }
+}
+#circularheader img {
+  width: 80%;
+  margin: 2.5em 0 0.5em 0;
+}
+
+.masthead-home {
+  background-image: url(https://images.hasgeek.com/embed/file/b78ecfd5c4ad4cadbcef84e09b3d8f1f?size=1296x768);
+  height: 50em;
+  background-size: 100%;
+}
 .masthead-home.fill-image{
-  /*background: rgba(255, 0, 0, 0.25), url('http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg');*/
+  
   background-position: center center;
   background: 
-    linear-gradient(
       rgba(93, 84, 136, 0.8), 
       rgba(93, 84, 136, 0.8)
     ),
     url(http://farm8.staticflickr.com/7316/11099025613_62b1a73c50_h.jpg) center center;
-}
-
+   }
 .masthead-home .logo { 
   background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
   background-size: contain;
@@ -82,7 +170,7 @@
   margin-top: 12em;
 }
 .masthead-home .logo-center { 
-  background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca') no-repeat scroll center center;
+  background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w470_h284.png') no-repeat scroll center center;
   background-size: contain;
   height: auto;
   width: 450px;
@@ -92,11 +180,29 @@
   margin-left: auto;
   margin-right: auto;
 }
+.logo-new {
+  background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w430_h260.png')no-repeat scroll center center;
+}
+
+ /*end*/
+.parent-element {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.element {
+  position: center;
+  top: 100%;
+  transform: translateY();
+}
+  /*end*/
 
 .logo-text{
-  background: rgba(255, 255, 255, 0.8);
+  background: url('https://imgee.s3.amazonaws.com/imgee/4009dafe8f9045b1a07fd8185336508b_w430_h260.png') no-repeat scroll center center;
+  background-size: contain;
   color: #46425a;
-  width: 235px;
+  width: 240px;
   line-height: 50px;
   border-radius: 50%;
   padding: 68px 20px 68px 10px;
@@ -111,6 +217,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 
 @media (min-width: 1199px) and (max-width: 1359px){
   .logo-text-large{
@@ -176,6 +283,7 @@
     margin-top: -50%;
     margin-left: 20%;
   }
+
   .logo-text{
     display: block;
     margin-right: auto;
@@ -215,7 +323,7 @@
 
 .banner h1    { float: left; width: 4.5rem; margin: .5rem auto 0 -.5rem; }
 .banner .logo {
-    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
+    background: url('https://images.hasgeek.com/embed/file/4009dafe8f9045b1a07fd8185336508b?size=320x240') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width: 100%;
@@ -246,7 +354,7 @@
     padding-top: .3rem;
     margin-left: -5.75rem;
 }
-.banner h3 i.amp    { font-style: italic; line-height: inherit; font-size: inherit; margin-top: 0.3rem; }
+.banner h3 i.amp    { font-style: "Varela Round"; line-height: inherit; font-size: inherit; margin-top: 0.3rem; }
 .banner .intro {
     margin: 4rem auto 3rem;
     max-width: 28rem;
@@ -279,34 +387,20 @@
 }
 
 .banner-internal .logo {
-    background: url('https://images.hasgeek.com/embed/file/63caa7d2f3df4c7d8222b68e9861a6ca?size=320x240') no-repeat scroll center center;
+    background: url('https://imgee.s3.amazonaws.com/imgee/d110341bb8b745c48a8cbc6246fc872d_w320_h162.png') no-repeat scroll center center;
     background-size: contain;
     height: 0;
     width:       5.5rem;
     padding-top: 5.5rem;
-    -webkit-transition: all 0.5s;
-       -moz-transition: all 0.5s;
-         -o-transition: all 0.5s;
-            transition: all 0.5s;
-}
-.banner-internal .logo:hover,
-.banner-internal .logo:focus {
-    -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);
 }
 @media (max-width:767px) {
     .banner-internal .logo  { width: 1eem; }
-    .ticket-link-container .button { padding: 0.2em 0.6em; }
+    /*.ticket-link-container .button { padding: 0.2em 0.6em; }*/
 }
 @media (min-width: 768px) {
     .banner-internal nav    { margin-top: -0.5rem; }
     .banner-internal h3     { margin-top: 1rem; }
 }
-
-
 .program-committee h2 {
     line-height: 1.2;
     margin-top: 1rem;
@@ -337,7 +431,6 @@
     height: 400px;
   }
 }
-
 
 .venue-home h2 {
     margin-bottom: 2rem;
@@ -418,7 +511,11 @@
     .video-thumbnail h5 { padding: 0 1rem 0 1rem; max-width: 300px; }
 }
 
-
+.sponsor-ml > li {
+    float: left !important;
+    width: 100% !important;
+    margin-left: 0;
+}
 
 .sponsor-m > li {
     float: left !important;
@@ -442,20 +539,16 @@
     width: calc(100/3)% !important;
 }
 .sponsor-compact > li:nth-child(3n+1) { margin-left: 0; }
-
 .sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
 .sponsor-logo:hover { background-color: #E5E5E5 !important; }
 .sponsor-logo img   { max-height: 100%; max-width: 100%; }
-
 .sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
 .sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
 .sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
 .sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
 .sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
-
 .sponsor-xl .sponsor-logo.contain-width { padding: 1.34rem 3rem; }
 .sponsor-l  .sponsor-logo.contain-width { padding: .84rem 4rem;  }
-
 
 .credits .row-fluid .offset1 {
   margin-left: 8.51063829787234%;
@@ -483,7 +576,6 @@
 }
 
 .page-footer {
-    background-color: #000 !important;
     /*background-image: url(../img/2012-stage.jpg);*/
 /*    background-position: bottom center;
     background-repeat: no-repeat;
@@ -501,10 +593,6 @@
             border-radius: 30px 30px 30px 0;
 }
 a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
-
-
-
-
 /* -------------------------------------
  * timeline
  * ------------------------------------- */
@@ -615,7 +703,6 @@ a.hasgeek-logo:hover { background-color: rgba(255,255,255,0.15); }
 li.event-node{
     padding: 10px;
 }
-
 /* -------------------------------------
  * mobile phones (vertical version only)
  * ------------------------------------- */
@@ -870,9 +957,10 @@ li.event-node{
 .theme{
   height: 150px;
   width: 150px;
+  opacity: 0.8;
   border-radius: 50%;
   display: block;
-  background-color: #FFF;
+  background-color: #798371;
   margin-left: auto;
   margin-right: auto;
   background-size: 100% 100%;
@@ -924,17 +1012,19 @@ li.event-node{
 .theme#app-demos{
   background-image: url(https://images.hasgeek.com/embed/file/363bae34271a4843b12f2a0cb83fa492);
   background-repeat: no-repeat;
+  
+
 }
 .theme#business{
   background-image: url(https://images.hasgeek.com/embed/file/513b6b98c0aa46e58a89aa311a0e4fac);
   background-repeat: no-repeat;
 }
 .theme#gaming{
-  background-image: url(https://images.hasgeek.com/embed/file/f2f5369f618a4f3f927bce66a632b351);
+  background-image: url(https://images.hasgeek.com/embed/file/39403df54c8a4685a7de7b59956aa524);
   background-repeat: no-repeat;
 }
 .theme#systems{
-  background-image: url(https://images.hasgeek.com/embed/file/44811261e1e44630a57d784c56cd6267);
+  background-image: url(https://images.hasgeek.com/embed/file/596cc9b5fd0c46faa8da033c2c250577);
   background-repeat: no-repeat;
 }
 .theme#ux{
@@ -965,8 +1055,6 @@ li.event-node{
   text-transform: uppercase;
 }
 
-
-
 @media (min-width: 1200px){
   .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     width: 1170px !important;
@@ -976,17 +1064,7 @@ li.event-node{
 .navbar-inverse{
   border-bottom: 0;
 }
-.zigzag-seperator{
-  display: block;
-  height: 5px;
-  width: 100%;
-  position: relative;
-  margin-bottom: -5px;
 
-  background-color: transparent;
-  background-image: url('https://images.hasgeek.com/embed/file/e752ea21f4904c18af0745ce0f2d425e');
-  background-repeat: repeat-x;
-}
 .navbar-fixed-top+.zigzag-seperator{
   position: fixed;
   top: 50px;
@@ -1010,8 +1088,6 @@ li.event-node{
   padding-left: 20px;
   padding-right: 20px;
 }*/
-
-
 #tickets li{
   list-style-type: none;
   line-height: 25px;
@@ -1095,7 +1171,6 @@ li.event-node{
 .speaker-photo{
   width: 30%;
 }
-
 .popover{
   border: 3px solid #778B4C;
   padding: 0;
@@ -1207,3 +1282,8 @@ li.event-node{
 .padding{
   padding: 30px;
 }
+
+@media (max-width: 480px) { #circularheader img{ width: 80%; margin: .8em 0 .5em 0;}
+
+.ticket-button { margin-top: 5em; }
+@media (max-width: 480px) { .ticket-button{ margin-top: 4em; font-size: 0.7rem; padding: 2em 2em 2em;} }
