@@ -188,9 +188,6 @@ if (location.hostname == 'droidcon.in') {
   var trackOutboundLink = function (url, event) {
     ga('send', 'event', 'outbound', 'click', url, {
       'hitCallback': function () {
-        if (event.type === 'click'){
-          document.location = url;
-        }
       }
     });
   }
