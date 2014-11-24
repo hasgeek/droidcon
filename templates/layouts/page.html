@@ -185,16 +185,13 @@ if (location.hostname == 'droidcon.in') {
   * This function takes a valid URL string as an argument, and uses that URL string
   * as the event label.
   */
-  var trackOutboundLink = function (url, event) {
-    ga('send', 'event', 'outbound', 'click', url, {
-      'hitCallback': function () {
-      }
-    });
+  var trackOutboundLink = function (url) {
+    ga('send', 'event', 'ticket-button', 'click', url);
   }
   
   $(function () {
-    $('.ticket-button').on('click contextmenu', function (event) {
-      trackOutboundLink($(this).attr('href'), event);
+    $('.ticket-button').on('click contextmenu', function () {
+      trackOutboundLink($(this).attr('href'));
     });
   });
 }
