@@ -43,6 +43,7 @@ a.link-silent   { border-bottom: none; }
 .fill-silver-hud{ background-color: rgba(255,255,255,0.65) !important; color: #222; }
 .fill-red       { background-color: #BB3311 !important; color: #FCF3F3; }
 .fill-green     { background-color: #8bc34a !important; color: #FCF3F3; }
+.fill-lightgreen     { background-color: #C6E1A7 !important; color: #666; }
 .fill-yellow     { background-color: #ffee58 !important; color: #333; }
 .fill-lightyellow{ background-color: rgba(180, 155, 51, 0.2) !important; color: #333; }
 .fill-redgray   { background-color: #EFE7E6 !important; color: #222020; }
@@ -103,13 +104,28 @@ a.link-silent   { border-bottom: none; }
 .schedule > li:last-child, .fill-dark .schedule > li:last-child{
     border-bottom: none;
 }
-.theme-box-left{
-    border-right: 4px solid transparent;
-    padding-right: 30px;
+.theme-box-bottom{
+    border-bottom: 4px solid transparent;
 }
 .theme-box-right{
-    border-left: 4px solid transparent;
-    padding-left: 30px;
+    border-left: 0.3em solid transparent;
+    padding-left: 1em;
+}
+.table-bordered th {
+    padding: 0.5em 1em;
+    background-color: rgba(255,255,255,0.1);
+}
+.table-bordered td:first-child {
+    padding: 0.5em;
+    width: 16%;
+}
+.table-bordered td:nth-child(2) {
+    padding-right: 1em;
+    width: 42%;
+}
+.table-bordered td:nth-child(3) {
+    padding-right: 1em;
+    width: 43%;
 }
 .schedule .gray a{
     border-bottom: 0;
@@ -133,36 +149,23 @@ a.link-silent   { border-bottom: none; }
 .theme-box-right i{
     padding-right: 5px;
 }
-
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid #DBEDC9!important;
+}
+.table-wrapper {
+    border: 1px solid #DBEDC9!important;
+}
+.table-wrapper table{    
+    margin: -1px;
+    width: 100%;
+    width: calc(100% + 2px) !important;
+}
 @media (min-width: 768px){
   .schedule{
       overflow: hidden;
   }
 }
-@media (max-width: 767px){
-  .schedule{
-    padding-left: 40px;
-    padding-right: 20px;
-  }
-  .schedule .text-right{
-    text-align: left;
-  }
-  .schedule .text-left{
-    text-align: right;
-  }
-  .theme-box-left{
-    padding-left: 10px;
-    border-right: 0;
-    border-left: 5px solid;
-  }
-  .theme-box-right{
-    padding-right: 10px;
-    border-left: 0;
-    border-right: 5px solid;
-  }
 
-
-}
 .theme-orange-light{
     background-color: rgba(237, 166, 52, 0.4);
 }

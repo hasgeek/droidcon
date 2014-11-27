@@ -20,7 +20,7 @@
           </thead>
           <tbody class="tiny prose prose-type unstyled">
             {% for item in items  %}         
-                <tr class="fill-{% if item.type == 'special-offer' %}blue{% elif item.type == 'budget' %}bronze{% elif item.type == 'delux' %}silver{% elif item.type == 'luxury' %}gold{% endif %}">             
+                <tr class="fill-{% if item.type == 'special-offer' %}white{% elif item.type == 'budget' %}lightgreen{% elif item.type == 'delux' %}silver{% elif item.type == 'luxury' %}silver{% endif %}">             
                   <td class="bold secondary-prose semibold" colspan="4">{{ item.title }}</td>
                   <td>{{ item.address|safe }} <br><a class="yellow" target="_blank" href="http://{{ item.link }}">{{ item.link }}</a></td>
                   <td>{{ item.contact|safe }}</td>              
