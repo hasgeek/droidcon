@@ -27,10 +27,10 @@
                                 </td>
                             {% else %}
                                 {% if item.track1 %}
-                                    <td  {% if item.expand == '1' %}rowspan="2"{% endif %}>
+                                    <td  {% if item.expand %}{% if item.expand[0] == '1' %}rowspan="{{ item.expand[1] }}"{% endif %}{% endif %}>
                                         {% with item = sessions[item.track1] %}
                                             <div class="nospace-bottom clearfix theme-box-right {% if item.type == 'app-demos' %}theme-blue{% elif item.type == 'hardware' %}theme-orange{% elif item.type == 'datasync' %}theme-red{% elif item.type == 'versioning' %}theme-red{% elif item.type == 'iot' %}theme-green{% elif item.type == 'hands-on' %}theme-pink{% elif item.type == 'ui-ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-                                                <a target="_blank" class="{% if item.featured == true %}popover-left{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}">
+                                                <a target="_blank" class="{% if item.featured == true %}popover-left{% endif %}" data-content="{{ item.blurb|safe }}" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}">
                                                     <div class="nospace-top push-1q secondary-prose prose-type">
                                                         <span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span>
                                                     </div>
@@ -47,7 +47,7 @@
                                 {% endif %}
 
                                 {% if item.track2 %}
-                                    <td {% if item.expand == '2' %}rowspan="2"{% endif %}>
+                                    <td {% if item.expand %}{% if item.expand[0] == '2' %}rowspan="{{ item.expand[1] }}"{% endif %}{% endif %}>
                                         {% with item = sessions[item.track2] %}
                                             <div class="nospace-bottom clearfix theme-box-right {% if item.type == 'app-demos' %}theme-blue{% elif item.type == 'hardware' %}theme-orange{% elif item.type == 'datasync' %}theme-red{% elif item.type == 'versioning' %}theme-red{% elif item.type == 'iot' %}theme-green{% elif item.type == 'hands-on' %}theme-pink{% elif item.type == 'ui-ux' %}theme-violet{% else %}theme-transparent{% endif %}">
                                                 <a target="_blank" class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}">
@@ -75,12 +75,4 @@
             </table>
         </div>
     </div>
-    {% if schedule.id == 'schedule-day2' %}
-        <div class="ticket-link-container">
-            <div class="text-center space-line">
-                <a class="button tiny ticket-button" href="https://in.explara.com/e/droidcon-2014" target="_blank">Get Tickets: Rs. 4000 (REGULAR)</a>
-                <p class="tiny"><em>Single day tickets are also available<sup>*</sup></em></p>
-            </div>
-        </div>
-    {% endif %}
 </section>
