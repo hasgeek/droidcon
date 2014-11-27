@@ -1,71 +1,86 @@
 <section id="{{ schedule.id }}" class="schedule push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row text-center">
-    <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps space-two-bottom">Schedule{% if schedule.date %} — {{ schedule.date|safe }}{% endif %}</h2>
-  </div>
-  <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
-  <ul class="unstyled schedule ">
-    <li class="row">
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 nospace-bottom clearfix text-right theme-box-left theme-transparent">
-        <h3 class="nospace-top legible-prose prose-type"><span class="">Track 1</span></h3>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 legible space-one-bottom clearfix text-center">
-        <h3 class="nospace-top legible-prose prose-type"><span class="">Starts at</span></h3>
-      </div>
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 nospace-bottom clearfix text-left theme-box-right theme-transparent">
-        <h3 class="nospace-top legible-prose prose-type"><span class="">Track 2</span></h3>
-      </div>
-    </li>
+    <div class="row-fluid text-center">
+        <h2 class="legible-prose col-lg-12 col-md-12 col-sm-12 col-xs-12 large all-caps space-two-bottom">{% if schedule.date %} {{ schedule.date|safe }}{% endif %}</h2>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="">
+            <table class="table-bordered">
+                <thead>
+                    <tr class="text-center">
+                        <th>Time</th>
+                        <th>Track 1</th>
+                        <th>Track 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in schedule.list %}
+                        <tr>
+                            <td class="text-center">
+                                <div class="all-caps tiny nospace-top semibold">{{ item.slot|replace(' ', '&nbsp;')|safe }}</div>
+                            </td>
+                            
+                            {% if item.title %}
+                                <td colspan="2">
+                                    <div class="tiny prose pad-3q-left prose-type clearfix theme-box-left theme-transparent">
+                                        <div class="push-1q-top"><span class="calm italic nospace-top push-1q regular-prose">{{ item.title|safe }}</span></div>
+                                    </div>
+                                </td>
+                            {% else %}
+                                {% if item.track1 %}
+                                    <td  {% if item.expand == '1' %}rowspan="2"{% endif %}>
+                                        {% with item = sessions[item.track1] %}
+                                            <div class="nospace-bottom clearfix theme-box-right {% if item.type == 'app-demos' %}theme-blue{% elif item.type == 'hardware' %}theme-orange{% elif item.type == 'datasync' %}theme-red{% elif item.type == 'versioning' %}theme-red{% elif item.type == 'iot' %}theme-green{% elif item.type == 'hands-on' %}theme-pink{% elif item.type == 'ui-ux' %}theme-violet{% else %}theme-transparent{% endif %}">
+                                                <a target="_blank" class="{% if item.featured == true %}popover-left{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}">
+                                                    <div class="nospace-top push-1q secondary-prose prose-type">
+                                                        <span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span>
+                                                    </div>
+                                                </a>
+                                                {% if item.speaker or item.designation %}
+                                                    <p class="prose-type tiny calm">
+                                                        <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker | safe }}</span>
+                                                        <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
+                                                    </p>
+                                                {% endif %}
+                                            </div>
+                                        {% endwith %}
+                                    </td>
+                                {% endif %}
 
-  {% for item in schedule.list %}
-    <li id="{{ item.id }}" class="row">
-      {% if item.track1 %}
-      {% with item = sessions[item.track1] %}
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-left {% if item.type == 'app-demos' %}theme-blue{% elif item.type == 'hardware' %}theme-orange{% elif item.type == 'datasync' %}theme-red{% elif item.type == 'versioning' %}theme-red{% elif item.type == 'iot' %}theme-green{% elif item.type == 'hands-on' %}theme-pink{% elif item.type == 'ui-ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <a target="_blank" class="{% if item.featured == true %}popover-left{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}"><h3 class="nospace-top legible-prose prose-type"><span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span></h3></a>
-          {% if item.speaker or item.designation %}
-            <p class="prose-type tiny calm">
-              <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker | safe }}</span><span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span>
-            </p>
-          {% endif %}
-        </div>
-      {% endwith %}
-      {% else %}
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-right theme-box-left theme-transparent">
-          <div class="push-1q-top"><span class="calm italic nospace-top regular-prose">{{ item.title|safe }}</span></div>
-        </div>
-      {% endif %}
-      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 legible space-one-bottom clearfix text-center">
-        <h3 class="all-caps nospace-top semibold">{{ item.slot|replace(' ', '&nbsp;')|safe }}</h3>
-      </div>
-    {% if item.track2 %}
-      {% with item = sessions[item.track2] %}
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 nospace-bottom clearfix text-right theme-box-right {% if item.type == 'app-demos' %}theme-blue{% elif item.type == 'hardware' %}theme-orange{% elif item.type == 'datasync' %}theme-red{% elif item.type == 'versioning' %}theme-red{% elif item.type == 'iot' %}theme-green{% elif item.type == 'hands-on' %}theme-pink{% elif item.type == 'ui-ux' %}theme-violet{% else %}theme-transparent{% endif %}">
-          <a target="_blank" class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}"><h3 class="nospace-top legible-prose prose-type"><span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span>{% if item.sponsor %}<div class="green secondary-prose">Sponsored talk - {{ item.sponsor }}</div>{% endif %}</h3></a>
+                                {% if item.track2 %}
+                                    <td {% if item.expand == '2' %}rowspan="2"{% endif %}>
+                                        {% with item = sessions[item.track2] %}
+                                            <div class="nospace-bottom clearfix theme-box-right {% if item.type == 'app-demos' %}theme-blue{% elif item.type == 'hardware' %}theme-orange{% elif item.type == 'datasync' %}theme-red{% elif item.type == 'versioning' %}theme-red{% elif item.type == 'iot' %}theme-green{% elif item.type == 'hands-on' %}theme-pink{% elif item.type == 'ui-ux' %}theme-violet{% else %}theme-transparent{% endif %}">
+                                                <a target="_blank" class="{% if item.featured == true %}popover-right{% endif %}" data-content="{{ item.blurb|safe }}" title="" data-toggle="popover" data-original-title="{{ item.title|safe }}" href="{{ item.funnel }}">
+                                                    <div class="nospace-top push-1q secondary-prose prose-type">
+                                                        <span class="{% if item.featured == false %}gray{% endif %}">{{ item.title|safe }}</span>{% if item.sponsor %}<div class="green secondary-prose">Sponsored talk - {{ item.sponsor }}</div>{% endif %}
+                                                    </div>
+                                                </a>
 
-          {% if item.speaker or item.designation %}
-            <p class="prose-type tiny calm">
-                <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> 
-                <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker|safe }}</span>
-            </p>
-          {% endif %}
-
+                                                {% if item.speaker or item.designation %}
+                                                    <p class="prose-type tiny calm">
+                                                        <span class="gray">{% if item.funnel %}<a href="{{ item.funnel }}"><i class="icon-filter"></i></a>{% endif %} {% if item.preview %}<a href="{{ item.preview }}"><i class="icon-youtube-play"></i></a>{% endif %}</span> 
+                                                        <span class="tiny {% if item.featured == false %}gray{% endif %}">{{ item.speaker|safe }}</span>
+                                                    </p>
+                                                {% endif %}
+                                            </div>
+                                        {% endwith %}
+                                    </td>
+                                {% elif item.track2 == ''%}
+                                <td></td>
+                                {% endif %}
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-      {% endwith %}
-      {% else %}
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible-prose prose prose-type clearfix text-left theme-box-right theme-transparent">
-          <div class="push-1q-top"><span class="calm italic nospace-top regular-prose">{{ item.title }}</span></div>
+    </div>
+    {% if schedule.id == 'schedule-day2' %}
+        <div class="ticket-link-container">
+            <div class="text-center space-line">
+                <a class="button tiny ticket-button" href="https://in.explara.com/e/droidcon-2014" target="_blank">Get Tickets: Rs. 4000 (REGULAR)</a>
+                <p class="tiny"><em>Single day tickets are also available<sup>*</sup></em></p>
+            </div>
         </div>
-      {% endif %}
-    </li>
-  {% endfor %}
-  </ul>
-</div>
-{% if schedule.id == 'schedule-day2' %}
-<div class="ticket-link-container">
-  <div class="text-center space-line">
-    <a class="button tiny ticket-button" href="https://in.explara.com/e/droidcon-2014" target="_blank">Get Tickets: Rs. 4000 (REGULAR)</a>
-    <p class="tiny"><em>Single day tickets are also available<sup>*</sup></em></p>
-  </div>
-</div>
-{% endif %}
+    {% endif %}
 </section>
