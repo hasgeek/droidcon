@@ -1,9 +1,9 @@
 {
     "application": "eventframe",
-    "identifier": "droidcon2014",
-    "name": "Droidcon India 2014",
-    "author": "Miranj and HasGeek",
-    "description": "Droidcon India 2014 website template, adapted from JSFoo 2013",
+    "identifier": "droidcon2015",
+    "name": "Droidcon India 2015",
+    "author": "HasGeek",
+    "description": "Droidcon India 2015 website template, adapted from JSFoo 2013",
     "license": "All rights reserved",
     "doctype": "html5",
     "options": {
@@ -18,7 +18,8 @@
         ],
         "assets_js": [
             "js/vendor/bootstrap.min.js",
-            "js/maps.js"
+            "js/maps.js",
+            "js/main.js"
         ]
     }
 }

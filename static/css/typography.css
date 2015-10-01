@@ -7,7 +7,7 @@
 /*body*/
 
 body,
-.title-type     { font-family: "Varela Round", sans-serif; }
+.title-type     { font-family: 'Roboto', sans-serif; }
 
 
 /*  Scale  */
@@ -75,10 +75,10 @@ abbr {
 .unordered      { list-style-type: none; }
 
 .amp  {
-    font-family:'Varela Round', sans-serif;
-    font-style: italic;
-    font-size: 1.2em;
-    line-height: 0.5em;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 1.2em;
+  line-height: 0.5em;
 }
 .quo  { margin-left: -0.24em; }
 .dquo { margin-left: -0.44em; }
@@ -118,14 +118,14 @@ abbr {
 }
 
 .navbar .nav>li>a, .navbar-brand{
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Roboto Slab', serif;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.05em;
   color: #9793AD;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-    font-family: inherit;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading{
+  font-family: 'Roboto Slab', serif;
 }
 @media (min-width: 768px) and (max-width: 979px){
     .navbar .nav>li>a, .navbar-brand{

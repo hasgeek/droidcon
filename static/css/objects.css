@@ -16,8 +16,8 @@
 }
 .button-Propose-a-session {
     display: inline-block;
-    background: #00BFFF;
-    color: #000;
+    background: #444;
+    color: #fff;
     line-height: 0.5;
     padding: 1em 2em 1em;
     text-transform: uppercase;
@@ -60,7 +60,7 @@
 }
 .button-mini    { padding: 0.2em 0.6em; }
 .button-on-dark { background: #aed581; }
-.button:focus   { text-decoration: none; }
+.button:focus, .button:active, .button:hover { color:#fff !important; text-decoration: none; }
 .button:active  { box-shadow: inset 0 0 10px #000; }
 
 .separated-links + .separated-links:before {
@@ -110,43 +110,35 @@
 @media (max-width: 767px) { #hg-bar { padding: 0 20px; } }
 
 #circularheader {
-  height: 50em;
+  background-image: url('../img/bck-img.png');
+  padding: 3em 0;
 }
-#circularheader div{
+#circularheader div.logo-bck{
   font-size: 4em;
   text-align: center;
   background: #FFF;
-  width: 10em;
-  height: 10em;
+  width: 4em;
+  height: 4em;
   border-radius: 50%;
   display: block;
-  margin: 1em auto;
-  box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 3em rgba(255,255,255,0.3), -0.1em -0.1em 0 4.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 6em rgba(255,255,255,0.3);
-}
-@media (max-width:767px) {
-  header {
-    padding-top: 0 !important;
-  }
-  #circularheader {
-    height: 42em;
-  }
-  #circularheader div{
-    background: #FFF;
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    margin: 0 auto;
-    box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3);
- }
-  .event-themes.push-four-top {
-    padding-top: 2em !important;
-  }
+  margin: 0 auto 0;
+  /*box-shadow: -0.1em -0.1em 0 1.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 3em rgba(255,255,255,0.3), -0.1em -0.1em 0 4.5em rgba(255,255,255,0.3), -0.1em -0.1em 0 6em rgba(255,255,255,0.3);*/
+  overflow: hidden;
 }
 #circularheader img {
-  width: 80%;
-  margin: 2.5em 0 0.5em 0;
+  width: 90%;
+  margin: 15% 0 0;
 }
 
+@media(min-width:1200px) {
+  #circularheader {
+    height: 100%;
+  }
+  #circularheader div.logo-bck{
+    width: 6em;
+    height: 6em;
+  }
+}
 .masthead-home {
   background-image: url(https://images.hasgeek.com/embed/file/b78ecfd5c4ad4cadbcef84e09b3d8f1f?size=1296x768);
   height: 50em;
@@ -387,14 +379,13 @@
 }
 
 .banner-internal .logo {
-    background: url('https://imgee.s3.amazonaws.com/imgee/d110341bb8b745c48a8cbc6246fc872d_w320_h162.png') no-repeat scroll center center;
+    background: url('../img/logo.png') no-repeat scroll center center;
     background-size: contain;
-    height: 0;
-    width:       5.5rem;
-    padding-top: 5.5rem;
+    width:       100%;
+    padding-top: 3em;
 }
 @media (max-width:767px) {
-    .banner-internal .logo  { width: 1eem; }
+    .banner-internal .logo  { width: 1em; }
     /*.ticket-link-container .button { padding: 0.2em 0.6em; }*/
 }
 @media (min-width: 768px) {
@@ -536,19 +527,27 @@
     float: left !important;
     margin-bottom: 0 !important;
     width: 33.3333% !important;
-    width: calc(100/3)% !important;
 }
 .sponsor-compact > li:nth-child(3n+1) { margin-left: 0; }
-.sponsor-logo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
-.sponsor-logo:hover { background-color: #E5E5E5 !important; }
-.sponsor-logo img   { max-height: 100%; max-width: 100%; }
-.sponsor-xl       .sponsor-logo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
-.sponsor-l        .sponsor-logo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
-.sponsor-m        .sponsor-logo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
-.sponsor-s        .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
-.sponsor-compact  .sponsor-logo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
-.sponsor-xl .sponsor-logo.contain-width { padding: 1.34rem 3rem; }
-.sponsor-l  .sponsor-logo.contain-width { padding: .84rem 4rem;  }
+
+.sponsorlogo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
+.sponsorlogo:hover { background-color: #FFF !important; }
+.sponsorlogo img   { max-height: 100%; width: auto; }
+.sponsors .sponsorlogo   { 
+    width: 100%; 
+    img { height: auto; max-width: 100%; }
+}
+
+.sponsor-xl       .sponsorlogo { height: 6.67rem;  line-height: 4rem;    padding: 1.34rem; }
+.sponsor-l        .sponsorlogo { height: 5.34rem;  line-height: 3.35rem; padding: .84rem;  }
+.sponsor-m        .sponsorlogo { height: 5.34rem;  line-height: 2.68rem; padding: 1.34rem; }
+.sponsor-s        .sponsorlogo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+.sponsor-compact  .sponsorlogo { height: 4rem;     line-height: 2rem;    padding: .84rem;  }
+
+.sponsor-xl .sponsorlogo.contain-width { padding: 1.34rem 3rem; }
+.sponsor-l  .sponsorlogo.contain-width { padding: .84rem 4rem;  }
+
+.sponsor-s        .sponsorlogo.contain-height { padding: 0.5rem; }
 
 .credits .row-fluid .offset1 {
   margin-left: 8.51063829787234%;
@@ -581,9 +580,6 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     padding-bottom: 36%;*/
-}
-.page-footer > div{
-    margin-bottom: 160px;
 }
 .hasgeek-logo {
     background: url(https://images.hasgeek.com/embed/file/11bac6c19b904e4e94db44a9aa1bf831) no-repeat scroll center center;

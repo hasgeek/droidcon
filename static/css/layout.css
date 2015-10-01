@@ -12,6 +12,10 @@
     }
 }
 
+html, body, #page {
+  height: 100%;
+}
+
 /*  Helpers  */
 
 .clearboth          { clear: both;  }

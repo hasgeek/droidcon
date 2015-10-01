@@ -1,13 +1,14 @@
-$(function init() {
-    $('.leaflet-map').each(function initMap () {
+$(function initLeaflets() {
+    $('.leaflet-map').each(function initLeafletMap () {
         var   $container = $(this)
             , defaults = {
                   zoom: 5
-                , latitude: 12.9833
-                , longitude: 77.5833
-                , label: "Bangalore"
-                , scrollwheel: false
-                , styles: [{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#769E72"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#7B8758"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#EBF4A4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#8dab68"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5B5B3F"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ABCE83"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#A4C67D"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#9BBF72"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#EBF4A4"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#87ae79"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#7f2200"},{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"visibility":"on"},{"weight":4.1}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#495421"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]}]
+                , marker: [12.9833, 77.5833] // bangalore
+                , label: null
+                , maxZoom: 18
+                , attribution: '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
+                , subdomains: ['otile1','otile2','otile3','otile4']
+                , scrollWheelZoom: false
             }
             , args
             , options
@@ -21,22 +22,21 @@ $(function init() {
         args = $container.data();
         if (args.marker) { args.marker = args.marker.split(','); }
         options = $.extend({}, defaults, args);
-
-        var map = new google.maps.Map($container[0], {
-              center: new google.maps.LatLng(options.latitude, options.longitude)
+        
+        map = new L.Map($container[0], {
+              center: options.center || options.marker
             , zoom: options.zoom
-            , scrollwheel: options.scrollwheel
-            , styles: options.styles
+            , scrollWheelZoom: options.scrollWheelZoom
         });
-
-        var latLng = new google.maps.LatLng(options.latitude, options.longitude);
-
-        var marker = new google.maps.Marker({
-            position: latLng,
-            map: map,
-            title: options.label
-        });
-    });
+        
+        L.tileLayer('http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+              maxZoom: options.maxZoom
+            , attribution: options.attribution
+            , subdomains: options.subdomains
+        }).addTo(map);
+        
+        
+        marker = new L.marker(options.marker).addTo(map);
+        if (options.label) marker.bindPopup(options.label).openPopup();
+    })
 });
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
