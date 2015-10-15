@@ -82,10 +82,6 @@
 @media (max-width: 767px) {
     .page-section {
         padding: 2rem 0;
-        margin-left:  -20px;
-        margin-right: -20px;
-        padding-left:  20px;
-        padding-right: 20px;
     }
     .full-width {      
         margin-left:  -20px;
@@ -385,8 +381,11 @@
     padding-top: 3em;
 }
 @media (max-width:767px) {
-    .banner-internal .logo  { width: 1em; }
-    /*.ticket-link-container .button { padding: 0.2em 0.6em; }*/
+  .banner-internal .logo {
+    position: relative;
+    top: 1px;
+    padding-top: 2em;
+  }
 }
 @media (min-width: 768px) {
     .banner-internal nav    { margin-top: -0.5rem; }
