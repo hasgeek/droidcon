@@ -470,7 +470,7 @@ $(document).ready(function() {
             $('.subscribe-status').html('Please enter an email id');
         }
         else {
-            postData = { "Email": $('#subscribe-email').val(), "Event" : "JSFoo 2016" };
+            postData = { "Email": $('#subscribe-email').val(), "Event" : "DroidCon India 2016" };
             $('.ajax-loader').css('visibility', 'visible');
             $.ajax({
                 type: 'post',
