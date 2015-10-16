@@ -161,40 +161,6 @@ if (location.hostname == 'droidcon.in') {
   });
 }
 </script>
-
-<script>
-    $(window).scroll(function () {
-      var currentScroll = $(this).scrollTop();
-      var checkPoint;
-      if(Modernizr.mq('only screen and (max-width: 45em)')){
-        checkPoint = 890;
-      } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
-        checkPoint = 1100;
-      } else {
-        checkPoint = 700;
-      }
-      if( currentScroll > checkPoint){
-        $('#nav-home').addClass('navbar-fixed-top');
-      }  else {
-        $('#nav-home').removeClass('navbar-fixed-top');
-      }
-      if( currentScroll > 248){
-        $('#nav-inner').addClass('navbar-fixed-top');
-      }  else {
-        $('#nav-inner').removeClass('navbar-fixed-top');
-      }
-    });
-/*
-    $('#contentModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('content') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-});*/
-</script>
 <script type="text/javascript">
   if (Modernizr.mq('only screen and (min-width: 768px)') == true) {
     $(".popover-right").popover({ placement: 'left', animation: true, trigger: 'hover'});

@@ -124,15 +124,39 @@ abbr {
   letter-spacing: 0.05em;
   color: #9793AD;
 }
+.navbar-collapse {
+  max-height: 250px;
+  overflow-y: scroll;
+}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading{
   font-family: 'Roboto Slab', serif;
 }
-@media (min-width: 768px) and (max-width: 979px){
+@media (min-width: 768px) and (max-width: 1023px){
     .navbar .nav>li>a, .navbar-brand{
-      font-size: 14px;
+      font-size: 10px;
       letter-spacing: 0.05em;
+      padding: 5px 7px;
+    }
+    .navbar-brand {
+      height: auto;
+    }
+    .navbar {
+      min-height: auto;
     }
     .line4{
         font-size: 1.85em;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1199px){
+    .navbar .nav>li>a, .navbar-brand{
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+    }
+    .navbar-brand {
+      height: auto;
+    }
+    .navbar {
+      min-height: auto;
     }
 }

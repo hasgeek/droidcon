@@ -289,30 +289,37 @@ function parseJson(data) {
 }
 
 $(document).ready(function() {
-    if($(".site-navbar").length) {
-      var siteNavTop = $(".site-navbar").offset().top;
-    }
-    var windowWidth = $(window).width();
-
-    $(window).resize(function() {
-        windowWidth = $(window).width();
+    $(window).scroll(function () {
+      var currentScroll = $(this).scrollTop();
+      var checkPoint;
+      if(Modernizr.mq('only screen and (max-width: 45em)')){
+        checkPoint = 890;
+      } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
+        checkPoint = 1100;
+      } else {
+        checkPoint = 700;
+      }
+      if( currentScroll > checkPoint){
+        $('#nav-home').addClass('navbar-fixed-top');
+      }  else {
+        $('#nav-home').removeClass('navbar-fixed-top');
+      }
+      if( currentScroll > 248){
+        $('#nav-inner').addClass('navbar-fixed-top');
+      }  else {
+        $('#nav-inner').removeClass('navbar-fixed-top');
+      }
     });
+    if($("#nav-home").length) {
+      var siteNavTop = $("#nav-home").offset().top;
+    }
 
     $(window).scroll(function() {
         if($(this).scrollTop() > siteNavTop) {
-            $(".site-navbar").addClass("nav-fixed");
+            $('#nav-home').addClass('navbar-fixed-top');
         }
         else {
-            $(".site-navbar").removeClass("nav-fixed");
-        }
-    });
-
-    $('#menu-btn').click(function() {
-        if ($('#dropdown-menu').hasClass('off')){
-            $('#dropdown-menu').slideDown().removeClass('off');
-        }
-        else {
-            $("#dropdown-menu").slideUp().addClass('off');
+            $('#nav-home').removeClass('navbar-fixed-top');
         }
     });
 
@@ -321,6 +328,7 @@ $(document).ready(function() {
         var section = $(this).attr('href');
         var sectionPos = $(""+section).offset().top - $('.site-navbar').height();
         $('html,body').animate({scrollTop:sectionPos}, '900');
+        $(".navbar-toggle").trigger( "click" );
     });
 
     $('.turn-right').click(function() {
@@ -337,12 +345,6 @@ $(document).ready(function() {
             $(this).clearQueue();
         });
     });
-
-    setTimeout(function() {
-      $('.heading-text .text1').animate({right: 0}, 500);
-      $('.heading-text .text2').animate({left: 0}, 500);
-      $('.heading-text .ticket-btn, .heading-text .transfer-links').animate({top: 0}, 500);
-    }, 500);
 
     // For conference and workshop schedule
     var funnelurl = 'https://droidcon.talkfunnel.com/2015/schedule/json';
