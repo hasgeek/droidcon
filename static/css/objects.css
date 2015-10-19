@@ -51,7 +51,7 @@
     background: #71BF44;
     color: #FFF;
     line-height: 1.4;
-    padding: 1em 2em 1em;
+    padding: .5em 1.5em .4em;
     text-transform: uppercase;
     text-align: left;
     border-radius: 0.25em;
@@ -1115,6 +1115,18 @@ li.event-node{
   padding: 12px 5px 7px 5px;
   display: block;
 }
+.ticket-boxes {
+  max-width: 1000px;
+  margin: auto;
+}
+.ticket-boxes .description {
+  min-height: 76px;
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .ticket-boxes .description {
+    min-height: 100px;
+  }
+}
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
   border: 1px solid #ccc;
 }
@@ -1348,4 +1360,31 @@ li.event-node{
 }
 .helptext {
   height: 30px;
+}
+
+.expand-cancel-form {
+  display: inline-block;
+}
+.expand-cancel-form:focus,
+.expand-cancel-form:active {
+  outline: none;
+}
+.cancel-tickets, .cancelticket-status {
+  display: none;
+}
+.cancel-tickets .radio-box {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .cancel-tickets .radio-box {
+    text-align: right;
+  }
+}
+.help-text {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .help-text {
+    padding-left: 10px;
+  }
 }

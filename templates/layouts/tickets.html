@@ -1,31 +1,110 @@
 <section id="tickets" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid">
-    <h2 class="large all-caps text-center space-two-bottom">Ticket Pricing</h2>
-  </div>
-  <div class="row-fluid container">
-  {% for ticket in items -%}
-    {% if ticket.open and ticket.category=='conference' %}
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center fill-lightgray push-one">
-        <div class="subsection fill-mediumgray">        
-          <h3>{{ ticket.type }}</h3>
-          <div class="icon-container">
-            <img src="{{ticket.icon}}" alt="">
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="large all-caps text-center space-two-bottom">Ticket Pricing</h2>
+    </div>
+    <div class="row ticket-boxes">
+    {% for ticket in items -%}
+      {% if ticket.open %}
+        <div class="col-sm-6 col-xs-12 text-center fill-lightgray push-one">
+          <div class="subsection fill-mediumgray">        
+            <h3 class="legible">{{ ticket.type }}</h3>
+            <div class="icon-container">
+              <img src="{{ticket.icon}}" alt="">
+            </div>
+            <h5 class="legible-prose">Rs. {{ ticket.price }}</h5>
           </div>
-          <h5 class="legible-prose">Rs. {{ ticket.price }}</h5>
+          <div class="subsection tiny fill-darkgray">
+            {% if ticket.end_date %}<div class="white">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
+          </div>
+          <div class="subsection description fill-green push-half-top push-one-bottom">
+            {{ ticket.package | safe }}
+          </div>
         </div>
-        <div class="subsection tiny fill-darkgray">
-          {% if ticket.end_date %}<div class="yellow">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
-        </div>
-        <div class="subsection fill-green push-half-top push-one-bottom">
-          {{ ticket.package | safe }}
-        </div>
+      {% endif %}
+    {%- endfor %}
+    </div>
+    <div class="row text-center">
+      <p class="secondary space-one-top space-two-bottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <a class="button" href="https://in.explara.com/e/droidconin-2015/checkout" target="_blank">Get your Tickets</a>
+      </p>
+    </div>
+
+    <div class="col-xs-12 transfer-form" id="request-form">
+      <div class="text-center regular space-one-bottom">
+        <p>If you need to <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="expand-cancel-form button dark tiny-prose space-half-bottom" data-target="#transferticket">transfer</a> or <a href="https://docs.google.com/a/hasgeek.in/forms/d/1HwTmcgu6Zc8QxmPUmfsrx3lt_QClvHW0_YJAUX65KM8/viewform" class="expand-cancel-form button dark tiny-prose space-half-bottom" data-target="#cancelticket">cancel</a> your ticket, submit the details and we will process your request within 7 days.</p>
       </div>
-    {% endif %}
-  {%- endfor %}
-  </div>
-  <div class="row-fluid container text-center">
-    <p class="secondary space-one-top space-two-bottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <a class="button" href="http://droidcon.doattend.com/">Get your Ticket</a>
-    </p>
+      <form class="form-horizontal cancel-tickets nospace" id='transferticket' action="" role="form" autocomplete="off">
+        <h4 class="text-center medium regular">Transfer ticket form</h4>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="text" class="form-control tiny" id="order-no" name="order-no" required placeholder="Order No."/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="text" class="form-control tiny" id="ticket-no" name="ticket-no" required placeholder="Ticket No."/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="email" class="form-control tiny" id="ticket-email" name="ticket-email" required placeholder="Specify the email that you used to buy the ticket"/>
+          </div>
+        </div>
+        <input type="hidden" value="Transfer" name="type" />
+        <div class="form-group">
+          <p class="secondary space-1q text-left col-md-9 col-md-offset-3 col-sm-10 col-sm-offset-2">Enter the details of the person the ticket is being transferred to</p>
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="text" class="form-control tiny" id="transferee-name" name="transferee-name" required placeholder="Name"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="email" class="form-control tiny" id="transferee-email" name="transferee-email" required placeholder="Email"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="tel" class="form-control tiny" id="transferee-phone" name="transferee-phone" required placeholder="Phone"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-left ">
+            <button type="submit" class="button tiny dark">Submit</button>
+            <button class="button tiny dark close-form gap-half">Close</button>
+            <img src="{{ theme_static('img/ajax-loader.gif') }}" class="submit-loader"/>
+          </div>
+        </div>
+      </form>
+
+      <form class="form-horizontal cancel-tickets nospace" id='cancelticket' action="" role="form" autocomplete="off">
+        <h4 class="text-center medium regular">Cancel ticket form</h4>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="text" class="form-control tiny" id="cancel-order-no" name="order-no" required placeholder="Order No."/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="text" class="form-control tiny" id="cancel-ticket-no" name="ticket-no" required placeholder="Ticket No."/>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <input type="email" class="form-control tiny" id="cancel-ticket-email" name="ticket-email" required placeholder="Specify the email that you used to buy the ticket"/>
+          </div>
+        </div>
+        <input type="hidden" value="Cancel" name="type"/>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-left">
+            <button type="submit" class="button tiny dark">Submit</button>
+            <button class="button tiny dark close-form gap-half">Close</button>
+            <img src="{{ theme_static('img/ajax-loader.gif') }}" class="submit-loader"/>
+          </div>
+        </div>
+      </form> 
+
+      <div class="secondary nospace text-left col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 help-text"><p class="cancelticket-status"></p></div>       
+    </div>
   </div>
 </section>

@@ -427,12 +427,12 @@ $(document).ready(function() {
         if(formDataValid) {
             if(formData["type"] === "Cancel") {
                 formTarget = "cancelticket";
-                postData =  { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], "Event" : "JSFoo 2015" };
+                postData =  { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], "Event" : "DroidCon India 2015" };
             }
             else {
                 formTarget = "transferticket";
                 postData = { "Order no.": formData["order-no"], "Ticket no." : formData["ticket-no"],  "Email" : formData["ticket-email"], "Type" : formData["type"], 
-                             "Transferee name" :formData["transferee-name"], "Transferee email" : formData["transferee-email"] , "Transferee phone" : formData["transferee-phone"], "Event" : "JSFoo 2015" };
+                             "Transferee name" :formData["transferee-name"], "Transferee email" : formData["transferee-email"] , "Transferee phone" : formData["transferee-phone"], "Event" : "DroidCon India 2015" };
             }
             p = "Are you sure you want to " + formData["type"] + " your ticket?";
             var result = window.confirm(p);
@@ -472,7 +472,7 @@ $(document).ready(function() {
             $('.subscribe-status').html('Please enter an email id');
         }
         else {
-            postData = { "Email": $('#subscribe-email').val(), "Event" : "DroidCon India 2016" };
+            postData = { "Email": $('#subscribe-email').val(), "Event" : "DroidCon India 2015" };
             $('.ajax-loader').css('visibility', 'visible');
             $.ajax({
                 type: 'post',
