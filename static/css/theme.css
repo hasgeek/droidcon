@@ -16,7 +16,7 @@ a:focus {
 }
 a:hover         { background-color: #444; }
 .link-silent a,
-a.link-silent   { border-bottom: none; }
+a.link-silent   { background-color: transparent; border-bottom: none; }
 
 .prose.prose-type a { border-bottom: none; }
 /*  Colours  */
