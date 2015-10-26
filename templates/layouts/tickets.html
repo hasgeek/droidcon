@@ -17,7 +17,7 @@
           <div class="subsection tiny fill-darkgray">
             {% if ticket.end_date %}<div class="white">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}
           </div>
-          <div class="subsection description fill-green push-half-top push-one-bottom">
+          <div class="subsection description fill-green push-half-top push-one-bottom tiny pad-1q">
             {{ ticket.package | safe }}
           </div>
         </div>

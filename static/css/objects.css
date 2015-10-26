@@ -1119,12 +1119,14 @@ li.event-node{
   max-width: 1000px;
   margin: auto;
 }
-.ticket-boxes .description {
-  min-height: 76px;
-}
 @media (min-width: 768px) and (max-width: 1023px){
   .ticket-boxes .description {
-    min-height: 100px;
+    min-height: 162px;
+  }
+}
+@media (min-width: 1024px) {
+  .ticket-boxes .description {
+    min-height: 145px;
   }
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
