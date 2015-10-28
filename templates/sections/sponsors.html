@@ -22,7 +22,7 @@
         <div id="{{ type.id }}-{{ item.id }}" class="row space-two pad-two-left pad-three-right">
           <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 regular space-half-top nospace-bottom clearfix clearboth">
             <p class="clearfix space-two-bottom">
-              <a href="{{ item.link }}" target="_blank" class="occupy fill-white sponsorlogo contain-width flushleft link-silent">
+              <a href="{{ item.link }}" target="_blank" class="occupy fill-mediumgray sponsorlogo contain-width flushleft link-silent">
                 <img alt="{{ item.name }}" src="{{ item.logo }}">
               </a>
             </p>
@@ -35,7 +35,7 @@
           <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
             {% if item.display %}
               <h4 class="tiny all-caps nospace">Website</h4>
-              <p class="secondary space-half-top space-one-bottom"><a href="{{ item.link }}" class="blue" target="_blank">{{ item.display }}</a></p>
+              <p class="tiny space-half-top space-one-bottom link-silent"><a href="{{ item.link }}" class="blue" target="_blank">{{ item.display }}</a></p>
             {% endif %}
             
             {% if item.attendee %}
