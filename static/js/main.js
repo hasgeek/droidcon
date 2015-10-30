@@ -326,7 +326,7 @@ $(document).ready(function() {
     $('.smooth-scroll').click(function(event) {
         event.preventDefault();
         var section = $(this).attr('href');
-        var sectionPos = $(""+section).offset().top - $('.site-navbar').height();
+        var sectionPos = $(""+section).offset().top;
         $('html,body').animate({scrollTop:sectionPos}, '900');
         $(".navbar-toggle").trigger( "click" );
     });
