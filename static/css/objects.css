@@ -548,7 +548,7 @@ header { overflow: hidden; }
 
 .sponsorlogo       { text-align: center; border-radius: 0.25rem; height: 5.34rem; line-height: 3.35rem; padding: .84rem; }
 .sponsorlogo:hover { background-color: rgba(0,0,0,0.3) !important; }
-.sponsorlogo img   { max-height: 100%; width: auto; }
+.sponsorlogo img   { max-height: 100%; width: auto; max-width: 100%; }
 .sponsors .sponsorlogo   { 
     width: 100%; 
     img { height: auto; max-width: 100%; }
