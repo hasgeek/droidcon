@@ -161,10 +161,6 @@ var disableResponsiveTable = function() {
     $('td').not('.centered').attr('colspan', "");
 }
 
-var compressScheduleTable = function(table) {
-   
-}
-
 var renderScheduleTable = function(schedules, eventType) {
     schedules.forEach(function(schedule) {
         var tableTemplate = $('#scheduletemplate').html();
@@ -289,61 +285,27 @@ function parseJson(data) {
 }
 
 $(document).ready(function() {
-    $(window).scroll(function () {
-      var currentScroll = $(this).scrollTop();
-      var checkPoint;
-      if(Modernizr.mq('only screen and (max-width: 45em)')){
-        checkPoint = 890;
-      } else if(Modernizr.mq('only screen and (min-width: 45em) and (max-width: 767px)')){
-        checkPoint = 1100;
-      } else {
-        checkPoint = 700;
-      }
-      if( currentScroll > checkPoint){
-        $('#nav-home').addClass('navbar-fixed-top');
-      }  else {
-        $('#nav-home').removeClass('navbar-fixed-top');
-      }
-      if( currentScroll > 248){
-        $('#nav-inner').addClass('navbar-fixed-top');
-      }  else {
-        $('#nav-inner').removeClass('navbar-fixed-top');
-      }
-    });
     if($("#nav-home").length) {
       var siteNavTop = $("#nav-home").offset().top;
     }
 
     $(window).scroll(function() {
-        if($(this).scrollTop() > siteNavTop) {
-            $('#nav-home').addClass('navbar-fixed-top');
-        }
-        else {
-            $('#nav-home').removeClass('navbar-fixed-top');
+        if($("#nav-home").length) {
+            if($(this).scrollTop() > siteNavTop) {
+                $('#nav-home').addClass('navbar-fixed-top');
+            }
+            else {
+                $('#nav-home').removeClass('navbar-fixed-top');
+            }
         }
     });
 
     $('.smooth-scroll').click(function(event) {
         event.preventDefault();
         var section = $(this).attr('href');
-        var sectionPos = $(""+section).offset().top;
+        var sectionPos = $(""+section).offset().top - $(".navbar-header").height();
         $('html,body').animate({scrollTop:sectionPos}, '900');
         $(".navbar-toggle").trigger( "click" );
-    });
-
-    $('.turn-right').click(function() {
-        $(this).parent('.box-front-side').addClass('flip').delay(400).queue(function() {
-            $(this).removeClass('show-side').removeClass('flip');
-            $(this).parents('.box').find('.box-back-side').addClass('show-side');
-            $(this).clearQueue();
-        });
-    });
-    $('.turn-left').click(function() {
-        $(this).parent('.box-back-side').addClass('flip').delay(400).queue(function() {
-            $(this).removeClass('show-side').removeClass('flip');
-            $(this).parents('.box').find('.box-front-side').addClass('show-side');
-            $(this).clearQueue();
-        });
     });
 
     // For conference and workshop schedule

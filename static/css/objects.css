@@ -141,6 +141,7 @@ header { overflow: hidden; }
 @media(min-width:1200px) {
   #circularheader {
     height: 100%;
+    min-height: 650px;
   }
   #circularheader div.logo-bck{
     width: 6em;
@@ -1309,12 +1310,6 @@ li.event-node{
   padding: 30px;
 }
 
-@media (max-width: 480px) { 
-    #circularheader img{ width: 80%; margin: .8em 0 .5em 0;}
-    .ticket-button { margin-top: 4em; }
-    .ticket-button{ margin-top: 4em; font-size: 0.7rem; padding: 2em 2em 2em;} 
-}
-
 .headbutt:before { 
   display: block; 
   content: " "; 
@@ -1421,4 +1416,36 @@ li.event-node{
   padding: 0px 10px 5px;
   display: none;
 }
-
+.scroll-down {
+  position: relative;
+  -webkit-animation: 1s linear 0s normal none infinite bounce;
+  animation: 1s linear 0s normal none infinite bounce;
+}
+@-webkit-keyframes bounce {
+  0% {
+  top: -5px;
+  opacity: 0;
+  }
+  50% {
+  top: 0px;
+  opacity: 1;
+  }
+  100% {
+  top: -5px;
+  opacity: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+  top: -5px;
+  opacity: 0;
+  }
+  50% {
+  top: 0px;
+  opacity: 1;
+  }
+  100% {
+  top: -5px;
+  opacity: 0;
+  }
+}
