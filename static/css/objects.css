@@ -1101,10 +1101,14 @@ li.event-node{
   padding-left: 20px;
   padding-right: 20px;
 }*/
+#tickets ul {
+  text-align: left;
+}
 #tickets li{
-  list-style-type: none;
   line-height: 25px;
   border-radius: 5px;
+  padding-left: 10px;
+  list-style-position: inside;
 }
 @media (min-width: 1200px){
   #tickets li.offer-block{
@@ -1133,12 +1137,12 @@ li.event-node{
 }
 @media (min-width: 768px) and (max-width: 1023px){
   .ticket-boxes .description {
-    min-height: 162px;
+    min-height: 212px;
   }
 }
 @media (min-width: 1024px) {
   .ticket-boxes .description {
-    min-height: 145px;
+    min-height: 195px;
   }
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
