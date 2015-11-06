@@ -1200,7 +1200,9 @@ li.event-node{
 }
 
 .speaker-photo{
-  width: 30%;
+  width: 40%;
+  border-radius: 50%;
+  border: 5px solid #AED581;
 }
 .popover{
   border: 3px solid #778B4C;
