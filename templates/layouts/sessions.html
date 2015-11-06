@@ -1,48 +1,38 @@
-<section id="sessions" class="push-two clearfix{% if background %} fill-{{ background }}{% endif %}">
-  <div class="row-fluid container text-center">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Talks</h2>
-  </div>
-  {% for item in talks %}
-    <div id="{{ item.id }}" class="row-fluid container push-two">
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
-        <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
-        <img class="speaker-photo {% if item.type == 'app-demos' %}theme-green{% elif item.type == 'systems' %}theme-red{% elif item.type == 'business' %}theme-blue{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'ux' %}theme-violet{% endif %}" src="{{ item.photo }}" alt="">
-        <h4 class="prose-type calm italic"><span class="legible-prose">{{ item.speaker }}</span></h4>
-        <h5 class="italic">{{ item.designation|safe }}</h5>
+<section id="{{ session.id }}" class="clearfix{% if background %} fill-{{ background }}{% endif %}">
+<div class="container-fluid">
+  {% if session.label %}<h2 class="large all-caps text-center push-one">{{ session.label }}</h2>{% endif %}
+  {% for item in session.list|sort(attribute='count') %}
+  <div id="{{ item.id }}" class="row push-two-bottom pad-3q session">
+    <div class="row">
+      <h3 class="legible nospace-top medium push-one-top pad-half darkblue bold text-center">{{ item.title|safe }}</h3>
+      <div class="col-md-4 col-xs-12 speaker-bio">
+        {% if item.photos %}<div class="clearfix nospace-top push-one-top space-half-bottom">{% for photo in item.photos %}<img src="{{photo}}" alt="" class="center-block speaker-photo {% if item.photos|length > 1 %} speaker-photo-small {% endif %}">{% endfor %}</div>{% endif %}
+        <h4 class="regular prose-type calm all-caps space-1q-top nospace-bottom darkblue bold text-center">{{ item.speaker|safe }}</h4>
+        {% if item.twitter %}<div class="link-silent regular-prose space-1q-top nospace-bottom text-center"><a href="https://twitter.com/{{ item.twitter }}" target="_blank">@{{ item.twitter }}</a></div>{% endif %}
+        {% if item.designation %}<p class="secondary italic space-1q-top nospace-bottom darkyellow text-center">{{ item.designation|safe }}</p>{% endif %}
+        {% if item.bio %}<div class="tiny space-1q-top nospace-bottom">{{ item.bio|safe }}</div>{% endif %}
+        {% if item.sponsor %}<div class="lightblue secondary-prose space-1q-top nospace-bottom link-silent"><em>Sponsored session by <a href="{{ item.sponsor_link }}" target="_blank">{{ item.sponsor }}</a></em></div>{% endif %}
       </div>
-      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 legible-prose prose prose-type">
-        <div class="prose-type regular-prose space-three-bottom">
-          {{ item.blurb|safe }}
-          <ul class="list-plain secondary prose space-one-top">
-            {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
-            {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-  <div class="row-fluid container text-center">
-    <h2 class="offset1 extralarge all-caps space-two-bottom">Panel Discussions</h2>
-  </div>
-  {% for item in paneldiscussions %}
-    <div id="{{ item.id }}" class="row-fluid container push-two">
-      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 legible space-two-bottom clearfix text-right">
-        <h3 class="all-caps nospace-top semibold">{{ item.title|safe }}</h3>
-        {% for member in item.panelists %}
-          <img class="speaker-photo {% if item.type == 'app-demos' %}theme-green{% elif item.type == 'systems' %}theme-red{% elif item.type == 'business' %}theme-blue{% elif item.type == 'gaming' %}theme-orange{% elif item.type == 'ux' %}theme-violet{% endif %}" src="{{ member.photo }}" alt="">
-          <h4 class="prose-type calm italic"><span class="legible-prose">{{ member.speaker }}</span></h4>
-          <h5 class="italic">{{ member.designation|safe }}</h5>
-        {% endfor %}     
-      </div>
-      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 legible-prose prose prose-type">
-        <div class="prose-type regular-prose space-three-bottom">
-          {{ item.blurb|safe }}
-          <ul class="list-plain secondary prose space-one-top">
-            {% if item.funnel %}<li class="flushleft"><a href="{{ item.funnel }}">Funnel Proposal</a></li>{% endif %}
-            {% if item.preview %}<li class="flushright"><a href="{{ item.preview }}">Preview</a></li>{% endif %}
-          </ul>
-        </div>
+      <div class="col-md-8 col-xs-12">
+        {% if item.banner %}<div class="regular nospace-top push-one-top pad-half"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
+        {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible semibold nospace-top space-half-bottom">Objective</h2>{{ item.objective|safe }}</div>{% endif %}
+        {% if item.preview %}<div class="pad-half"> {{ item.preview|safe }} </div>{% endif %}
+        {% if item.blurb %}<div class="regular space-one pad-half link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
+        {% if item.requirements %}<div class="regular space-one pad-half"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
+        {% if item.previewphotos %}<div class="regular space-one-top pad-half link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
+        {% if item.links %}<div class="regular space-one-top pad-half link-silent session-links"><p class="legible semibold">Links</p><ul>{% for link in item.links %}<li><a class="orange" href="{{ link.link }}" target="_blank">{{ link.name }}</a></li>{% endfor %}</ul></div>{% endif %}
+        <ul class="list-plain regular space-one-top pad-half">
+          {% if item.date %}<li class="space-1q">{{ item.date|safe }}</li>{% endif %}
+          {% if item.time %}<li class="space-1q">{{ item.time|safe }}</li>{% endif %}
+          {% if item.venue %}<li class="space-1q"><i class="icon-map-marker"></i>&nbsp; {{ item.venue|safe }}</li>{% endif %}
+          {% if item.price %}<li class="large space-1q bold">{{ item.price|safe }}</li>{% endif %}
+          <li class="space-1q"><a class="orange" target="_blank" href="https://droidconin.talkfunnel.com/2015/{{ item.id }}">Read workshop proposal</a></li>
+        </ul>
+<!--         <div class="space-one-top pad-half"><a href="https://in.explara.com/e/jsfoo-2015/checkout" class="button button-on-dark regular dark ticket-btn" title="JSFoo 2015 Tickets on Explara" target="_blank">Buy Tickets</a></div> -->
+        </ul>
       </div>
     </div>
+  </div>
   {% endfor %}
+  </div>
 </section>
