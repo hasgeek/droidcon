@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading{
 }
 @media (min-width: 768px) and (max-width: 1023px){
     .navbar .nav>li>a, .navbar-brand{
-      font-size: 10px;
+      font-size: 13px;
       letter-spacing: 0.05em;
       padding: 5px 7px;
     }

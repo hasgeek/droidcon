@@ -6,13 +6,11 @@
     <div class="row ticket-boxes">
     {% for ticket in items -%}
       {% if ticket.open %}
-        <div class="col-sm-6 col-xs-12 text-center fill-lightgray push-one">
-          <div class="subsection fill-mediumgray">        
-            <h3 class="legible">{{ ticket.type }}</h3>
-            <div class="icon-container">
-              <img src="{{ticket.icon}}" alt="">
-            </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 text-center fill-lightgray push-one">
+          <div class="subsection details fill-mediumgray">        
+            <h3 class="legible">{{ ticket.type|safe }}</h3>
             <h5 class="legible-prose">Rs. {{ ticket.price }}</h5>
+            <h5 class="tiny"><i class="icon-map-marker pad-1q-right"></i>{{ ticket.location }}</h5>
           </div>
           <div class="subsection tiny fill-darkgray">
             {% if ticket.end_date %}<div class="white">Sales closes on:&nbsp;&nbsp;{{ ticket.end_date }}</div>{% else %} <div class="red shadow-text-white">{{ ticket.closed_msg }}</div>{% endif %}

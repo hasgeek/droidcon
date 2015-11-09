@@ -1132,17 +1132,25 @@ li.event-node{
   display: block;
 }
 .ticket-boxes {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: auto;
 }
-@media (min-width: 768px) and (max-width: 1023px){
+@media (min-width: 768px) and (max-width: 991px){
   .ticket-boxes .description {
-    min-height: 212px;
+    min-height: 162px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1199px){
+  .ticket-boxes .details {
+    min-height: 180px;
+  }
   .ticket-boxes .description {
-    min-height: 195px;
+    min-height: 265px;
+  }
+}
+@media (min-width: 1200px) {
+  .ticket-boxes .description {
+    min-height: 245px;
   }
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
