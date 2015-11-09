@@ -1463,3 +1463,7 @@ li.event-node{
   opacity: 0;
   }
 }
+.testimonials .context {
+  min-width: 300px;
+  max-width: 300px;
+}
