@@ -393,10 +393,10 @@ header { overflow: hidden; }
     width:       100%;
     padding-top: 3em;
 }
-@media (max-width:767px) {
+@media (max-width:480px) {
   .banner-internal .logo {
     position: relative;
-    top: 10px;
+    top: 25px;
     padding-top: 2em;
   }
 }
@@ -1211,6 +1211,12 @@ li.event-node{
   width: 40%;
   border-radius: 50%;
   border: 5px solid #AED581;
+}
+.speaker-photo-small {
+  float: left;
+  width: 40%;
+  margin:0 5%;
+  max-width: auto;
 }
 .popover{
   border: 3px solid #778B4C;
