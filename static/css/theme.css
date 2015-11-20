@@ -31,6 +31,8 @@ a.link-silent   { background-color: transparent; border-bottom: none; }
 .white          { color: #FFFFFF !important; }
 .yellow         { color: #B49B33 !important; }
 .faded          { color: rgba(255,255,255,.8) !important; }
+.twitter-blue   { color: #4099FF !important; }
+.twitter-blue a:hover, .twitter-blue a:focus   { color: #4099FF !important; }
 
 .blue-bg        { background: #46425A; padding: 0 5px 0 5px;}
 .shadow-text-white   { text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }

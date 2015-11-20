@@ -1137,7 +1137,7 @@ li.event-node{
 }
 @media (min-width: 768px) and (max-width: 991px){
   .ticket-boxes .description {
-    min-height: 162px;
+    min-height: 190px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px){
@@ -1150,7 +1150,7 @@ li.event-node{
 }
 @media (min-width: 1200px) {
   .ticket-boxes .description {
-    min-height: 245px;
+    min-height: 200px;
   }
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
@@ -1207,16 +1207,24 @@ li.event-node{
   }
 }
 
+.speaker-info {
+  width: 50%;
+  margin: auto;
+}
+.speaker-info-small {
+  float: left;
+}
+.speaker-bio div:last-of-type {
+  float: none;
+}
+.speaker-details {
+  clear: both;
+}
+
 .speaker-photo{
-  width: 40%;
+  width: 80%;
   border-radius: 50%;
   border: 5px solid #AED581;
-}
-.speaker-photo-small {
-  float: left;
-  width: 40%;
-  margin:0 5%;
-  max-width: auto;
 }
 .popover{
   border: 3px solid #778B4C;
