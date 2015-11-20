@@ -1214,7 +1214,7 @@ li.event-node{
 .speaker-info-small {
   float: left;
 }
-.speaker-bio div:last-of-type {
+.speaker-bio div:nth-of-type(3) {
   float: none;
 }
 .speaker-details {
@@ -1225,6 +1225,7 @@ li.event-node{
   width: 80%;
   border-radius: 50%;
   border: 5px solid #AED581;
+  max-width: 180px;
 }
 .popover{
   border: 3px solid #778B4C;
