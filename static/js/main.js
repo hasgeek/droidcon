@@ -162,16 +162,17 @@ var disableResponsiveTable = function() {
 }
 
 var renderScheduleTable = function(schedules, eventType) {
+  console.log("renderScheduleTable", schedules, eventType);
     schedules.forEach(function(schedule) {
         var tableTemplate = $('#scheduletemplate').html();
         if(eventType === 'conference') {
           $('#conferenceschedule').append(Mustache.render(tableTemplate, schedule));
           $(".schedule-table-container p.loadingtxt").hide();
         }
-        else {
-          $('#workshopschedule').append(Mustache.render(tableTemplate, schedule));
-          $(".schedule-table-container p.loadingtxt").hide();
-        }
+        // else {
+        //   $('#workshopschedule').append(Mustache.render(tableTemplate, schedule));
+        //   $(".schedule-table-container p.loadingtxt").hide();
+        // }
     });
     if($(window).width() < 768){
         renderResponsiveTable();
@@ -205,7 +206,10 @@ function parseJson(data) {
             }
             sessions.forEach(function(session, sessionindex, sessions) {
                 //Type of schedule-
-                if(session.section_name && (session.section_name.toLowerCase().indexOf('workshop') !== -1)) {
+                if(session.room === "mlr-convention-centre-j-p-nagar/auditorium") {
+                  schedules[scheduleindex].type = 'conference';
+                }
+                else if(session.section_name && (session.section_name.toLowerCase().indexOf('workshop') !== -1)) {
                     schedules[scheduleindex].type = 'workshop';
                 }
                 //Tracks or No:of auditorium
@@ -309,7 +313,7 @@ $(document).ready(function() {
     });
 
     // For conference and workshop schedule
-    var funnelurl = 'https://droidcon.talkfunnel.com/2015/schedule/json';
+    var funnelurl = 'https://droidconin.talkfunnel.com/2015/schedule/json';
     //If schedule divs are present on the page, then make the ajax call.
     if(($('#conferenceschedule').length) || ($('#workshopschedule').length)) {
         $.ajax({
@@ -334,12 +338,12 @@ $(document).ready(function() {
     });
 
     $('#conferenceschedule, #workshopschedule').on('click', 'table td .expand', function() {
-        if($(this).hasClass('fa-chevron-circle-down')) {
-            $(this).removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
+        if($(this).hasClass('icon-chevron-sign-down')) {
+            $(this).removeClass('icon-chevron-sign-down').addClass('icon-chevron-sign-up');
             $(this).parents('td').find('.description-text').slideDown();
         }
         else {
-            $(this).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
+            $(this).removeClass('icon-chevron-sign-up').addClass('icon-chevron-sign-down');
             $(this).parents('td').find('.description-text').slideUp();
         }
     });
