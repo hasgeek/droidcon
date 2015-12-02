@@ -210,7 +210,10 @@ function parseJson(data) {
                   schedules[scheduleindex].type = 'conference';
                 }
                 else if(session.section_name && (session.section_name.toLowerCase().indexOf('workshop') !== -1)) {
-                    schedules[scheduleindex].type = 'workshop';
+                  schedules[scheduleindex].type = 'workshop';
+                }
+                else if(session.room === "teri-domlur/auditorium") {
+                  schedules[scheduleindex].type = 'workshop';
                 }
                 //Tracks or No:of auditorium
                 if(session.room && (rooms.indexOf(session.room) === -1)) {
