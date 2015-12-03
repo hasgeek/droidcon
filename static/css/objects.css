@@ -1530,3 +1530,7 @@ li.event-node{
   .schedule-table tbody td { padding: 0.5rem; }
 }
 
+.tweet-button {
+  position: relative;
+  top: 5px;
+}

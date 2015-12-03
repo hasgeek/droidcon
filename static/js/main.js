@@ -162,17 +162,21 @@ var disableResponsiveTable = function() {
 }
 
 var renderScheduleTable = function(schedules, eventType) {
-  console.log("renderScheduleTable", schedules, eventType);
     schedules.forEach(function(schedule) {
         var tableTemplate = $('#scheduletemplate').html();
         if(eventType === 'conference') {
           $('#conferenceschedule').append(Mustache.render(tableTemplate, schedule));
           $(".schedule-table-container p.loadingtxt").hide();
         }
-        // else {
-        //   $('#workshopschedule').append(Mustache.render(tableTemplate, schedule));
-        //   $(".schedule-table-container p.loadingtxt").hide();
-        // }
+        else {
+          var workshopDates = $('#workshopschedule').attr('data-date');
+          workshopDates = workshopDates.split('-');
+          var date = schedule.date.substr(8, 2);
+          if(workshopDates.indexOf(date) > -1) {
+            $('#workshopschedule').append(Mustache.render(tableTemplate, schedule));
+            $(".schedule-table-container p.loadingtxt").hide();
+          }
+        }
     });
     if($(window).width() < 768){
         renderResponsiveTable();
