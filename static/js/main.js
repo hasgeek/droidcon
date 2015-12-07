@@ -168,7 +168,7 @@ var renderScheduleTable = function(schedules, eventType) {
           $('#conferenceschedule').append(Mustache.render(tableTemplate, schedule));
           $(".schedule-table-container p.loadingtxt").hide();
         }
-        else {
+        else if($('#workshopschedule').length) {
           var workshopDates = $('#workshopschedule').attr('data-date');
           workshopDates = workshopDates.split('-');
           var date = schedule.date.substr(8, 2);

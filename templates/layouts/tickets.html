@@ -9,7 +9,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12 text-center fill-lightgray push-one">
           <div class="subsection details fill-mediumgray">        
             <h3 class="legible">{{ ticket.type|safe }}</h3>
-            <h5 class="legible-prose">Rs. {{ ticket.price }}</h5>
+            <h5 class="legible-prose">Rs. {{ ticket.price|safe }}</h5>
             <h5 class="tiny"><i class="icon-map-marker pad-1q-right"></i>{{ ticket.location }}</h5>
           </div>
           <div class="subsection tiny fill-darkgray">
