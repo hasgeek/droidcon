@@ -565,6 +565,7 @@ header { overflow: hidden; }
 .sponsor-l  .sponsorlogo.contain-width { padding: .84rem 4rem;  }
 
 .sponsor-s        .sponsorlogo.contain-height { padding: 0.5rem; }
+.sponsor-m        .sponsorlogo.contain-height { padding: 1rem; }
 
 .credits .row-fluid .offset1 {
   margin-left: 8.51063829787234%;
