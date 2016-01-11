@@ -135,7 +135,7 @@ header { overflow: hidden; }
 }
 #circularheader img {
   width: 90%;
-  margin: 15% 0 0;
+  margin: 20% 0 0;
 }
 
 @media(min-width:1200px) {
