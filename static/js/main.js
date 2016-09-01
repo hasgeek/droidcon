@@ -366,6 +366,13 @@ $(document).ready(function() {
         }
     });
 
+    $('#boxoffice-widget').popover({
+      selector: '.t-shirt-image',
+      placement : 'right',
+      trigger : 'hover',
+      html : true
+    });
+
     $('.expand-cancel-form').on('click', function(event) {
         event.preventDefault();
         $('.cancel-tickets').hide();
