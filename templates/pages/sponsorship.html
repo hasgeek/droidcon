@@ -1,0 +1,109 @@
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'               : ''
+    , 'description'         : ''
+    , 'sections'            : [
+      ('sponsorship-intro', 'dark'),
+      ('sponsorship-sales', 'white'),
+    ]
+  }
+%}
+
+{% block navtype %}
+{% endblock %}
+
+{% block banner %}
+<header id="circularheader">
+  <div class="logo-bck">
+    <img src="{{ theme_static('img/logo.png') }}" alt="">
+  </div>
+  <div class="container text-center">
+    <h1 class="legible">droidconIN 2016</h1>
+    <h3 class="large">10 - 11 November 2016</h3>
+    <h3 class="secondary">MLR Convention Centre, JP Nagar, Bangalore</h3>
+    <p>
+    <a class="button tiny ticket-button smooth-scroll" href="#tickets" target="_blank">Become a sponsor</a>
+    </p>
+    <p class="legible link-silent space-one"><a href="#annoucements" class="smooth-scroll icon-chevron-down scroll-down hidden-xs"></a></p>
+  </div>
+</header>
+{% endblock %}
+
+{% block footerscripts %}
+<style type="text/css">
+  #boxoffice-widget .boxoffice-button-action {
+    background-color: #FAA51A;
+    border-color:  #d98f15;
+    color: #fff;
+  }
+  #boxoffice-widget .boxoffice-button-info {
+    background-color: #5BC0DE;
+    border-color: #2A9CBE;
+    color: #fff;
+  }
+  #boxoffice-widget .payment-stages-bg {
+    background-color: #586152;
+  }
+  #boxoffice-widget .progress-indicator>li {
+    color: #FFF;
+  }
+  #boxoffice-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
+    color: #aed581;
+  }
+  #boxoffice-widget .category-heading {
+    background-color: #71BF44;
+    border-bottom: 3px solid #586152;
+    color: rgba(0,0,0,0.6);
+    line-height: 1.1;
+    font-weight: bold;
+  }
+  #boxoffice-widget .category-heading:after {
+    border-color: #71BF44 #fff #71BF44 #71BF44;
+  }
+</style>
+        
+<script>
+  $(function(){
+    //Boxoffice widget
+    var boxofficeUrl = "http://boxoffice.vidya.dev:6500"
+    {% if g.user %}
+      {% if g.user.fullname %}
+        username = "{{ g.user.fullname }}";
+      {% endif %}
+      {% if g.user.phone %}
+        userphone = "{{ g.user.phone }}";
+      {% endif %}
+      useremail = "{{ g.user.email }}";
+    {% endif %}
+    $.get({
+      url: boxofficeUrl+"/api/1/outreach.js",
+      crossDomain: true
+    }).done(function(data) {
+      var boxofficeScript = document.createElement('script');
+      boxofficeScript.innerHTML = data.script;
+      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);
+      window.Boxoffice.init({
+        org: 'hasgeek',
+        itemCollection: '79664759-8ab6-11e6-afd9-fffcd3583125',
+        paymentDesc: 'droidconIN sponsorship 2016'
+      });
+
+    }).fail(function(response) {
+      var error_msg;
+      if (response.readyState === 4) {
+        error_msg = "Server error, please try again later";
+      }
+      else if (response.readyState === 0) {
+        if(!navigator.onLine) {
+          error_msg = "Unable to connect. There is no network!";
+        }
+        else {
+          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com</p>";
+        }
+      }
+      $('#boxoffice-widget p').html(error_msg);
+    });
+  });
+</script>
+{% endblock %}
