@@ -1,16 +1,16 @@
 {% raw %}
 <script id="scheduletemplate" type="text/x-mustache-template">
-  <h3 class="text-center space-two legible">{{date}}</h3>
+  <h4 class="text-left space-two regular"><i class="fa fa-calendar"></i> {{date}}</h4>
   <table class="schedule-table" id="{{tableid}}">
     <thead>
       <tr>
-        <th class="time semi-bold text-center regular">Time</th>
+        <th class="time semi-bold text-center regular"><div>Time</div></th>
         {{#rooms}}
         {{#track}}
-          <th class="track{{track}} semi-bold text-center regular" data-td="track-{{track}}">{{title}}</th>
+          <th class="track{{track}} semi-bold text-center regular" data-td="track-{{track}}"><div>{{shorttitle}}</div></th>
         {{/track}}
         {{^track}}
-          <th class="track{{track}} semi-bold tab-active text-center regular" data-td="track-{{track}}">{{title}}</th>
+          <th class="track{{track}} semi-bold tab-active text-center regular" data-td="track-{{track}}"><div>{{shorttitle}}</div></th>
         {{/track}}
         {{/rooms}}
       </tr>
@@ -19,12 +19,17 @@
     {{#slots}}
       {{#issession}}
       <tr>
-        <td class="time" scope="row"><p class="regular bold">{{slot}}</p></td>
+        <td class="time" scope="row">
+          <div class="time-icon"></div>
+          <p class="time-text bold">{{slot}}</p>
+        </td>
         {{#sessions}}
         {{#is_break}}
         <td colspan="2" class="centered" rowspan={{rowspan}}>
-          <h4 class="space-1q secondary-prose">{{title}}</h4>
-          <p class="space-1q secondary"><em>{{start}} - {{end}}</em></p> 
+          <div class="schedule-talk">
+            <h4 class="space-1q title">{{title}}</h4>
+            <p class="space-1q duration">{{start}} - {{end}}</p>
+          </div>
         </td>       
         {{/is_break}}
         {{^is_break}}
@@ -34,26 +39,31 @@
         {{^track}}
           <td class="track-{{track}} tab-active" rowspan={{rowspan}}>
         {{/track}}
-            <h4 class="link-silent space-1q secondary-prose">
-              {{#proposal_url}}
-              <a href="{{proposal_url}}" target="_blank" class="orange">{{title}}</a>
-              {{/proposal_url}}
-              {{^proposal_url}}
-              {{title}}
-              {{/proposal_url}}
+            <div class="schedule-talk">
+              <h4 class="link-silent space-1q">
+                {{#description}}
+                <i class="fa fa-caret-right js-expand expand-icon"></i>
+                {{/description}}
+                {{#proposal_url}}
+                <a href="{{proposal_url}}" target="_blank" class="title">{{title}}</a>
+                {{/proposal_url}}
+                {{^proposal_url}}
+                <span class="title">{{title}}</span>
+                {{/proposal_url}}
+              </h4>
               {{#description}}
-              <i class="icon-chevron-sign-down tiny lightgray expand"></i>
+              <div class="space-1q pad-one description-text text-left">{{{description}}}</div>
               {{/description}}
-            </h4>
-            {{#description}}
-            <div class="space-1q tiny description-text text-left">{{{description}}}</div>
-            {{/description}}
-            {{#speaker}}
-            <p class="space-1q regular-prose bold">{{speaker}}</p>
-            {{/speaker}}
-            {{#title}}
-            <p class="space-1q secondary-prose"><em>{{start}} - {{end}}</em></p>
-            {{/title}}
+              {{#speaker}}
+              <p class="space-1q speaker">{{speaker}}</p>
+              {{/speaker}}
+              {{#title}}
+              <p class="space-1q duration">{{start}} - {{end}}</p>
+              {{/title}}
+              {{#roomTitle}}
+              <p class="space-1q venue"><i class="fa fa-map-marker"></i> {{roomTitle}}</p>
+              {{/roomTitle}}
+            </div>
           </td>
         {{/is_break}}
         {{/sessions}}
