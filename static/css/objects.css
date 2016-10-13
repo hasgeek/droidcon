@@ -958,16 +958,6 @@ li.event-node{
   padding-bottom: 30px;
 }
 
-.event-themes li{
-  list-style-type: none;
-  display: inline-block;
-  width: 18%;
-  text-align: center;
-}
-/*.event-themes p{
-  font-size: 1.3em;
-  line-height: 1.5em;
-}*/
 .theme{
   height: 150px;
   width: 150px;
@@ -1084,76 +1074,16 @@ li.event-node{
   top: 50px;
   z-index: 1030;
 }
-#highlights ul, #sessions ul, .schedule ul, .featured-speakers ul, .sponsors ul, #tickets ul, .code-of-conduct ul, .event-summary ul, .sessions h3, .event-themes ul, .sessions h5, .venue ul{
+#highlights ul, #sessions ul, .schedule ul, .featured-speakers ul, .code-of-conduct ul, .event-summary ul, .sessions h3, .event-themes ul, .sessions h5, .venue ul{
   margin-left: 0 !important;
   padding-left: 0 !important;
   margin-right: 0 !important;
   padding-right: 0 !important;
 }
-.schedule ul{
-  margin-right: 0 !important;
-  padding-right: 15px !important;
-}
 .sponsors p{
   margin-left: -15px;
 }
-/*.schedule{
-  overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
-}*/
-#tickets ul {
-  text-align: left;
-}
-#tickets li{
-  line-height: 25px;
-  border-radius: 5px;
-  padding-left: 10px;
-  list-style-position: inside;
-}
-@media (min-width: 1200px){
-  #tickets li.offer-block{
-    height: 222px;
-    overflow:hidden;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px){
-  #tickets li.offer-block{
-    height: 205px;
-    overflow:hidden;
-  }
-}
 
-#tickets .subsection{
-  /*margin-top: -10px;*/
-  padding: 5px 5px 10px 5px;
-}
-#tickets .icon-container{
-  padding: 12px 5px 7px 5px;
-  display: block;
-}
-.ticket-boxes {
-  max-width: 1300px;
-  margin: auto;
-}
-@media (min-width: 768px) and (max-width: 991px){
-  .ticket-boxes .description {
-    min-height: 190px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px){
-  .ticket-boxes .details {
-    min-height: 180px;
-  }
-  .ticket-boxes .description {
-    min-height: 265px;
-  }
-}
-@media (min-width: 1200px) {
-  .ticket-boxes .description {
-    min-height: 200px;
-  }
-}
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
   border: 1px solid #ccc;
 }
