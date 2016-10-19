@@ -56,14 +56,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fill-silver">
-  {% block networkbar %}
-    {{ networkbar(siteid='events', login=false) }}
-  {% endblock %}
-</div>
-
 
 <div id="page">
+
+{% block navtype %}
+{% endblock %}
 
 {% block banner %}
 <header class="banner-internal push-two-top resetcoords clearfix">
@@ -85,18 +82,10 @@
           Bangalore
         </h3>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-        <div class="flushright center-xs space-two-top space-one-bottom">
-<!--           <a class="button tiny" href="https://in.explara.com/e/droidconin-2015/checkout" target="_blank">Buy Tickets</a> -->
-        </div>
-      </div>
 
     </div>
   </div>
 </header>
-{% endblock %}
-
-{% block navtype %}
 {% endblock %}
 
 {% block content %}

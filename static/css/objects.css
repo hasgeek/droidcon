@@ -135,7 +135,7 @@ header { overflow: hidden; }
 }
 #circularheader img {
   width: 90%;
-  margin: 20% 0 0;
+  margin: 5% 0 0;
 }
 
 @media(min-width:1200px) {
@@ -388,10 +388,13 @@ header { overflow: hidden; }
 }
 
 .banner-internal .logo {
-    background: url('../img/logo.png') no-repeat scroll center center;
+    background: url('https://imgee.s3.amazonaws.com/imgee/8a751ebfd09c4001842c747bb9d73727_w500_h500.png') no-repeat scroll center center;
     background-size: contain;
-    width:       100%;
     padding-top: 3em;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
 }
 @media (max-width:480px) {
   .banner-internal .logo {
@@ -1633,19 +1636,22 @@ li.event-node{
   color: #fff;
   min-height: 100px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  text-align: left;
 }
 .schedule-table td.track-0 div {
   background-color: #AED581;
   color: #333;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  text-align: left;
 }
 .schedule-table td.track-1 div {
   background-color: #D7EAC1;
   color: #333;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  text-align: left;
 }
 .schedule-table tbody td h4 { 
   margin: 0 !important;
@@ -1695,7 +1701,7 @@ li.event-node{
  .schedule-table .centered .description-text {
   display: block;
   min-height: auto;
-  text-align: center;
+  text-align: left;
   padding: 0;
   margin: 0;
 }
