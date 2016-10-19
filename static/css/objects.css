@@ -1814,3 +1814,17 @@ li.event-node{
 #boxoffice-widget img {
   width: 100%;
 }
+
+.hacknight-alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #eba18e;
+  border-color: #eba18e;
+  color: #fff;
+}
+
+.hacknight-alert p {
+  padding: 0;
+}
+
