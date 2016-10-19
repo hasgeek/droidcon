@@ -56,14 +56,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fill-silver">
-  {% block networkbar %}
-    {{ networkbar(siteid='events', login=false) }}
-  {% endblock %}
-</div>
-
 
 <div id="page">
+
+{% block navtype %}
+{% endblock %}
 
 {% block banner %}
 <header class="banner-internal push-two-top resetcoords clearfix">
@@ -94,9 +91,6 @@
     </div>
   </div>
 </header>
-{% endblock %}
-
-{% block navtype %}
 {% endblock %}
 
 {% block content %}
