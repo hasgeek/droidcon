@@ -208,11 +208,6 @@ function parseJson(data, eventType, divContainer) {
         schedules[scheduleindex].end = getIST(getTimeString(slot.sessions[sessions.length-1].end));
       }
       sessions.forEach(function(session, sessionindex, sessions) {
-        //Type of schedule
-        if (session.section_name && session.section_name.toLowerCase().indexOf('workshop') !== -1) {
-          schedules[scheduleindex].type = 'workshop';
-        }
-
         //Tracks or No:of auditorium
         if (session.room && (rooms.indexOf(session.room) === -1)) {
             rooms.push(session.room);
@@ -222,9 +217,7 @@ function parseJson(data, eventType, divContainer) {
         schedules[scheduleindex].slots[slotindex].sessions[sessionindex].end = getIST(getTimeString(session.end));
       }); //eof sessions loop
 
-      if (schedules[scheduleindex].type !== 'workshop') {
-        schedules[scheduleindex].type = 'conference';
-      }
+      schedules[scheduleindex].type = 'conference';
     }); //eof schedule.slots loop
 
     //Sort rooms

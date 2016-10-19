@@ -1632,14 +1632,20 @@ li.event-node{
   padding: 15px 0;
   color: #fff;
   min-height: 100px;
+  position: relative;
+  z-index: 2;
 }
 .schedule-table td.track-0 div {
   background-color: #AED581;
   color: #333;
+  position: relative;
+  z-index: 1;
 }
 .schedule-table td.track-1 div {
   background-color: #D7EAC1;
   color: #333;
+  position: relative;
+  z-index: 1;
 }
 .schedule-table tbody td h4 { 
   margin: 0 !important;
@@ -1685,6 +1691,13 @@ li.event-node{
 .js .schedule-table .description-text,
 .js .schedule-table .description-text.show-text  { 
   display: none; 
+}
+ .schedule-table .centered .description-text {
+  display: block;
+  min-height: auto;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 .no-js .schedule-table .js-expand { 
   display: none; 
