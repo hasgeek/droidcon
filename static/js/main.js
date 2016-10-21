@@ -208,11 +208,6 @@ function parseJson(data, eventType, divContainer) {
         schedules[scheduleindex].end = getIST(getTimeString(slot.sessions[sessions.length-1].end));
       }
       sessions.forEach(function(session, sessionindex, sessions) {
-        //Type of schedule
-        if (session.section_name && session.section_name.toLowerCase().indexOf('workshop') !== -1) {
-          schedules[scheduleindex].type = 'workshop';
-        }
-
         //Tracks or No:of auditorium
         if (session.room && (rooms.indexOf(session.room) === -1)) {
             rooms.push(session.room);
@@ -222,9 +217,7 @@ function parseJson(data, eventType, divContainer) {
         schedules[scheduleindex].slots[slotindex].sessions[sessionindex].end = getIST(getTimeString(session.end));
       }); //eof sessions loop
 
-      if (schedules[scheduleindex].type !== 'workshop') {
-        schedules[scheduleindex].type = 'conference';
-      }
+      schedules[scheduleindex].type = 'conference';
     }); //eof schedule.slots loop
 
     //Sort rooms
@@ -379,33 +372,38 @@ $(document).ready(function() {
     }
   });
 
-  $('#subscribe').on('submit', function(event) {
-      event.preventDefault();
-      $('.subscribe-status').html('');
-      var postData ={};
-      if($('#subscribe-email').val() === "") {
-          $('.subscribe-status').html('Please enter an email id');
-      }
-      else {
-          postData = { "Email": $('#subscribe-email').val(), "Event" : "JSFoo 2016" };
-          $('.ajax-loader').css('visibility', 'visible');
-          $.ajax({
-              type: 'post',
-              url: 'https://script.google.com/macros/s/AKfycbwkkVFfdoQF7_aozgUPyfxDuuxOrN2melaehVBcsuP84Fa7Vks/exec',
-              data: postData,
-              dataType: 'json',
-              timeout: 5000,
-              complete: function(response, textStatus) {
-                  $('.ajax-loader').css('visibility', 'hidden');
-                  if(response.status === 200) {
-                      $("#subscribe")[0].reset();
-                      $('.subscribe-status').show().html('Thank you for subscribing!');
-                  }
-                  else {
-                      $('.subscribe-status').show().html('Error, try again.');
-                  }
-              }
-          });
-      }
+  var conf_photos_wall = new Freewall("#conf-photos");
+  conf_photos_wall.reset({
+    selector: '.brick',
+    animate: true,
+    cellW: 150,
+    cellH: 'auto',
+    delay: 200,
+    onResize: function() {
+      conf_photos_wall.fitWidth();
+    }
   });
+
+  var conf_photos_wallimages = conf_photos_wall.container.find('.brick');
+  conf_photos_wallimages.find('img').load(function() {
+    conf_photos_wall.fitWidth();
+  });
+
+  var sponsorship_photos_wall = new Freewall("#sponsorship-photos");
+  sponsorship_photos_wall.reset({
+    selector: '.brick',
+    animate: true,
+    cellW: 150,
+    cellH: 'auto',
+    delay: 200,
+    onResize: function() {
+      sponsorship_photos_wall.fitWidth();
+    }
+  });
+
+  var sponsorship_photos_wallimages = sponsorship_photos_wall.container.find('.brick');
+  sponsorship_photos_wallimages.find('img').load(function() {
+    sponsorship_photos_wall.fitWidth();
+  });
+
 });

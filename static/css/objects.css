@@ -388,10 +388,13 @@ header { overflow: hidden; }
 }
 
 .banner-internal .logo {
-    background: url('../img/logo.png') no-repeat scroll center center;
+    background: url('https://imgee.s3.amazonaws.com/imgee/8a751ebfd09c4001842c747bb9d73727_w500_h500.png') no-repeat scroll center center;
     background-size: contain;
-    width:       100%;
     padding-top: 3em;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
 }
 @media (max-width:480px) {
   .banner-internal .logo {
@@ -1571,14 +1574,23 @@ li.event-node{
   padding: 15px 0;
   color: #fff;
   min-height: 100px;
+  position: relative;
+  z-index: 1;
+  text-align: left;
 }
 .schedule-table td.track-0 div {
   background-color: #AED581;
   color: #333;
+  position: relative;
+  z-index: 2;
+  text-align: left;
 }
 .schedule-table td.track-1 div {
   background-color: #D7EAC1;
   color: #333;
+  position: relative;
+  z-index: 2;
+  text-align: left;
 }
 .schedule-table tbody td h4 { 
   margin: 0 !important;
@@ -1624,6 +1636,13 @@ li.event-node{
 .js .schedule-table .description-text,
 .js .schedule-table .description-text.show-text  { 
   display: none; 
+}
+ .schedule-table .centered .description-text {
+  display: block;
+  min-height: auto;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 .no-js .schedule-table .js-expand { 
   display: none; 
@@ -1733,4 +1752,44 @@ li.event-node{
 
 #boxoffice-widget img {
   width: 100%;
+}
+
+.hacknight-alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #eba18e;
+  border-color: #eba18e;
+  color: #fff;
+}
+
+.hacknight-alert p {
+  padding: 0;
+}
+
+.sponsorship-desc {
+  width: 90%;
+  margin: auto;
+}
+
+.gallery {
+  margin-top: 20px;
+}
+
+@media(min-width: 768px) {
+  .conf-gallery {
+    margin-top: 70px;
+  }
+}
+
+.brick img {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.section-separator {
+  border-width: 3px;
+  border-color: #ccc;
+  margin-top: 50px;
 }
