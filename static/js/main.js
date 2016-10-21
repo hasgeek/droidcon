@@ -401,4 +401,22 @@ $(document).ready(function() {
           });
       }
   });
+
+  var conf_photos_wall = new Freewall("#conf-photos");
+  conf_photos_wall.reset({
+    selector: '.brick',
+    animate: true,
+    cellW: 150,
+    cellH: 'auto',
+    delay: 200,
+    onResize: function() {
+      conf_photos_wall.fitWidth();
+    }
+  });
+
+  var conf_photos_wallimages = conf_photos_wall.container.find('.brick');
+  conf_photos_wallimages.find('img').load(function() {
+    conf_photos_wall.fitWidth();
+  });
+
 });
