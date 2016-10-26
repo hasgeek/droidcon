@@ -10,7 +10,7 @@
   {% for post in feed() -%}
     <div class="post fill-white push-two">
       <div class="container">
-        <h2 class="post-title extrabold"><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h2>
+        <h2 class="post-title extrabold">{{ post.title }}</h2>
         <p>by <strong>{{ post.author or post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
         <div class="space-one-top">{{ post.content }}</div>
       </div>
