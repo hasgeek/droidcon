@@ -1845,7 +1845,23 @@ li.event-node{
   border-bottom: 3px solid #ccc;
 }
 
+.post-no-border {
+  border-bottom: none;
+}
+
+.post-title {
+  font-size: 32px;
+}
+
 .post img {
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media(max-width: 600px) {
+  .post iframe {
+    width: 100% !important;
+    height: 315px !important;
+  }
 }
 
