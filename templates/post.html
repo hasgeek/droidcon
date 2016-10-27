@@ -1,0 +1,21 @@
+{% extends theme('layouts/page.html') %}
+
+{% block title %}{{ node.title }}{% endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+{% block headline %}{% endblock %}
+{% block content %}
+  <div class="description fill-white">
+    <div class="container">
+      <div class="row-fluid">
+        <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 legible"><a href="/2016/blog"><i class="icon-caret-left"></i> Blog</a></h3></div>
+      <div class="row-fluid">
+        <h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 post-title extrabold">{{ node.title }}</h2>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 post post-no-border">
+          <p>by <strong>{{ node.author or node.user.fullname }}</strong> &middot; {{ node.published_at|longdate }}</p>
+          {{ node.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
