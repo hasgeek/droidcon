@@ -426,4 +426,8 @@ $(document).ready(function() {
     conf_photos_wall.fitWidth();
   });
 
+  $(window).load(function() {
+    conf_photos_wall.fitWidth();
+  });
+
 });

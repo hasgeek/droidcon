@@ -1814,7 +1814,7 @@ li.event-node{
   width: 250px;
 }
 
-#boxoffice-widget img {
+#boxoffice-widget .popover img {
   width: 100%;
 }
 
