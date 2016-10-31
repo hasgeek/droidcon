@@ -23,7 +23,7 @@
       <h3 class="large nospace-top medium push-one-top darkblue bold text-left"><a href="{{ item.funnel|safe }}" target="_blank">{{ item.title|safe }}</a></h3>
       {% if item.banner %}<div class="regular nospace-top push-one-top"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
       {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible semibold nospace-top space-half-bottom">Objective</h2>{{ item.objective|safe }}</div>{% endif %}
-      {% if item.blurb %}<div class="regular space-one-top link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
+      {% if item.blurb %}<div class="regular space-one-top">{{ item.blurb|safe }}</div>{% endif %}
       {% if item.requirements %}<div class="regular space-one-top"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
       {% if item.previewphotos %}<div class="regular space-one-top link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
       {% if item.links %}
