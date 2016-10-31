@@ -21,29 +21,26 @@
     </div>
     <div class="col-sm-8 col-xs-12">
       <h3 class="large nospace-top medium push-one-top darkblue bold text-left"><a href="{{ item.funnel|safe }}" target="_blank">{{ item.title|safe }}</a></h3>
-      {% if item.banner %}<div class="regular nospace-top push-one-top pad-half"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
+      {% if item.banner %}<div class="regular nospace-top push-one-top"><img src="{{ item.banner[0]|safe }}" alt="{{ item.banner[0]|safe }}"/><p class="tiny space-1q-top">{{ item.banner[1]|safe }}</p></div>{% endif %}
       {% if item.objective %}<div class="regular nospace-top push-one-top pad-half"><h2 class="legible semibold nospace-top space-half-bottom">Objective</h2>{{ item.objective|safe }}</div>{% endif %}
-      {% if item.blurb %}<div class="regular space-one pad-half link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
-      {% if item.requirements %}<div class="regular space-one pad-half"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
-      {% if item.previewphotos %}<div class="regular space-one-top pad-half link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
-      {% if item.links %}<div class="regular space-one-top pad-half session-links"><p class="legible semibold">Links</p><ul>{% for link in item.links %}<li><a href="{{ link.link }}" target="_blank">{{ link.name }}</a></li>{% endfor %}</ul></div>{% endif %}
-      <div class="fb-share-button pad-half" data-href="https://droidcon.in/2016" data-layout="button"></div>
+      {% if item.blurb %}<div class="regular space-one-top link-silent"><h2 class="legible semibold space-half">Description</h2>{{ item.blurb|safe }}</div>{% endif %}
+      {% if item.requirements %}<div class="regular space-one-top"><h2 class="legible semibold space-half">Requirements</h2>{{ item.requirements|safe }}</div>{% endif %}
+      {% if item.previewphotos %}<div class="regular space-one-top link-silent">{% for link in item.previewphotos %}<img src="{{ link }}" class="preview-photos"/>{% endfor %}</div>{% endif %}
+      {% if item.links %}
+        <div class="regular space-one-top session-links"><p class="legible semibold">Links</p><ul>{% for link in item.links %}<li><a href="{{ link.link }}" target="_blank">{{ link.name }}</a></li>{% endfor %}</ul></div>
+      {% endif %}
+      <ul class="list-plain secondary space-half">
+        {% if item.date %}<li class="space-1q legible semibold">{{ item.date|safe }}</li>{% endif %}
+        {% if item.time %}<li class="space-1q">{{ item.time|safe }}</li>{% endif %}
+        {% if item.venue %}<li class="space-1q"><i class="icon-map-marker"></i>&nbsp; {{ item.venue|safe }}</li>{% endif %}
+        <li class="space-1q"><a class="orange" target="_blank" href="{{ item.funnel|safe }}">Read more ...</a></li>
+        {% if item.price %}<li class="large space-1q bold">{{ item.price|safe }}</li>{% endif %}
+      </ul>
+      <div class="fb-share-button pad-half-right" data-href="https://droidcon.in/2016" data-layout="button"></div>
       <span class="tweet-button">
       <a href="https://twitter.com/intent/tweet?text={{item.title}}&url=https://droidcon.in/2016&hashtags=droidconIN,HasGeek" 
       class="twitter-hashtag-button" data-url="https://droidcon.in/2016">Tweet</a>
       </span>
-      <ul class="list-plain secondary space-one-top pad-half">
-        {% if item.date %}<li class="space-1q legible semibold">{{ item.date|safe }}</li>{% endif %}
-        {% if item.time %}<li class="space-1q">{{ item.time|safe }}</li>{% endif %}
-        {% if item.venue %}<li class="space-1q"><i class="icon-map-marker"></i>&nbsp; {{ item.venue|safe }}</li>{% endif %}
-        <li class="space-1q"><a class="orange" target="_blank" href="https://droidconin.talkfunnel.com/2015/{{ item.id }}">Read more ...</a></li>
-        {% if item.price %}<li class="large space-1q bold">{{ item.price|safe }}</li>{% endif %}
-      </ul>
-      {% if item.open %}
-      <div class="space-one-top pad-half">
-        <a class="button secondary" href="https://in.explara.com/e/droidconin-2015/checkout" target="_blank">Buy Tickets</a>
-      </div>
-      {% endif %}
     </div>
   </div>
   {% endfor %}
