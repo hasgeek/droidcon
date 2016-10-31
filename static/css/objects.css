@@ -1593,7 +1593,7 @@ li.event-node{
 .schedule-table tbody td.time-hide .time-text { 
   visibility: hidden; 
 }
-.schedule-table tbody td.centered { 
+.schedule-table tbody td.break {
   background-color: transparent; 
   display: table-cell; 
   padding: 0;
@@ -1617,13 +1617,8 @@ li.event-node{
   border-style: solid;
   border-width: 5px 5px 5px 20px;
 }
-.schedule-table td.track-2  { 
-  width: 44%; 
-  background-color: transparent; 
-  padding: 0;
-  border-color: transparent;   
-  border-style: solid;
-  border-width: 5px 5px 5px 20px;
+.schedule-table td.track-1.break {
+  border-width: 5px;
 }
 .schedule-table tbody td .schedule-talk{
   padding: 0;
@@ -1633,7 +1628,7 @@ li.event-node{
   min-height: 100%;
   height: 100% !important;
 }
-.schedule-table tbody td.centered div {
+.schedule-table tbody td.break div {
   background-color: #466d2c;
   padding: 15px 0;
   color: #fff;
@@ -1701,7 +1696,7 @@ li.event-node{
 .js .schedule-table .description-text.show-text  { 
   display: none; 
 }
- .schedule-table .centered .description-text {
+ .schedule-table .break .description-text {
   display: block;
   min-height: auto;
   text-align: left;
@@ -1753,12 +1748,6 @@ li.event-node{
   }
   .schedule-table td.track-1  { 
     width: 25%; 
-    background-color: transparent; 
-    display: table-cell;
-    border-width: 5px;
-  }
-  .schedule-table td.track-2  { 
-    width: 23%; 
     background-color: transparent; 
     display: table-cell;
     border-width: 5px;
