@@ -4,9 +4,9 @@
       'title'               : ''
     , 'description'         : ''
     , 'sections'            : [
+      ('sponsorship-sales', 'white'),
       ('event-highlights', 'white'),
       ('sponsorship-intro', 'white'),
-      ('sponsorship-sales', 'white'),
       ('venue-summary',          'white'),
       ('sponsors-list', '')
     ]
@@ -18,76 +18,77 @@
 
 {% block banner %}
 <header id="circularheader">
-  <div class="logo-bck">
-    <img src="https://imgee.s3.amazonaws.com/imgee/8a751ebfd09c4001842c747bb9d73727_w500_h500.png" alt="droidconIN">
-  </div>
-  <div class="container text-center">
-    <h3 class="large space-half-top space-1q-bottom">10 - 11 November 2016</h3>
-    <h3 class="secondary space-1q">MLR Convention Centre, JP Nagar, Bangalore</h3>
-    <h3 class="secondary space-1q-top space-half-bottom">Build awareness for your brand among some of India’s best mobile developers.</h3>
-    <p class="secondary space-1q-top space-half-bottom sponsorship-desc">Advertising at droidconIN is value for money because of the profile of the audience, quality of conversations with participants, and the opportunity to get feedback (and adoption) for your product / API / SDK.</p>
-    <p><a class="button tiny ticket-button" href="sponsorship">Learn more</a></p>
+  <div class="container">
+    <div class="logo-wrapper">
+      <div class="logo-bck">
+        <a href="/2016" class="link-silent"><img src="https://imgee.s3.amazonaws.com/imgee/8a751ebfd09c4001842c747bb9d73727_w500_h500.png" alt="droidconIN"></a>
+      </div>
+      <div class="header-event-details">
+        <h3 class="large space-half-top space-1q-bottom">10 - 11 November 2016</h3>
+        <h3 class="secondary space-1q">MLR Convention Centre, JP Nagar, Bangalore</h3>
+        <p><a class="tiny smooth-scroll smooth-scroll" href="#droidconIN">About droidconIN</a> <a class="tiny smooth-scroll smooth-scroll gap-half-left" href="#sponsors">Current sponsors</a></p>
+      </div>
+    </div>
+    <div class="sponsorship-description">
+      <h1 class="large space-1q-top space-half-bottom extrabold">Reach out to India's best mobile developers</h1>
+      <p class="legible-prose">Sponsor droidconIN to:</p>
+      <ul class="legible-prose">
+        <li>Build awareness for your brand.</li>
+        <li>Get traction / adoption for your APIs and SDKs.</li>
+        <li>Recruit Android and cross-platform developers.</li>
+      </ul>
+      <p class="legible-prose">Choose from the following options to make your brand visible, and/or to have conversations with developers at droidconIN.</p>
+      <p class="space-one-top"><a class="button button-dark tiny smooth-scroll" href="#sponsorship">Get Started</a></p>
+    </div>
   </div>
 </header>
 {% endblock %}
 
 {% block footerscripts %}
 <style type="text/css">
-  #boxoffice-widget .boxoffice-button-action {
+  #outreach-widget .outreach-button-action {
     background-color: #FAA51A;
     border-color:  #d98f15;
     color: #fff;
   }
-  #boxoffice-widget .boxoffice-button-info {
+  #outreach-widget .outreach-button-info {
     background-color: #5BC0DE;
     border-color: #2A9CBE;
     color: #fff;
   }
-  #boxoffice-widget .payment-stages-bg {
+  #outreach-widget .progress-wrapper {
     background-color: #586152;
   }
-  #boxoffice-widget .progress-indicator>li {
+  #outreach-widget .progress-indicator>li {
     color: #FFF;
   }
-  #boxoffice-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
+  #outreach-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
     color: #aed581;
   }
-  #boxoffice-widget .category-heading {
-    background-color: #71BF44;
+  #outreach-widget .category-heading {
+/*    background-color: #71BF44;
     border-bottom: 3px solid #586152;
     color: rgba(0,0,0,0.6);
     line-height: 1.1;
-    font-weight: bold;
-  }
-  #boxoffice-widget .category-heading:after {
-    border-color: #71BF44 #fff #71BF44 #71BF44;
+    font-weight: bold;*/
   }
 </style>
         
-<!-- <script>
+<script>
   $(function(){
-    //Boxoffice widget
-    var boxofficeUrl = "http://outreach.vidya.dev:4000"
-    {% if g.user %}
-      {% if g.user.fullname %}
-        username = "{{ g.user.fullname }}";
-      {% endif %}
-      {% if g.user.phone %}
-        userphone = "{{ g.user.phone }}";
-      {% endif %}
-      useremail = "{{ g.user.email }}";
-    {% endif %}
+    //outreach widget
+    var outreachUrl = "http://outreach.vidya.dev:4000"
     $.get({
-      url: boxofficeUrl+"/api/1/outreach.js",
+      url: outreachUrl+"/api/1/outreach.js",
       crossDomain: true
     }).done(function(data) {
-      var boxofficeScript = document.createElement('script');
-      boxofficeScript.innerHTML = data.script;
-      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);
-      window.Boxoffice.init({
-        org: 'hasgeek',
-        itemCollection: '9c32e9d7-9064-11e6-a7b6-452895a8cf89',
-        paymentDesc: 'droidconIN sponsorship 2016'
+      var outreachScript = document.createElement('script');
+      outreachScript.innerHTML = data.script;
+      document.getElementsByTagName('body')[0].appendChild(outreachScript);
+      window.outreach_widget.init({
+        orgName: 'hasgeek',
+        itemCollection: '2b594fdc-9b6c-11e6-8e14-df193332bda2',
+        eventName: 'droidconIN sponsorship 2016'
       });
 
     }).fail(function(response) {
@@ -100,11 +101,11 @@
           error_msg = "Unable to connect. There is no network!";
         }
         else {
-          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com</p>";
+          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load outreach.hasgeek.com</p>";
         }
       }
-      $('#boxoffice-widget p').html(error_msg);
+      $('#outreach-widget p').html(error_msg);
     });
   });
-</script> -->
+</script>
 {% endblock %}

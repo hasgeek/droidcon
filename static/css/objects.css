@@ -58,6 +58,9 @@
     border: 0;
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
+.button-dark {
+  background: #005580;
+}
 .button-mini    { padding: 0.2em 0.6em; }
 .button-on-dark {     
     display: inline-block;
@@ -137,15 +140,31 @@ header { overflow: hidden; }
   width: 90%;
   margin: 5% 0 0;
 }
+.header-event-details {
+  text-align: center;
+}
+.sponsorship-description {
+  padding: 15px;
+}
 
 @media(min-width:1200px) {
   #circularheader {
     height: 100%;
     min-height: 650px;
   }
-  #circularheader div.logo-bck{
-    width: 6em;
-    height: 6em;
+  #circularheader div.logo-bck {
+    width: 335px;
+    height: 335px;
+  }
+  .logo-wrapper {
+    float: left;
+    margin: 50px 100px 0 0;
+  }
+  .sponsorship-description {
+    float: left;
+    margin: 60px 0 0 0;
+    width: 580px;
+    padding: 0;
   }
 }
 .masthead-home {
@@ -1768,8 +1787,8 @@ li.event-node{
 }
 
 .sponsorship-desc {
-  width: 90%;
   margin: auto;
+  width: 60%;
 }
 
 .gallery {

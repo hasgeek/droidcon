@@ -288,10 +288,12 @@ function parseJson(data, eventType, divContainer) {
 }
 
 $(document).ready(function() {
+    $(document).resize();
+
     var windowWidth = $(window).width();
 
     $(window).resize(function() {
-        windowWidth = $(window).width();
+      windowWidth = $(window).width();
     });
 
     $(window).scroll(function() {
@@ -372,6 +374,14 @@ $(document).ready(function() {
     }
   });
 
+  $('#boxoffice-widget').popover({
+    selector: '.t-shirt-image',
+    placement : 'right',
+    trigger : 'hover',
+    html : true
+  });
+
+
   var conf_photos_wall = new Freewall("#conf-photos");
   conf_photos_wall.reset({
     selector: '.brick',
@@ -403,6 +413,11 @@ $(document).ready(function() {
 
   var sponsorship_photos_wallimages = sponsorship_photos_wall.container.find('.brick');
   sponsorship_photos_wallimages.find('img').load(function() {
+    sponsorship_photos_wall.fitWidth();
+  });
+
+  $(window).load(function() {
+    conf_photos_wall.fitWidth();
     sponsorship_photos_wall.fitWidth();
   });
 
