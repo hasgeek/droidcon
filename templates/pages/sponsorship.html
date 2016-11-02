@@ -1,0 +1,89 @@
+{% extends theme('layouts/page.html') %}
+{%
+  set page = {
+      'title'               : ''
+    , 'description'         : ''
+    , 'sections'            : [
+      ('event-highlights', 'white'),
+    ]
+  }
+%}
+
+{% block navtype %}
+{% endblock %}
+
+{% block banner %}
+<header id="circularheader" class="sponsorship">
+  <div class="container">
+    <div class="col-lg-6 col-xs-12">
+      <div class="logo-bck">
+        <a href="/2016" class="link-silent"><img src="https://imgee.s3.amazonaws.com/imgee/8a751ebfd09c4001842c747bb9d73727_w500_h500.png" alt="droidconIN"></a>
+      </div>
+      <div class="header-event-details">
+        <h3 class="large space-half-top space-1q-bottom">10&#8211;11 November 2016</h3>
+        <h3 class="secondary space-1q">MLR Convention Centre, JP Nagar, Bangalore</h3>
+      </div>
+    </div>
+    <div class="col-lg-6 col-xs-12">
+      <h1 class="large space-1q-top space-half-bottom extrabold">Reach out to India's best mobile developers</h1>
+      <p class="legible-prose">Sponsor droidconIN to:</p>
+      <ul class="legible-prose">
+        <li>Build awareness for your brand.</li>
+        <li>Get traction / adoption for your APIs and SDKs.</li>
+        <li>Recruit Android and cross-platform developers.</li>
+      </ul>
+      <p class="space-one-top"><a class="button button-dark regular smooth-scroll" href="#droidconIN-sponsorship">Get Started</a></p>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block footerscripts %}
+<style type="text/css">
+  #outreach-widget .outreach-button-action {
+    background-color: #FAA51A;
+    border-color:  #d98f15;
+    color: #fff;
+  }
+  #outreach-widget .outreach-button-info {
+    background-color: #5BC0DE;
+    border-color: #2A9CBE;
+    color: #fff;
+  }
+</style>
+        
+<script>
+  $(function(){
+    //outreach widget
+    var outreachUrl = "http://outreach.hasgeek.com"
+    $.get({
+      url: outreachUrl+"/api/1/outreach.js",
+      crossDomain: true
+    }).done(function(data) {
+      var outreachScript = document.createElement('script');
+      outreachScript.innerHTML = data.script;
+      document.getElementsByTagName('body')[0].appendChild(outreachScript);
+      window.outreach_widget.init({
+        orgName: 'hasgeek',
+        itemCollection: '9db179fa-a11a-11e6-b2f7-a302c30662d8',
+        eventName: 'droidconIN sponsorship 2016'
+      });
+
+    }).fail(function(response) {
+      var error_msg;
+      if (response.readyState === 4) {
+        error_msg = "Server error, please try again later";
+      }
+      else if (response.readyState === 0) {
+        if(!navigator.onLine) {
+          error_msg = "Unable to connect. There is no network!";
+        }
+        else {
+          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load outreach.hasgeek.com</p>";
+        }
+      }
+      $('#outreach-widget p').html(error_msg);
+    });
+  });
+</script>
+{% endblock %}
