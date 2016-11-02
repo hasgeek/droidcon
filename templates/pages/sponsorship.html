@@ -4,11 +4,7 @@
       'title'               : ''
     , 'description'         : ''
     , 'sections'            : [
-      ('sponsorship-sales', 'white'),
       ('event-highlights', 'white'),
-      ('sponsorship-intro', 'white'),
-      ('venue-summary',          'white'),
-      ('sponsors-list', '')
     ]
   }
 %}
@@ -17,19 +13,18 @@
 {% endblock %}
 
 {% block banner %}
-<header id="circularheader">
+<header id="circularheader" class="sponsorship">
   <div class="container">
-    <div class="logo-wrapper">
+    <div class="col-lg-6 col-xs-12">
       <div class="logo-bck">
         <a href="/2016" class="link-silent"><img src="https://imgee.s3.amazonaws.com/imgee/8a751ebfd09c4001842c747bb9d73727_w500_h500.png" alt="droidconIN"></a>
       </div>
       <div class="header-event-details">
-        <h3 class="large space-half-top space-1q-bottom">10 - 11 November 2016</h3>
+        <h3 class="large space-half-top space-1q-bottom">10&#8211;11 November 2016</h3>
         <h3 class="secondary space-1q">MLR Convention Centre, JP Nagar, Bangalore</h3>
-        <p><a class="tiny smooth-scroll smooth-scroll" href="#droidconIN">About droidconIN</a> <a class="tiny smooth-scroll smooth-scroll gap-half-left" href="#sponsors">Current sponsors</a></p>
       </div>
     </div>
-    <div class="sponsorship-description">
+    <div class="col-lg-6 col-xs-12">
       <h1 class="large space-1q-top space-half-bottom extrabold">Reach out to India's best mobile developers</h1>
       <p class="legible-prose">Sponsor droidconIN to:</p>
       <ul class="legible-prose">
@@ -37,8 +32,7 @@
         <li>Get traction / adoption for your APIs and SDKs.</li>
         <li>Recruit Android and cross-platform developers.</li>
       </ul>
-      <p class="legible-prose">Choose from the following options to make your brand visible, and/or to have conversations with developers at droidconIN.</p>
-      <p class="space-one-top"><a class="button button-dark tiny smooth-scroll" href="#sponsorship">Get Started</a></p>
+      <p class="space-one-top"><a class="button button-dark regular smooth-scroll" href="#droidconIN-sponsorship">Get Started</a></p>
     </div>
   </div>
 </header>
@@ -56,22 +50,6 @@
     border-color: #2A9CBE;
     color: #fff;
   }
-  #outreach-widget .progress-wrapper {
-    background-color: #586152;
-  }
-  #outreach-widget .progress-indicator>li {
-    color: #FFF;
-  }
-  #outreach-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
-    color: #aed581;
-  }
-  #outreach-widget .category-heading {
-/*    background-color: #71BF44;
-    border-bottom: 3px solid #586152;
-    color: rgba(0,0,0,0.6);
-    line-height: 1.1;
-    font-weight: bold;*/
-  }
 </style>
         
 <script>
@@ -87,7 +65,7 @@
       document.getElementsByTagName('body')[0].appendChild(outreachScript);
       window.outreach_widget.init({
         orgName: 'hasgeek',
-        itemCollection: '2b594fdc-9b6c-11e6-8e14-df193332bda2',
+        itemCollection: '6c672778-a103-11e6-95d6-43e264f86b5b',
         eventName: 'droidconIN sponsorship 2016'
       });
 

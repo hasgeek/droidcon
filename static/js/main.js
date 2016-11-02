@@ -7,18 +7,18 @@ var getDateString = function(dateStr) {
   var d = new Date();
   d.setFullYear(year,month,day);
   return d.toDateString();
-}
+};
 
 //dateString is expected in the format "2014-07-24T11:30:00Z" returns time "11:30"
 var getTimeString = function(dateString) {
   return dateString.substr(dateString.indexOf('T')+1,5);
-}
+};
 
 var getHrMin = function(dateString) {
   var hr = dateString.substring(0, dateString.indexOf(":"));
   var min = dateString.substring(dateString.indexOf(":")+1);
   return [hr, min];
-}
+};
 
 var getdateObject = function(hr, min) {
   var time = new Date();
@@ -235,7 +235,7 @@ function parseJson(data, eventType, divContainer) {
       sessions.forEach(function(session, sessionindex) {
         if(session.room) {
           schedules[scheduleindex].slots[slotindex].sessions[sessionindex].track = getTrack(session.room, rooms);
-          schedules[scheduleindex].slots[slotindex].sessions[sessionindex].roomTitle = getAudiTitle(session.room)
+          schedules[scheduleindex].slots[slotindex].sessions[sessionindex].roomTitle = getAudiTitle(session.room);
         }
       });
     });
@@ -288,12 +288,10 @@ function parseJson(data, eventType, divContainer) {
 }
 
 $(document).ready(function() {
-    $(document).resize();
-
     var windowWidth = $(window).width();
 
     $(window).resize(function() {
-      windowWidth = $(window).width();
+        windowWidth = $(window).width();
     });
 
     $(window).scroll(function() {
@@ -322,10 +320,10 @@ $(document).ready(function() {
     });
 
      // For conference and workshop schedule
-  var funnelurl = 'https://droidconin.talkfunnel.com/2016/schedule/json';
+    var funnelurl = 'https://droidconin.talkfunnel.com/2016/schedule/json';
 
-  //If schedule divs are present on the page, then make the ajax call.
-  if(($('.schedule-table-container').length)) {
+    //If schedule divs are present on the page, then make the ajax call.
+    if(($('.schedule-table-container').length)) {
 
     if($('#conferenceschedule').length) {
       funnelurl = funnelurl;
@@ -341,84 +339,145 @@ $(document).ready(function() {
         parseJson(data, eventType, divContainer);
       }
     });//eof ajax call
-  }
-
-  $(window).resize(function() {
-    if($(window).width() < 768) {
-      renderResponsiveTable();
     }
-    else{
-      disableResponsiveTable();
+
+    $(window).resize(function() {
+        if($(window).width() < 768) {
+            renderResponsiveTable();
+        }
+        else{
+            disableResponsiveTable();
+        }
+    });
+
+    $('#conferenceschedule').on('click', 'table td .js-expand', function() {
+        if($(this).hasClass('fa-caret-right')) {
+            $(this).removeClass('fa-caret-right').addClass('fa-caret-down');
+            $(this).parents('td').find('.description-text').slideDown();
+        }
+        else {
+            $(this).removeClass('fa-caret-down').addClass('fa-caret-right');
+            $(this).parents('td').find('.description-text').slideUp();
+        }
+    });
+
+    $('#conferenceschedule').on('click', 'table th.track0, table th.track1, table th.track2', function() {
+        if($(window).width() < 768){
+            var parentTable = $(this).parents('table');
+            var activeColumn = $(this).attr('data-td');
+            parentTable.find('.tab-active').removeClass('tab-active');
+            $(this).addClass('tab-active');
+            parentTable.find('.' + activeColumn).addClass('tab-active');
+            renderResponsiveTable();
+        }
+    });
+
+    $('#boxoffice-widget').popover({
+        selector: '.t-shirt-image',
+        placement : 'right',
+        trigger : 'hover',
+        html : true
+    });
+
+    if($('#conf-photos').length) {
+        var conf_photos_wall = new Freewall("#conf-photos");
+            conf_photos_wall.reset({
+            selector: '.brick',
+            animate: true,
+            cellW: 150,
+            cellH: 'auto',
+            delay: 200,
+            onResize: function() {
+                conf_photos_wall.fitWidth();
+            }
+        });
+
+        var conf_photos_wallimages = conf_photos_wall.container.find('.brick');
+        conf_photos_wallimages.find('img').load(function() {
+            conf_photos_wall.fitWidth();
+        });
+
+        $(window).load(function() {
+            conf_photos_wall.fitWidth();
+        });
     }
-  });
 
-  $('#conferenceschedule').on('click', 'table td .js-expand', function() {
-    if($(this).hasClass('fa-caret-right')) {
-      $(this).removeClass('fa-caret-right').addClass('fa-caret-down');
-      $(this).parents('td').find('.description-text').slideDown();
+    if($('#section1-photos').length) {
+        var section1_photos_wall = new Freewall("#section1-photos");
+        section1_photos_wall.reset({
+            selector: '.brick',
+            animate: true,
+            cellW: 150,
+            cellH: 'auto',
+            delay: 200,
+            onResize: function() {
+                section1_photos_wall.fitWidth();
+            }
+        });
+
+        var section1_photos_wall_images = section1_photos_wall.container.find('.brick');
+        section1_photos_wall_images.find('img').load(function() {
+            section1_photos_wall.fitWidth();
+        });
+
+        var section2_photos_wall = new Freewall("#section2-photos");
+        section2_photos_wall.reset({
+            selector: '.brick',
+            animate: true,
+            cellW: 150,
+            cellH: 'auto',
+            delay: 200,
+            onResize: function() {
+                section2_photos_wall.fitWidth();
+            }
+        });
+
+        var section2_photos_wall_images = section2_photos_wall.container.find('.brick');
+        section2_photos_wall_images.find('img').load(function() {
+            section1_photos_wall.fitWidth();
+        });
+
+        var section3_photos_wall = new Freewall("#section3-photos");
+        section3_photos_wall.reset({
+            selector: '.brick',
+            animate: true,
+            cellW: 150,
+            cellH: 'auto',
+            delay: 200,
+            onResize: function() {
+                section3_photos_wall.fitWidth();
+            }
+        });
+
+        var section3_photos_wall_images = section3_photos_wall.container.find('.brick');
+        section3_photos_wall_images.find('img').load(function() {
+            section3_photos_wall.fitWidth();
+        });
+
+        var section4_photos_wall = new Freewall("#section4-photos");
+        section4_photos_wall.reset({
+            selector: '.brick',
+            animate: true,
+            cellW: 150,
+            cellH: 'auto',
+            delay: 200,
+            onResize: function() {
+                section4_photos_wall.fitWidth();
+            }
+        });
+
+        var section4_photos_wall_images = section4_photos_wall.container.find('.brick');
+        section4_photos_wall_images.find('img').load(function() {
+            section4_photos_wall.fitWidth();
+        });
+
+
+        $(window).load(function() {
+            section1_photos_wall.fitWidth();
+            section2_photos_wall.fitWidth();
+            section3_photos_wall.fitWidth();
+            section4_photos_wall.fitWidth();
+        });
     }
-    else {
-      $(this).removeClass('fa-caret-down').addClass('fa-caret-right');
-      $(this).parents('td').find('.description-text').slideUp();
-    }
-  });
-
-  $('#conferenceschedule').on('click', 'table th.track0, table th.track1, table th.track2', function() {
-    if($(window).width() < 768){
-      var parentTable = $(this).parents('table');
-      var activeColumn = $(this).attr('data-td');
-      parentTable.find('.tab-active').removeClass('tab-active');
-      $(this).addClass('tab-active');
-      parentTable.find('.' + activeColumn).addClass('tab-active');
-      renderResponsiveTable();
-    }
-  });
-
-  $('#boxoffice-widget').popover({
-    selector: '.t-shirt-image',
-    placement : 'right',
-    trigger : 'hover',
-    html : true
-  });
-
-
-  var conf_photos_wall = new Freewall("#conf-photos");
-  conf_photos_wall.reset({
-    selector: '.brick',
-    animate: true,
-    cellW: 150,
-    cellH: 'auto',
-    delay: 200,
-    onResize: function() {
-      conf_photos_wall.fitWidth();
-    }
-  });
-
-  var conf_photos_wallimages = conf_photos_wall.container.find('.brick');
-  conf_photos_wallimages.find('img').load(function() {
-    conf_photos_wall.fitWidth();
-  });
-
-  var sponsorship_photos_wall = new Freewall("#sponsorship-photos");
-  sponsorship_photos_wall.reset({
-    selector: '.brick',
-    animate: true,
-    cellW: 150,
-    cellH: 'auto',
-    delay: 200,
-    onResize: function() {
-      sponsorship_photos_wall.fitWidth();
-    }
-  });
-
-  var sponsorship_photos_wallimages = sponsorship_photos_wall.container.find('.brick');
-  sponsorship_photos_wallimages.find('img').load(function() {
-    sponsorship_photos_wall.fitWidth();
-  });
-
-  $(window).load(function() {
-    conf_photos_wall.fitWidth();
-    sponsorship_photos_wall.fitWidth();
-  });
 
 });

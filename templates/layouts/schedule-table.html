@@ -25,23 +25,36 @@
         </td>
         {{#sessions}}
         {{#is_break}}
-        <td colspan="2" class="centered" rowspan={{rowspan}}>
-          <div class="schedule-talk">
-            <h4 class="space-1q title">{{title}}</h4>
-            <p class="space-1q duration">{{start}} - {{end}}</p>
-            {{#description}}
-              <div class="space-1q description-text">{{{description}}}</div>
-            {{/description}}
-          </div>
-        </td>       
+          {{#roomTitle}}
+          <td class="track-{{track}} break" rowspan={{rowspan}}>
+            <div class="schedule-talk">
+              <h4 class="space-1q title">{{title}}</h4>
+              <p class="space-1q duration">{{start}} - {{end}}</p>
+              {{#description}}
+                <div class="space-1q description-text">{{{description}}}</div>
+              {{/description}}
+            </div>
+          </td>
+          {{/roomTitle}}
+          {{^roomTitle}}
+          <td colspan="2" class="break" rowspan={{rowspan}}>
+            <div class="schedule-talk">
+              <h4 class="space-1q title">{{title}}</h4>
+              <p class="space-1q duration">{{start}} - {{end}}</p>
+              {{#description}}
+                <div class="space-1q description-text">{{{description}}}</div>
+              {{/description}}
+            </div>
+          </td>
+          {{/roomTitle}}
         {{/is_break}}
         {{^is_break}}
-        {{#track}}
-          <td class="track-{{track}}" rowspan={{rowspan}}>
-        {{/track}}
-        {{^track}}
-          <td class="track-{{track}} tab-active" rowspan={{rowspan}}>
-        {{/track}}
+          {{#track}}
+            <td class="track-{{track}}" rowspan={{rowspan}}>
+          {{/track}}
+          {{^track}}
+            <td class="track-{{track}} tab-active" rowspan={{rowspan}}>
+          {{/track}}
             <div class="schedule-talk">
               <h4 class="link-silent space-1q">
                 {{#description}}

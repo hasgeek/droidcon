@@ -20,8 +20,8 @@ html                    { font-size: 16px;     line-height: 1.5; }
 .large                  { font-size: 1.500rem; line-height: 1.15; }
 .large-prose            { font-size: 1.250rem; line-height: 1.40; }
 .legible                { font-size: 1.125rem; line-height: 1.40; }
-.legible-prose          { font-size: 0.900rem; line-height: 1.65; }
-.regular                { font-size: 0.850rem; line-height: 1.50; }
+.legible-prose          { font-size: 1.000rem; line-height: 1.7; }
+.regular                { font-size: 0.900rem; line-height: 1.50; }
 .regular-prose          { font-size: 1.125rem; line-height: 1.45; }
 .secondary              { font-size: 0.875rem; line-height: 1.90; }
 .secondary-prose        { font-size: 0.950rem; line-height: 1.40; }

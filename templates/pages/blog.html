@@ -1,11 +1,25 @@
 {% extends theme('layouts/page.html') %}
-{%
-  set page = {
-      'title'       : 'Blog'
-    , 'description' : 'Blog for Droidcon India 2014'
-    , 'sections'    : [
-        ('blog', '')
-      , ('sponsors-summary', 'yellowgreen')
-    ]
-  }
-%}
+
+{% block title %}{{ node.title }}{% endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+{% block headline %}{% endblock %}
+{% block content %}
+  <div class="description fill-white container">
+    {{ node.content }}
+  </div>
+  {% for post in feed() -%}
+    <div class="post fill-white push-two">
+      <div class="container">
+        <h2 class="post-title extrabold">{{ post.title }}</h2>
+        <p>by <strong>{{ post.author or post.user.fullname }}</strong> &middot; {{ post.published_at|longdate }}</p>
+        <div class="space-one-top">{{ post.content }}</div>
+      </div>
+    </div>
+  {%- else -%}
+  <div class="fill-white">
+    <div class="container">
+      <p>(No blog entries have been written so far)</p>
+    </div>
+  </div>
+  {%- endfor %}
+{% endblock %}
