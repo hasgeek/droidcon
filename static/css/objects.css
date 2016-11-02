@@ -751,16 +751,6 @@ li.event-node{
     margin: 50px 0;
   }
 
-  label {
-    width: 85%;
-    font-size: 1.1em;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: block;
-    transform: translateX(18px);
-  }
-
   .content {
     padding-top: 45px;
     border-color: white;
