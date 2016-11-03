@@ -319,6 +319,15 @@ $(document).ready(function() {
         $('html,body').animate({scrollTop:sectionPos}, '900');
     });
 
+    // Function that tracks a click button in Google Analytics.
+    $('.button').click(function(event) {
+        var button = $(this).html();
+        var section = $(this).attr('href');
+        if (typeof ga !== "undefined") {
+          ga('send', { hitType: 'event', eventCategory: 'click', eventAction: button, eventLabel: section});
+        }
+    });
+
      // For conference and workshop schedule
     var funnelurl = 'https://droidconin.talkfunnel.com/2016/schedule/json';
 

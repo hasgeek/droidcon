@@ -157,21 +157,6 @@ if (location.hostname == 'droidcon.in') {
 
   ga('create', 'UA-19123154-16', 'auto');
   ga('send', 'pageview');
-
-  /**
-  * Function that tracks a click on an outbound link in Google Analytics.
-  * This function takes a valid URL string as an argument, and uses that URL string
-  * as the event label.
-  */
-  var trackOutboundLink = function (url) {
-    ga('send', 'event', 'ticket-button', 'click', url);
-  }
-  
-  $(function () {
-    $('.ticket-button').on('click contextmenu', function () {
-      trackOutboundLink($(this).attr('href'));
-    });
-  });
 }
 </script>
 <script type="text/javascript">
