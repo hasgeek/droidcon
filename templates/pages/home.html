@@ -107,48 +107,10 @@
         
 <script>
   $(function(){
-    //Boxoffice widget
-    var boxofficeUrl = "https://boxoffice.hasgeek.com";
-    var username, userphone, useremail;
-    {% if g.user %}
-      {% if g.user.fullname %}
-        username = "{{ g.user.fullname }}";
-      {% endif %}
-      {% if g.user.phone %}
-        userphone = "{{ g.user.phone }}";
-      {% endif %}
-      useremail = "{{ g.user.email }}";
-    {% endif %}
-    $.get({
-      url: boxofficeUrl+"/api/1/boxoffice.js",
-      crossDomain: true
-    }).done(function(data) {
-      var boxofficeScript = document.createElement('script');
-      boxofficeScript.innerHTML = data.script;
-      document.getElementsByTagName('body')[0].appendChild(boxofficeScript);
-      window.Boxoffice.init({
-        org: 'hasgeek',
-        itemCollection: '25f48cf5-5afc-11e6-b09e-5580be063711',
-        user_name: username,
-        user_phone: userphone,
-        user_email: useremail,
-        paymentDesc: 'droidconIN 2016'
-      });
-
-    }).fail(function(response) {
-      var error_msg;
-      if (response.readyState === 4) {
-        error_msg = "Server error, please try again later";
-      }
-      else if (response.readyState === 0) {
-        if(!navigator.onLine) {
-          error_msg = "Unable to connect. There is no network!";
-        }
-        else {
-          error_msg = "<p>Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger).<p></p> Please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com</p>";
-        }
-      }
-      $('#boxoffice-widget p').html(error_msg);
+    window.Boxoffice.init({
+      org: 'hasgeek',
+      itemCollection: '25f48cf5-5afc-11e6-b09e-5580be063711',
+      paymentDesc: 'droidconIN 2016'
     });
   });
 </script>

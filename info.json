@@ -19,7 +19,8 @@
             "js/vendor/bootstrap.min.js",
             "js/vendor/freewall.min.js",
             "js/maps.js",
-            "js/main.js"
+            "js/main.js",
+            "js/boxoffice.js"
         ]
     }
 }

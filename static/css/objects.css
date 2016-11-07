@@ -138,6 +138,8 @@ header { overflow: hidden; }
 }
 #circularheader.sponsorship div.logo-bck{
   box-shadow: none;
+  float: left;
+  margin-bottom: 20px;
 }
 
 #circularheader img {
@@ -145,7 +147,8 @@ header { overflow: hidden; }
   margin: 5% 0 0;
 }
 .header-event-details {
-  text-align: center;
+  text-align: left;
+  clear: both;
 }
 .sponsorship-description {
   padding: 15px;
@@ -1808,8 +1811,9 @@ li.event-node{
 }
 
 @media(min-width: 768px){
+  .spons-descr,
   .sponsorship-sales {
-    padding-left: 12%;
+    padding-left: 70px;
   }
 }
 
