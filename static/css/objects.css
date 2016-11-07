@@ -121,8 +121,7 @@
 
 header { overflow: hidden; }
 #circularheader {
-  /*background-image: url('../img/bck-img.png');*/
-  padding: 3em 0;
+  padding: 25px 0;
 }
 #circularheader div.logo-bck{
   font-size: 4em;
@@ -1541,14 +1540,14 @@ li.event-node{
   visibility: hidden; 
 }
 .schedule-table tbody td.break {
-  background-color: transparent; 
-  display: table-cell; 
+  display: table-cell;
+  background-color: transparent;
   padding: 0;
   border-color: transparent;   
   border-style: solid;
   border-width: 5px 5px 5px 20px;
 }
-.schedule-table td.track-0  { 
+.schedule-table td.track-0 { 
   width: 44%; 
   background-color: transparent; 
   padding: 0;
@@ -1556,7 +1555,7 @@ li.event-node{
   border-style: solid;
   border-width: 5px 5px 5px 20px;
 }
-.schedule-table td.track-1  { 
+.schedule-table td.track-1 { 
   width: 44%; 
   background-color: transparent; 
   padding: 0;
@@ -1564,10 +1563,7 @@ li.event-node{
   border-style: solid;
   border-width: 5px 5px 5px 20px;
 }
-.schedule-table td.track-1.break {
-  border-width: 5px;
-}
-.schedule-table tbody td .schedule-talk{
+.schedule-table tbody td .schedule-talk {
   padding: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.4);
   border-radius: 4px;
@@ -1636,8 +1632,15 @@ li.event-node{
 .schedule-table tbody td .description-text ul{
   padding-left: 10px;
 }
-.schedule-table tbody td.tab-active { display: table-cell; }
-
+.schedule-table tbody td.track-0.break,
+.schedule-table tbody td.track-1.break  {
+  display: none;
+}
+.schedule-table tbody td.tab-active,
+.schedule-table tbody td.track-0.break.tab-active,
+.schedule-table tbody td.track-1.break.tab-active { 
+  display: table-cell; 
+}
 .js .funnel-schedule-link,
 .js .schedule-table .description-text,
 .js .schedule-table .description-text.show-text  { 
@@ -1657,8 +1660,9 @@ li.event-node{
   cursor: pointer; 
   margin: 0 5px;
 }
-.schedule-table .expand { display: block; }
-
+.schedule-table .expand { 
+  display: block; 
+}
 @media (max-width: 479px) {
   .schedule-table tbody td h4 { 
     font-size: .8rem; 
@@ -1668,42 +1672,49 @@ li.event-node{
   }
 }
 @media only screen and (min-width: 768px) {
-  .schedule-table thead th.time   { 
+  .schedule-table thead th.time  { 
     width: 12%; 
     display: none;
   }
-  .schedule-table thead th.track0  { 
+  .schedule-table thead th.track0 { 
     width: 50%; 
     display: none;
   }
-  .schedule-table thead th.track1  { 
+  .schedule-table thead th.track1 { 
     width: 30%; 
     display: none;
   }
-  .schedule-table thead th.track2  { 
+  .schedule-table thead th.track2 { 
     width: 8%; 
     display: none;
   }
-  .schedule-table tbody td.time    { 
+  .schedule-table tbody td.time { 
     width: 12%; 
     padding: 5px 10px 1rem 1rem
   }
-  .schedule-table td.track-0  { 
+  .schedule-table td.track-0 { 
     width: 40%; 
     background-color: transparent; 
     display: table-cell;
   }
-  .schedule-table td.track-1  { 
+  .schedule-table td.track-1 { 
     width: 25%; 
     background-color: transparent; 
     display: table-cell;
     border-width: 5px;
   }
-  .schedule-table td.track-empty  { 
+  .schedule-table tbody td.track-0.break,
+  .schedule-table tbody td.track-1.break  {
+    display: table-cell;
+  }
+  .schedule-table td.track-empty { 
     width: 34%; 
     background-color: transparent; 
     display: table-cell;
     border: none;
+  }
+  .schedule-table td.track-1.break {
+    border-width: 5px;
   }
   .schedule-table td.track-empty .schedule-talk  { 
     box-shadow: none;
@@ -1828,4 +1839,10 @@ li.event-node{
 
 .sponsorship-page-tabs.nav-tabs > li > a:hover {
   color: #444;
+}
+
+.tag-line {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -26,7 +26,12 @@
         {{#sessions}}
         {{#is_break}}
           {{#roomTitle}}
-          <td class="track-{{track}} break" rowspan={{rowspan}}>
+            {{#track}}
+              <td class="track-{{track}} break" rowspan={{rowspan}}>
+            {{/track}}
+            {{^track}}
+              <td class="track-{{track}} break tab-active" rowspan={{rowspan}}>
+            {{/track}}
             <div class="schedule-talk">
               <h4 class="space-1q title">{{title}}</h4>
               <p class="space-1q duration">{{start}} - {{end}}</p>
@@ -37,7 +42,7 @@
           </td>
           {{/roomTitle}}
           {{^roomTitle}}
-          <td colspan="2" class="break" rowspan={{rowspan}}>
+          <td colspan="2" class="break tab-active" rowspan={{rowspan}}>
             <div class="schedule-talk">
               <h4 class="space-1q title">{{title}}</h4>
               <p class="space-1q duration">{{start}} - {{end}}</p>
