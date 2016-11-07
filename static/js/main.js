@@ -320,7 +320,7 @@ $(document).ready(function() {
     });
 
     // Function that tracks a click button in Google Analytics.
-    $('.button').click(function(event) {
+    $('.button, .click-btn').click(function(event) {
         var button = $(this).html();
         var section = $(this).attr('href');
         if (typeof ga !== "undefined") {
