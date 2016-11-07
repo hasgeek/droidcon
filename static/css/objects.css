@@ -1809,9 +1809,13 @@ li.event-node{
     height: 315px !important;
   }
 }
+@media(min-width: 1200px){
+  .spons-descr {
+    padding-left: 70px;
+  }
+}
 
 @media(min-width: 768px){
-  .spons-descr,
   .sponsorship-sales {
     padding-left: 70px;
   }
