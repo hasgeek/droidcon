@@ -3,12 +3,11 @@
   set page = {
       'title'               : ''
     , 'description'         : ''
-    , 'sections'            : [    
+    , 'sections'            : [
+      ('past-highlights',    'white'),
       ('featured-speakers', 'dark'),
       ('workshop-sessions', ''),
-      ('past-highlights',    ''),
       ('schedule',          'white'),
-      ('tickets', 'white'),
       ('testimonials',          'dark'),
       ('venue-summary',          'white'),
       ('sponsors-summary', '')
@@ -32,10 +31,9 @@
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#featured-talks" class="smooth-scroll">Featured talks</a></li>
         <li><a href="#highlights" class="smooth-scroll">Highlights</a></li>
+        <li><a href="#featured-talks" class="smooth-scroll">Featured talks</a></li>
         <li><a href="#schedules" class="smooth-scroll">Schedule</a></li>
-        <li><a href="#tickets" class="smooth-scroll">Tickets</a></li>
         <li><a href="blog">Blog</a></li>
         <li><a href="#sponsors" class="smooth-scroll">Sponsors</a></li>
         <li><a target="_blank" href="https://jobs.hasgeek.com/search?q=android">Jobs</a></li>
@@ -63,55 +61,12 @@
     <h3 class="secondary-prose space-half">MLR Convention Centre, JP Nagar, Bangalore</h3>
     <h3 class="secondary-prose space-half tag-line clearfix"><i class="fa fa-quote-left pad-1q-right"></i>droidconIN is the biggest android conference in the region and is the place to be if you are into android development, design or architecture.<br><span class="tiny pull-right italic">- Co-organizer, BlrDroid</span></h3>
     <p>
-    <a class="button tiny ticket-button smooth-scroll" href="#tickets">Buy Tickets</a>
-    <a class="button tiny ticket-button gap-half-left" href="sponsor">Become a sponsor</a>
+      <a class="button tiny ticket-button" href="https://www.flickr.com/photos/hasgeek/albums" target="_blank">Photos</a>
+      <a class="button tiny ticket-button gap-half-left" href="https://www.youtube.com/user/hasgeek/playlists" target="_blank">Videos</a>
+    </p>
     <p><a class="tiny smooth-scroll click-btn" href="#schedules" target="_blank">See schedule</a></p>
     </p>
     <p class="legible link-silent space-half"><a href="#featured-talks" class="smooth-scroll fa fa-chevron-down scroll-down hidden-xs click-btn"></a></p>
   </div>
 </header>
-{% endblock %}
-
-{% block footerscripts %}
-<style type="text/css">
-  #boxoffice-widget .boxoffice-button-action {
-    background-color: #FAA51A;
-    border-color:  #d98f15;
-    color: #fff;
-  }
-  #boxoffice-widget .boxoffice-button-info {
-    background-color: #5BC0DE;
-    border-color: #2A9CBE;
-    color: #fff;
-  }
-  #boxoffice-widget .payment-stages-bg {
-    background-color: #586152;
-  }
-  #boxoffice-widget .progress-indicator>li {
-    color: #FFF;
-  }
-  #boxoffice-widget .progress-indicator>li.active, .progress-indicator > li.active .bubble {
-    color: #aed581;
-  }
-  #boxoffice-widget .category-heading {
-    background-color: #71BF44;
-    border-bottom: 3px solid #586152;
-    color: rgba(0,0,0,0.6);
-    line-height: 1.1;
-    font-weight: bold;
-  }
-  #boxoffice-widget .category-heading:after {
-    border-color: #71BF44 #fff #71BF44 #71BF44;
-  }
-</style>
-        
-<script>
-  $(function(){
-    window.Boxoffice.init({
-      org: 'hasgeek',
-      itemCollection: '25f48cf5-5afc-11e6-b09e-5580be063711',
-      paymentDesc: 'droidconIN 2016'
-    });
-  });
-</script>
 {% endblock %}
