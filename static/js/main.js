@@ -412,6 +412,7 @@ $(document).ready(function() {
     }
 
     if($('#section1-photos').length) {
+
         var section1_photos_wall = new Freewall("#section1-photos");
         section1_photos_wall.reset({
             selector: '.brick',
@@ -424,68 +425,9 @@ $(document).ready(function() {
             }
         });
 
-        var section1_photos_wall_images = section1_photos_wall.container.find('.brick');
-        section1_photos_wall_images.find('img').load(function() {
-            section1_photos_wall.fitWidth();
-        });
-
-        var section2_photos_wall = new Freewall("#section2-photos");
-        section2_photos_wall.reset({
-            selector: '.brick',
-            animate: true,
-            cellW: 150,
-            cellH: 'auto',
-            delay: 200,
-            onResize: function() {
-                section2_photos_wall.fitWidth();
-            }
-        });
-
-        var section2_photos_wall_images = section2_photos_wall.container.find('.brick');
-        section2_photos_wall_images.find('img').load(function() {
-            section1_photos_wall.fitWidth();
-        });
-
-        var section3_photos_wall = new Freewall("#section3-photos");
-        section3_photos_wall.reset({
-            selector: '.brick',
-            animate: true,
-            cellW: 150,
-            cellH: 'auto',
-            delay: 200,
-            onResize: function() {
-                section3_photos_wall.fitWidth();
-            }
-        });
-
-        var section3_photos_wall_images = section3_photos_wall.container.find('.brick');
-        section3_photos_wall_images.find('img').load(function() {
-            section3_photos_wall.fitWidth();
-        });
-
-        var section4_photos_wall = new Freewall("#section4-photos");
-        section4_photos_wall.reset({
-            selector: '.brick',
-            animate: true,
-            cellW: 150,
-            cellH: 'auto',
-            delay: 200,
-            onResize: function() {
-                section4_photos_wall.fitWidth();
-            }
-        });
-
-        var section4_photos_wall_images = section4_photos_wall.container.find('.brick');
-        section4_photos_wall_images.find('img').load(function() {
-            section4_photos_wall.fitWidth();
-        });
-
 
         $(window).load(function() {
-            section1_photos_wall.fitWidth();
-            section2_photos_wall.fitWidth();
-            section3_photos_wall.fitWidth();
-            section4_photos_wall.fitWidth();
+          section1_photos_wall.fitWidth();
         });
     }
 
